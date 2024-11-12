@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using KimTools.WinForms;
+using SchoolManagement.Dialog;
 
 namespace SchoolManagement.Pages
 {
@@ -42,6 +43,18 @@ namespace SchoolManagement.Pages
 
         {   MainPages.SetPage(Users);
             PageLbl.Text = "All Users";
+        }
+
+        private void AddBtn_Click(object sender, EventArgs e)
+        {
+            AddUser addUser = new AddUser();
+            addUser.ShowDialog();
+        }
+
+        private void DeleteBtn_Click(object sender, EventArgs e)
+        {
+            DeleteDialog dialog = new DeleteDialog();
+            dialog.ShowDialog();
         }
     }
 }

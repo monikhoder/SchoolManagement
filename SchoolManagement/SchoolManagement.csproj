@@ -110,6 +110,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dialog\AddUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialog\AddUser.Designer.cs">
+      <DependentUpon>AddUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\DeleteDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialog\DeleteDialog.Designer.cs">
+      <DependentUpon>DeleteDialog.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,6 +142,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Dialog\AddUser.resx">
+      <DependentUpon>AddUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialog\DeleteDialog.resx">
+      <DependentUpon>DeleteDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -169,9 +187,7 @@
   <ItemGroup>
     <None Include="Resources\9206485.jpg" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Dialog\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\App icon.png" />
   </ItemGroup>
