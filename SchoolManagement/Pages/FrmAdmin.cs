@@ -37,5 +37,11 @@ namespace SchoolManagement.Pages
             MainPages.SetPage(Dasboard);
             PageLbl.Text = "Dashboard";
         }
+
+        private void UsersBtn_Change(object sender, bool selected, EventArgs e)
+
+        {   MainPages.SetPage(Users);
+            PageLbl.Text = "All Users";
+        }
     }
 }
