@@ -36,34 +36,6 @@
             this.StSwBtn = new KimTools.WinForms.KtButton();
             this.Pages = new KimTools.WinForms.KtPages();
             this.Student = new System.Windows.Forms.TabPage();
-            this.Teacher = new System.Windows.Forms.TabPage();
-            this.Admin = new System.Windows.Forms.TabPage();
-            this.ktTextBox7 = new KimTools.WinForms.KtTextBox();
-            this.ktLabel7 = new KimTools.WinForms.KtLabel();
-            this.ktTextBox8 = new KimTools.WinForms.KtTextBox();
-            this.ktLabel8 = new KimTools.WinForms.KtLabel();
-            this.ktButton1 = new KimTools.WinForms.KtButton();
-            this.ktTextBox9 = new KimTools.WinForms.KtTextBox();
-            this.ktLabel9 = new KimTools.WinForms.KtLabel();
-            this.ktTextBox10 = new KimTools.WinForms.KtTextBox();
-            this.ktLabel10 = new KimTools.WinForms.KtLabel();
-            this.ktTextBox11 = new KimTools.WinForms.KtTextBox();
-            this.ktLabel11 = new KimTools.WinForms.KtLabel();
-            this.ktTextBox12 = new KimTools.WinForms.KtTextBox();
-            this.ktLabel12 = new KimTools.WinForms.KtLabel();
-            this.ktTextBox13 = new KimTools.WinForms.KtTextBox();
-            this.ktLabel13 = new KimTools.WinForms.KtLabel();
-            this.ktTextBox14 = new KimTools.WinForms.KtTextBox();
-            this.ktLabel14 = new KimTools.WinForms.KtLabel();
-            this.ktButton2 = new KimTools.WinForms.KtButton();
-            this.ktTextBox15 = new KimTools.WinForms.KtTextBox();
-            this.ktLabel15 = new KimTools.WinForms.KtLabel();
-            this.ktTextBox16 = new KimTools.WinForms.KtTextBox();
-            this.ktLabel16 = new KimTools.WinForms.KtLabel();
-            this.ktTextBox17 = new KimTools.WinForms.KtTextBox();
-            this.ktLabel17 = new KimTools.WinForms.KtLabel();
-            this.ktTextBox18 = new KimTools.WinForms.KtTextBox();
-            this.ktLabel18 = new KimTools.WinForms.KtLabel();
             this.ktTextBox1 = new KimTools.WinForms.KtTextBox();
             this.ktLabel1 = new KimTools.WinForms.KtLabel();
             this.ktTextBox2 = new KimTools.WinForms.KtTextBox();
@@ -77,6 +49,34 @@
             this.ktLabel5 = new KimTools.WinForms.KtLabel();
             this.ktTextBox6 = new KimTools.WinForms.KtTextBox();
             this.ktLabel6 = new KimTools.WinForms.KtLabel();
+            this.Teacher = new System.Windows.Forms.TabPage();
+            this.ktTextBox7 = new KimTools.WinForms.KtTextBox();
+            this.ktLabel7 = new KimTools.WinForms.KtLabel();
+            this.ktTextBox8 = new KimTools.WinForms.KtTextBox();
+            this.ktLabel8 = new KimTools.WinForms.KtLabel();
+            this.ktButton1 = new KimTools.WinForms.KtButton();
+            this.ktTextBox9 = new KimTools.WinForms.KtTextBox();
+            this.ktLabel9 = new KimTools.WinForms.KtLabel();
+            this.ktTextBox10 = new KimTools.WinForms.KtTextBox();
+            this.ktLabel10 = new KimTools.WinForms.KtLabel();
+            this.ktTextBox11 = new KimTools.WinForms.KtTextBox();
+            this.ktLabel11 = new KimTools.WinForms.KtLabel();
+            this.ktTextBox12 = new KimTools.WinForms.KtTextBox();
+            this.ktLabel12 = new KimTools.WinForms.KtLabel();
+            this.Admin = new System.Windows.Forms.TabPage();
+            this.ktTextBox13 = new KimTools.WinForms.KtTextBox();
+            this.ktLabel13 = new KimTools.WinForms.KtLabel();
+            this.ktTextBox14 = new KimTools.WinForms.KtTextBox();
+            this.ktLabel14 = new KimTools.WinForms.KtLabel();
+            this.ktButton2 = new KimTools.WinForms.KtButton();
+            this.ktTextBox15 = new KimTools.WinForms.KtTextBox();
+            this.ktLabel15 = new KimTools.WinForms.KtLabel();
+            this.ktTextBox16 = new KimTools.WinForms.KtTextBox();
+            this.ktLabel16 = new KimTools.WinForms.KtLabel();
+            this.ktTextBox17 = new KimTools.WinForms.KtTextBox();
+            this.ktLabel17 = new KimTools.WinForms.KtLabel();
+            this.ktTextBox18 = new KimTools.WinForms.KtTextBox();
+            this.ktLabel18 = new KimTools.WinForms.KtLabel();
             this.top.SuspendLayout();
             this.Pages.SuspendLayout();
             this.Student.SuspendLayout();
@@ -204,7 +204,7 @@
             animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
             animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
             animation1.MosaicSize = 0;
-            animation1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            animation1.Padding = new System.Windows.Forms.Padding(0);
             animation1.RotateCoeff = 0F;
             animation1.RotateLimit = 0F;
             animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
@@ -237,6 +237,335 @@
             this.Student.Text = "Student";
             this.Student.UseVisualStyleBackColor = true;
             // 
+            // ktTextBox1
+            // 
+            this.ktTextBox1.AcceptsReturn = false;
+            this.ktTextBox1.AcceptsTab = false;
+            this.ktTextBox1.AnimationSpeed = 200;
+            this.ktTextBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.ktTextBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.ktTextBox1.AutoSizeHeight = true;
+            this.ktTextBox1.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
+            this.ktTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.ktTextBox1.CustomBorderColor = System.Drawing.Color.Empty;
+            this.ktTextBox1.CustomBorderColorActive = System.Drawing.Color.Empty;
+            this.ktTextBox1.CustomBorderColorDisabled = System.Drawing.Color.Empty;
+            this.ktTextBox1.CustomFillColor = System.Drawing.Color.Empty;
+            this.ktTextBox1.CustomIconLeft = null;
+            this.ktTextBox1.CustomIconRight = null;
+            this.ktTextBox1.CustomPlaceholderColor = System.Drawing.Color.Empty;
+            this.ktTextBox1.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.ktTextBox1.ForeColor = System.Drawing.Color.Empty;
+            this.ktTextBox1.HideSelection = true;
+            this.ktTextBox1.Lines = new string[0];
+            this.ktTextBox1.Location = new System.Drawing.Point(362, 195);
+            this.ktTextBox1.MaxLength = 32767;
+            this.ktTextBox1.MinimumSize = new System.Drawing.Size(1, 1);
+            this.ktTextBox1.Modified = false;
+            this.ktTextBox1.Name = "ktTextBox1";
+            this.ktTextBox1.Password = false;
+            this.ktTextBox1.PasswordChar = '\0';
+            this.ktTextBox1.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.ktTextBox1.SelectedText = "";
+            this.ktTextBox1.SelectionLength = 0;
+            this.ktTextBox1.SelectionStart = 0;
+            this.ktTextBox1.ShortcutsEnabled = true;
+            this.ktTextBox1.Size = new System.Drawing.Size(230, 27);
+            this.ktTextBox1.Style = KimTools.WinForms.KtTextBox.KtTextBoxStyle.Tailwind;
+            this.ktTextBox1.TabIndex = 38;
+            this.ktTextBox1.TextMarginBottom = 0;
+            this.ktTextBox1.TextPlaceholder = "Enter Last Name";
+            // 
+            // ktLabel1
+            // 
+            this.ktLabel1.AutoSize = true;
+            this.ktLabel1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.ktLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(40)))), ((int)(((byte)(67)))));
+            this.ktLabel1.KtFontSize = KimTools.WinForms.KtFont.Default;
+            this.ktLabel1.Location = new System.Drawing.Point(362, 167);
+            this.ktLabel1.Name = "ktLabel1";
+            this.ktLabel1.Size = new System.Drawing.Size(99, 25);
+            this.ktLabel1.TabIndex = 37;
+            this.ktLabel1.Text = "Last Name";
+            // 
+            // ktTextBox2
+            // 
+            this.ktTextBox2.AcceptsReturn = false;
+            this.ktTextBox2.AcceptsTab = false;
+            this.ktTextBox2.AnimationSpeed = 200;
+            this.ktTextBox2.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.ktTextBox2.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.ktTextBox2.AutoSizeHeight = true;
+            this.ktTextBox2.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
+            this.ktTextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.ktTextBox2.CustomBorderColor = System.Drawing.Color.Empty;
+            this.ktTextBox2.CustomBorderColorActive = System.Drawing.Color.Empty;
+            this.ktTextBox2.CustomBorderColorDisabled = System.Drawing.Color.Empty;
+            this.ktTextBox2.CustomFillColor = System.Drawing.Color.Empty;
+            this.ktTextBox2.CustomIconLeft = null;
+            this.ktTextBox2.CustomIconRight = null;
+            this.ktTextBox2.CustomPlaceholderColor = System.Drawing.Color.Empty;
+            this.ktTextBox2.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.ktTextBox2.ForeColor = System.Drawing.Color.Empty;
+            this.ktTextBox2.HideSelection = true;
+            this.ktTextBox2.Lines = new string[0];
+            this.ktTextBox2.Location = new System.Drawing.Point(31, 195);
+            this.ktTextBox2.MaxLength = 32767;
+            this.ktTextBox2.MinimumSize = new System.Drawing.Size(1, 1);
+            this.ktTextBox2.Modified = false;
+            this.ktTextBox2.Name = "ktTextBox2";
+            this.ktTextBox2.Password = false;
+            this.ktTextBox2.PasswordChar = '\0';
+            this.ktTextBox2.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.ktTextBox2.SelectedText = "";
+            this.ktTextBox2.SelectionLength = 0;
+            this.ktTextBox2.SelectionStart = 0;
+            this.ktTextBox2.ShortcutsEnabled = true;
+            this.ktTextBox2.Size = new System.Drawing.Size(230, 27);
+            this.ktTextBox2.Style = KimTools.WinForms.KtTextBox.KtTextBoxStyle.Tailwind;
+            this.ktTextBox2.TabIndex = 36;
+            this.ktTextBox2.TextMarginBottom = 0;
+            this.ktTextBox2.TextPlaceholder = "Enter First Name";
+            // 
+            // ktLabel2
+            // 
+            this.ktLabel2.AutoSize = true;
+            this.ktLabel2.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.ktLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(40)))), ((int)(((byte)(67)))));
+            this.ktLabel2.KtFontSize = KimTools.WinForms.KtFont.Default;
+            this.ktLabel2.Location = new System.Drawing.Point(31, 167);
+            this.ktLabel2.Name = "ktLabel2";
+            this.ktLabel2.Size = new System.Drawing.Size(102, 25);
+            this.ktLabel2.TabIndex = 35;
+            this.ktLabel2.Text = "First Name";
+            // 
+            // ktButton3
+            // 
+            this.ktButton3.BackColor = System.Drawing.Color.Empty;
+            this.ktButton3.BorderShape = KimTools.WinForms.KtSize.Default;
+            this.ktButton3.BorderSize = KimTools.WinForms.KtSize.Default;
+            this.ktButton3.CustomColors = new System.Drawing.Color[0];
+            this.ktButton3.FlatAppearance.BorderSize = 0;
+            this.ktButton3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.ktButton3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.ktButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ktButton3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ktButton3.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.ktButton3.IconName = "";
+            this.ktButton3.IconSize = 16;
+            this.ktButton3.IconStroke = 2.5D;
+            this.ktButton3.Location = new System.Drawing.Point(493, 291);
+            this.ktButton3.Name = "ktButton3";
+            this.ktButton3.Size = new System.Drawing.Size(95, 37);
+            this.ktButton3.Style = KimTools.WinForms.KtStyle.Tailwind;
+            this.ktButton3.TabIndex = 34;
+            this.ktButton3.Text = "ADD";
+            this.ktButton3.UseVisualStyleBackColor = false;
+            // 
+            // ktTextBox3
+            // 
+            this.ktTextBox3.AcceptsReturn = false;
+            this.ktTextBox3.AcceptsTab = false;
+            this.ktTextBox3.AnimationSpeed = 200;
+            this.ktTextBox3.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.ktTextBox3.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.ktTextBox3.AutoSizeHeight = true;
+            this.ktTextBox3.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
+            this.ktTextBox3.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.ktTextBox3.CustomBorderColor = System.Drawing.Color.Empty;
+            this.ktTextBox3.CustomBorderColorActive = System.Drawing.Color.Empty;
+            this.ktTextBox3.CustomBorderColorDisabled = System.Drawing.Color.Empty;
+            this.ktTextBox3.CustomFillColor = System.Drawing.Color.Empty;
+            this.ktTextBox3.CustomIconLeft = null;
+            this.ktTextBox3.CustomIconRight = null;
+            this.ktTextBox3.CustomPlaceholderColor = System.Drawing.Color.Empty;
+            this.ktTextBox3.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.ktTextBox3.ForeColor = System.Drawing.Color.Empty;
+            this.ktTextBox3.HideSelection = true;
+            this.ktTextBox3.Lines = new string[0];
+            this.ktTextBox3.Location = new System.Drawing.Point(363, 124);
+            this.ktTextBox3.MaxLength = 32767;
+            this.ktTextBox3.MinimumSize = new System.Drawing.Size(1, 1);
+            this.ktTextBox3.Modified = false;
+            this.ktTextBox3.Name = "ktTextBox3";
+            this.ktTextBox3.Password = false;
+            this.ktTextBox3.PasswordChar = '\0';
+            this.ktTextBox3.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.ktTextBox3.SelectedText = "";
+            this.ktTextBox3.SelectionLength = 0;
+            this.ktTextBox3.SelectionStart = 0;
+            this.ktTextBox3.ShortcutsEnabled = true;
+            this.ktTextBox3.Size = new System.Drawing.Size(230, 27);
+            this.ktTextBox3.Style = KimTools.WinForms.KtTextBox.KtTextBoxStyle.Tailwind;
+            this.ktTextBox3.TabIndex = 33;
+            this.ktTextBox3.TextMarginBottom = 0;
+            this.ktTextBox3.TextPlaceholder = "Enter Last Name";
+            // 
+            // ktLabel3
+            // 
+            this.ktLabel3.AutoSize = true;
+            this.ktLabel3.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.ktLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(40)))), ((int)(((byte)(67)))));
+            this.ktLabel3.KtFontSize = KimTools.WinForms.KtFont.Default;
+            this.ktLabel3.Location = new System.Drawing.Point(363, 96);
+            this.ktLabel3.Name = "ktLabel3";
+            this.ktLabel3.Size = new System.Drawing.Size(99, 25);
+            this.ktLabel3.TabIndex = 32;
+            this.ktLabel3.Text = "Last Name";
+            // 
+            // ktTextBox4
+            // 
+            this.ktTextBox4.AcceptsReturn = false;
+            this.ktTextBox4.AcceptsTab = false;
+            this.ktTextBox4.AnimationSpeed = 200;
+            this.ktTextBox4.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.ktTextBox4.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.ktTextBox4.AutoSizeHeight = true;
+            this.ktTextBox4.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
+            this.ktTextBox4.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.ktTextBox4.CustomBorderColor = System.Drawing.Color.Empty;
+            this.ktTextBox4.CustomBorderColorActive = System.Drawing.Color.Empty;
+            this.ktTextBox4.CustomBorderColorDisabled = System.Drawing.Color.Empty;
+            this.ktTextBox4.CustomFillColor = System.Drawing.Color.Empty;
+            this.ktTextBox4.CustomIconLeft = null;
+            this.ktTextBox4.CustomIconRight = null;
+            this.ktTextBox4.CustomPlaceholderColor = System.Drawing.Color.Empty;
+            this.ktTextBox4.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.ktTextBox4.ForeColor = System.Drawing.Color.Empty;
+            this.ktTextBox4.HideSelection = true;
+            this.ktTextBox4.Lines = new string[0];
+            this.ktTextBox4.Location = new System.Drawing.Point(32, 124);
+            this.ktTextBox4.MaxLength = 32767;
+            this.ktTextBox4.MinimumSize = new System.Drawing.Size(1, 1);
+            this.ktTextBox4.Modified = false;
+            this.ktTextBox4.Name = "ktTextBox4";
+            this.ktTextBox4.Password = false;
+            this.ktTextBox4.PasswordChar = '\0';
+            this.ktTextBox4.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.ktTextBox4.SelectedText = "";
+            this.ktTextBox4.SelectionLength = 0;
+            this.ktTextBox4.SelectionStart = 0;
+            this.ktTextBox4.ShortcutsEnabled = true;
+            this.ktTextBox4.Size = new System.Drawing.Size(230, 27);
+            this.ktTextBox4.Style = KimTools.WinForms.KtTextBox.KtTextBoxStyle.Tailwind;
+            this.ktTextBox4.TabIndex = 31;
+            this.ktTextBox4.TextMarginBottom = 0;
+            this.ktTextBox4.TextPlaceholder = "Enter First Name";
+            // 
+            // ktLabel4
+            // 
+            this.ktLabel4.AutoSize = true;
+            this.ktLabel4.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.ktLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(40)))), ((int)(((byte)(67)))));
+            this.ktLabel4.KtFontSize = KimTools.WinForms.KtFont.Default;
+            this.ktLabel4.Location = new System.Drawing.Point(32, 96);
+            this.ktLabel4.Name = "ktLabel4";
+            this.ktLabel4.Size = new System.Drawing.Size(102, 25);
+            this.ktLabel4.TabIndex = 30;
+            this.ktLabel4.Text = "First Name";
+            // 
+            // ktTextBox5
+            // 
+            this.ktTextBox5.AcceptsReturn = false;
+            this.ktTextBox5.AcceptsTab = false;
+            this.ktTextBox5.AnimationSpeed = 200;
+            this.ktTextBox5.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.ktTextBox5.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.ktTextBox5.AutoSizeHeight = true;
+            this.ktTextBox5.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
+            this.ktTextBox5.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.ktTextBox5.CustomBorderColor = System.Drawing.Color.Empty;
+            this.ktTextBox5.CustomBorderColorActive = System.Drawing.Color.Empty;
+            this.ktTextBox5.CustomBorderColorDisabled = System.Drawing.Color.Empty;
+            this.ktTextBox5.CustomFillColor = System.Drawing.Color.Empty;
+            this.ktTextBox5.CustomIconLeft = null;
+            this.ktTextBox5.CustomIconRight = null;
+            this.ktTextBox5.CustomPlaceholderColor = System.Drawing.Color.Empty;
+            this.ktTextBox5.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.ktTextBox5.ForeColor = System.Drawing.Color.Empty;
+            this.ktTextBox5.HideSelection = true;
+            this.ktTextBox5.Lines = new string[0];
+            this.ktTextBox5.Location = new System.Drawing.Point(363, 56);
+            this.ktTextBox5.MaxLength = 32767;
+            this.ktTextBox5.MinimumSize = new System.Drawing.Size(1, 1);
+            this.ktTextBox5.Modified = false;
+            this.ktTextBox5.Name = "ktTextBox5";
+            this.ktTextBox5.Password = false;
+            this.ktTextBox5.PasswordChar = '\0';
+            this.ktTextBox5.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.ktTextBox5.SelectedText = "";
+            this.ktTextBox5.SelectionLength = 0;
+            this.ktTextBox5.SelectionStart = 0;
+            this.ktTextBox5.ShortcutsEnabled = true;
+            this.ktTextBox5.Size = new System.Drawing.Size(230, 27);
+            this.ktTextBox5.Style = KimTools.WinForms.KtTextBox.KtTextBoxStyle.Tailwind;
+            this.ktTextBox5.TabIndex = 29;
+            this.ktTextBox5.TextMarginBottom = 0;
+            this.ktTextBox5.TextPlaceholder = "Enter Last Name";
+            // 
+            // ktLabel5
+            // 
+            this.ktLabel5.AutoSize = true;
+            this.ktLabel5.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.ktLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(40)))), ((int)(((byte)(67)))));
+            this.ktLabel5.KtFontSize = KimTools.WinForms.KtFont.Default;
+            this.ktLabel5.Location = new System.Drawing.Point(363, 28);
+            this.ktLabel5.Name = "ktLabel5";
+            this.ktLabel5.Size = new System.Drawing.Size(99, 25);
+            this.ktLabel5.TabIndex = 28;
+            this.ktLabel5.Text = "Last Name";
+            // 
+            // ktTextBox6
+            // 
+            this.ktTextBox6.AcceptsReturn = false;
+            this.ktTextBox6.AcceptsTab = false;
+            this.ktTextBox6.AnimationSpeed = 200;
+            this.ktTextBox6.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.ktTextBox6.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.ktTextBox6.AutoSizeHeight = true;
+            this.ktTextBox6.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
+            this.ktTextBox6.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.ktTextBox6.CustomBorderColor = System.Drawing.Color.Empty;
+            this.ktTextBox6.CustomBorderColorActive = System.Drawing.Color.Empty;
+            this.ktTextBox6.CustomBorderColorDisabled = System.Drawing.Color.Empty;
+            this.ktTextBox6.CustomFillColor = System.Drawing.Color.Empty;
+            this.ktTextBox6.CustomIconLeft = null;
+            this.ktTextBox6.CustomIconRight = null;
+            this.ktTextBox6.CustomPlaceholderColor = System.Drawing.Color.Empty;
+            this.ktTextBox6.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.ktTextBox6.ForeColor = System.Drawing.Color.Empty;
+            this.ktTextBox6.HideSelection = true;
+            this.ktTextBox6.Lines = new string[0];
+            this.ktTextBox6.Location = new System.Drawing.Point(32, 56);
+            this.ktTextBox6.MaxLength = 32767;
+            this.ktTextBox6.MinimumSize = new System.Drawing.Size(1, 1);
+            this.ktTextBox6.Modified = false;
+            this.ktTextBox6.Name = "ktTextBox6";
+            this.ktTextBox6.Password = false;
+            this.ktTextBox6.PasswordChar = '\0';
+            this.ktTextBox6.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.ktTextBox6.SelectedText = "";
+            this.ktTextBox6.SelectionLength = 0;
+            this.ktTextBox6.SelectionStart = 0;
+            this.ktTextBox6.ShortcutsEnabled = true;
+            this.ktTextBox6.Size = new System.Drawing.Size(230, 27);
+            this.ktTextBox6.Style = KimTools.WinForms.KtTextBox.KtTextBoxStyle.Tailwind;
+            this.ktTextBox6.TabIndex = 27;
+            this.ktTextBox6.TextMarginBottom = 0;
+            this.ktTextBox6.TextPlaceholder = "Enter First Name";
+            // 
+            // ktLabel6
+            // 
+            this.ktLabel6.AutoSize = true;
+            this.ktLabel6.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.ktLabel6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(40)))), ((int)(((byte)(67)))));
+            this.ktLabel6.KtFontSize = KimTools.WinForms.KtFont.Default;
+            this.ktLabel6.Location = new System.Drawing.Point(32, 28);
+            this.ktLabel6.Name = "ktLabel6";
+            this.ktLabel6.Size = new System.Drawing.Size(102, 25);
+            this.ktLabel6.TabIndex = 26;
+            this.ktLabel6.Text = "First Name";
+            // 
             // Teacher
             // 
             this.Teacher.Controls.Add(this.ktTextBox7);
@@ -259,29 +588,6 @@
             this.Teacher.TabIndex = 2;
             this.Teacher.Text = "Teacher";
             this.Teacher.UseVisualStyleBackColor = true;
-            // 
-            // Admin
-            // 
-            this.Admin.Controls.Add(this.ktTextBox13);
-            this.Admin.Controls.Add(this.ktLabel13);
-            this.Admin.Controls.Add(this.ktTextBox14);
-            this.Admin.Controls.Add(this.ktLabel14);
-            this.Admin.Controls.Add(this.ktButton2);
-            this.Admin.Controls.Add(this.ktTextBox15);
-            this.Admin.Controls.Add(this.ktLabel15);
-            this.Admin.Controls.Add(this.ktTextBox16);
-            this.Admin.Controls.Add(this.ktLabel16);
-            this.Admin.Controls.Add(this.ktTextBox17);
-            this.Admin.Controls.Add(this.ktLabel17);
-            this.Admin.Controls.Add(this.ktTextBox18);
-            this.Admin.Controls.Add(this.ktLabel18);
-            this.Admin.Location = new System.Drawing.Point(4, 4);
-            this.Admin.Name = "Admin";
-            this.Admin.Padding = new System.Windows.Forms.Padding(3);
-            this.Admin.Size = new System.Drawing.Size(625, 357);
-            this.Admin.TabIndex = 3;
-            this.Admin.Text = "Admin";
-            this.Admin.UseVisualStyleBackColor = true;
             // 
             // ktTextBox7
             // 
@@ -612,6 +918,29 @@
             this.ktLabel12.TabIndex = 13;
             this.ktLabel12.Text = "First Name";
             // 
+            // Admin
+            // 
+            this.Admin.Controls.Add(this.ktTextBox13);
+            this.Admin.Controls.Add(this.ktLabel13);
+            this.Admin.Controls.Add(this.ktTextBox14);
+            this.Admin.Controls.Add(this.ktLabel14);
+            this.Admin.Controls.Add(this.ktButton2);
+            this.Admin.Controls.Add(this.ktTextBox15);
+            this.Admin.Controls.Add(this.ktLabel15);
+            this.Admin.Controls.Add(this.ktTextBox16);
+            this.Admin.Controls.Add(this.ktLabel16);
+            this.Admin.Controls.Add(this.ktTextBox17);
+            this.Admin.Controls.Add(this.ktLabel17);
+            this.Admin.Controls.Add(this.ktTextBox18);
+            this.Admin.Controls.Add(this.ktLabel18);
+            this.Admin.Location = new System.Drawing.Point(4, 4);
+            this.Admin.Name = "Admin";
+            this.Admin.Padding = new System.Windows.Forms.Padding(3);
+            this.Admin.Size = new System.Drawing.Size(625, 357);
+            this.Admin.TabIndex = 3;
+            this.Admin.Text = "Admin";
+            this.Admin.UseVisualStyleBackColor = true;
+            // 
             // ktTextBox13
             // 
             this.ktTextBox13.AcceptsReturn = false;
@@ -940,335 +1269,6 @@
             this.ktLabel18.Size = new System.Drawing.Size(102, 25);
             this.ktLabel18.TabIndex = 13;
             this.ktLabel18.Text = "First Name";
-            // 
-            // ktTextBox1
-            // 
-            this.ktTextBox1.AcceptsReturn = false;
-            this.ktTextBox1.AcceptsTab = false;
-            this.ktTextBox1.AnimationSpeed = 200;
-            this.ktTextBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.ktTextBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.ktTextBox1.AutoSizeHeight = true;
-            this.ktTextBox1.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
-            this.ktTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.ktTextBox1.CustomBorderColor = System.Drawing.Color.Empty;
-            this.ktTextBox1.CustomBorderColorActive = System.Drawing.Color.Empty;
-            this.ktTextBox1.CustomBorderColorDisabled = System.Drawing.Color.Empty;
-            this.ktTextBox1.CustomFillColor = System.Drawing.Color.Empty;
-            this.ktTextBox1.CustomIconLeft = null;
-            this.ktTextBox1.CustomIconRight = null;
-            this.ktTextBox1.CustomPlaceholderColor = System.Drawing.Color.Empty;
-            this.ktTextBox1.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
-            this.ktTextBox1.ForeColor = System.Drawing.Color.Empty;
-            this.ktTextBox1.HideSelection = true;
-            this.ktTextBox1.Lines = new string[0];
-            this.ktTextBox1.Location = new System.Drawing.Point(362, 195);
-            this.ktTextBox1.MaxLength = 32767;
-            this.ktTextBox1.MinimumSize = new System.Drawing.Size(1, 1);
-            this.ktTextBox1.Modified = false;
-            this.ktTextBox1.Name = "ktTextBox1";
-            this.ktTextBox1.Password = false;
-            this.ktTextBox1.PasswordChar = '\0';
-            this.ktTextBox1.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.ktTextBox1.SelectedText = "";
-            this.ktTextBox1.SelectionLength = 0;
-            this.ktTextBox1.SelectionStart = 0;
-            this.ktTextBox1.ShortcutsEnabled = true;
-            this.ktTextBox1.Size = new System.Drawing.Size(230, 27);
-            this.ktTextBox1.Style = KimTools.WinForms.KtTextBox.KtTextBoxStyle.Tailwind;
-            this.ktTextBox1.TabIndex = 38;
-            this.ktTextBox1.TextMarginBottom = 0;
-            this.ktTextBox1.TextPlaceholder = "Enter Last Name";
-            // 
-            // ktLabel1
-            // 
-            this.ktLabel1.AutoSize = true;
-            this.ktLabel1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
-            this.ktLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(40)))), ((int)(((byte)(67)))));
-            this.ktLabel1.KtFontSize = KimTools.WinForms.KtFont.Default;
-            this.ktLabel1.Location = new System.Drawing.Point(362, 167);
-            this.ktLabel1.Name = "ktLabel1";
-            this.ktLabel1.Size = new System.Drawing.Size(99, 25);
-            this.ktLabel1.TabIndex = 37;
-            this.ktLabel1.Text = "Last Name";
-            // 
-            // ktTextBox2
-            // 
-            this.ktTextBox2.AcceptsReturn = false;
-            this.ktTextBox2.AcceptsTab = false;
-            this.ktTextBox2.AnimationSpeed = 200;
-            this.ktTextBox2.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.ktTextBox2.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.ktTextBox2.AutoSizeHeight = true;
-            this.ktTextBox2.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
-            this.ktTextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.ktTextBox2.CustomBorderColor = System.Drawing.Color.Empty;
-            this.ktTextBox2.CustomBorderColorActive = System.Drawing.Color.Empty;
-            this.ktTextBox2.CustomBorderColorDisabled = System.Drawing.Color.Empty;
-            this.ktTextBox2.CustomFillColor = System.Drawing.Color.Empty;
-            this.ktTextBox2.CustomIconLeft = null;
-            this.ktTextBox2.CustomIconRight = null;
-            this.ktTextBox2.CustomPlaceholderColor = System.Drawing.Color.Empty;
-            this.ktTextBox2.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
-            this.ktTextBox2.ForeColor = System.Drawing.Color.Empty;
-            this.ktTextBox2.HideSelection = true;
-            this.ktTextBox2.Lines = new string[0];
-            this.ktTextBox2.Location = new System.Drawing.Point(31, 195);
-            this.ktTextBox2.MaxLength = 32767;
-            this.ktTextBox2.MinimumSize = new System.Drawing.Size(1, 1);
-            this.ktTextBox2.Modified = false;
-            this.ktTextBox2.Name = "ktTextBox2";
-            this.ktTextBox2.Password = false;
-            this.ktTextBox2.PasswordChar = '\0';
-            this.ktTextBox2.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.ktTextBox2.SelectedText = "";
-            this.ktTextBox2.SelectionLength = 0;
-            this.ktTextBox2.SelectionStart = 0;
-            this.ktTextBox2.ShortcutsEnabled = true;
-            this.ktTextBox2.Size = new System.Drawing.Size(230, 27);
-            this.ktTextBox2.Style = KimTools.WinForms.KtTextBox.KtTextBoxStyle.Tailwind;
-            this.ktTextBox2.TabIndex = 36;
-            this.ktTextBox2.TextMarginBottom = 0;
-            this.ktTextBox2.TextPlaceholder = "Enter First Name";
-            // 
-            // ktLabel2
-            // 
-            this.ktLabel2.AutoSize = true;
-            this.ktLabel2.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
-            this.ktLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(40)))), ((int)(((byte)(67)))));
-            this.ktLabel2.KtFontSize = KimTools.WinForms.KtFont.Default;
-            this.ktLabel2.Location = new System.Drawing.Point(31, 167);
-            this.ktLabel2.Name = "ktLabel2";
-            this.ktLabel2.Size = new System.Drawing.Size(102, 25);
-            this.ktLabel2.TabIndex = 35;
-            this.ktLabel2.Text = "First Name";
-            // 
-            // ktButton3
-            // 
-            this.ktButton3.BackColor = System.Drawing.Color.Empty;
-            this.ktButton3.BorderShape = KimTools.WinForms.KtSize.Default;
-            this.ktButton3.BorderSize = KimTools.WinForms.KtSize.Default;
-            this.ktButton3.CustomColors = new System.Drawing.Color[0];
-            this.ktButton3.FlatAppearance.BorderSize = 0;
-            this.ktButton3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.ktButton3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.ktButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ktButton3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ktButton3.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.ktButton3.IconName = "";
-            this.ktButton3.IconSize = 16;
-            this.ktButton3.IconStroke = 2.5D;
-            this.ktButton3.Location = new System.Drawing.Point(493, 291);
-            this.ktButton3.Name = "ktButton3";
-            this.ktButton3.Size = new System.Drawing.Size(95, 37);
-            this.ktButton3.Style = KimTools.WinForms.KtStyle.Tailwind;
-            this.ktButton3.TabIndex = 34;
-            this.ktButton3.Text = "ADD";
-            this.ktButton3.UseVisualStyleBackColor = false;
-            // 
-            // ktTextBox3
-            // 
-            this.ktTextBox3.AcceptsReturn = false;
-            this.ktTextBox3.AcceptsTab = false;
-            this.ktTextBox3.AnimationSpeed = 200;
-            this.ktTextBox3.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.ktTextBox3.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.ktTextBox3.AutoSizeHeight = true;
-            this.ktTextBox3.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
-            this.ktTextBox3.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.ktTextBox3.CustomBorderColor = System.Drawing.Color.Empty;
-            this.ktTextBox3.CustomBorderColorActive = System.Drawing.Color.Empty;
-            this.ktTextBox3.CustomBorderColorDisabled = System.Drawing.Color.Empty;
-            this.ktTextBox3.CustomFillColor = System.Drawing.Color.Empty;
-            this.ktTextBox3.CustomIconLeft = null;
-            this.ktTextBox3.CustomIconRight = null;
-            this.ktTextBox3.CustomPlaceholderColor = System.Drawing.Color.Empty;
-            this.ktTextBox3.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
-            this.ktTextBox3.ForeColor = System.Drawing.Color.Empty;
-            this.ktTextBox3.HideSelection = true;
-            this.ktTextBox3.Lines = new string[0];
-            this.ktTextBox3.Location = new System.Drawing.Point(363, 124);
-            this.ktTextBox3.MaxLength = 32767;
-            this.ktTextBox3.MinimumSize = new System.Drawing.Size(1, 1);
-            this.ktTextBox3.Modified = false;
-            this.ktTextBox3.Name = "ktTextBox3";
-            this.ktTextBox3.Password = false;
-            this.ktTextBox3.PasswordChar = '\0';
-            this.ktTextBox3.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.ktTextBox3.SelectedText = "";
-            this.ktTextBox3.SelectionLength = 0;
-            this.ktTextBox3.SelectionStart = 0;
-            this.ktTextBox3.ShortcutsEnabled = true;
-            this.ktTextBox3.Size = new System.Drawing.Size(230, 27);
-            this.ktTextBox3.Style = KimTools.WinForms.KtTextBox.KtTextBoxStyle.Tailwind;
-            this.ktTextBox3.TabIndex = 33;
-            this.ktTextBox3.TextMarginBottom = 0;
-            this.ktTextBox3.TextPlaceholder = "Enter Last Name";
-            // 
-            // ktLabel3
-            // 
-            this.ktLabel3.AutoSize = true;
-            this.ktLabel3.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
-            this.ktLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(40)))), ((int)(((byte)(67)))));
-            this.ktLabel3.KtFontSize = KimTools.WinForms.KtFont.Default;
-            this.ktLabel3.Location = new System.Drawing.Point(363, 96);
-            this.ktLabel3.Name = "ktLabel3";
-            this.ktLabel3.Size = new System.Drawing.Size(99, 25);
-            this.ktLabel3.TabIndex = 32;
-            this.ktLabel3.Text = "Last Name";
-            // 
-            // ktTextBox4
-            // 
-            this.ktTextBox4.AcceptsReturn = false;
-            this.ktTextBox4.AcceptsTab = false;
-            this.ktTextBox4.AnimationSpeed = 200;
-            this.ktTextBox4.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.ktTextBox4.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.ktTextBox4.AutoSizeHeight = true;
-            this.ktTextBox4.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
-            this.ktTextBox4.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.ktTextBox4.CustomBorderColor = System.Drawing.Color.Empty;
-            this.ktTextBox4.CustomBorderColorActive = System.Drawing.Color.Empty;
-            this.ktTextBox4.CustomBorderColorDisabled = System.Drawing.Color.Empty;
-            this.ktTextBox4.CustomFillColor = System.Drawing.Color.Empty;
-            this.ktTextBox4.CustomIconLeft = null;
-            this.ktTextBox4.CustomIconRight = null;
-            this.ktTextBox4.CustomPlaceholderColor = System.Drawing.Color.Empty;
-            this.ktTextBox4.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
-            this.ktTextBox4.ForeColor = System.Drawing.Color.Empty;
-            this.ktTextBox4.HideSelection = true;
-            this.ktTextBox4.Lines = new string[0];
-            this.ktTextBox4.Location = new System.Drawing.Point(32, 124);
-            this.ktTextBox4.MaxLength = 32767;
-            this.ktTextBox4.MinimumSize = new System.Drawing.Size(1, 1);
-            this.ktTextBox4.Modified = false;
-            this.ktTextBox4.Name = "ktTextBox4";
-            this.ktTextBox4.Password = false;
-            this.ktTextBox4.PasswordChar = '\0';
-            this.ktTextBox4.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.ktTextBox4.SelectedText = "";
-            this.ktTextBox4.SelectionLength = 0;
-            this.ktTextBox4.SelectionStart = 0;
-            this.ktTextBox4.ShortcutsEnabled = true;
-            this.ktTextBox4.Size = new System.Drawing.Size(230, 27);
-            this.ktTextBox4.Style = KimTools.WinForms.KtTextBox.KtTextBoxStyle.Tailwind;
-            this.ktTextBox4.TabIndex = 31;
-            this.ktTextBox4.TextMarginBottom = 0;
-            this.ktTextBox4.TextPlaceholder = "Enter First Name";
-            // 
-            // ktLabel4
-            // 
-            this.ktLabel4.AutoSize = true;
-            this.ktLabel4.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
-            this.ktLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(40)))), ((int)(((byte)(67)))));
-            this.ktLabel4.KtFontSize = KimTools.WinForms.KtFont.Default;
-            this.ktLabel4.Location = new System.Drawing.Point(32, 96);
-            this.ktLabel4.Name = "ktLabel4";
-            this.ktLabel4.Size = new System.Drawing.Size(102, 25);
-            this.ktLabel4.TabIndex = 30;
-            this.ktLabel4.Text = "First Name";
-            // 
-            // ktTextBox5
-            // 
-            this.ktTextBox5.AcceptsReturn = false;
-            this.ktTextBox5.AcceptsTab = false;
-            this.ktTextBox5.AnimationSpeed = 200;
-            this.ktTextBox5.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.ktTextBox5.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.ktTextBox5.AutoSizeHeight = true;
-            this.ktTextBox5.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
-            this.ktTextBox5.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.ktTextBox5.CustomBorderColor = System.Drawing.Color.Empty;
-            this.ktTextBox5.CustomBorderColorActive = System.Drawing.Color.Empty;
-            this.ktTextBox5.CustomBorderColorDisabled = System.Drawing.Color.Empty;
-            this.ktTextBox5.CustomFillColor = System.Drawing.Color.Empty;
-            this.ktTextBox5.CustomIconLeft = null;
-            this.ktTextBox5.CustomIconRight = null;
-            this.ktTextBox5.CustomPlaceholderColor = System.Drawing.Color.Empty;
-            this.ktTextBox5.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
-            this.ktTextBox5.ForeColor = System.Drawing.Color.Empty;
-            this.ktTextBox5.HideSelection = true;
-            this.ktTextBox5.Lines = new string[0];
-            this.ktTextBox5.Location = new System.Drawing.Point(363, 56);
-            this.ktTextBox5.MaxLength = 32767;
-            this.ktTextBox5.MinimumSize = new System.Drawing.Size(1, 1);
-            this.ktTextBox5.Modified = false;
-            this.ktTextBox5.Name = "ktTextBox5";
-            this.ktTextBox5.Password = false;
-            this.ktTextBox5.PasswordChar = '\0';
-            this.ktTextBox5.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.ktTextBox5.SelectedText = "";
-            this.ktTextBox5.SelectionLength = 0;
-            this.ktTextBox5.SelectionStart = 0;
-            this.ktTextBox5.ShortcutsEnabled = true;
-            this.ktTextBox5.Size = new System.Drawing.Size(230, 27);
-            this.ktTextBox5.Style = KimTools.WinForms.KtTextBox.KtTextBoxStyle.Tailwind;
-            this.ktTextBox5.TabIndex = 29;
-            this.ktTextBox5.TextMarginBottom = 0;
-            this.ktTextBox5.TextPlaceholder = "Enter Last Name";
-            // 
-            // ktLabel5
-            // 
-            this.ktLabel5.AutoSize = true;
-            this.ktLabel5.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
-            this.ktLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(40)))), ((int)(((byte)(67)))));
-            this.ktLabel5.KtFontSize = KimTools.WinForms.KtFont.Default;
-            this.ktLabel5.Location = new System.Drawing.Point(363, 28);
-            this.ktLabel5.Name = "ktLabel5";
-            this.ktLabel5.Size = new System.Drawing.Size(99, 25);
-            this.ktLabel5.TabIndex = 28;
-            this.ktLabel5.Text = "Last Name";
-            // 
-            // ktTextBox6
-            // 
-            this.ktTextBox6.AcceptsReturn = false;
-            this.ktTextBox6.AcceptsTab = false;
-            this.ktTextBox6.AnimationSpeed = 200;
-            this.ktTextBox6.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.ktTextBox6.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.ktTextBox6.AutoSizeHeight = true;
-            this.ktTextBox6.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
-            this.ktTextBox6.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.ktTextBox6.CustomBorderColor = System.Drawing.Color.Empty;
-            this.ktTextBox6.CustomBorderColorActive = System.Drawing.Color.Empty;
-            this.ktTextBox6.CustomBorderColorDisabled = System.Drawing.Color.Empty;
-            this.ktTextBox6.CustomFillColor = System.Drawing.Color.Empty;
-            this.ktTextBox6.CustomIconLeft = null;
-            this.ktTextBox6.CustomIconRight = null;
-            this.ktTextBox6.CustomPlaceholderColor = System.Drawing.Color.Empty;
-            this.ktTextBox6.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
-            this.ktTextBox6.ForeColor = System.Drawing.Color.Empty;
-            this.ktTextBox6.HideSelection = true;
-            this.ktTextBox6.Lines = new string[0];
-            this.ktTextBox6.Location = new System.Drawing.Point(32, 56);
-            this.ktTextBox6.MaxLength = 32767;
-            this.ktTextBox6.MinimumSize = new System.Drawing.Size(1, 1);
-            this.ktTextBox6.Modified = false;
-            this.ktTextBox6.Name = "ktTextBox6";
-            this.ktTextBox6.Password = false;
-            this.ktTextBox6.PasswordChar = '\0';
-            this.ktTextBox6.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.ktTextBox6.SelectedText = "";
-            this.ktTextBox6.SelectionLength = 0;
-            this.ktTextBox6.SelectionStart = 0;
-            this.ktTextBox6.ShortcutsEnabled = true;
-            this.ktTextBox6.Size = new System.Drawing.Size(230, 27);
-            this.ktTextBox6.Style = KimTools.WinForms.KtTextBox.KtTextBoxStyle.Tailwind;
-            this.ktTextBox6.TabIndex = 27;
-            this.ktTextBox6.TextMarginBottom = 0;
-            this.ktTextBox6.TextPlaceholder = "Enter First Name";
-            // 
-            // ktLabel6
-            // 
-            this.ktLabel6.AutoSize = true;
-            this.ktLabel6.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
-            this.ktLabel6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(40)))), ((int)(((byte)(67)))));
-            this.ktLabel6.KtFontSize = KimTools.WinForms.KtFont.Default;
-            this.ktLabel6.Location = new System.Drawing.Point(32, 28);
-            this.ktLabel6.Name = "ktLabel6";
-            this.ktLabel6.Size = new System.Drawing.Size(102, 25);
-            this.ktLabel6.TabIndex = 26;
-            this.ktLabel6.Text = "First Name";
             // 
             // AddUser
             // 

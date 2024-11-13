@@ -16,10 +16,10 @@ namespace SchoolManagement
         public FrmLogin()
         {
             InitializeComponent();
-           
+            cmbRole.Items.AddRange(new string[] { "Student", "Teacher", "Admin" });
+            cmbRole.SelectedIndex = 0;
         }
-
-       
+        TeamProjectEntities db = new TeamProjectEntities();
         private void BtnClose_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -33,8 +33,6 @@ namespace SchoolManagement
             {
                 BtnLogin.Enabled = false;
             }
-
-
         }
 
         private void FrmLogin_Load(object sender, EventArgs e)
@@ -86,9 +84,33 @@ namespace SchoolManagement
         }
 
         private void BtnLogin_Click(object sender, EventArgs e)
-        {           
-            DialogResult = DialogResult.OK;
-            this.Close();
+        {
+            string username = UsernameTxb.Text.Trim();
+            string password = PasswordTxb.Text.Trim();
+            string role = cmbRole.SelectedItem?.ToString();
+
+            if (string.IsNullOrEmpty(role))
+            {
+                InvalidUserLbl.Visible = true;
+                InvalidUserLbl.Text = "Select a role";
+                return;
+            }
+
+            var user = db.Users.FirstOrDefault(x => x.Name == username && x.Password == password && x.Role == role);
+
+            if(user != null)
+            {
+
+                DialogResult = DialogResult.OK;
+                this.Close();
+            }
+            else
+            {
+                InvalidUserLbl.Visible = true;
+                InvalidUserLbl.Text = "Invalid username or password";
+                PasswordTxb.Clear();
+                PasswordTxb.Focus();
+            }
         }
     }
 }

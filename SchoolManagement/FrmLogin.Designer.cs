@@ -39,6 +39,7 @@
             this.PasswordTxb = new KimTools.WinForms.KtTextBox();
             this.UsernameTxb = new KimTools.WinForms.KtTextBox();
             this.ktTheme = new KimTools.WinForms.KtTheme(this.components);
+            this.cmbRole = new KimTools.WinForms.KtComboBox();
             this.top.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.Main.SuspendLayout();
@@ -65,6 +66,7 @@
             // 
             // Main
             // 
+            this.Main.Controls.Add(this.cmbRole);
             this.Main.Controls.Add(this.InvalidUserLbl);
             this.Main.Controls.Add(this.BtnClose);
             this.Main.Controls.Add(this.BtnLogin);
@@ -81,7 +83,7 @@
             this.InvalidUserLbl.AutoSize = true;
             this.InvalidUserLbl.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.InvalidUserLbl.ForeColor = System.Drawing.Color.IndianRed;
-            this.InvalidUserLbl.Location = new System.Drawing.Point(36, 225);
+            this.InvalidUserLbl.Location = new System.Drawing.Point(36, 176);
             this.InvalidUserLbl.Name = "InvalidUserLbl";
             this.InvalidUserLbl.Size = new System.Drawing.Size(229, 21);
             this.InvalidUserLbl.TabIndex = 4;
@@ -105,7 +107,7 @@
             this.BtnClose.IconSize = 16;
             this.BtnClose.IconStroke = 2.5D;
             this.BtnClose.LabelColor = KimTools.WinForms.KtColor.Tailwind_White;
-            this.BtnClose.Location = new System.Drawing.Point(37, 266);
+            this.BtnClose.Location = new System.Drawing.Point(37, 279);
             this.BtnClose.Name = "BtnClose";
             this.BtnClose.Size = new System.Drawing.Size(167, 46);
             this.BtnClose.Style = KimTools.WinForms.KtStyle.Tailwind;
@@ -131,7 +133,7 @@
             this.BtnLogin.IconSize = 16;
             this.BtnLogin.IconStroke = 2.5D;
             this.BtnLogin.LabelColor = KimTools.WinForms.KtColor.Tailwind_White;
-            this.BtnLogin.Location = new System.Drawing.Point(223, 266);
+            this.BtnLogin.Location = new System.Drawing.Point(223, 279);
             this.BtnLogin.Name = "BtnLogin";
             this.BtnLogin.Size = new System.Drawing.Size(167, 46);
             this.BtnLogin.Style = KimTools.WinForms.KtStyle.Tailwind;
@@ -163,7 +165,7 @@
             this.PasswordTxb.HideSelection = true;
             this.PasswordTxb.IconRight = "Tabler.outline.key";
             this.PasswordTxb.Lines = new string[0];
-            this.PasswordTxb.Location = new System.Drawing.Point(37, 162);
+            this.PasswordTxb.Location = new System.Drawing.Point(37, 113);
             this.PasswordTxb.MaxLength = 32767;
             this.PasswordTxb.MinimumSize = new System.Drawing.Size(1, 1);
             this.PasswordTxb.Modified = false;
@@ -206,7 +208,7 @@
             this.UsernameTxb.HideSelection = true;
             this.UsernameTxb.IconRight = "Tabler.outline.user";
             this.UsernameTxb.Lines = new string[0];
-            this.UsernameTxb.Location = new System.Drawing.Point(37, 66);
+            this.UsernameTxb.Location = new System.Drawing.Point(37, 17);
             this.UsernameTxb.MaxLength = 32767;
             this.UsernameTxb.MinimumSize = new System.Drawing.Size(1, 1);
             this.UsernameTxb.Modified = false;
@@ -232,6 +234,47 @@
             this.ktTheme.Contrast = 10D;
             this.ktTheme.Dark = false;
             this.ktTheme.Primary = System.Drawing.Color.Empty;
+            // 
+            // cmbRole
+            // 
+            this.cmbRole.BackColor = System.Drawing.Color.Transparent;
+            this.cmbRole.BackgroundColor = System.Drawing.Color.White;
+            this.cmbRole.BorderColor = System.Drawing.Color.Silver;
+            this.cmbRole.BorderRadius = 1;
+            this.cmbRole.Color = System.Drawing.Color.Silver;
+            this.cmbRole.Direction = KimTools.WinForms.KtComboBox.Directions.Down;
+            this.cmbRole.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.cmbRole.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.cmbRole.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.cmbRole.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.cmbRole.DisabledIndicatorColor = System.Drawing.Color.DarkGray;
+            this.cmbRole.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbRole.DropdownBorderThickness = KimTools.WinForms.KtComboBox.BorderThickness.Thin;
+            this.cmbRole.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbRole.DropDownTextAlign = KimTools.WinForms.KtComboBox.TextAlign.Left;
+            this.cmbRole.FillDropDown = true;
+            this.cmbRole.FillIndicator = false;
+            this.cmbRole.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbRole.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.cmbRole.ForeColor = System.Drawing.Color.Black;
+            this.cmbRole.FormattingEnabled = true;
+            this.cmbRole.Icon = null;
+            this.cmbRole.IndicatorAlignment = KimTools.WinForms.KtComboBox.Indicator.Right;
+            this.cmbRole.IndicatorColor = System.Drawing.Color.Gray;
+            this.cmbRole.IndicatorLocation = KimTools.WinForms.KtComboBox.Indicator.Right;
+            this.cmbRole.ItemBackColor = System.Drawing.Color.White;
+            this.cmbRole.ItemBorderColor = System.Drawing.Color.White;
+            this.cmbRole.ItemForeColor = System.Drawing.Color.Black;
+            this.cmbRole.ItemHeight = 26;
+            this.cmbRole.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
+            this.cmbRole.ItemHighLightForeColor = System.Drawing.Color.White;
+            this.cmbRole.ItemTopMargin = 3;
+            this.cmbRole.Location = new System.Drawing.Point(37, 216);
+            this.cmbRole.Name = "cmbRole";
+            this.cmbRole.Size = new System.Drawing.Size(167, 32);
+            this.cmbRole.TabIndex = 5;
+            this.cmbRole.TextAlignment = KimTools.WinForms.KtComboBox.TextAlign.Left;
+            this.cmbRole.TextLeftMargin = 5;
             // 
             // FrmLogin
             // 
@@ -270,6 +313,7 @@
         private KimTools.WinForms.KtButton BtnLogin;
         private KimTools.WinForms.KtButton BtnClose;
         private System.Windows.Forms.Label InvalidUserLbl;
+        private KimTools.WinForms.KtComboBox cmbRole;
     }
 }
 
