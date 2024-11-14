@@ -42,7 +42,6 @@ namespace SchoolManagement.Pages
         }
 
         private void UsersBtn_Change(object sender, bool selected, EventArgs e)
-
         {   MainPages.SetPage(Users);
             PageLbl.Text = "All Users";
         }
@@ -57,6 +56,12 @@ namespace SchoolManagement.Pages
         {
             DeleteDialog dialog = new DeleteDialog();
             dialog.ShowDialog();
+        }
+
+        private void ClassBtn_Change(object sender, bool selected, EventArgs e)
+        {
+            MainPages.SetPage(Class);
+            PageLbl.Text = "Class";
         }
     }
 }
