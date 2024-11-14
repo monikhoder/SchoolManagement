@@ -39,7 +39,6 @@
             this.PasswordTxb = new KimTools.WinForms.KtTextBox();
             this.UsernameTxb = new KimTools.WinForms.KtTextBox();
             this.ktTheme = new KimTools.WinForms.KtTheme(this.components);
-            this.cmbRole = new KimTools.WinForms.KtComboBox();
             this.top.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.Main.SuspendLayout();
@@ -66,7 +65,6 @@
             // 
             // Main
             // 
-            this.Main.Controls.Add(this.cmbRole);
             this.Main.Controls.Add(this.InvalidUserLbl);
             this.Main.Controls.Add(this.BtnClose);
             this.Main.Controls.Add(this.BtnLogin);
@@ -235,47 +233,6 @@
             this.ktTheme.Dark = false;
             this.ktTheme.Primary = System.Drawing.Color.Empty;
             // 
-            // cmbRole
-            // 
-            this.cmbRole.BackColor = System.Drawing.Color.Transparent;
-            this.cmbRole.BackgroundColor = System.Drawing.Color.White;
-            this.cmbRole.BorderColor = System.Drawing.Color.Silver;
-            this.cmbRole.BorderRadius = 1;
-            this.cmbRole.Color = System.Drawing.Color.Silver;
-            this.cmbRole.Direction = KimTools.WinForms.KtComboBox.Directions.Down;
-            this.cmbRole.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.cmbRole.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.cmbRole.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.cmbRole.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.cmbRole.DisabledIndicatorColor = System.Drawing.Color.DarkGray;
-            this.cmbRole.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cmbRole.DropdownBorderThickness = KimTools.WinForms.KtComboBox.BorderThickness.Thin;
-            this.cmbRole.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbRole.DropDownTextAlign = KimTools.WinForms.KtComboBox.TextAlign.Left;
-            this.cmbRole.FillDropDown = true;
-            this.cmbRole.FillIndicator = false;
-            this.cmbRole.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbRole.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.cmbRole.ForeColor = System.Drawing.Color.Black;
-            this.cmbRole.FormattingEnabled = true;
-            this.cmbRole.Icon = null;
-            this.cmbRole.IndicatorAlignment = KimTools.WinForms.KtComboBox.Indicator.Right;
-            this.cmbRole.IndicatorColor = System.Drawing.Color.Gray;
-            this.cmbRole.IndicatorLocation = KimTools.WinForms.KtComboBox.Indicator.Right;
-            this.cmbRole.ItemBackColor = System.Drawing.Color.White;
-            this.cmbRole.ItemBorderColor = System.Drawing.Color.White;
-            this.cmbRole.ItemForeColor = System.Drawing.Color.Black;
-            this.cmbRole.ItemHeight = 26;
-            this.cmbRole.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
-            this.cmbRole.ItemHighLightForeColor = System.Drawing.Color.White;
-            this.cmbRole.ItemTopMargin = 3;
-            this.cmbRole.Location = new System.Drawing.Point(37, 216);
-            this.cmbRole.Name = "cmbRole";
-            this.cmbRole.Size = new System.Drawing.Size(167, 32);
-            this.cmbRole.TabIndex = 5;
-            this.cmbRole.TextAlignment = KimTools.WinForms.KtComboBox.TextAlign.Left;
-            this.cmbRole.TextLeftMargin = 5;
-            // 
             // FrmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
@@ -313,7 +270,6 @@
         private KimTools.WinForms.KtButton BtnLogin;
         private KimTools.WinForms.KtButton BtnClose;
         private System.Windows.Forms.Label InvalidUserLbl;
-        private KimTools.WinForms.KtComboBox cmbRole;
     }
 }
 

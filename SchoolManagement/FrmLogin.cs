@@ -8,24 +8,27 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using KimTools.WinForms;
+using SchoolManagement.DBAccess;
 using SchoolManagement.Pages;
 namespace SchoolManagement
 {
     public partial class FrmLogin : KtWindow
     {
+        CrudUsers userdb = new CrudUsers();
+        public int UserId { get; private set; }
         public FrmLogin()
         {
             InitializeComponent();
-            cmbRole.Items.AddRange(new string[] { "Student", "Teacher", "Admin" });
-            cmbRole.SelectedIndex = 0;
+           
         }
-        TeamProjectEntities db = new TeamProjectEntities();
+        
         private void BtnClose_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
         private void BtnLoginEnable()
         {
+            InvalidUserLbl.Visible = false;
             if (UsernameTxb.Text.Trim().Length > 0 && PasswordTxb.Text.Trim().Length > 0)
             {
                 BtnLogin.Enabled = true;
@@ -85,32 +88,20 @@ namespace SchoolManagement
 
         private void BtnLogin_Click(object sender, EventArgs e)
         {
-            string username = UsernameTxb.Text.Trim();
-            string password = PasswordTxb.Text.Trim();
-            string role = cmbRole.SelectedItem?.ToString();
+            int userId = userdb.ValidateUser(UsernameTxb.Text, PasswordTxb.Text);
 
-            if (string.IsNullOrEmpty(role))
+            if (userId == -1)
             {
                 InvalidUserLbl.Visible = true;
-                InvalidUserLbl.Text = "Select a role";
-                return;
-            }
-
-            var user = db.Users.FirstOrDefault(x => x.Name == username && x.Password == password && x.Role == role);
-
-            if(user != null)
-            {
-
-                DialogResult = DialogResult.OK;
-                this.Close();
+                BtnLogin.Enabled = false;
             }
             else
             {
-                InvalidUserLbl.Visible = true;
-                InvalidUserLbl.Text = "Invalid username or password";
-                PasswordTxb.Clear();
-                PasswordTxb.Focus();
+                UserId = userId; // Store the userId
+                DialogResult = DialogResult.OK; // Set dialog result
+                this.Close();
             }
         }
+    }
     }
 }

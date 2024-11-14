@@ -1,4 +1,5 @@
-﻿using SchoolManagement.Pages;
+﻿using SchoolManagement.DBAccess;
+using SchoolManagement.Pages;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,17 +14,49 @@ namespace SchoolManagement
         /// The main entry point for the application.
         /// </summary>
         [STAThread]
+        
         static void Main()
         {
+            CrudUsers userdb = new CrudUsers();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             using (FrmLogin frmLogin = new FrmLogin())
             {
-                if (frmLogin.ShowDialog() == DialogResult.OK)
+                DialogResult result = frmLogin.ShowDialog();
+
+                if (result == DialogResult.OK)
                 {
-                    Application.Run(new FrmAdmin());
+                    int userId = frmLogin.UserId;
+                    var user = userdb.GetUserDetails(userId);
+                    string userRole = user.Role;
+
+                    switch (userRole.ToLower())
+                    {
+                        case "admin":
+                            using (FrmAdmin adminForm = new FrmAdmin(userId))
+                            {
+                                adminForm.ShowDialog();
+                            }
+                            break;
+
+                        case "teacher":
+                            using (FrmTeacher teacherForm = new FrmTeacher(userId))
+                            {
+                                teacherForm.ShowDialog();
+                            }
+                            break;
+
+                        case "student":
+                            using (FrmStudent studentForm = new FrmStudent(userId))
+                            {
+                                studentForm.ShowDialog();
+                            }
+                            break;
+
+                        default:
+                            break;
+                    }
                 }
-                
             }
         }
     }

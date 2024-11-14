@@ -14,9 +14,11 @@ namespace SchoolManagement.Pages
 {
     public partial class FrmAdmin : KtWindow
     {
-        public FrmAdmin()
+        private int userId = -1;
+        public FrmAdmin(int UserId)
         {
             InitializeComponent();
+            userId = UserId;
         }
       
 
