@@ -1,6 +1,6 @@
 ﻿namespace SchoolManagement.Pages
 {
-    partial class FrmAdmin
+    partial class FrmTeacher
     {
         /// <summary>
         /// Required designer variable.
@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             KimTools.WinForms.KtToastHelpers.KtPages.KtPgAnimatorNS.Animation animation1 = new KimTools.WinForms.KtToastHelpers.KtPages.KtPgAnimatorNS.Animation();
             KimTools.WinForms.KtIcon ktIcon1 = new KimTools.WinForms.KtIcon();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmStudent));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmTeacher));
             KimTools.WinForms.KtIcon ktIcon2 = new KimTools.WinForms.KtIcon();
             KimTools.WinForms.KtIcon ktIcon3 = new KimTools.WinForms.KtIcon();
             KimTools.WinForms.KtIcon ktIcon4 = new KimTools.WinForms.KtIcon();
@@ -898,7 +898,6 @@
             this.DeleteBtn.TabIndex = 2;
             this.MenuTooltips.SetToolTip(this.DeleteBtn, "Delete");
             this.DeleteBtn.UseVisualStyleBackColor = false;
-            this.DeleteBtn.Click += new System.EventHandler(this.DeleteBtn_Click);
             // 
             // ktButton2
             // 
@@ -952,7 +951,6 @@
             this.AddBtn.TabIndex = 0;
             this.MenuTooltips.SetToolTip(this.AddBtn, "Add User");
             this.AddBtn.UseVisualStyleBackColor = false;
-            this.AddBtn.Click += new System.EventHandler(this.AddBtn_Click);
             // 
             // Profile
             // 
@@ -1028,7 +1026,7 @@
             // 
             // PageLbl
             // 
-            this.PageLbl.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            this.PageLbl.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.PageLbl.AutoSize = true;
             this.PageLbl.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold);
@@ -1038,9 +1036,9 @@
             this.PageLbl.LabelColor = KimTools.WinForms.KtColor.Tailwind_White;
             this.PageLbl.Location = new System.Drawing.Point(20, 15);
             this.PageLbl.Name = "PageLbl";
-            this.PageLbl.Size = new System.Drawing.Size(156, 38);
+            this.PageLbl.Size = new System.Drawing.Size(113, 38);
             this.PageLbl.TabIndex = 0;
-            this.PageLbl.Text = "Dashboard";
+            this.PageLbl.Text = "Teacher";
             this.MenuTooltips.SetToolTip(this.PageLbl, "");
             // 
             // LeftBar
@@ -1138,7 +1136,6 @@
             this.ProfileBtn.TabIndex = 7;
             this.MenuTooltips.SetToolTip(this.ProfileBtn, "Profile");
             this.ProfileBtn.UseVisualStyleBackColor = false;
-            this.ProfileBtn.Change += new KimTools.WinForms.KtButtonSelect.KtButtonSelectChangeHandler(this.ProfileBtn_Change);
             // 
             // UsersBtn
             // 
@@ -1176,7 +1173,6 @@
             this.UsersBtn.TabIndex = 6;
             this.MenuTooltips.SetToolTip(this.UsersBtn, "Users");
             this.UsersBtn.UseVisualStyleBackColor = false;
-            this.UsersBtn.Change += new KimTools.WinForms.KtButtonSelect.KtButtonSelectChangeHandler(this.UsersBtn_Change);
             // 
             // ktButtonSelect3
             // 
@@ -1288,7 +1284,6 @@
             this.DashboardBtn.TabIndex = 2;
             this.MenuTooltips.SetToolTip(this.DashboardBtn, "Dashboard");
             this.DashboardBtn.UseVisualStyleBackColor = false;
-            this.DashboardBtn.Change += new KimTools.WinForms.KtButtonSelect.KtButtonSelectChangeHandler(this.DashboardBtn_Change);
             // 
             // MenuBar
             // 
@@ -1334,7 +1329,7 @@
             this.Icons.Property = null;
             this.Icons.Stroke = 1D;
             // 
-            // FrmAdmin
+            // FrmTeacher
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -1346,7 +1341,7 @@
             this.ForeColor = System.Drawing.Color.Black;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Icons.SetIcons(this, new KimTools.WinForms.KtIcon[0]);
-            this.Name = "FrmAdmin";
+            this.Name = "FrmTeacher";
             this.Opacity = 1D;
             this.Padding = new System.Windows.Forms.Padding(10);
             this.Role = KimTools.WinForms.KtColor.Tailwind_White;

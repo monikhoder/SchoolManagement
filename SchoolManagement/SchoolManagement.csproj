@@ -168,6 +168,18 @@
     <Compile Include="Pages\FrmProfile.Designer.cs">
       <DependentUpon>FrmProfile.cs</DependentUpon>
     </Compile>
+    <Compile Include="Pages\FrmStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\FrmStudent.Designer.cs">
+      <DependentUpon>FrmStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\FrmTeacher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\FrmTeacher.Designer.cs">
+      <DependentUpon>FrmTeacher.cs</DependentUpon>
+    </Compile>
     <Compile Include="POS.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -217,6 +229,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Pages\FrmProfile.resx">
       <DependentUpon>FrmProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\FrmStudent.resx">
+      <DependentUpon>FrmStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\FrmTeacher.resx">
+      <DependentUpon>FrmTeacher.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
