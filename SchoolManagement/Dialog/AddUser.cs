@@ -42,5 +42,75 @@ namespace SchoolManagement.Dialog
         {
             Pages.SetPage(Admin);
         }
+
+        private void Pages_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ktLabel6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ktTextBox6_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ktLabel4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void GenderCmb_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ktLabel2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ktTextBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ktTextBox1_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ktLabel1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void StudentStatusCmb_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ktLabel3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ktTextBox5_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ktLabel5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ktButton3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

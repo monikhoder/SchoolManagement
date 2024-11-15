@@ -62,6 +62,30 @@ namespace SchoolManagement.Pages
         {
             MainPages.SetPage(Class);
             PageLbl.Text = "Class";
+
+        }
+
+        private void AddClassBtn_Click(object sender, EventArgs e)
+        {
+            AddClass addClass = new AddClass();
+            addClass.ShowDialog();
+        }
+
+        private void DeleteClassBtn_Click(object sender, EventArgs e)
+        {
+            DeleteDialog deleteDialog = new DeleteDialog();
+            deleteDialog.ShowDialog();
+        }
+
+        private void EditClassBtn_Click(object sender, EventArgs e)
+        {
+            AddClass addClass = new AddClass();
+            addClass.ShowDialog();
+        }
+
+        private void UserlistCmb_SelectedIndexChanged(object sender, EventArgs e)
+        {           
+            UsersPages.SetPage(UserlistCmb.Text);           
         }
     }
 }
