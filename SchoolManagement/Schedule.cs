@@ -12,13 +12,18 @@ namespace SchoolManagement
     using System;
     using System.Collections.Generic;
     
-    public partial class ClassroomStudent
+    public partial class Schedule
     {
         public int Id { get; set; }
         public int ClassroomId { get; set; }
-        public int StudentId { get; set; }
+        public int TeacherId { get; set; }
+        public int SubjectId { get; set; }
+        public byte DayOfWeek { get; set; }
+        public System.TimeSpan StartTime { get; set; }
+        public System.TimeSpan EndTime { get; set; }
     
         public virtual Classroom Classroom { get; set; }
-        public virtual Student Student { get; set; }
+        public virtual Subject Subject { get; set; }
+        public virtual Teacher Teacher { get; set; }
     }
 }

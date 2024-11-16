@@ -90,15 +90,15 @@ namespace SchoolManagement
         {
             int userId = userdb.ValidateUser(UsernameTxb.Text, PasswordTxb.Text);
 
-            if (userId == -1)
+            if (userId <= 0)
             {
                 InvalidUserLbl.Visible = true;
                 BtnLogin.Enabled = false;
             }
             else
             {
-                UserId = userId; // Store the userId
-                DialogResult = DialogResult.OK; // Set dialog result
+                UserId = userId; 
+                DialogResult = DialogResult.OK; 
                 this.Close();
             }
         }

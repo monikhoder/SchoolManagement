@@ -9,25 +9,32 @@ namespace SchoolManagement.DBAccess
     
     public class CrudUsers
     {
-        private readonly TeamProjectEntities db;
+        private readonly DBSchoolEntities db;
         public CrudUsers()
         {
-            db = new TeamProjectEntities();
+            db = new DBSchoolEntities();
         }
 
-        // Validate user credentials
+        // Validate user credentials by return user ID
         public int ValidateUser(string username, string password)
         {
-            // this function will return the user id if the credentials are valid
-            // otherwise it will return -1
-           
+            int userID = db.Users.Where(u => u.Username == username && u.Password == password).Select(u => u.Id).FirstOrDefault();
+            if (userID != null)
+            {
+                return userID;
+            }          
             return -1;
         }
-        // Get User details by user id parameter (that should be return user detail such as name, username, etc.)
-       public User GetUserDetails(int userId)
+        // Get User Role by Id
+        public string GetUserRole(int userId)
         {
-            return null; //modify here
+            string role = db.Users
+            .Where(u => u.Id == userId)
+            .Select(u => u.Role.Name)
+            .FirstOrDefault();
+            return role;
         }
+      
 
        
     }

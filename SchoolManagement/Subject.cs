@@ -18,8 +18,8 @@ namespace SchoolManagement
         public Subject()
         {
             this.Exams = new HashSet<Exam>();
-            this.Grades = new HashSet<Grade>();
-            this.TeacherSubjects = new HashSet<TeacherSubject>();
+            this.Schedules = new HashSet<Schedule>();
+            this.TeacherSubjectAssignments = new HashSet<TeacherSubjectAssignment>();
         }
     
         public int Id { get; set; }
@@ -28,8 +28,8 @@ namespace SchoolManagement
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Exam> Exams { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Grade> Grades { get; set; }
+        public virtual ICollection<Schedule> Schedules { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<TeacherSubject> TeacherSubjects { get; set; }
+        public virtual ICollection<TeacherSubjectAssignment> TeacherSubjectAssignments { get; set; }
     }
 }

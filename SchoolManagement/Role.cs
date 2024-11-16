@@ -12,13 +12,18 @@ namespace SchoolManagement
     using System;
     using System.Collections.Generic;
     
-    public partial class ExamStudent
+    public partial class Role
     {
-        public int Id { get; set; }
-        public int ExamId { get; set; }
-        public int StudentId { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Role()
+        {
+            this.Users = new HashSet<User>();
+        }
     
-        public virtual Exam Exam { get; set; }
-        public virtual Student Student { get; set; }
+        public int Id { get; set; }
+        public string Name { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<User> Users { get; set; }
     }
 }

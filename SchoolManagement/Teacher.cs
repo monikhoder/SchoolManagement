@@ -17,11 +17,14 @@ namespace SchoolManagement
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Teacher()
         {
-            this.ClassroomTeachers = new HashSet<ClassroomTeacher>();
-            this.TeacherSubjects = new HashSet<TeacherSubject>();
+            this.Exams = new HashSet<Exam>();
+            this.ExamResults = new HashSet<ExamResult>();
+            this.Schedules = new HashSet<Schedule>();
+            this.TeacherSubjectAssignments = new HashSet<TeacherSubjectAssignment>();
         }
     
         public int Id { get; set; }
+        public int UserId { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Gender { get; set; }
@@ -29,8 +32,13 @@ namespace SchoolManagement
         public Nullable<bool> Status { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ClassroomTeacher> ClassroomTeachers { get; set; }
+        public virtual ICollection<Exam> Exams { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<TeacherSubject> TeacherSubjects { get; set; }
+        public virtual ICollection<ExamResult> ExamResults { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Schedule> Schedules { get; set; }
+        public virtual User User { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<TeacherSubjectAssignment> TeacherSubjectAssignments { get; set; }
     }
 }

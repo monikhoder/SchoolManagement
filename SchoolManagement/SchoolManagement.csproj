@@ -119,16 +119,28 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClassEnrollment.cs">
+      <DependentUpon>DBModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Classroom.cs">
-      <DependentUpon>POS.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ClassroomStudent.cs">
-      <DependentUpon>POS.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ClassroomTeacher.cs">
-      <DependentUpon>POS.tt</DependentUpon>
+      <DependentUpon>DBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DBAccess\CrudUsers.cs" />
+    <Compile Include="DBModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DBModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DBModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBModel.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Dialog\AddClass.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -148,19 +160,16 @@
       <DependentUpon>DeleteDialog.cs</DependentUpon>
     </Compile>
     <Compile Include="Exam.cs">
-      <DependentUpon>POS.tt</DependentUpon>
+      <DependentUpon>DBModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="ExamStudent.cs">
-      <DependentUpon>POS.tt</DependentUpon>
+    <Compile Include="ExamResult.cs">
+      <DependentUpon>DBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmLogin.Designer.cs">
       <DependentUpon>FrmLogin.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Grade.cs">
-      <DependentUpon>POS.tt</DependentUpon>
     </Compile>
     <Compile Include="Pages\FrmAdmin.cs">
       <SubType>Form</SubType>
@@ -186,40 +195,31 @@
     <Compile Include="Pages\FrmTeacher.Designer.cs">
       <DependentUpon>FrmTeacher.cs</DependentUpon>
     </Compile>
-    <Compile Include="POS.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>POS.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="POS.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>POS.tt</DependentUpon>
-    </Compile>
-    <Compile Include="POS.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>POS.edmx</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Role.cs">
+      <DependentUpon>DBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Schedule.cs">
+      <DependentUpon>DBModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Student.cs">
-      <DependentUpon>POS.tt</DependentUpon>
+      <DependentUpon>DBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Subject.cs">
-      <DependentUpon>POS.tt</DependentUpon>
+      <DependentUpon>DBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="sysdiagram.cs">
-      <DependentUpon>POS.tt</DependentUpon>
+      <DependentUpon>DBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Teacher.cs">
-      <DependentUpon>POS.tt</DependentUpon>
+      <DependentUpon>DBModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="TeacherSubject.cs">
-      <DependentUpon>POS.tt</DependentUpon>
+    <Compile Include="TeacherSubjectAssignment.cs">
+      <DependentUpon>DBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="User.cs">
-      <DependentUpon>POS.tt</DependentUpon>
+      <DependentUpon>DBModel.tt</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Dialog\AddClass.resx">
       <DependentUpon>AddClass.cs</DependentUpon>
@@ -255,14 +255,14 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="packages.config" />
-    <EntityDeploy Include="POS.edmx">
+    <EntityDeploy Include="DBModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>POS.Designer.cs</LastGenOutput>
+      <LastGenOutput>DBModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="POS.edmx.diagram">
-      <DependentUpon>POS.edmx</DependentUpon>
+    <None Include="DBModel.edmx.diagram">
+      <DependentUpon>DBModel.edmx</DependentUpon>
     </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -283,22 +283,22 @@
     <None Include="Resources\9206485.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="POS.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>POS.Context.cs</LastGenOutput>
-      <DependentUpon>POS.edmx</DependentUpon>
-    </Content>
-    <Content Include="POS.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>POS.edmx</DependentUpon>
-      <LastGenOutput>POS.cs</LastGenOutput>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\App icon.png" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DBModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DBModel.edmx</DependentUpon>
+      <LastGenOutput>DBModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="DBModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DBModel.edmx</DependentUpon>
+      <LastGenOutput>DBModel.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

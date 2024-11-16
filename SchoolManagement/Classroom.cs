@@ -17,16 +17,17 @@ namespace SchoolManagement
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Classroom()
         {
-            this.ClassroomStudents = new HashSet<ClassroomStudent>();
-            this.ClassroomTeachers = new HashSet<ClassroomTeacher>();
+            this.ClassEnrollments = new HashSet<ClassEnrollment>();
+            this.Schedules = new HashSet<Schedule>();
         }
     
         public int Id { get; set; }
         public string Name { get; set; }
+        public int Capacity { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ClassroomStudent> ClassroomStudents { get; set; }
+        public virtual ICollection<ClassEnrollment> ClassEnrollments { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ClassroomTeacher> ClassroomTeachers { get; set; }
+        public virtual ICollection<Schedule> Schedules { get; set; }
     }
 }

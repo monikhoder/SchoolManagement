@@ -12,13 +12,17 @@ namespace SchoolManagement
     using System;
     using System.Collections.Generic;
     
-    public partial class ClassroomTeacher
+    public partial class ExamResult
     {
         public int Id { get; set; }
-        public int ClassroomId { get; set; }
+        public int ExamId { get; set; }
+        public int StudentId { get; set; }
+        public decimal Score { get; set; }
         public int TeacherId { get; set; }
+        public System.DateTime GradedDate { get; set; }
     
-        public virtual Classroom Classroom { get; set; }
+        public virtual Exam Exam { get; set; }
+        public virtual Student Student { get; set; }
         public virtual Teacher Teacher { get; set; }
     }
 }

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="2d5dff7455b84cda9583180d0161ca4a" Name="Diagram1">
+        <EntityTypeShape EntityType="DBSchoolModel.ClassEnrollment" Width="1.5" PointX="7.5" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBSchoolModel.Classroom" Width="1.5" PointX="5.25" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBSchoolModel.Exam" Width="1.5" PointX="10.5" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBSchoolModel.ExamResult" Width="1.5" PointX="7.5" PointY="10.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBSchoolModel.Role" Width="1.5" PointX="0.625" PointY="9.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBSchoolModel.Schedule" Width="1.5" PointX="7.5" PointY="13.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBSchoolModel.Student" Width="1.5" PointX="5.25" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBSchoolModel.Subject" Width="1.5" PointX="8.25" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBSchoolModel.sysdiagram" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBSchoolModel.Teacher" Width="1.5" PointX="5.25" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBSchoolModel.TeacherSubjectAssignment" Width="1.5" PointX="10.5" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBSchoolModel.User" Width="1.5" PointX="3" PointY="8.375" IsExpanded="true" />
+        <AssociationConnector Association="DBSchoolModel.FK__ClassEnro__Class__693CA210" ManuallyRouted="false" />
+        <AssociationConnector Association="DBSchoolModel.FK__ClassEnro__Stude__6A30C649" ManuallyRouted="false" />
+        <AssociationConnector Association="DBSchoolModel.FK__Schedule__Classr__5AEE82B9" ManuallyRouted="false" />
+        <AssociationConnector Association="DBSchoolModel.FK__Exam__SubjectId__5FB337D6" ManuallyRouted="false" />
+        <AssociationConnector Association="DBSchoolModel.FK__Exam__TeacherId__60A75C0F" ManuallyRouted="false" />
+        <AssociationConnector Association="DBSchoolModel.FK__ExamResul__ExamI__6383C8BA" ManuallyRouted="false" />
+        <AssociationConnector Association="DBSchoolModel.FK__ExamResul__Stude__6477ECF3" ManuallyRouted="false" />
+        <AssociationConnector Association="DBSchoolModel.FK__ExamResul__Teach__656C112C" ManuallyRouted="false" />
+        <AssociationConnector Association="DBSchoolModel.FK__User__RoleId__4CA06362" ManuallyRouted="false" />
+        <AssociationConnector Association="DBSchoolModel.FK__Schedule__Subjec__5CD6CB2B" ManuallyRouted="false" />
+        <AssociationConnector Association="DBSchoolModel.FK__Schedule__Teache__5BE2A6F2" ManuallyRouted="false" />
+        <AssociationConnector Association="DBSchoolModel.FK__Student__UserId__5070F446" ManuallyRouted="false" />
+        <AssociationConnector Association="DBSchoolModel.FK__TeacherSu__Subje__6EF57B66" ManuallyRouted="false" />
+        <AssociationConnector Association="DBSchoolModel.FK__Teacher__UserId__5441852A" ManuallyRouted="false" />
+        <AssociationConnector Association="DBSchoolModel.FK__TeacherSu__Teach__6E01572D" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

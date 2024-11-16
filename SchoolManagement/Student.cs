@@ -17,22 +17,22 @@ namespace SchoolManagement
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Student()
         {
-            this.ClassroomStudents = new HashSet<ClassroomStudent>();
-            this.ExamStudents = new HashSet<ExamStudent>();
+            this.ClassEnrollments = new HashSet<ClassEnrollment>();
+            this.ExamResults = new HashSet<ExamResult>();
         }
     
         public int Id { get; set; }
+        public int UserId { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Gender { get; set; }
         public System.DateTime EnrollDate { get; set; }
         public Nullable<bool> Status { get; set; }
-        public int GradeId { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ClassroomStudent> ClassroomStudents { get; set; }
+        public virtual ICollection<ClassEnrollment> ClassEnrollments { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ExamStudent> ExamStudents { get; set; }
-        public virtual Grade Grade { get; set; }
+        public virtual ICollection<ExamResult> ExamResults { get; set; }
+        public virtual User User { get; set; }
     }
 }

@@ -36,8 +36,8 @@
             this.ClassDetailPanel = new KimTools.WinForms.KtPanel();
             this.ktButton3 = new KimTools.WinForms.KtButton();
             this.Mainpanel = new System.Windows.Forms.Panel();
-            this.SubjectPanel = new KimTools.WinForms.KtPanel();
             this.StudentPanel = new KimTools.WinForms.KtPanel();
+            this.SubjectPanel = new KimTools.WinForms.KtPanel();
             this.ClassDetailPanel.SuspendLayout();
             this.Mainpanel.SuspendLayout();
             this.SuspendLayout();
@@ -127,6 +127,7 @@
             this.ktDate1.DisabledColor = System.Drawing.Color.Gray;
             this.ktDate1.DisplayWeekNumbers = false;
             this.ktDate1.DPHeight = 0;
+            this.ktDate1.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
             this.ktDate1.FillDatePicker = false;
             this.ktDate1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.ktDate1.ForeColor = System.Drawing.Color.Black;
@@ -135,7 +136,7 @@
             this.ktDate1.IconLocation = KimTools.WinForms.KtDate.Indicator.Right;
             this.ktDate1.LeftTextMargin = 5;
             this.ktDate1.Location = new System.Drawing.Point(471, 31);
-            this.ktDate1.MinimumSize = new System.Drawing.Size(0, 32);
+            this.ktDate1.MinimumSize = new System.Drawing.Size(4, 32);
             this.ktDate1.Name = "ktDate1";
             this.ktDate1.Size = new System.Drawing.Size(226, 32);
             this.ktDate1.TabIndex = 52;
@@ -203,26 +204,6 @@
             this.Mainpanel.Size = new System.Drawing.Size(851, 415);
             this.Mainpanel.TabIndex = 54;
             // 
-            // SubjectPanel
-            // 
-            this.SubjectPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(209)))), ((int)(((byte)(217)))));
-            this.SubjectPanel.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(209)))), ((int)(((byte)(217)))));
-            this.SubjectPanel.BgOpacity = 255;
-            this.SubjectPanel.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(192)))), ((int)(((byte)(202)))));
-            this.SubjectPanel.BorderOpacity = 255;
-            this.SubjectPanel.BorderRadiusSize = 15;
-            this.SubjectPanel.BorderShape = KimTools.WinForms.KtSize.Default;
-            this.SubjectPanel.BorderSize = KimTools.WinForms.KtSize.Default;
-            this.SubjectPanel.BorderThickness = 1;
-            this.SubjectPanel.CustomColors = new System.Drawing.Color[0];
-            this.SubjectPanel.Dock = System.Windows.Forms.DockStyle.Left;
-            this.SubjectPanel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(40)))), ((int)(((byte)(67)))));
-            this.SubjectPanel.Location = new System.Drawing.Point(5, 5);
-            this.SubjectPanel.Name = "SubjectPanel";
-            this.SubjectPanel.ShowBorders = true;
-            this.SubjectPanel.Size = new System.Drawing.Size(229, 405);
-            this.SubjectPanel.TabIndex = 0;
-            // 
             // StudentPanel
             // 
             this.StudentPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(209)))), ((int)(((byte)(217)))));
@@ -242,6 +223,26 @@
             this.StudentPanel.ShowBorders = true;
             this.StudentPanel.Size = new System.Drawing.Size(612, 405);
             this.StudentPanel.TabIndex = 1;
+            // 
+            // SubjectPanel
+            // 
+            this.SubjectPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(209)))), ((int)(((byte)(217)))));
+            this.SubjectPanel.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(209)))), ((int)(((byte)(217)))));
+            this.SubjectPanel.BgOpacity = 255;
+            this.SubjectPanel.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(192)))), ((int)(((byte)(202)))));
+            this.SubjectPanel.BorderOpacity = 255;
+            this.SubjectPanel.BorderRadiusSize = 15;
+            this.SubjectPanel.BorderShape = KimTools.WinForms.KtSize.Default;
+            this.SubjectPanel.BorderSize = KimTools.WinForms.KtSize.Default;
+            this.SubjectPanel.BorderThickness = 1;
+            this.SubjectPanel.CustomColors = new System.Drawing.Color[0];
+            this.SubjectPanel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.SubjectPanel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(40)))), ((int)(((byte)(67)))));
+            this.SubjectPanel.Location = new System.Drawing.Point(5, 5);
+            this.SubjectPanel.Name = "SubjectPanel";
+            this.SubjectPanel.ShowBorders = true;
+            this.SubjectPanel.Size = new System.Drawing.Size(229, 405);
+            this.SubjectPanel.TabIndex = 0;
             // 
             // AddClass
             // 

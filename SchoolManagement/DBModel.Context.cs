@@ -13,10 +13,10 @@ namespace SchoolManagement
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class TeamProjectEntities : DbContext
+    public partial class DBSchoolEntities : DbContext
     {
-        public TeamProjectEntities()
-            : base("name=TeamProjectEntities")
+        public DBSchoolEntities()
+            : base("name=DBSchoolEntities")
         {
         }
     
@@ -25,17 +25,17 @@ namespace SchoolManagement
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<ClassEnrollment> ClassEnrollments { get; set; }
         public virtual DbSet<Classroom> Classrooms { get; set; }
-        public virtual DbSet<ClassroomStudent> ClassroomStudents { get; set; }
-        public virtual DbSet<ClassroomTeacher> ClassroomTeachers { get; set; }
         public virtual DbSet<Exam> Exams { get; set; }
-        public virtual DbSet<ExamStudent> ExamStudents { get; set; }
-        public virtual DbSet<Grade> Grades { get; set; }
+        public virtual DbSet<ExamResult> ExamResults { get; set; }
+        public virtual DbSet<Role> Roles { get; set; }
+        public virtual DbSet<Schedule> Schedules { get; set; }
         public virtual DbSet<Student> Students { get; set; }
         public virtual DbSet<Subject> Subjects { get; set; }
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<Teacher> Teachers { get; set; }
-        public virtual DbSet<TeacherSubject> TeacherSubjects { get; set; }
+        public virtual DbSet<TeacherSubjectAssignment> TeacherSubjectAssignments { get; set; }
         public virtual DbSet<User> Users { get; set; }
     }
 }
