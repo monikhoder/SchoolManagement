@@ -106,7 +106,7 @@
             this.BtnLogout = new KimTools.WinForms.KtButton();
             this.ProfileBtn = new KimTools.WinForms.KtButtonSelect();
             this.UsersBtn = new KimTools.WinForms.KtButtonSelect();
-            this.ClassBtn = new KimTools.WinForms.KtButtonSelect();
+            this.ClassRoomBtn = new KimTools.WinForms.KtButtonSelect();
             this.ExamBtn = new KimTools.WinForms.KtButtonSelect();
             this.DashboardBtn = new KimTools.WinForms.KtButtonSelect();
             this.MenuBar = new System.Windows.Forms.Panel();
@@ -169,10 +169,10 @@
             this.MainPages.Multiline = true;
             this.MainPages.Name = "MainPages";
             this.MainPages.Padding = new System.Drawing.Point(10, 10);
-            this.MainPages.Page = this.Users;
-            this.MainPages.PageIndex = 2;
-            this.MainPages.PageName = "Users";
-            this.MainPages.PageTitle = "Users";
+            this.MainPages.Page = this.Class;
+            this.MainPages.PageIndex = 1;
+            this.MainPages.PageName = "Class";
+            this.MainPages.PageTitle = "Class";
             this.MainPages.SelectedIndex = 0;
             this.MainPages.Size = new System.Drawing.Size(1177, 606);
             this.MainPages.TabIndex = 1;
@@ -1304,7 +1304,7 @@
             this.LeftBar.Controls.Add(this.BtnLogout);
             this.LeftBar.Controls.Add(this.ProfileBtn);
             this.LeftBar.Controls.Add(this.UsersBtn);
-            this.LeftBar.Controls.Add(this.ClassBtn);
+            this.LeftBar.Controls.Add(this.ClassRoomBtn);
             this.LeftBar.Controls.Add(this.ExamBtn);
             this.LeftBar.Controls.Add(this.DashboardBtn);
             this.LeftBar.Controls.Add(this.MenuBar);
@@ -1425,43 +1425,43 @@
             this.UsersBtn.UseVisualStyleBackColor = false;
             this.UsersBtn.Change += new KimTools.WinForms.KtButtonSelect.KtButtonSelectChangeHandler(this.UsersBtn_Change);
             // 
-            // ClassBtn
+            // ClassRoomBtn
             // 
-            this.ClassBtn.Appearance = System.Windows.Forms.Appearance.Button;
-            this.ClassBtn.BackColor = System.Drawing.Color.Transparent;
-            this.ClassBtn.Bg = KimTools.WinForms.KtColor.Secondary;
-            this.ClassBtn.BorderShape = KimTools.WinForms.KtSize.Lg;
-            this.ClassBtn.BorderSize = KimTools.WinForms.KtSize.Default;
-            this.ClassBtn.ContentColor = KimTools.WinForms.KtColor.Primary;
-            this.ClassBtn.ContentColorSelected = KimTools.WinForms.KtColor.Tailwind_White;
-            this.ClassBtn.ContentCustomSelected = System.Drawing.Color.Empty;
-            this.ClassBtn.CustomColors = new System.Drawing.Color[0];
-            this.ClassBtn.Dock = System.Windows.Forms.DockStyle.Top;
-            this.ClassBtn.FillSelected = KimTools.WinForms.KtColor.Primary;
-            this.ClassBtn.FlatAppearance.BorderSize = 0;
-            this.ClassBtn.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-            this.ClassBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.ClassBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.ClassBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ClassBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
-            this.ClassBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(63)))), ((int)(((byte)(218)))));
-            this.ClassBtn.IconName = "Hero.outline.building-library";
-            this.Icons.SetIcons(this.ClassBtn, new KimTools.WinForms.KtIcon[0]);
-            this.ClassBtn.IconSize = 20;
-            this.ClassBtn.IconStroke = 2.5D;
-            this.ClassBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.ClassBtn.LabelColorCustom = System.Drawing.Color.Empty;
-            this.ClassBtn.LabelPadding = 0;
-            this.ClassBtn.Location = new System.Drawing.Point(4, 189);
-            this.ClassBtn.Name = "ClassBtn";
-            this.ClassBtn.Padding = new System.Windows.Forms.Padding(10);
-            this.ClassBtn.Size = new System.Drawing.Size(68, 54);
-            this.ClassBtn.Style = KimTools.WinForms.KtStyle.Ghost;
-            this.ClassBtn.StyleSelected = KimTools.WinForms.KtStyle.GradientOutline;
-            this.ClassBtn.TabIndex = 5;
-            this.MenuTooltips.SetToolTip(this.ClassBtn, "Class");
-            this.ClassBtn.UseVisualStyleBackColor = false;
-            this.ClassBtn.Change += new KimTools.WinForms.KtButtonSelect.KtButtonSelectChangeHandler(this.ClassBtn_Change);
+            this.ClassRoomBtn.Appearance = System.Windows.Forms.Appearance.Button;
+            this.ClassRoomBtn.BackColor = System.Drawing.Color.Transparent;
+            this.ClassRoomBtn.Bg = KimTools.WinForms.KtColor.Secondary;
+            this.ClassRoomBtn.BorderShape = KimTools.WinForms.KtSize.Lg;
+            this.ClassRoomBtn.BorderSize = KimTools.WinForms.KtSize.Default;
+            this.ClassRoomBtn.ContentColor = KimTools.WinForms.KtColor.Primary;
+            this.ClassRoomBtn.ContentColorSelected = KimTools.WinForms.KtColor.Tailwind_White;
+            this.ClassRoomBtn.ContentCustomSelected = System.Drawing.Color.Empty;
+            this.ClassRoomBtn.CustomColors = new System.Drawing.Color[0];
+            this.ClassRoomBtn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ClassRoomBtn.FillSelected = KimTools.WinForms.KtColor.Primary;
+            this.ClassRoomBtn.FlatAppearance.BorderSize = 0;
+            this.ClassRoomBtn.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.ClassRoomBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.ClassRoomBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.ClassRoomBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ClassRoomBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.ClassRoomBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(63)))), ((int)(((byte)(218)))));
+            this.ClassRoomBtn.IconName = "Hero.outline.building-library";
+            this.Icons.SetIcons(this.ClassRoomBtn, new KimTools.WinForms.KtIcon[0]);
+            this.ClassRoomBtn.IconSize = 20;
+            this.ClassRoomBtn.IconStroke = 2.5D;
+            this.ClassRoomBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.ClassRoomBtn.LabelColorCustom = System.Drawing.Color.Empty;
+            this.ClassRoomBtn.LabelPadding = 0;
+            this.ClassRoomBtn.Location = new System.Drawing.Point(4, 189);
+            this.ClassRoomBtn.Name = "ClassRoomBtn";
+            this.ClassRoomBtn.Padding = new System.Windows.Forms.Padding(10);
+            this.ClassRoomBtn.Size = new System.Drawing.Size(68, 54);
+            this.ClassRoomBtn.Style = KimTools.WinForms.KtStyle.Ghost;
+            this.ClassRoomBtn.StyleSelected = KimTools.WinForms.KtStyle.GradientOutline;
+            this.ClassRoomBtn.TabIndex = 5;
+            this.MenuTooltips.SetToolTip(this.ClassRoomBtn, "Class Room");
+            this.ClassRoomBtn.UseVisualStyleBackColor = false;
+            this.ClassRoomBtn.Change += new KimTools.WinForms.KtButtonSelect.KtButtonSelectChangeHandler(this.ClassBtn_Change);
             // 
             // ExamBtn
             // 
@@ -2235,7 +2235,7 @@
         private KimTools.WinForms.KtButtonSelect ExamBtn;
         private KimTools.WinForms.KtButtonSelect ProfileBtn;
         private KimTools.WinForms.KtButtonSelect UsersBtn;
-        private KimTools.WinForms.KtButtonSelect ClassBtn;
+        private KimTools.WinForms.KtButtonSelect ClassRoomBtn;
         public KimTools.WinForms.KtTooltips MenuTooltips;
         private KimTools.WinForms.KtButton BtnLogout;
         private KimTools.WinForms.KtPanel DashboardBarPanel;

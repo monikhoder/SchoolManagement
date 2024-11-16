@@ -18,16 +18,6 @@ namespace SchoolManagement.Dialog
             InitializeComponent();
         }
 
-        private void ktTextBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ktTextBox7_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void tcSwBtn_Click(object sender, EventArgs e)
         {
             Pages.SetPage(Teacher);
