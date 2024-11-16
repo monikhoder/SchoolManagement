@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="DBSchoolModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="SchoolDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="ClassEnrollment">
           <Key>
             <PropertyRef Name="Id" />
@@ -13,6 +13,8 @@
           <Property Name="ClassroomId" Type="int" Nullable="false" />
           <Property Name="StudentId" Type="int" Nullable="false" />
           <Property Name="EnrollmentDate" Type="datetime" Nullable="false" />
+          <Property Name="EndDate" Type="datetime" />
+          <Property Name="Status" Type="bit" />
         </EntityType>
         <EntityType Name="Classroom">
           <Key>
@@ -21,6 +23,19 @@
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Name" Type="varchar" MaxLength="255" Nullable="false" />
           <Property Name="Capacity" Type="int" Nullable="false" />
+          <Property Name="StartDate" Type="date" Nullable="false" />
+          <Property Name="EndDate" Type="date" Nullable="false" />
+          <Property Name="Status" Type="bit" />
+        </EntityType>
+        <EntityType Name="ClassSubject">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ClassroomId" Type="int" Nullable="false" />
+          <Property Name="SubjectId" Type="int" Nullable="false" />
+          <Property Name="TeacherId" Type="int" Nullable="false" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
         </EntityType>
         <EntityType Name="Exam">
           <Key>
@@ -28,8 +43,7 @@
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Name" Type="varchar" MaxLength="255" Nullable="false" />
-          <Property Name="SubjectId" Type="int" Nullable="false" />
-          <Property Name="TeacherId" Type="int" Nullable="false" />
+          <Property Name="ClassSubjectId" Type="int" Nullable="false" />
           <Property Name="ExamDate" Type="datetime" Nullable="false" />
           <Property Name="Duration" Type="int" Nullable="false" />
         </EntityType>
@@ -41,7 +55,6 @@
           <Property Name="ExamId" Type="int" Nullable="false" />
           <Property Name="StudentId" Type="int" Nullable="false" />
           <Property Name="Score" Type="decimal" Precision="5" Scale="2" Nullable="false" />
-          <Property Name="TeacherId" Type="int" Nullable="false" />
           <Property Name="GradedDate" Type="datetime" Nullable="false" />
         </EntityType>
         <EntityType Name="Role">
@@ -50,18 +63,6 @@
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
-        </EntityType>
-        <EntityType Name="Schedule">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="ClassroomId" Type="int" Nullable="false" />
-          <Property Name="TeacherId" Type="int" Nullable="false" />
-          <Property Name="SubjectId" Type="int" Nullable="false" />
-          <Property Name="DayOfWeek" Type="tinyint" Nullable="false" />
-          <Property Name="StartTime" Type="time" Precision="7" Nullable="false" />
-          <Property Name="EndTime" Type="time" Precision="7" Nullable="false" />
         </EntityType>
         <EntityType Name="Student">
           <Key>
@@ -72,7 +73,7 @@
           <Property Name="FirstName" Type="varchar" MaxLength="255" Nullable="false" />
           <Property Name="LastName" Type="varchar" MaxLength="255" Nullable="false" />
           <Property Name="Gender" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="EnrollDate" Type="datetime" Nullable="false" />
+          <Property Name="RegisterDate" Type="datetime" Nullable="false" />
           <Property Name="Status" Type="bit" />
         </EntityType>
         <EntityType Name="Subject">
@@ -103,15 +104,7 @@
           <Property Name="Gender" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="Salary" Type="decimal" Precision="10" Scale="2" Nullable="false" />
           <Property Name="Status" Type="bit" />
-        </EntityType>
-        <EntityType Name="TeacherSubjectAssignment">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="TeacherId" Type="int" Nullable="false" />
-          <Property Name="SubjectId" Type="int" Nullable="false" />
-          <Property Name="AssignedDate" Type="datetime" Nullable="false" />
+          <Property Name="RegisterDate" Type="datetime" Nullable="false" />
         </EntityType>
         <EntityType Name="User">
           <Key>
@@ -121,8 +114,9 @@
           <Property Name="Username" Type="varchar" MaxLength="255" Nullable="false" />
           <Property Name="Password" Type="varchar" MaxLength="255" Nullable="false" />
           <Property Name="RoleId" Type="int" Nullable="false" />
+          <Property Name="Firstlogin" Type="bit" />
         </EntityType>
-        <Association Name="FK__ClassEnro__Class__693CA210">
+        <Association Name="FK__ClassEnro__Class__6477ECF3">
           <End Role="Classroom" Type="Self.Classroom" Multiplicity="1" />
           <End Role="ClassEnrollment" Type="Self.ClassEnrollment" Multiplicity="*" />
           <ReferentialConstraint>
@@ -134,7 +128,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__ClassEnro__Stude__6A30C649">
+        <Association Name="FK__ClassEnro__Stude__656C112C">
           <End Role="Student" Type="Self.Student" Multiplicity="1" />
           <End Role="ClassEnrollment" Type="Self.ClassEnrollment" Multiplicity="*" />
           <ReferentialConstraint>
@@ -146,31 +140,55 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Exam__SubjectId__5FB337D6">
+        <Association Name="FK__ClassSubj__Class__5DCAEF64">
+          <End Role="Classroom" Type="Self.Classroom" Multiplicity="1" />
+          <End Role="ClassSubject" Type="Self.ClassSubject" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Classroom">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ClassSubject">
+              <PropertyRef Name="ClassroomId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__ClassSubj__Subje__5EBF139D">
           <End Role="Subject" Type="Self.Subject" Multiplicity="1" />
-          <End Role="Exam" Type="Self.Exam" Multiplicity="*" />
+          <End Role="ClassSubject" Type="Self.ClassSubject" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Subject">
               <PropertyRef Name="Id" />
             </Principal>
-            <Dependent Role="Exam">
+            <Dependent Role="ClassSubject">
               <PropertyRef Name="SubjectId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Exam__TeacherId__60A75C0F">
+        <Association Name="FK__ClassSubj__Teach__5FB337D6">
           <End Role="Teacher" Type="Self.Teacher" Multiplicity="1" />
-          <End Role="Exam" Type="Self.Exam" Multiplicity="*" />
+          <End Role="ClassSubject" Type="Self.ClassSubject" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Teacher">
               <PropertyRef Name="Id" />
             </Principal>
-            <Dependent Role="Exam">
+            <Dependent Role="ClassSubject">
               <PropertyRef Name="TeacherId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__ExamResul__ExamI__6383C8BA">
+        <Association Name="FK__Exam__ClassSubje__693CA210">
+          <End Role="ClassSubject" Type="Self.ClassSubject" Multiplicity="1" />
+          <End Role="Exam" Type="Self.Exam" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ClassSubject">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Exam">
+              <PropertyRef Name="ClassSubjectId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__ExamResul__ExamI__6D0D32F4">
           <End Role="Exam" Type="Self.Exam" Multiplicity="1" />
           <End Role="ExamResult" Type="Self.ExamResult" Multiplicity="*" />
           <ReferentialConstraint>
@@ -182,7 +200,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__ExamResul__Stude__6477ECF3">
+        <Association Name="FK__ExamResul__Stude__6E01572D">
           <End Role="Student" Type="Self.Student" Multiplicity="1" />
           <End Role="ExamResult" Type="Self.ExamResult" Multiplicity="*" />
           <ReferentialConstraint>
@@ -191,54 +209,6 @@
             </Principal>
             <Dependent Role="ExamResult">
               <PropertyRef Name="StudentId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__ExamResul__Teach__656C112C">
-          <End Role="Teacher" Type="Self.Teacher" Multiplicity="1" />
-          <End Role="ExamResult" Type="Self.ExamResult" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Teacher">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="ExamResult">
-              <PropertyRef Name="TeacherId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__Schedule__Classr__5AEE82B9">
-          <End Role="Classroom" Type="Self.Classroom" Multiplicity="1" />
-          <End Role="Schedule" Type="Self.Schedule" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Classroom">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="Schedule">
-              <PropertyRef Name="ClassroomId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__Schedule__Subjec__5CD6CB2B">
-          <End Role="Subject" Type="Self.Subject" Multiplicity="1" />
-          <End Role="Schedule" Type="Self.Schedule" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Subject">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="Schedule">
-              <PropertyRef Name="SubjectId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__Schedule__Teache__5BE2A6F2">
-          <End Role="Teacher" Type="Self.Teacher" Multiplicity="1" />
-          <End Role="Schedule" Type="Self.Schedule" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Teacher">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="Schedule">
-              <PropertyRef Name="TeacherId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -266,30 +236,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__TeacherSu__Subje__6EF57B66">
-          <End Role="Subject" Type="Self.Subject" Multiplicity="1" />
-          <End Role="TeacherSubjectAssignment" Type="Self.TeacherSubjectAssignment" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Subject">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="TeacherSubjectAssignment">
-              <PropertyRef Name="SubjectId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__TeacherSu__Teach__6E01572D">
-          <End Role="Teacher" Type="Self.Teacher" Multiplicity="1" />
-          <End Role="TeacherSubjectAssignment" Type="Self.TeacherSubjectAssignment" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Teacher">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="TeacherSubjectAssignment">
-              <PropertyRef Name="TeacherId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK__User__RoleId__4CA06362">
           <End Role="Role" Type="Self.Role" Multiplicity="1" />
           <End Role="User" Type="Self.User" Multiplicity="*" />
@@ -302,58 +248,80 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="DBSchoolModelStoreContainer">
+        <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+        <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="version" Type="int" Mode="In" />
+          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="version" Type="int" Mode="In" />
+          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <EntityContainer Name="SchoolDBModelStoreContainer">
           <EntitySet Name="ClassEnrollment" EntityType="Self.ClassEnrollment" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Classroom" EntityType="Self.Classroom" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ClassSubject" EntityType="Self.ClassSubject" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Exam" EntityType="Self.Exam" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ExamResult" EntityType="Self.ExamResult" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Role" EntityType="Self.Role" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Schedule" EntityType="Self.Schedule" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Student" EntityType="Self.Student" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Subject" EntityType="Self.Subject" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Teacher" EntityType="Self.Teacher" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="TeacherSubjectAssignment" EntityType="Self.TeacherSubjectAssignment" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK__ClassEnro__Class__693CA210" Association="Self.FK__ClassEnro__Class__693CA210">
+          <AssociationSet Name="FK__ClassEnro__Class__6477ECF3" Association="Self.FK__ClassEnro__Class__6477ECF3">
             <End Role="Classroom" EntitySet="Classroom" />
             <End Role="ClassEnrollment" EntitySet="ClassEnrollment" />
           </AssociationSet>
-          <AssociationSet Name="FK__ClassEnro__Stude__6A30C649" Association="Self.FK__ClassEnro__Stude__6A30C649">
+          <AssociationSet Name="FK__ClassEnro__Stude__656C112C" Association="Self.FK__ClassEnro__Stude__656C112C">
             <End Role="Student" EntitySet="Student" />
             <End Role="ClassEnrollment" EntitySet="ClassEnrollment" />
           </AssociationSet>
-          <AssociationSet Name="FK__Exam__SubjectId__5FB337D6" Association="Self.FK__Exam__SubjectId__5FB337D6">
+          <AssociationSet Name="FK__ClassSubj__Class__5DCAEF64" Association="Self.FK__ClassSubj__Class__5DCAEF64">
+            <End Role="Classroom" EntitySet="Classroom" />
+            <End Role="ClassSubject" EntitySet="ClassSubject" />
+          </AssociationSet>
+          <AssociationSet Name="FK__ClassSubj__Subje__5EBF139D" Association="Self.FK__ClassSubj__Subje__5EBF139D">
             <End Role="Subject" EntitySet="Subject" />
-            <End Role="Exam" EntitySet="Exam" />
+            <End Role="ClassSubject" EntitySet="ClassSubject" />
           </AssociationSet>
-          <AssociationSet Name="FK__Exam__TeacherId__60A75C0F" Association="Self.FK__Exam__TeacherId__60A75C0F">
+          <AssociationSet Name="FK__ClassSubj__Teach__5FB337D6" Association="Self.FK__ClassSubj__Teach__5FB337D6">
             <End Role="Teacher" EntitySet="Teacher" />
+            <End Role="ClassSubject" EntitySet="ClassSubject" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Exam__ClassSubje__693CA210" Association="Self.FK__Exam__ClassSubje__693CA210">
+            <End Role="ClassSubject" EntitySet="ClassSubject" />
             <End Role="Exam" EntitySet="Exam" />
           </AssociationSet>
-          <AssociationSet Name="FK__ExamResul__ExamI__6383C8BA" Association="Self.FK__ExamResul__ExamI__6383C8BA">
+          <AssociationSet Name="FK__ExamResul__ExamI__6D0D32F4" Association="Self.FK__ExamResul__ExamI__6D0D32F4">
             <End Role="Exam" EntitySet="Exam" />
             <End Role="ExamResult" EntitySet="ExamResult" />
           </AssociationSet>
-          <AssociationSet Name="FK__ExamResul__Stude__6477ECF3" Association="Self.FK__ExamResul__Stude__6477ECF3">
+          <AssociationSet Name="FK__ExamResul__Stude__6E01572D" Association="Self.FK__ExamResul__Stude__6E01572D">
             <End Role="Student" EntitySet="Student" />
             <End Role="ExamResult" EntitySet="ExamResult" />
-          </AssociationSet>
-          <AssociationSet Name="FK__ExamResul__Teach__656C112C" Association="Self.FK__ExamResul__Teach__656C112C">
-            <End Role="Teacher" EntitySet="Teacher" />
-            <End Role="ExamResult" EntitySet="ExamResult" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Schedule__Classr__5AEE82B9" Association="Self.FK__Schedule__Classr__5AEE82B9">
-            <End Role="Classroom" EntitySet="Classroom" />
-            <End Role="Schedule" EntitySet="Schedule" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Schedule__Subjec__5CD6CB2B" Association="Self.FK__Schedule__Subjec__5CD6CB2B">
-            <End Role="Subject" EntitySet="Subject" />
-            <End Role="Schedule" EntitySet="Schedule" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Schedule__Teache__5BE2A6F2" Association="Self.FK__Schedule__Teache__5BE2A6F2">
-            <End Role="Teacher" EntitySet="Teacher" />
-            <End Role="Schedule" EntitySet="Schedule" />
           </AssociationSet>
           <AssociationSet Name="FK__Student__UserId__5070F446" Association="Self.FK__Student__UserId__5070F446">
             <End Role="User" EntitySet="User" />
@@ -363,24 +331,15 @@
             <End Role="User" EntitySet="User" />
             <End Role="Teacher" EntitySet="Teacher" />
           </AssociationSet>
-          <AssociationSet Name="FK__TeacherSu__Subje__6EF57B66" Association="Self.FK__TeacherSu__Subje__6EF57B66">
-            <End Role="Subject" EntitySet="Subject" />
-            <End Role="TeacherSubjectAssignment" EntitySet="TeacherSubjectAssignment" />
-          </AssociationSet>
-          <AssociationSet Name="FK__TeacherSu__Teach__6E01572D" Association="Self.FK__TeacherSu__Teach__6E01572D">
-            <End Role="Teacher" EntitySet="Teacher" />
-            <End Role="TeacherSubjectAssignment" EntitySet="TeacherSubjectAssignment" />
-          </AssociationSet>
           <AssociationSet Name="FK__User__RoleId__4CA06362" Association="Self.FK__User__RoleId__4CA06362">
             <End Role="Role" EntitySet="Role" />
             <End Role="User" EntitySet="User" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="DBSchoolModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="SchoolDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="ClassEnrollment">
           <Key>
             <PropertyRef Name="Id" />
@@ -389,8 +348,10 @@
           <Property Name="ClassroomId" Type="Int32" Nullable="false" />
           <Property Name="StudentId" Type="Int32" Nullable="false" />
           <Property Name="EnrollmentDate" Type="DateTime" Nullable="false" Precision="3" />
-          <NavigationProperty Name="Classroom" Relationship="Self.FK__ClassEnro__Class__693CA210" FromRole="ClassEnrollment" ToRole="Classroom" />
-          <NavigationProperty Name="Student" Relationship="Self.FK__ClassEnro__Stude__6A30C649" FromRole="ClassEnrollment" ToRole="Student" />
+          <Property Name="EndDate" Type="DateTime" Precision="3" />
+          <Property Name="Status" Type="Boolean" />
+          <NavigationProperty Name="Classroom" Relationship="Self.FK__ClassEnro__Class__6477ECF3" FromRole="ClassEnrollment" ToRole="Classroom" />
+          <NavigationProperty Name="Student" Relationship="Self.FK__ClassEnro__Stude__656C112C" FromRole="ClassEnrollment" ToRole="Student" />
         </EntityType>
         <EntityType Name="Classroom">
           <Key>
@@ -399,8 +360,25 @@
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Capacity" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="ClassEnrollments" Relationship="Self.FK__ClassEnro__Class__693CA210" FromRole="Classroom" ToRole="ClassEnrollment" />
-          <NavigationProperty Name="Schedules" Relationship="Self.FK__Schedule__Classr__5AEE82B9" FromRole="Classroom" ToRole="Schedule" />
+          <Property Name="StartDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="EndDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Status" Type="Boolean" />
+          <NavigationProperty Name="ClassEnrollments" Relationship="Self.FK__ClassEnro__Class__6477ECF3" FromRole="Classroom" ToRole="ClassEnrollment" />
+          <NavigationProperty Name="ClassSubjects" Relationship="Self.FK__ClassSubj__Class__5DCAEF64" FromRole="Classroom" ToRole="ClassSubject" />
+        </EntityType>
+        <EntityType Name="ClassSubject">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ClassroomId" Type="Int32" Nullable="false" />
+          <Property Name="SubjectId" Type="Int32" Nullable="false" />
+          <Property Name="TeacherId" Type="Int32" Nullable="false" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="Classroom" Relationship="Self.FK__ClassSubj__Class__5DCAEF64" FromRole="ClassSubject" ToRole="Classroom" />
+          <NavigationProperty Name="Subject" Relationship="Self.FK__ClassSubj__Subje__5EBF139D" FromRole="ClassSubject" ToRole="Subject" />
+          <NavigationProperty Name="Teacher" Relationship="Self.FK__ClassSubj__Teach__5FB337D6" FromRole="ClassSubject" ToRole="Teacher" />
+          <NavigationProperty Name="Exams" Relationship="Self.FK__Exam__ClassSubje__693CA210" FromRole="ClassSubject" ToRole="Exam" />
         </EntityType>
         <EntityType Name="Exam">
           <Key>
@@ -408,13 +386,11 @@
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="SubjectId" Type="Int32" Nullable="false" />
-          <Property Name="TeacherId" Type="Int32" Nullable="false" />
+          <Property Name="ClassSubjectId" Type="Int32" Nullable="false" />
           <Property Name="ExamDate" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="Duration" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Subject" Relationship="Self.FK__Exam__SubjectId__5FB337D6" FromRole="Exam" ToRole="Subject" />
-          <NavigationProperty Name="Teacher" Relationship="Self.FK__Exam__TeacherId__60A75C0F" FromRole="Exam" ToRole="Teacher" />
-          <NavigationProperty Name="ExamResults" Relationship="Self.FK__ExamResul__ExamI__6383C8BA" FromRole="Exam" ToRole="ExamResult" />
+          <NavigationProperty Name="ClassSubject" Relationship="Self.FK__Exam__ClassSubje__693CA210" FromRole="Exam" ToRole="ClassSubject" />
+          <NavigationProperty Name="ExamResults" Relationship="Self.FK__ExamResul__ExamI__6D0D32F4" FromRole="Exam" ToRole="ExamResult" />
         </EntityType>
         <EntityType Name="ExamResult">
           <Key>
@@ -424,11 +400,9 @@
           <Property Name="ExamId" Type="Int32" Nullable="false" />
           <Property Name="StudentId" Type="Int32" Nullable="false" />
           <Property Name="Score" Type="Decimal" Precision="5" Scale="2" Nullable="false" />
-          <Property Name="TeacherId" Type="Int32" Nullable="false" />
           <Property Name="GradedDate" Type="DateTime" Nullable="false" Precision="3" />
-          <NavigationProperty Name="Exam" Relationship="Self.FK__ExamResul__ExamI__6383C8BA" FromRole="ExamResult" ToRole="Exam" />
-          <NavigationProperty Name="Student" Relationship="Self.FK__ExamResul__Stude__6477ECF3" FromRole="ExamResult" ToRole="Student" />
-          <NavigationProperty Name="Teacher" Relationship="Self.FK__ExamResul__Teach__656C112C" FromRole="ExamResult" ToRole="Teacher" />
+          <NavigationProperty Name="Exam" Relationship="Self.FK__ExamResul__ExamI__6D0D32F4" FromRole="ExamResult" ToRole="Exam" />
+          <NavigationProperty Name="Student" Relationship="Self.FK__ExamResul__Stude__6E01572D" FromRole="ExamResult" ToRole="Student" />
         </EntityType>
         <EntityType Name="Role">
           <Key>
@@ -437,21 +411,6 @@
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <NavigationProperty Name="Users" Relationship="Self.FK__User__RoleId__4CA06362" FromRole="Role" ToRole="User" />
-        </EntityType>
-        <EntityType Name="Schedule">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="ClassroomId" Type="Int32" Nullable="false" />
-          <Property Name="TeacherId" Type="Int32" Nullable="false" />
-          <Property Name="SubjectId" Type="Int32" Nullable="false" />
-          <Property Name="DayOfWeek" Type="Byte" Nullable="false" />
-          <Property Name="StartTime" Type="Time" Nullable="false" Precision="7" />
-          <Property Name="EndTime" Type="Time" Nullable="false" Precision="7" />
-          <NavigationProperty Name="Classroom" Relationship="Self.FK__Schedule__Classr__5AEE82B9" FromRole="Schedule" ToRole="Classroom" />
-          <NavigationProperty Name="Subject" Relationship="Self.FK__Schedule__Subjec__5CD6CB2B" FromRole="Schedule" ToRole="Subject" />
-          <NavigationProperty Name="Teacher" Relationship="Self.FK__Schedule__Teache__5BE2A6F2" FromRole="Schedule" ToRole="Teacher" />
         </EntityType>
         <EntityType Name="Student">
           <Key>
@@ -462,11 +421,11 @@
           <Property Name="FirstName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="LastName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Gender" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="EnrollDate" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="Status" Type="Boolean" />
-          <NavigationProperty Name="ClassEnrollments" Relationship="Self.FK__ClassEnro__Stude__6A30C649" FromRole="Student" ToRole="ClassEnrollment" />
-          <NavigationProperty Name="ExamResults" Relationship="Self.FK__ExamResul__Stude__6477ECF3" FromRole="Student" ToRole="ExamResult" />
+          <NavigationProperty Name="ClassEnrollments" Relationship="Self.FK__ClassEnro__Stude__656C112C" FromRole="Student" ToRole="ClassEnrollment" />
+          <NavigationProperty Name="ExamResults" Relationship="Self.FK__ExamResul__Stude__6E01572D" FromRole="Student" ToRole="ExamResult" />
           <NavigationProperty Name="User" Relationship="Self.FK__Student__UserId__5070F446" FromRole="Student" ToRole="User" />
+          <Property Name="RegisterDate" Type="DateTime" Nullable="false" Precision="3" />
         </EntityType>
         <EntityType Name="Subject">
           <Key>
@@ -474,9 +433,7 @@
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
-          <NavigationProperty Name="Exams" Relationship="Self.FK__Exam__SubjectId__5FB337D6" FromRole="Subject" ToRole="Exam" />
-          <NavigationProperty Name="Schedules" Relationship="Self.FK__Schedule__Subjec__5CD6CB2B" FromRole="Subject" ToRole="Schedule" />
-          <NavigationProperty Name="TeacherSubjectAssignments" Relationship="Self.FK__TeacherSu__Subje__6EF57B66" FromRole="Subject" ToRole="TeacherSubjectAssignment" />
+          <NavigationProperty Name="ClassSubjects" Relationship="Self.FK__ClassSubj__Subje__5EBF139D" FromRole="Subject" ToRole="ClassSubject" />
         </EntityType>
         <EntityType Name="sysdiagram">
           <Key>
@@ -499,22 +456,9 @@
           <Property Name="Gender" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Salary" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
           <Property Name="Status" Type="Boolean" />
-          <NavigationProperty Name="Exams" Relationship="Self.FK__Exam__TeacherId__60A75C0F" FromRole="Teacher" ToRole="Exam" />
-          <NavigationProperty Name="ExamResults" Relationship="Self.FK__ExamResul__Teach__656C112C" FromRole="Teacher" ToRole="ExamResult" />
-          <NavigationProperty Name="Schedules" Relationship="Self.FK__Schedule__Teache__5BE2A6F2" FromRole="Teacher" ToRole="Schedule" />
+          <NavigationProperty Name="ClassSubjects" Relationship="Self.FK__ClassSubj__Teach__5FB337D6" FromRole="Teacher" ToRole="ClassSubject" />
           <NavigationProperty Name="User" Relationship="Self.FK__Teacher__UserId__5441852A" FromRole="Teacher" ToRole="User" />
-          <NavigationProperty Name="TeacherSubjectAssignments" Relationship="Self.FK__TeacherSu__Teach__6E01572D" FromRole="Teacher" ToRole="TeacherSubjectAssignment" />
-        </EntityType>
-        <EntityType Name="TeacherSubjectAssignment">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="TeacherId" Type="Int32" Nullable="false" />
-          <Property Name="SubjectId" Type="Int32" Nullable="false" />
-          <Property Name="AssignedDate" Type="DateTime" Nullable="false" Precision="3" />
-          <NavigationProperty Name="Subject" Relationship="Self.FK__TeacherSu__Subje__6EF57B66" FromRole="TeacherSubjectAssignment" ToRole="Subject" />
-          <NavigationProperty Name="Teacher" Relationship="Self.FK__TeacherSu__Teach__6E01572D" FromRole="TeacherSubjectAssignment" ToRole="Teacher" />
+          <Property Name="RegisterDate" Type="DateTime" Nullable="false" Precision="3" />
         </EntityType>
         <EntityType Name="User">
           <Key>
@@ -527,8 +471,9 @@
           <NavigationProperty Name="Role" Relationship="Self.FK__User__RoleId__4CA06362" FromRole="User" ToRole="Role" />
           <NavigationProperty Name="Students" Relationship="Self.FK__Student__UserId__5070F446" FromRole="User" ToRole="Student" />
           <NavigationProperty Name="Teachers" Relationship="Self.FK__Teacher__UserId__5441852A" FromRole="User" ToRole="Teacher" />
+          <Property Name="Firstlogin" Type="Boolean" />
         </EntityType>
-        <Association Name="FK__ClassEnro__Class__693CA210">
+        <Association Name="FK__ClassEnro__Class__6477ECF3">
           <End Role="Classroom" Type="Self.Classroom" Multiplicity="1" />
           <End Role="ClassEnrollment" Type="Self.ClassEnrollment" Multiplicity="*" />
           <ReferentialConstraint>
@@ -540,7 +485,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__ClassEnro__Stude__6A30C649">
+        <Association Name="FK__ClassEnro__Stude__656C112C">
           <End Role="Student" Type="Self.Student" Multiplicity="1" />
           <End Role="ClassEnrollment" Type="Self.ClassEnrollment" Multiplicity="*" />
           <ReferentialConstraint>
@@ -552,43 +497,55 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Schedule__Classr__5AEE82B9">
+        <Association Name="FK__ClassSubj__Class__5DCAEF64">
           <End Role="Classroom" Type="Self.Classroom" Multiplicity="1" />
-          <End Role="Schedule" Type="Self.Schedule" Multiplicity="*" />
+          <End Role="ClassSubject" Type="Self.ClassSubject" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Classroom">
               <PropertyRef Name="Id" />
             </Principal>
-            <Dependent Role="Schedule">
+            <Dependent Role="ClassSubject">
               <PropertyRef Name="ClassroomId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Exam__SubjectId__5FB337D6">
+        <Association Name="FK__ClassSubj__Subje__5EBF139D">
           <End Role="Subject" Type="Self.Subject" Multiplicity="1" />
-          <End Role="Exam" Type="Self.Exam" Multiplicity="*" />
+          <End Role="ClassSubject" Type="Self.ClassSubject" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Subject">
               <PropertyRef Name="Id" />
             </Principal>
-            <Dependent Role="Exam">
+            <Dependent Role="ClassSubject">
               <PropertyRef Name="SubjectId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Exam__TeacherId__60A75C0F">
+        <Association Name="FK__ClassSubj__Teach__5FB337D6">
           <End Role="Teacher" Type="Self.Teacher" Multiplicity="1" />
-          <End Role="Exam" Type="Self.Exam" Multiplicity="*" />
+          <End Role="ClassSubject" Type="Self.ClassSubject" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Teacher">
               <PropertyRef Name="Id" />
             </Principal>
-            <Dependent Role="Exam">
+            <Dependent Role="ClassSubject">
               <PropertyRef Name="TeacherId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__ExamResul__ExamI__6383C8BA">
+        <Association Name="FK__Exam__ClassSubje__693CA210">
+          <End Role="ClassSubject" Type="Self.ClassSubject" Multiplicity="1" />
+          <End Role="Exam" Type="Self.Exam" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ClassSubject">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Exam">
+              <PropertyRef Name="ClassSubjectId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__ExamResul__ExamI__6D0D32F4">
           <End Role="Exam" Type="Self.Exam" Multiplicity="1" />
           <End Role="ExamResult" Type="Self.ExamResult" Multiplicity="*" />
           <ReferentialConstraint>
@@ -600,7 +557,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__ExamResul__Stude__6477ECF3">
+        <Association Name="FK__ExamResul__Stude__6E01572D">
           <End Role="Student" Type="Self.Student" Multiplicity="1" />
           <End Role="ExamResult" Type="Self.ExamResult" Multiplicity="*" />
           <ReferentialConstraint>
@@ -609,18 +566,6 @@
             </Principal>
             <Dependent Role="ExamResult">
               <PropertyRef Name="StudentId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__ExamResul__Teach__656C112C">
-          <End Role="Teacher" Type="Self.Teacher" Multiplicity="1" />
-          <End Role="ExamResult" Type="Self.ExamResult" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Teacher">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="ExamResult">
-              <PropertyRef Name="TeacherId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -636,30 +581,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Schedule__Subjec__5CD6CB2B">
-          <End Role="Subject" Type="Self.Subject" Multiplicity="1" />
-          <End Role="Schedule" Type="Self.Schedule" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Subject">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="Schedule">
-              <PropertyRef Name="SubjectId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__Schedule__Teache__5BE2A6F2">
-          <End Role="Teacher" Type="Self.Teacher" Multiplicity="1" />
-          <End Role="Schedule" Type="Self.Schedule" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Teacher">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="Schedule">
-              <PropertyRef Name="TeacherId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK__Student__UserId__5070F446">
           <End Role="User" Type="Self.User" Multiplicity="1" />
           <End Role="Student" Type="Self.Student" Multiplicity="*" />
@@ -669,18 +590,6 @@
             </Principal>
             <Dependent Role="Student">
               <PropertyRef Name="UserId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__TeacherSu__Subje__6EF57B66">
-          <End Role="Subject" Type="Self.Subject" Multiplicity="1" />
-          <End Role="TeacherSubjectAssignment" Type="Self.TeacherSubjectAssignment" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Subject">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="TeacherSubjectAssignment">
-              <PropertyRef Name="SubjectId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -696,177 +605,190 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__TeacherSu__Teach__6E01572D">
-          <End Role="Teacher" Type="Self.Teacher" Multiplicity="1" />
-          <End Role="TeacherSubjectAssignment" Type="Self.TeacherSubjectAssignment" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Teacher">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="TeacherSubjectAssignment">
-              <PropertyRef Name="TeacherId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <EntityContainer Name="DBSchoolEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="SchoolDBEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="ClassEnrollments" EntityType="Self.ClassEnrollment" />
           <EntitySet Name="Classrooms" EntityType="Self.Classroom" />
+          <EntitySet Name="ClassSubjects" EntityType="Self.ClassSubject" />
           <EntitySet Name="Exams" EntityType="Self.Exam" />
           <EntitySet Name="ExamResults" EntityType="Self.ExamResult" />
           <EntitySet Name="Roles" EntityType="Self.Role" />
-          <EntitySet Name="Schedules" EntityType="Self.Schedule" />
           <EntitySet Name="Students" EntityType="Self.Student" />
           <EntitySet Name="Subjects" EntityType="Self.Subject" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
           <EntitySet Name="Teachers" EntityType="Self.Teacher" />
-          <EntitySet Name="TeacherSubjectAssignments" EntityType="Self.TeacherSubjectAssignment" />
           <EntitySet Name="Users" EntityType="Self.User" />
-          <AssociationSet Name="FK__ClassEnro__Class__693CA210" Association="Self.FK__ClassEnro__Class__693CA210">
+          <AssociationSet Name="FK__ClassEnro__Class__6477ECF3" Association="Self.FK__ClassEnro__Class__6477ECF3">
             <End Role="Classroom" EntitySet="Classrooms" />
             <End Role="ClassEnrollment" EntitySet="ClassEnrollments" />
           </AssociationSet>
-          <AssociationSet Name="FK__ClassEnro__Stude__6A30C649" Association="Self.FK__ClassEnro__Stude__6A30C649">
+          <AssociationSet Name="FK__ClassEnro__Stude__656C112C" Association="Self.FK__ClassEnro__Stude__656C112C">
             <End Role="Student" EntitySet="Students" />
             <End Role="ClassEnrollment" EntitySet="ClassEnrollments" />
           </AssociationSet>
-          <AssociationSet Name="FK__Schedule__Classr__5AEE82B9" Association="Self.FK__Schedule__Classr__5AEE82B9">
+          <AssociationSet Name="FK__ClassSubj__Class__5DCAEF64" Association="Self.FK__ClassSubj__Class__5DCAEF64">
             <End Role="Classroom" EntitySet="Classrooms" />
-            <End Role="Schedule" EntitySet="Schedules" />
+            <End Role="ClassSubject" EntitySet="ClassSubjects" />
           </AssociationSet>
-          <AssociationSet Name="FK__Exam__SubjectId__5FB337D6" Association="Self.FK__Exam__SubjectId__5FB337D6">
+          <AssociationSet Name="FK__ClassSubj__Subje__5EBF139D" Association="Self.FK__ClassSubj__Subje__5EBF139D">
             <End Role="Subject" EntitySet="Subjects" />
-            <End Role="Exam" EntitySet="Exams" />
+            <End Role="ClassSubject" EntitySet="ClassSubjects" />
           </AssociationSet>
-          <AssociationSet Name="FK__Exam__TeacherId__60A75C0F" Association="Self.FK__Exam__TeacherId__60A75C0F">
+          <AssociationSet Name="FK__ClassSubj__Teach__5FB337D6" Association="Self.FK__ClassSubj__Teach__5FB337D6">
             <End Role="Teacher" EntitySet="Teachers" />
+            <End Role="ClassSubject" EntitySet="ClassSubjects" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Exam__ClassSubje__693CA210" Association="Self.FK__Exam__ClassSubje__693CA210">
+            <End Role="ClassSubject" EntitySet="ClassSubjects" />
             <End Role="Exam" EntitySet="Exams" />
           </AssociationSet>
-          <AssociationSet Name="FK__ExamResul__ExamI__6383C8BA" Association="Self.FK__ExamResul__ExamI__6383C8BA">
+          <AssociationSet Name="FK__ExamResul__ExamI__6D0D32F4" Association="Self.FK__ExamResul__ExamI__6D0D32F4">
             <End Role="Exam" EntitySet="Exams" />
             <End Role="ExamResult" EntitySet="ExamResults" />
           </AssociationSet>
-          <AssociationSet Name="FK__ExamResul__Stude__6477ECF3" Association="Self.FK__ExamResul__Stude__6477ECF3">
+          <AssociationSet Name="FK__ExamResul__Stude__6E01572D" Association="Self.FK__ExamResul__Stude__6E01572D">
             <End Role="Student" EntitySet="Students" />
-            <End Role="ExamResult" EntitySet="ExamResults" />
-          </AssociationSet>
-          <AssociationSet Name="FK__ExamResul__Teach__656C112C" Association="Self.FK__ExamResul__Teach__656C112C">
-            <End Role="Teacher" EntitySet="Teachers" />
             <End Role="ExamResult" EntitySet="ExamResults" />
           </AssociationSet>
           <AssociationSet Name="FK__User__RoleId__4CA06362" Association="Self.FK__User__RoleId__4CA06362">
             <End Role="Role" EntitySet="Roles" />
             <End Role="User" EntitySet="Users" />
           </AssociationSet>
-          <AssociationSet Name="FK__Schedule__Subjec__5CD6CB2B" Association="Self.FK__Schedule__Subjec__5CD6CB2B">
-            <End Role="Subject" EntitySet="Subjects" />
-            <End Role="Schedule" EntitySet="Schedules" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Schedule__Teache__5BE2A6F2" Association="Self.FK__Schedule__Teache__5BE2A6F2">
-            <End Role="Teacher" EntitySet="Teachers" />
-            <End Role="Schedule" EntitySet="Schedules" />
-          </AssociationSet>
           <AssociationSet Name="FK__Student__UserId__5070F446" Association="Self.FK__Student__UserId__5070F446">
             <End Role="User" EntitySet="Users" />
             <End Role="Student" EntitySet="Students" />
-          </AssociationSet>
-          <AssociationSet Name="FK__TeacherSu__Subje__6EF57B66" Association="Self.FK__TeacherSu__Subje__6EF57B66">
-            <End Role="Subject" EntitySet="Subjects" />
-            <End Role="TeacherSubjectAssignment" EntitySet="TeacherSubjectAssignments" />
           </AssociationSet>
           <AssociationSet Name="FK__Teacher__UserId__5441852A" Association="Self.FK__Teacher__UserId__5441852A">
             <End Role="User" EntitySet="Users" />
             <End Role="Teacher" EntitySet="Teachers" />
           </AssociationSet>
-          <AssociationSet Name="FK__TeacherSu__Teach__6E01572D" Association="Self.FK__TeacherSu__Teach__6E01572D">
-            <End Role="Teacher" EntitySet="Teachers" />
-            <End Role="TeacherSubjectAssignment" EntitySet="TeacherSubjectAssignments" />
-          </AssociationSet>
+          <FunctionImport Name="sp_alterdiagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="version" Mode="In" Type="Int32" />
+            <Parameter Name="definition" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="sp_creatediagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="version" Mode="In" Type="Int32" />
+            <Parameter Name="definition" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="sp_dropdiagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(SchoolDBModel.sp_helpdiagramdefinition_Result)">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(SchoolDBModel.sp_helpdiagrams_Result)">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_renamediagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="new_diagramname" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_upgraddiagrams" />
         </EntityContainer>
+        <ComplexType Name="sp_helpdiagramdefinition_Result">
+          <Property Type="Int32" Name="version" Nullable="true" />
+          <Property Type="Binary" Name="definition" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="sp_helpdiagrams_Result">
+          <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+          <Property Type="Int32" Name="OwnerID" Nullable="false" />
+        </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="DBSchoolModelStoreContainer" CdmEntityContainer="DBSchoolEntities">
+        <EntityContainerMapping StorageEntityContainer="SchoolDBModelStoreContainer" CdmEntityContainer="SchoolDBEntities">
           <EntitySetMapping Name="ClassEnrollments">
-            <EntityTypeMapping TypeName="DBSchoolModel.ClassEnrollment">
+            <EntityTypeMapping TypeName="SchoolDBModel.ClassEnrollment">
               <MappingFragment StoreEntitySet="ClassEnrollment">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="ClassroomId" ColumnName="ClassroomId" />
                 <ScalarProperty Name="StudentId" ColumnName="StudentId" />
                 <ScalarProperty Name="EnrollmentDate" ColumnName="EnrollmentDate" />
+                <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Classrooms">
-            <EntityTypeMapping TypeName="DBSchoolModel.Classroom">
+            <EntityTypeMapping TypeName="SchoolDBModel.Classroom">
               <MappingFragment StoreEntitySet="Classroom">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="Capacity" ColumnName="Capacity" />
+                <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+                <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ClassSubjects">
+            <EntityTypeMapping TypeName="SchoolDBModel.ClassSubject">
+              <MappingFragment StoreEntitySet="ClassSubject">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="ClassroomId" ColumnName="ClassroomId" />
+                <ScalarProperty Name="SubjectId" ColumnName="SubjectId" />
+                <ScalarProperty Name="TeacherId" ColumnName="TeacherId" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Exams">
-            <EntityTypeMapping TypeName="DBSchoolModel.Exam">
+            <EntityTypeMapping TypeName="SchoolDBModel.Exam">
               <MappingFragment StoreEntitySet="Exam">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
-                <ScalarProperty Name="SubjectId" ColumnName="SubjectId" />
-                <ScalarProperty Name="TeacherId" ColumnName="TeacherId" />
+                <ScalarProperty Name="ClassSubjectId" ColumnName="ClassSubjectId" />
                 <ScalarProperty Name="ExamDate" ColumnName="ExamDate" />
                 <ScalarProperty Name="Duration" ColumnName="Duration" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="ExamResults">
-            <EntityTypeMapping TypeName="DBSchoolModel.ExamResult">
+            <EntityTypeMapping TypeName="SchoolDBModel.ExamResult">
               <MappingFragment StoreEntitySet="ExamResult">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="ExamId" ColumnName="ExamId" />
                 <ScalarProperty Name="StudentId" ColumnName="StudentId" />
                 <ScalarProperty Name="Score" ColumnName="Score" />
-                <ScalarProperty Name="TeacherId" ColumnName="TeacherId" />
                 <ScalarProperty Name="GradedDate" ColumnName="GradedDate" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Roles">
-            <EntityTypeMapping TypeName="DBSchoolModel.Role">
+            <EntityTypeMapping TypeName="SchoolDBModel.Role">
               <MappingFragment StoreEntitySet="Role">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Schedules">
-            <EntityTypeMapping TypeName="DBSchoolModel.Schedule">
-              <MappingFragment StoreEntitySet="Schedule">
-                <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="ClassroomId" ColumnName="ClassroomId" />
-                <ScalarProperty Name="TeacherId" ColumnName="TeacherId" />
-                <ScalarProperty Name="SubjectId" ColumnName="SubjectId" />
-                <ScalarProperty Name="DayOfWeek" ColumnName="DayOfWeek" />
-                <ScalarProperty Name="StartTime" ColumnName="StartTime" />
-                <ScalarProperty Name="EndTime" ColumnName="EndTime" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="Students">
-            <EntityTypeMapping TypeName="DBSchoolModel.Student">
+            <EntityTypeMapping TypeName="SchoolDBModel.Student">
               <MappingFragment StoreEntitySet="Student">
+                <ScalarProperty Name="RegisterDate" ColumnName="RegisterDate" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="UserId" ColumnName="UserId" />
                 <ScalarProperty Name="FirstName" ColumnName="FirstName" />
                 <ScalarProperty Name="LastName" ColumnName="LastName" />
                 <ScalarProperty Name="Gender" ColumnName="Gender" />
-                <ScalarProperty Name="EnrollDate" ColumnName="EnrollDate" />
                 <ScalarProperty Name="Status" ColumnName="Status" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Subjects">
-            <EntityTypeMapping TypeName="DBSchoolModel.Subject">
+            <EntityTypeMapping TypeName="SchoolDBModel.Subject">
               <MappingFragment StoreEntitySet="Subject">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
@@ -874,7 +796,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="sysdiagrams">
-            <EntityTypeMapping TypeName="DBSchoolModel.sysdiagram">
+            <EntityTypeMapping TypeName="SchoolDBModel.sysdiagram">
               <MappingFragment StoreEntitySet="sysdiagrams">
                 <ScalarProperty Name="name" ColumnName="name" />
                 <ScalarProperty Name="principal_id" ColumnName="principal_id" />
@@ -885,8 +807,9 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Teachers">
-            <EntityTypeMapping TypeName="DBSchoolModel.Teacher">
+            <EntityTypeMapping TypeName="SchoolDBModel.Teacher">
               <MappingFragment StoreEntitySet="Teacher">
+                <ScalarProperty Name="RegisterDate" ColumnName="RegisterDate" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="UserId" ColumnName="UserId" />
                 <ScalarProperty Name="FirstName" ColumnName="FirstName" />
@@ -897,19 +820,10 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="TeacherSubjectAssignments">
-            <EntityTypeMapping TypeName="DBSchoolModel.TeacherSubjectAssignment">
-              <MappingFragment StoreEntitySet="TeacherSubjectAssignment">
-                <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="TeacherId" ColumnName="TeacherId" />
-                <ScalarProperty Name="SubjectId" ColumnName="SubjectId" />
-                <ScalarProperty Name="AssignedDate" ColumnName="AssignedDate" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="Users">
-            <EntityTypeMapping TypeName="DBSchoolModel.User">
+            <EntityTypeMapping TypeName="SchoolDBModel.User">
               <MappingFragment StoreEntitySet="User">
+                <ScalarProperty Name="Firstlogin" ColumnName="Firstlogin" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Username" ColumnName="Username" />
                 <ScalarProperty Name="Password" ColumnName="Password" />
@@ -917,6 +831,30 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="SchoolDBModel.Store.sp_alterdiagram" />
+          <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="SchoolDBModel.Store.sp_creatediagram" />
+          <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="SchoolDBModel.Store.sp_dropdiagram" />
+          <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="SchoolDBModel.Store.sp_helpdiagramdefinition">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="SchoolDBModel.sp_helpdiagramdefinition_Result">
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="SchoolDBModel.Store.sp_helpdiagrams">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="SchoolDBModel.sp_helpdiagrams_Result">
+                <ScalarProperty Name="Database" ColumnName="Database" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Owner" ColumnName="Owner" />
+                <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="SchoolDBModel.Store.sp_renamediagram" />
+          <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="SchoolDBModel.Store.sp_upgraddiagrams" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

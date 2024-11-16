@@ -87,5 +87,23 @@ namespace SchoolManagement.Pages
         {           
             UsersPages.SetPage(UserlistCmb.Text);           
         }
+
+        private void AddSubjectToClassBtn_Click(object sender, EventArgs e)
+        {
+            AddSubject addSubject = new AddSubject();
+            addSubject.ShowDialog();
+        }
+
+        private void EnrollBtn_Click(object sender, EventArgs e)
+        {
+            EnrollStudent enrollStudent = new EnrollStudent();
+            enrollStudent.ShowDialog();
+        }
+
+        private void ExamBtn_Change(object sender, bool selected, EventArgs e)
+        {
+            MainPages.SetPage(Exam);
+            PageLbl.Text = "Exam";
+        }
     }
 }

@@ -22,13 +22,11 @@ namespace SchoolManagement
     
         public int Id { get; set; }
         public string Name { get; set; }
-        public int SubjectId { get; set; }
-        public int TeacherId { get; set; }
+        public int ClassSubjectId { get; set; }
         public System.DateTime ExamDate { get; set; }
         public int Duration { get; set; }
     
-        public virtual Subject Subject { get; set; }
-        public virtual Teacher Teacher { get; set; }
+        public virtual ClassSubject ClassSubject { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ExamResult> ExamResults { get; set; }
     }

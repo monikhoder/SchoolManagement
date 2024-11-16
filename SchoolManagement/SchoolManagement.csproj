@@ -125,6 +125,9 @@
     <Compile Include="Classroom.cs">
       <DependentUpon>DBModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="ClassSubject.cs">
+      <DependentUpon>DBModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="DBAccess\CrudUsers.cs" />
     <Compile Include="DBModel.Context.cs">
       <AutoGen>True</AutoGen>
@@ -147,6 +150,12 @@
     <Compile Include="Dialog\AddClass.Designer.cs">
       <DependentUpon>AddClass.cs</DependentUpon>
     </Compile>
+    <Compile Include="Dialog\AddSubject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialog\AddSubject.Designer.cs">
+      <DependentUpon>AddSubject.cs</DependentUpon>
+    </Compile>
     <Compile Include="Dialog\AddUser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -158,6 +167,18 @@
     </Compile>
     <Compile Include="Dialog\DeleteDialog.Designer.cs">
       <DependentUpon>DeleteDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\EnrollStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialog\EnrollStudent.Designer.cs">
+      <DependentUpon>EnrollStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\WarningDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialog\WarningDialog.Designer.cs">
+      <DependentUpon>WarningDialog.cs</DependentUpon>
     </Compile>
     <Compile Include="Exam.cs">
       <DependentUpon>DBModel.tt</DependentUpon>
@@ -200,7 +221,10 @@
     <Compile Include="Role.cs">
       <DependentUpon>DBModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Schedule.cs">
+    <Compile Include="sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>DBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagrams_Result.cs">
       <DependentUpon>DBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Student.cs">
@@ -215,20 +239,26 @@
     <Compile Include="Teacher.cs">
       <DependentUpon>DBModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="TeacherSubjectAssignment.cs">
-      <DependentUpon>DBModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="User.cs">
       <DependentUpon>DBModel.tt</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Dialog\AddClass.resx">
       <DependentUpon>AddClass.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Dialog\AddSubject.resx">
+      <DependentUpon>AddSubject.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Dialog\AddUser.resx">
       <DependentUpon>AddUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Dialog\DeleteDialog.resx">
       <DependentUpon>DeleteDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialog\EnrollStudent.resx">
+      <DependentUpon>EnrollStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialog\WarningDialog.resx">
+      <DependentUpon>WarningDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>

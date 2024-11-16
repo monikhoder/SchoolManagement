@@ -10,17 +10,13 @@
 namespace SchoolManagement
 {
     using System;
-    using System.Collections.Generic;
     
-    public partial class ExamResult
+    public partial class sp_helpdiagrams_Result
     {
-        public int Id { get; set; }
-        public int ExamId { get; set; }
-        public int StudentId { get; set; }
-        public decimal Score { get; set; }
-        public System.DateTime GradedDate { get; set; }
-    
-        public virtual Exam Exam { get; set; }
-        public virtual Student Student { get; set; }
+        public string Database { get; set; }
+        public string Name { get; set; }
+        public int ID { get; set; }
+        public string Owner { get; set; }
+        public int OwnerID { get; set; }
     }
 }

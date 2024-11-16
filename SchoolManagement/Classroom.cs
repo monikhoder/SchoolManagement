@@ -18,16 +18,19 @@ namespace SchoolManagement
         public Classroom()
         {
             this.ClassEnrollments = new HashSet<ClassEnrollment>();
-            this.Schedules = new HashSet<Schedule>();
+            this.ClassSubjects = new HashSet<ClassSubject>();
         }
     
         public int Id { get; set; }
         public string Name { get; set; }
         public int Capacity { get; set; }
+        public System.DateTime StartDate { get; set; }
+        public System.DateTime EndDate { get; set; }
+        public Nullable<bool> Status { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ClassEnrollment> ClassEnrollments { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Schedule> Schedules { get; set; }
+        public virtual ICollection<ClassSubject> ClassSubjects { get; set; }
     }
 }

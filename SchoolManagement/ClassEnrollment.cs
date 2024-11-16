@@ -18,6 +18,8 @@ namespace SchoolManagement
         public int ClassroomId { get; set; }
         public int StudentId { get; set; }
         public System.DateTime EnrollmentDate { get; set; }
+        public Nullable<System.DateTime> EndDate { get; set; }
+        public Nullable<bool> Status { get; set; }
     
         public virtual Classroom Classroom { get; set; }
         public virtual Student Student { get; set; }

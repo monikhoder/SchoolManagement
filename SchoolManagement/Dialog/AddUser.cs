@@ -8,11 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using KimTools.WinForms;
+using SchoolManagement.DBAccess;
 
 namespace SchoolManagement.Dialog
 {
     public partial class AddUser : KtWindow
     {
+        CrudUsers CrudUsers = new CrudUsers();
         public AddUser()
         {
             InitializeComponent();
@@ -100,6 +102,54 @@ namespace SchoolManagement.Dialog
 
         private void ktButton3_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void InsertAdminBtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                CrudUsers.InsertUser("admin", AdminUsernameTxb.Text.Trim(), AdminPassTxb.Text.Trim(),"","","",0,true);
+                AdminUsernameTxb.Text = "";
+                AdminPassTxb.Text = "";
+                AdminWarninglbl.Text = "Admin Inserted Successfully";
+                AdminWarninglbl.LabelColor = KtColor.Tailwind_Violet;
+                AdminWarninglbl.Visible = true;
+            }
+            catch (Exception ex)
+            {
+                AdminWarninglbl.Text = ex.Message;
+                AdminWarninglbl.LabelColor = KtColor.Danger;
+                AdminWarninglbl.Visible = true;                
+            }
+        }
+
+        private void AdminUsernameTxb_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == ' ')
+            {
+                e.Handled = true; 
+            }
+
+        }
+
+        private void AdminUsernameTxb_TextChange(object sender, EventArgs e)
+        {
+            AdminInsertBtnEnable();
+            AdminWarninglbl.Visible=false;
+        }
+
+        private void AdminInsertBtnEnable()
+        {
+            if (AdminUsernameTxb.Text.Length > 0 && AdminPassTxb.Text.Length > 0)
+            {
+                InsertAdminBtn.Enabled = true;
+            }
+            else
+            {
+                InsertAdminBtn.Enabled = false;
+            }
+                  
 
         }
     }

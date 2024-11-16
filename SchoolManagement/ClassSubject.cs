@@ -12,18 +12,24 @@ namespace SchoolManagement
     using System;
     using System.Collections.Generic;
     
-    public partial class Schedule
+    public partial class ClassSubject
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public ClassSubject()
+        {
+            this.Exams = new HashSet<Exam>();
+        }
+    
         public int Id { get; set; }
         public int ClassroomId { get; set; }
-        public int TeacherId { get; set; }
         public int SubjectId { get; set; }
-        public byte DayOfWeek { get; set; }
-        public System.TimeSpan StartTime { get; set; }
-        public System.TimeSpan EndTime { get; set; }
+        public int TeacherId { get; set; }
+        public System.DateTime CreatedDate { get; set; }
     
         public virtual Classroom Classroom { get; set; }
         public virtual Subject Subject { get; set; }
         public virtual Teacher Teacher { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Exam> Exams { get; set; }
     }
 }
