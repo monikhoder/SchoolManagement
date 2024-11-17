@@ -10,9 +10,10 @@ using System.Windows.Forms;
 using KimTools.WinForms;
 namespace SchoolManagement.Dialog
 {
-    public partial class WarningDialog : KtWindow
+    public partial class AlertDialogs : KtWindow
     {
-        public WarningDialog()
+        
+        public AlertDialogs()
         {
             InitializeComponent();
         }
@@ -20,6 +21,16 @@ namespace SchoolManagement.Dialog
         private void ktLabel1_Click(object sender, EventArgs e)
         {
 
+        }
+        protected override void OnShown(EventArgs e)
+        {
+            base.OnShown(e);
+            CloseTimer.Start();
+        }
+        private void CloseTimer_Tick(object sender, EventArgs e)
+        {
+            CloseTimer.Stop();
+            this.Close();
         }
     }
 }

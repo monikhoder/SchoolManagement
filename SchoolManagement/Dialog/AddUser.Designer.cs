@@ -31,48 +31,47 @@
             KimTools.WinForms.KtToastHelpers.KtPages.KtPgAnimatorNS.Animation animation1 = new KimTools.WinForms.KtToastHelpers.KtPages.KtPgAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddUser));
             this.top = new System.Windows.Forms.Panel();
+            this.AdSwBtn = new KimTools.WinForms.KtButton();
+            this.tcSwBtn = new KimTools.WinForms.KtButton();
+            this.StSwBtn = new KimTools.WinForms.KtButton();
             this.Pages = new KimTools.WinForms.KtPages();
             this.Student = new System.Windows.Forms.TabPage();
+            this.StudentPassTxb = new KimTools.WinForms.KtTextBox();
             this.ktLabel1 = new KimTools.WinForms.KtLabel();
+            this.StudentUsernameTxb = new KimTools.WinForms.KtTextBox();
             this.ktLabel2 = new KimTools.WinForms.KtLabel();
             this.StudentStatusCmb = new KimTools.WinForms.KtComboBox();
-            this.GenderCmb = new KimTools.WinForms.KtComboBox();
+            this.StudentGenderCmb = new KimTools.WinForms.KtComboBox();
+            this.AddStudentBtn = new KimTools.WinForms.KtButton();
             this.ktLabel3 = new KimTools.WinForms.KtLabel();
             this.ktLabel4 = new KimTools.WinForms.KtLabel();
+            this.StudentLastNameTxb = new KimTools.WinForms.KtTextBox();
             this.ktLabel5 = new KimTools.WinForms.KtLabel();
+            this.StudentFirstNameTxb = new KimTools.WinForms.KtTextBox();
             this.ktLabel6 = new KimTools.WinForms.KtLabel();
             this.Teacher = new System.Windows.Forms.TabPage();
+            this.TeacherSalaryTxb = new KimTools.WinForms.KtTextBox();
             this.ktLabel19 = new KimTools.WinForms.KtLabel();
             this.ktLabel7 = new KimTools.WinForms.KtLabel();
             this.ktLabel8 = new KimTools.WinForms.KtLabel();
-            this.ktComboBox1 = new KimTools.WinForms.KtComboBox();
-            this.ktComboBox2 = new KimTools.WinForms.KtComboBox();
+            this.TeacherStatusCmb = new KimTools.WinForms.KtComboBox();
+            this.TeacherGenderCmb = new KimTools.WinForms.KtComboBox();
             this.ktLabel9 = new KimTools.WinForms.KtLabel();
             this.ktLabel10 = new KimTools.WinForms.KtLabel();
             this.ktLabel11 = new KimTools.WinForms.KtLabel();
             this.ktLabel12 = new KimTools.WinForms.KtLabel();
+            this.TeacherPassTxb = new KimTools.WinForms.KtTextBox();
+            this.TeacherUsernameTxb = new KimTools.WinForms.KtTextBox();
+            this.AddTeacherBtn = new KimTools.WinForms.KtButton();
+            this.TeacherLastNameTxb = new KimTools.WinForms.KtTextBox();
+            this.TeacherFirstNameTxb = new KimTools.WinForms.KtTextBox();
             this.Admin = new System.Windows.Forms.TabPage();
-            this.ktLabel17 = new KimTools.WinForms.KtLabel();
-            this.ktLabel18 = new KimTools.WinForms.KtLabel();
-            this.ktTextBox1 = new KimTools.WinForms.KtTextBox();
-            this.ktTextBox2 = new KimTools.WinForms.KtTextBox();
-            this.ktButton3 = new KimTools.WinForms.KtButton();
-            this.ktTextBox5 = new KimTools.WinForms.KtTextBox();
-            this.ktTextBox6 = new KimTools.WinForms.KtTextBox();
-            this.ktTextBox13 = new KimTools.WinForms.KtTextBox();
-            this.ktTextBox3 = new KimTools.WinForms.KtTextBox();
-            this.ktTextBox4 = new KimTools.WinForms.KtTextBox();
-            this.ktButton1 = new KimTools.WinForms.KtButton();
-            this.ktTextBox7 = new KimTools.WinForms.KtTextBox();
-            this.ktTextBox8 = new KimTools.WinForms.KtTextBox();
+            this.ktLabel13 = new KimTools.WinForms.KtLabel();
             this.InsertAdminBtn = new KimTools.WinForms.KtButton();
             this.AdminPassTxb = new KimTools.WinForms.KtTextBox();
+            this.ktLabel17 = new KimTools.WinForms.KtLabel();
             this.AdminUsernameTxb = new KimTools.WinForms.KtTextBox();
-            this.AdSwBtn = new KimTools.WinForms.KtButton();
-            this.tcSwBtn = new KimTools.WinForms.KtButton();
-            this.StSwBtn = new KimTools.WinForms.KtButton();
-            this.ktLabel13 = new KimTools.WinForms.KtLabel();
-            this.AdminWarninglbl = new KimTools.WinForms.KtLabel();
+            this.ktLabel18 = new KimTools.WinForms.KtLabel();
             this.top.SuspendLayout();
             this.Pages.SuspendLayout();
             this.Student.SuspendLayout();
@@ -92,998 +91,6 @@
             this.top.Padding = new System.Windows.Forms.Padding(5);
             this.top.Size = new System.Drawing.Size(633, 60);
             this.top.TabIndex = 0;
-            // 
-            // Pages
-            // 
-            this.Pages.Alignment = System.Windows.Forms.TabAlignment.Bottom;
-            this.Pages.AllowTransitions = false;
-            this.Pages.Controls.Add(this.Student);
-            this.Pages.Controls.Add(this.Teacher);
-            this.Pages.Controls.Add(this.Admin);
-            this.Pages.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Pages.Location = new System.Drawing.Point(3, 63);
-            this.Pages.Multiline = true;
-            this.Pages.Name = "Pages";
-            this.Pages.Page = this.Admin;
-            this.Pages.PageIndex = 2;
-            this.Pages.PageName = "Admin";
-            this.Pages.PageTitle = "Admin";
-            this.Pages.SelectedIndex = 0;
-            this.Pages.Size = new System.Drawing.Size(633, 395);
-            this.Pages.TabIndex = 1;
-            animation1.AnimateOnlyDifferences = false;
-            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
-            animation1.LeafCoeff = 0F;
-            animation1.MaxTime = 1F;
-            animation1.MinTime = 0F;
-            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
-            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
-            animation1.MosaicSize = 0;
-            animation1.Padding = new System.Windows.Forms.Padding(0);
-            animation1.RotateCoeff = 0F;
-            animation1.RotateLimit = 0F;
-            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
-            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
-            animation1.TimeCoeff = 0F;
-            animation1.TransparencyCoeff = 0F;
-            this.Pages.Transition = animation1;
-            this.Pages.TransitionType = KimTools.WinForms.KtToastHelpers.KtPages.KtPgAnimatorNS.AnimationType.Custom;
-            this.Pages.SelectedIndexChanged += new System.EventHandler(this.Pages_SelectedIndexChanged);
-            // 
-            // Student
-            // 
-            this.Student.Controls.Add(this.ktTextBox1);
-            this.Student.Controls.Add(this.ktLabel1);
-            this.Student.Controls.Add(this.ktTextBox2);
-            this.Student.Controls.Add(this.ktLabel2);
-            this.Student.Controls.Add(this.StudentStatusCmb);
-            this.Student.Controls.Add(this.GenderCmb);
-            this.Student.Controls.Add(this.ktButton3);
-            this.Student.Controls.Add(this.ktLabel3);
-            this.Student.Controls.Add(this.ktLabel4);
-            this.Student.Controls.Add(this.ktTextBox5);
-            this.Student.Controls.Add(this.ktLabel5);
-            this.Student.Controls.Add(this.ktTextBox6);
-            this.Student.Controls.Add(this.ktLabel6);
-            this.Student.Location = new System.Drawing.Point(4, 4);
-            this.Student.Name = "Student";
-            this.Student.Padding = new System.Windows.Forms.Padding(3);
-            this.Student.Size = new System.Drawing.Size(625, 357);
-            this.Student.TabIndex = 1;
-            this.Student.Text = "Student";
-            this.Student.UseVisualStyleBackColor = true;
-            // 
-            // ktLabel1
-            // 
-            this.ktLabel1.AutoSize = true;
-            this.ktLabel1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
-            this.ktLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(40)))), ((int)(((byte)(67)))));
-            this.ktLabel1.KtFontSize = KimTools.WinForms.KtFont.Default;
-            this.ktLabel1.Location = new System.Drawing.Point(363, 168);
-            this.ktLabel1.Name = "ktLabel1";
-            this.ktLabel1.Size = new System.Drawing.Size(90, 25);
-            this.ktLabel1.TabIndex = 43;
-            this.ktLabel1.Text = "Password";
-            this.ktLabel1.Click += new System.EventHandler(this.ktLabel1_Click);
-            // 
-            // ktLabel2
-            // 
-            this.ktLabel2.AutoSize = true;
-            this.ktLabel2.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
-            this.ktLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(40)))), ((int)(((byte)(67)))));
-            this.ktLabel2.KtFontSize = KimTools.WinForms.KtFont.Default;
-            this.ktLabel2.Location = new System.Drawing.Point(32, 168);
-            this.ktLabel2.Name = "ktLabel2";
-            this.ktLabel2.Size = new System.Drawing.Size(99, 25);
-            this.ktLabel2.TabIndex = 41;
-            this.ktLabel2.Text = "UserName";
-            this.ktLabel2.Click += new System.EventHandler(this.ktLabel2_Click);
-            // 
-            // StudentStatusCmb
-            // 
-            this.StudentStatusCmb.BackColor = System.Drawing.Color.Transparent;
-            this.StudentStatusCmb.BackgroundColor = System.Drawing.Color.White;
-            this.StudentStatusCmb.BorderColor = System.Drawing.Color.Silver;
-            this.StudentStatusCmb.BorderRadius = 1;
-            this.StudentStatusCmb.Color = System.Drawing.Color.Silver;
-            this.StudentStatusCmb.Direction = KimTools.WinForms.KtComboBox.Directions.Down;
-            this.StudentStatusCmb.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.StudentStatusCmb.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.StudentStatusCmb.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.StudentStatusCmb.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.StudentStatusCmb.DisabledIndicatorColor = System.Drawing.Color.DarkGray;
-            this.StudentStatusCmb.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.StudentStatusCmb.DropdownBorderThickness = KimTools.WinForms.KtComboBox.BorderThickness.Thin;
-            this.StudentStatusCmb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.StudentStatusCmb.DropDownTextAlign = KimTools.WinForms.KtComboBox.TextAlign.Left;
-            this.StudentStatusCmb.FillDropDown = true;
-            this.StudentStatusCmb.FillIndicator = false;
-            this.StudentStatusCmb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.StudentStatusCmb.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.StudentStatusCmb.ForeColor = System.Drawing.Color.Black;
-            this.StudentStatusCmb.FormattingEnabled = true;
-            this.StudentStatusCmb.Icon = null;
-            this.StudentStatusCmb.IndicatorAlignment = KimTools.WinForms.KtComboBox.Indicator.Right;
-            this.StudentStatusCmb.IndicatorColor = System.Drawing.Color.Gray;
-            this.StudentStatusCmb.IndicatorLocation = KimTools.WinForms.KtComboBox.Indicator.Right;
-            this.StudentStatusCmb.ItemBackColor = System.Drawing.Color.White;
-            this.StudentStatusCmb.ItemBorderColor = System.Drawing.Color.White;
-            this.StudentStatusCmb.ItemForeColor = System.Drawing.Color.Black;
-            this.StudentStatusCmb.ItemHeight = 26;
-            this.StudentStatusCmb.ItemHighLightColor = System.Drawing.Color.BlueViolet;
-            this.StudentStatusCmb.ItemHighLightForeColor = System.Drawing.Color.White;
-            this.StudentStatusCmb.Items.AddRange(new object[] {
-            "Active",
-            "NonActive"});
-            this.StudentStatusCmb.ItemTopMargin = 3;
-            this.StudentStatusCmb.Location = new System.Drawing.Point(358, 124);
-            this.StudentStatusCmb.Name = "StudentStatusCmb";
-            this.StudentStatusCmb.Size = new System.Drawing.Size(235, 32);
-            this.StudentStatusCmb.TabIndex = 40;
-            this.StudentStatusCmb.Text = null;
-            this.StudentStatusCmb.TextAlignment = KimTools.WinForms.KtComboBox.TextAlign.Left;
-            this.StudentStatusCmb.TextLeftMargin = 5;
-            this.StudentStatusCmb.SelectedIndexChanged += new System.EventHandler(this.StudentStatusCmb_SelectedIndexChanged);
-            // 
-            // GenderCmb
-            // 
-            this.GenderCmb.BackColor = System.Drawing.Color.Transparent;
-            this.GenderCmb.BackgroundColor = System.Drawing.Color.White;
-            this.GenderCmb.BorderColor = System.Drawing.Color.Silver;
-            this.GenderCmb.BorderRadius = 1;
-            this.GenderCmb.Color = System.Drawing.Color.Silver;
-            this.GenderCmb.Direction = KimTools.WinForms.KtComboBox.Directions.Down;
-            this.GenderCmb.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.GenderCmb.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.GenderCmb.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.GenderCmb.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.GenderCmb.DisabledIndicatorColor = System.Drawing.Color.DarkGray;
-            this.GenderCmb.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.GenderCmb.DropdownBorderThickness = KimTools.WinForms.KtComboBox.BorderThickness.Thin;
-            this.GenderCmb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.GenderCmb.DropDownTextAlign = KimTools.WinForms.KtComboBox.TextAlign.Left;
-            this.GenderCmb.FillDropDown = true;
-            this.GenderCmb.FillIndicator = false;
-            this.GenderCmb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.GenderCmb.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.GenderCmb.ForeColor = System.Drawing.Color.Black;
-            this.GenderCmb.FormattingEnabled = true;
-            this.GenderCmb.Icon = null;
-            this.GenderCmb.IndicatorAlignment = KimTools.WinForms.KtComboBox.Indicator.Right;
-            this.GenderCmb.IndicatorColor = System.Drawing.Color.Gray;
-            this.GenderCmb.IndicatorLocation = KimTools.WinForms.KtComboBox.Indicator.Right;
-            this.GenderCmb.ItemBackColor = System.Drawing.Color.White;
-            this.GenderCmb.ItemBorderColor = System.Drawing.Color.White;
-            this.GenderCmb.ItemForeColor = System.Drawing.Color.Black;
-            this.GenderCmb.ItemHeight = 26;
-            this.GenderCmb.ItemHighLightColor = System.Drawing.Color.BlueViolet;
-            this.GenderCmb.ItemHighLightForeColor = System.Drawing.Color.White;
-            this.GenderCmb.Items.AddRange(new object[] {
-            "Male",
-            "Female",
-            "Other"});
-            this.GenderCmb.ItemTopMargin = 3;
-            this.GenderCmb.Location = new System.Drawing.Point(32, 124);
-            this.GenderCmb.Name = "GenderCmb";
-            this.GenderCmb.Size = new System.Drawing.Size(230, 32);
-            this.GenderCmb.TabIndex = 39;
-            this.GenderCmb.Text = null;
-            this.GenderCmb.TextAlignment = KimTools.WinForms.KtComboBox.TextAlign.Left;
-            this.GenderCmb.TextLeftMargin = 5;
-            this.GenderCmb.SelectedIndexChanged += new System.EventHandler(this.GenderCmb_SelectedIndexChanged);
-            // 
-            // ktLabel3
-            // 
-            this.ktLabel3.AutoSize = true;
-            this.ktLabel3.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
-            this.ktLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(40)))), ((int)(((byte)(67)))));
-            this.ktLabel3.KtFontSize = KimTools.WinForms.KtFont.Default;
-            this.ktLabel3.Location = new System.Drawing.Point(363, 96);
-            this.ktLabel3.Name = "ktLabel3";
-            this.ktLabel3.Size = new System.Drawing.Size(63, 25);
-            this.ktLabel3.TabIndex = 32;
-            this.ktLabel3.Text = "Status";
-            this.ktLabel3.Click += new System.EventHandler(this.ktLabel3_Click);
-            // 
-            // ktLabel4
-            // 
-            this.ktLabel4.AutoSize = true;
-            this.ktLabel4.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
-            this.ktLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(40)))), ((int)(((byte)(67)))));
-            this.ktLabel4.KtFontSize = KimTools.WinForms.KtFont.Default;
-            this.ktLabel4.Location = new System.Drawing.Point(32, 96);
-            this.ktLabel4.Name = "ktLabel4";
-            this.ktLabel4.Size = new System.Drawing.Size(74, 25);
-            this.ktLabel4.TabIndex = 30;
-            this.ktLabel4.Text = "Gender";
-            this.ktLabel4.Click += new System.EventHandler(this.ktLabel4_Click);
-            // 
-            // ktLabel5
-            // 
-            this.ktLabel5.AutoSize = true;
-            this.ktLabel5.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
-            this.ktLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(40)))), ((int)(((byte)(67)))));
-            this.ktLabel5.KtFontSize = KimTools.WinForms.KtFont.Default;
-            this.ktLabel5.Location = new System.Drawing.Point(363, 28);
-            this.ktLabel5.Name = "ktLabel5";
-            this.ktLabel5.Size = new System.Drawing.Size(99, 25);
-            this.ktLabel5.TabIndex = 28;
-            this.ktLabel5.Text = "Last Name";
-            this.ktLabel5.Click += new System.EventHandler(this.ktLabel5_Click);
-            // 
-            // ktLabel6
-            // 
-            this.ktLabel6.AutoSize = true;
-            this.ktLabel6.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
-            this.ktLabel6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(40)))), ((int)(((byte)(67)))));
-            this.ktLabel6.KtFontSize = KimTools.WinForms.KtFont.Default;
-            this.ktLabel6.Location = new System.Drawing.Point(32, 28);
-            this.ktLabel6.Name = "ktLabel6";
-            this.ktLabel6.Size = new System.Drawing.Size(102, 25);
-            this.ktLabel6.TabIndex = 26;
-            this.ktLabel6.Text = "First Name";
-            this.ktLabel6.Click += new System.EventHandler(this.ktLabel6_Click);
-            // 
-            // Teacher
-            // 
-            this.Teacher.Controls.Add(this.ktTextBox13);
-            this.Teacher.Controls.Add(this.ktLabel19);
-            this.Teacher.Controls.Add(this.ktLabel7);
-            this.Teacher.Controls.Add(this.ktLabel8);
-            this.Teacher.Controls.Add(this.ktComboBox1);
-            this.Teacher.Controls.Add(this.ktComboBox2);
-            this.Teacher.Controls.Add(this.ktLabel9);
-            this.Teacher.Controls.Add(this.ktLabel10);
-            this.Teacher.Controls.Add(this.ktLabel11);
-            this.Teacher.Controls.Add(this.ktLabel12);
-            this.Teacher.Controls.Add(this.ktTextBox3);
-            this.Teacher.Controls.Add(this.ktTextBox4);
-            this.Teacher.Controls.Add(this.ktButton1);
-            this.Teacher.Controls.Add(this.ktTextBox7);
-            this.Teacher.Controls.Add(this.ktTextBox8);
-            this.Teacher.Location = new System.Drawing.Point(4, 4);
-            this.Teacher.Name = "Teacher";
-            this.Teacher.Padding = new System.Windows.Forms.Padding(3);
-            this.Teacher.Size = new System.Drawing.Size(625, 357);
-            this.Teacher.TabIndex = 2;
-            this.Teacher.Text = "Teacher";
-            this.Teacher.UseVisualStyleBackColor = true;
-            // 
-            // ktLabel19
-            // 
-            this.ktLabel19.AutoSize = true;
-            this.ktLabel19.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
-            this.ktLabel19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(40)))), ((int)(((byte)(67)))));
-            this.ktLabel19.KtFontSize = KimTools.WinForms.KtFont.Default;
-            this.ktLabel19.Location = new System.Drawing.Point(32, 242);
-            this.ktLabel19.Name = "ktLabel19";
-            this.ktLabel19.Size = new System.Drawing.Size(62, 25);
-            this.ktLabel19.TabIndex = 58;
-            this.ktLabel19.Text = "Salary";
-            // 
-            // ktLabel7
-            // 
-            this.ktLabel7.AutoSize = true;
-            this.ktLabel7.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
-            this.ktLabel7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(40)))), ((int)(((byte)(67)))));
-            this.ktLabel7.KtFontSize = KimTools.WinForms.KtFont.Default;
-            this.ktLabel7.Location = new System.Drawing.Point(363, 168);
-            this.ktLabel7.Name = "ktLabel7";
-            this.ktLabel7.Size = new System.Drawing.Size(90, 25);
-            this.ktLabel7.TabIndex = 56;
-            this.ktLabel7.Text = "Password";
-            // 
-            // ktLabel8
-            // 
-            this.ktLabel8.AutoSize = true;
-            this.ktLabel8.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
-            this.ktLabel8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(40)))), ((int)(((byte)(67)))));
-            this.ktLabel8.KtFontSize = KimTools.WinForms.KtFont.Default;
-            this.ktLabel8.Location = new System.Drawing.Point(32, 168);
-            this.ktLabel8.Name = "ktLabel8";
-            this.ktLabel8.Size = new System.Drawing.Size(99, 25);
-            this.ktLabel8.TabIndex = 54;
-            this.ktLabel8.Text = "UserName";
-            // 
-            // ktComboBox1
-            // 
-            this.ktComboBox1.BackColor = System.Drawing.Color.Transparent;
-            this.ktComboBox1.BackgroundColor = System.Drawing.Color.White;
-            this.ktComboBox1.BorderColor = System.Drawing.Color.Silver;
-            this.ktComboBox1.BorderRadius = 1;
-            this.ktComboBox1.Color = System.Drawing.Color.Silver;
-            this.ktComboBox1.Direction = KimTools.WinForms.KtComboBox.Directions.Down;
-            this.ktComboBox1.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.ktComboBox1.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.ktComboBox1.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.ktComboBox1.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.ktComboBox1.DisabledIndicatorColor = System.Drawing.Color.DarkGray;
-            this.ktComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.ktComboBox1.DropdownBorderThickness = KimTools.WinForms.KtComboBox.BorderThickness.Thin;
-            this.ktComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ktComboBox1.DropDownTextAlign = KimTools.WinForms.KtComboBox.TextAlign.Left;
-            this.ktComboBox1.FillDropDown = true;
-            this.ktComboBox1.FillIndicator = false;
-            this.ktComboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ktComboBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.ktComboBox1.ForeColor = System.Drawing.Color.Black;
-            this.ktComboBox1.FormattingEnabled = true;
-            this.ktComboBox1.Icon = null;
-            this.ktComboBox1.IndicatorAlignment = KimTools.WinForms.KtComboBox.Indicator.Right;
-            this.ktComboBox1.IndicatorColor = System.Drawing.Color.Gray;
-            this.ktComboBox1.IndicatorLocation = KimTools.WinForms.KtComboBox.Indicator.Right;
-            this.ktComboBox1.ItemBackColor = System.Drawing.Color.White;
-            this.ktComboBox1.ItemBorderColor = System.Drawing.Color.White;
-            this.ktComboBox1.ItemForeColor = System.Drawing.Color.Black;
-            this.ktComboBox1.ItemHeight = 26;
-            this.ktComboBox1.ItemHighLightColor = System.Drawing.Color.BlueViolet;
-            this.ktComboBox1.ItemHighLightForeColor = System.Drawing.Color.White;
-            this.ktComboBox1.Items.AddRange(new object[] {
-            "Active",
-            "NonActive"});
-            this.ktComboBox1.ItemTopMargin = 3;
-            this.ktComboBox1.Location = new System.Drawing.Point(358, 124);
-            this.ktComboBox1.Name = "ktComboBox1";
-            this.ktComboBox1.Size = new System.Drawing.Size(235, 32);
-            this.ktComboBox1.TabIndex = 53;
-            this.ktComboBox1.Text = null;
-            this.ktComboBox1.TextAlignment = KimTools.WinForms.KtComboBox.TextAlign.Left;
-            this.ktComboBox1.TextLeftMargin = 5;
-            // 
-            // ktComboBox2
-            // 
-            this.ktComboBox2.BackColor = System.Drawing.Color.Transparent;
-            this.ktComboBox2.BackgroundColor = System.Drawing.Color.White;
-            this.ktComboBox2.BorderColor = System.Drawing.Color.Silver;
-            this.ktComboBox2.BorderRadius = 1;
-            this.ktComboBox2.Color = System.Drawing.Color.Silver;
-            this.ktComboBox2.Direction = KimTools.WinForms.KtComboBox.Directions.Down;
-            this.ktComboBox2.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.ktComboBox2.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.ktComboBox2.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.ktComboBox2.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.ktComboBox2.DisabledIndicatorColor = System.Drawing.Color.DarkGray;
-            this.ktComboBox2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.ktComboBox2.DropdownBorderThickness = KimTools.WinForms.KtComboBox.BorderThickness.Thin;
-            this.ktComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ktComboBox2.DropDownTextAlign = KimTools.WinForms.KtComboBox.TextAlign.Left;
-            this.ktComboBox2.FillDropDown = true;
-            this.ktComboBox2.FillIndicator = false;
-            this.ktComboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ktComboBox2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.ktComboBox2.ForeColor = System.Drawing.Color.Black;
-            this.ktComboBox2.FormattingEnabled = true;
-            this.ktComboBox2.Icon = null;
-            this.ktComboBox2.IndicatorAlignment = KimTools.WinForms.KtComboBox.Indicator.Right;
-            this.ktComboBox2.IndicatorColor = System.Drawing.Color.Gray;
-            this.ktComboBox2.IndicatorLocation = KimTools.WinForms.KtComboBox.Indicator.Right;
-            this.ktComboBox2.ItemBackColor = System.Drawing.Color.White;
-            this.ktComboBox2.ItemBorderColor = System.Drawing.Color.White;
-            this.ktComboBox2.ItemForeColor = System.Drawing.Color.Black;
-            this.ktComboBox2.ItemHeight = 26;
-            this.ktComboBox2.ItemHighLightColor = System.Drawing.Color.BlueViolet;
-            this.ktComboBox2.ItemHighLightForeColor = System.Drawing.Color.White;
-            this.ktComboBox2.Items.AddRange(new object[] {
-            "Male",
-            "Female",
-            "Other"});
-            this.ktComboBox2.ItemTopMargin = 3;
-            this.ktComboBox2.Location = new System.Drawing.Point(32, 124);
-            this.ktComboBox2.Name = "ktComboBox2";
-            this.ktComboBox2.Size = new System.Drawing.Size(230, 32);
-            this.ktComboBox2.TabIndex = 52;
-            this.ktComboBox2.Text = null;
-            this.ktComboBox2.TextAlignment = KimTools.WinForms.KtComboBox.TextAlign.Left;
-            this.ktComboBox2.TextLeftMargin = 5;
-            // 
-            // ktLabel9
-            // 
-            this.ktLabel9.AutoSize = true;
-            this.ktLabel9.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
-            this.ktLabel9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(40)))), ((int)(((byte)(67)))));
-            this.ktLabel9.KtFontSize = KimTools.WinForms.KtFont.Default;
-            this.ktLabel9.Location = new System.Drawing.Point(363, 96);
-            this.ktLabel9.Name = "ktLabel9";
-            this.ktLabel9.Size = new System.Drawing.Size(63, 25);
-            this.ktLabel9.TabIndex = 50;
-            this.ktLabel9.Text = "Status";
-            // 
-            // ktLabel10
-            // 
-            this.ktLabel10.AutoSize = true;
-            this.ktLabel10.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
-            this.ktLabel10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(40)))), ((int)(((byte)(67)))));
-            this.ktLabel10.KtFontSize = KimTools.WinForms.KtFont.Default;
-            this.ktLabel10.Location = new System.Drawing.Point(32, 96);
-            this.ktLabel10.Name = "ktLabel10";
-            this.ktLabel10.Size = new System.Drawing.Size(74, 25);
-            this.ktLabel10.TabIndex = 49;
-            this.ktLabel10.Text = "Gender";
-            // 
-            // ktLabel11
-            // 
-            this.ktLabel11.AutoSize = true;
-            this.ktLabel11.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
-            this.ktLabel11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(40)))), ((int)(((byte)(67)))));
-            this.ktLabel11.KtFontSize = KimTools.WinForms.KtFont.Default;
-            this.ktLabel11.Location = new System.Drawing.Point(363, 28);
-            this.ktLabel11.Name = "ktLabel11";
-            this.ktLabel11.Size = new System.Drawing.Size(99, 25);
-            this.ktLabel11.TabIndex = 47;
-            this.ktLabel11.Text = "Last Name";
-            // 
-            // ktLabel12
-            // 
-            this.ktLabel12.AutoSize = true;
-            this.ktLabel12.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
-            this.ktLabel12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(40)))), ((int)(((byte)(67)))));
-            this.ktLabel12.KtFontSize = KimTools.WinForms.KtFont.Default;
-            this.ktLabel12.Location = new System.Drawing.Point(32, 28);
-            this.ktLabel12.Name = "ktLabel12";
-            this.ktLabel12.Size = new System.Drawing.Size(102, 25);
-            this.ktLabel12.TabIndex = 45;
-            this.ktLabel12.Text = "First Name";
-            // 
-            // Admin
-            // 
-            this.Admin.Controls.Add(this.AdminWarninglbl);
-            this.Admin.Controls.Add(this.ktLabel13);
-            this.Admin.Controls.Add(this.InsertAdminBtn);
-            this.Admin.Controls.Add(this.AdminPassTxb);
-            this.Admin.Controls.Add(this.ktLabel17);
-            this.Admin.Controls.Add(this.AdminUsernameTxb);
-            this.Admin.Controls.Add(this.ktLabel18);
-            this.Admin.Location = new System.Drawing.Point(4, 4);
-            this.Admin.Name = "Admin";
-            this.Admin.Padding = new System.Windows.Forms.Padding(3);
-            this.Admin.Size = new System.Drawing.Size(625, 357);
-            this.Admin.TabIndex = 3;
-            this.Admin.Text = "Admin";
-            this.Admin.UseVisualStyleBackColor = true;
-            // 
-            // ktLabel17
-            // 
-            this.ktLabel17.AutoSize = true;
-            this.ktLabel17.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
-            this.ktLabel17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(40)))), ((int)(((byte)(67)))));
-            this.ktLabel17.KtFontSize = KimTools.WinForms.KtFont.Default;
-            this.ktLabel17.Location = new System.Drawing.Point(363, 28);
-            this.ktLabel17.Name = "ktLabel17";
-            this.ktLabel17.Size = new System.Drawing.Size(90, 25);
-            this.ktLabel17.TabIndex = 47;
-            this.ktLabel17.Text = "Password";
-            // 
-            // ktLabel18
-            // 
-            this.ktLabel18.AutoSize = true;
-            this.ktLabel18.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
-            this.ktLabel18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(40)))), ((int)(((byte)(67)))));
-            this.ktLabel18.KtFontSize = KimTools.WinForms.KtFont.Default;
-            this.ktLabel18.Location = new System.Drawing.Point(32, 28);
-            this.ktLabel18.Name = "ktLabel18";
-            this.ktLabel18.Size = new System.Drawing.Size(99, 25);
-            this.ktLabel18.TabIndex = 45;
-            this.ktLabel18.Text = "UserName";
-            // 
-            // ktTextBox1
-            // 
-            this.ktTextBox1.AcceptsReturn = false;
-            this.ktTextBox1.AcceptsTab = false;
-            this.ktTextBox1.AnimationSpeed = 200;
-            this.ktTextBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.ktTextBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.ktTextBox1.AutoSizeHeight = true;
-            this.ktTextBox1.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
-            this.ktTextBox1.Bg = KimTools.WinForms.KtColor.Tailwind_White;
-            this.ktTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.ktTextBox1.CustomBorderColor = System.Drawing.Color.Empty;
-            this.ktTextBox1.CustomBorderColorActive = System.Drawing.Color.Empty;
-            this.ktTextBox1.CustomBorderColorDisabled = System.Drawing.Color.Empty;
-            this.ktTextBox1.CustomFillColor = System.Drawing.Color.Empty;
-            this.ktTextBox1.CustomIconLeft = null;
-            this.ktTextBox1.CustomIconRight = null;
-            this.ktTextBox1.CustomPlaceholderColor = System.Drawing.Color.Empty;
-            this.ktTextBox1.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
-            this.ktTextBox1.ForeColor = System.Drawing.Color.Empty;
-            this.ktTextBox1.HideSelection = true;
-            this.ktTextBox1.Lines = new string[0];
-            this.ktTextBox1.Location = new System.Drawing.Point(358, 196);
-            this.ktTextBox1.MaxLength = 32767;
-            this.ktTextBox1.MinimumSize = new System.Drawing.Size(1, 1);
-            this.ktTextBox1.Modified = false;
-            this.ktTextBox1.Name = "ktTextBox1";
-            this.ktTextBox1.Password = false;
-            this.ktTextBox1.PasswordChar = '\0';
-            this.ktTextBox1.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.ktTextBox1.SelectedText = "";
-            this.ktTextBox1.SelectionLength = 0;
-            this.ktTextBox1.SelectionStart = 0;
-            this.ktTextBox1.ShortcutsEnabled = true;
-            this.ktTextBox1.Size = new System.Drawing.Size(235, 27);
-            this.ktTextBox1.Style = KimTools.WinForms.KtTextBox.KtTextBoxStyle.Tailwind;
-            this.ktTextBox1.TabIndex = 44;
-            this.ktTextBox1.TextMarginBottom = 0;
-            this.ktTextBox1.TextPlaceholder = "Enter Password";
-            this.ktTextBox1.TextChanged += new System.EventHandler(this.ktTextBox1_TextChanged_1);
-            // 
-            // ktTextBox2
-            // 
-            this.ktTextBox2.AcceptsReturn = false;
-            this.ktTextBox2.AcceptsTab = false;
-            this.ktTextBox2.AnimationSpeed = 200;
-            this.ktTextBox2.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.ktTextBox2.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.ktTextBox2.AutoSizeHeight = true;
-            this.ktTextBox2.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
-            this.ktTextBox2.Bg = KimTools.WinForms.KtColor.Tailwind_White;
-            this.ktTextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.ktTextBox2.CustomBorderColor = System.Drawing.Color.Empty;
-            this.ktTextBox2.CustomBorderColorActive = System.Drawing.Color.Empty;
-            this.ktTextBox2.CustomBorderColorDisabled = System.Drawing.Color.Empty;
-            this.ktTextBox2.CustomFillColor = System.Drawing.Color.Empty;
-            this.ktTextBox2.CustomIconLeft = null;
-            this.ktTextBox2.CustomIconRight = null;
-            this.ktTextBox2.CustomPlaceholderColor = System.Drawing.Color.Empty;
-            this.ktTextBox2.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
-            this.ktTextBox2.ForeColor = System.Drawing.Color.Empty;
-            this.ktTextBox2.HideSelection = true;
-            this.ktTextBox2.Lines = new string[0];
-            this.ktTextBox2.Location = new System.Drawing.Point(32, 196);
-            this.ktTextBox2.MaxLength = 32767;
-            this.ktTextBox2.MinimumSize = new System.Drawing.Size(1, 1);
-            this.ktTextBox2.Modified = false;
-            this.ktTextBox2.Name = "ktTextBox2";
-            this.ktTextBox2.Password = false;
-            this.ktTextBox2.PasswordChar = '\0';
-            this.ktTextBox2.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.ktTextBox2.SelectedText = "";
-            this.ktTextBox2.SelectionLength = 0;
-            this.ktTextBox2.SelectionStart = 0;
-            this.ktTextBox2.ShortcutsEnabled = true;
-            this.ktTextBox2.Size = new System.Drawing.Size(230, 27);
-            this.ktTextBox2.Style = KimTools.WinForms.KtTextBox.KtTextBoxStyle.Tailwind;
-            this.ktTextBox2.TabIndex = 42;
-            this.ktTextBox2.TextMarginBottom = 0;
-            this.ktTextBox2.TextPlaceholder = "Enter UserName";
-            this.ktTextBox2.TextChanged += new System.EventHandler(this.ktTextBox2_TextChanged);
-            // 
-            // ktButton3
-            // 
-            this.ktButton3.BackColor = System.Drawing.Color.Empty;
-            this.ktButton3.BorderShape = KimTools.WinForms.KtSize.Default;
-            this.ktButton3.BorderSize = KimTools.WinForms.KtSize.Default;
-            this.ktButton3.CustomColors = new System.Drawing.Color[0];
-            this.ktButton3.FlatAppearance.BorderSize = 0;
-            this.ktButton3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.ktButton3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.ktButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ktButton3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ktButton3.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.ktButton3.IconName = "";
-            this.ktButton3.IconSize = 16;
-            this.ktButton3.IconStroke = 2.5D;
-            this.ktButton3.Location = new System.Drawing.Point(493, 291);
-            this.ktButton3.Name = "ktButton3";
-            this.ktButton3.Size = new System.Drawing.Size(95, 37);
-            this.ktButton3.Style = KimTools.WinForms.KtStyle.Tailwind;
-            this.ktButton3.TabIndex = 34;
-            this.ktButton3.Text = "ADD";
-            this.ktButton3.UseVisualStyleBackColor = false;
-            this.ktButton3.Click += new System.EventHandler(this.ktButton3_Click);
-            // 
-            // ktTextBox5
-            // 
-            this.ktTextBox5.AcceptsReturn = false;
-            this.ktTextBox5.AcceptsTab = false;
-            this.ktTextBox5.AnimationSpeed = 200;
-            this.ktTextBox5.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.ktTextBox5.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.ktTextBox5.AutoSizeHeight = true;
-            this.ktTextBox5.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
-            this.ktTextBox5.Bg = KimTools.WinForms.KtColor.Tailwind_White;
-            this.ktTextBox5.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.ktTextBox5.CustomBorderColor = System.Drawing.Color.Empty;
-            this.ktTextBox5.CustomBorderColorActive = System.Drawing.Color.Empty;
-            this.ktTextBox5.CustomBorderColorDisabled = System.Drawing.Color.Empty;
-            this.ktTextBox5.CustomFillColor = System.Drawing.Color.Empty;
-            this.ktTextBox5.CustomIconLeft = null;
-            this.ktTextBox5.CustomIconRight = null;
-            this.ktTextBox5.CustomPlaceholderColor = System.Drawing.Color.Empty;
-            this.ktTextBox5.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
-            this.ktTextBox5.ForeColor = System.Drawing.Color.Empty;
-            this.ktTextBox5.HideSelection = true;
-            this.ktTextBox5.Lines = new string[0];
-            this.ktTextBox5.Location = new System.Drawing.Point(358, 56);
-            this.ktTextBox5.MaxLength = 32767;
-            this.ktTextBox5.MinimumSize = new System.Drawing.Size(1, 1);
-            this.ktTextBox5.Modified = false;
-            this.ktTextBox5.Name = "ktTextBox5";
-            this.ktTextBox5.Password = false;
-            this.ktTextBox5.PasswordChar = '\0';
-            this.ktTextBox5.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.ktTextBox5.SelectedText = "";
-            this.ktTextBox5.SelectionLength = 0;
-            this.ktTextBox5.SelectionStart = 0;
-            this.ktTextBox5.ShortcutsEnabled = true;
-            this.ktTextBox5.Size = new System.Drawing.Size(235, 27);
-            this.ktTextBox5.Style = KimTools.WinForms.KtTextBox.KtTextBoxStyle.Tailwind;
-            this.ktTextBox5.TabIndex = 29;
-            this.ktTextBox5.TextMarginBottom = 0;
-            this.ktTextBox5.TextPlaceholder = "Enter Last Name";
-            this.ktTextBox5.TextChanged += new System.EventHandler(this.ktTextBox5_TextChanged);
-            // 
-            // ktTextBox6
-            // 
-            this.ktTextBox6.AcceptsReturn = false;
-            this.ktTextBox6.AcceptsTab = false;
-            this.ktTextBox6.AnimationSpeed = 200;
-            this.ktTextBox6.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.ktTextBox6.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.ktTextBox6.AutoSizeHeight = true;
-            this.ktTextBox6.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
-            this.ktTextBox6.Bg = KimTools.WinForms.KtColor.Tailwind_White;
-            this.ktTextBox6.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.ktTextBox6.CustomBorderColor = System.Drawing.Color.Empty;
-            this.ktTextBox6.CustomBorderColorActive = System.Drawing.Color.Empty;
-            this.ktTextBox6.CustomBorderColorDisabled = System.Drawing.Color.Empty;
-            this.ktTextBox6.CustomFillColor = System.Drawing.Color.Empty;
-            this.ktTextBox6.CustomIconLeft = null;
-            this.ktTextBox6.CustomIconRight = null;
-            this.ktTextBox6.CustomPlaceholderColor = System.Drawing.Color.Empty;
-            this.ktTextBox6.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
-            this.ktTextBox6.ForeColor = System.Drawing.Color.Empty;
-            this.ktTextBox6.HideSelection = true;
-            this.ktTextBox6.Lines = new string[0];
-            this.ktTextBox6.Location = new System.Drawing.Point(32, 56);
-            this.ktTextBox6.MaxLength = 32767;
-            this.ktTextBox6.MinimumSize = new System.Drawing.Size(1, 1);
-            this.ktTextBox6.Modified = false;
-            this.ktTextBox6.Name = "ktTextBox6";
-            this.ktTextBox6.Password = false;
-            this.ktTextBox6.PasswordChar = '\0';
-            this.ktTextBox6.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.ktTextBox6.SelectedText = "";
-            this.ktTextBox6.SelectionLength = 0;
-            this.ktTextBox6.SelectionStart = 0;
-            this.ktTextBox6.ShortcutsEnabled = true;
-            this.ktTextBox6.Size = new System.Drawing.Size(230, 27);
-            this.ktTextBox6.Style = KimTools.WinForms.KtTextBox.KtTextBoxStyle.Tailwind;
-            this.ktTextBox6.TabIndex = 27;
-            this.ktTextBox6.TextMarginBottom = 0;
-            this.ktTextBox6.TextPlaceholder = "Enter First Name";
-            this.ktTextBox6.TextChanged += new System.EventHandler(this.ktTextBox6_TextChanged);
-            // 
-            // ktTextBox13
-            // 
-            this.ktTextBox13.AcceptsReturn = false;
-            this.ktTextBox13.AcceptsTab = false;
-            this.ktTextBox13.AnimationSpeed = 200;
-            this.ktTextBox13.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.ktTextBox13.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.ktTextBox13.AutoSizeHeight = true;
-            this.ktTextBox13.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
-            this.ktTextBox13.Bg = KimTools.WinForms.KtColor.Tailwind_White;
-            this.ktTextBox13.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.ktTextBox13.CustomBorderColor = System.Drawing.Color.Empty;
-            this.ktTextBox13.CustomBorderColorActive = System.Drawing.Color.Empty;
-            this.ktTextBox13.CustomBorderColorDisabled = System.Drawing.Color.Empty;
-            this.ktTextBox13.CustomFillColor = System.Drawing.Color.Empty;
-            this.ktTextBox13.CustomIconLeft = null;
-            this.ktTextBox13.CustomIconRight = null;
-            this.ktTextBox13.CustomPlaceholderColor = System.Drawing.Color.Empty;
-            this.ktTextBox13.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
-            this.ktTextBox13.ForeColor = System.Drawing.Color.Empty;
-            this.ktTextBox13.HideSelection = true;
-            this.ktTextBox13.Lines = new string[0];
-            this.ktTextBox13.Location = new System.Drawing.Point(32, 270);
-            this.ktTextBox13.MaxLength = 32767;
-            this.ktTextBox13.MinimumSize = new System.Drawing.Size(1, 1);
-            this.ktTextBox13.Modified = false;
-            this.ktTextBox13.Name = "ktTextBox13";
-            this.ktTextBox13.Password = false;
-            this.ktTextBox13.PasswordChar = '\0';
-            this.ktTextBox13.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.ktTextBox13.SelectedText = "";
-            this.ktTextBox13.SelectionLength = 0;
-            this.ktTextBox13.SelectionStart = 0;
-            this.ktTextBox13.ShortcutsEnabled = true;
-            this.ktTextBox13.Size = new System.Drawing.Size(230, 27);
-            this.ktTextBox13.Style = KimTools.WinForms.KtTextBox.KtTextBoxStyle.Tailwind;
-            this.ktTextBox13.TabIndex = 59;
-            this.ktTextBox13.TextMarginBottom = 0;
-            this.ktTextBox13.TextPlaceholder = "Enter Teacher Salary";
-            // 
-            // ktTextBox3
-            // 
-            this.ktTextBox3.AcceptsReturn = false;
-            this.ktTextBox3.AcceptsTab = false;
-            this.ktTextBox3.AnimationSpeed = 200;
-            this.ktTextBox3.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.ktTextBox3.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.ktTextBox3.AutoSizeHeight = true;
-            this.ktTextBox3.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
-            this.ktTextBox3.Bg = KimTools.WinForms.KtColor.Tailwind_White;
-            this.ktTextBox3.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.ktTextBox3.CustomBorderColor = System.Drawing.Color.Empty;
-            this.ktTextBox3.CustomBorderColorActive = System.Drawing.Color.Empty;
-            this.ktTextBox3.CustomBorderColorDisabled = System.Drawing.Color.Empty;
-            this.ktTextBox3.CustomFillColor = System.Drawing.Color.Empty;
-            this.ktTextBox3.CustomIconLeft = null;
-            this.ktTextBox3.CustomIconRight = null;
-            this.ktTextBox3.CustomPlaceholderColor = System.Drawing.Color.Empty;
-            this.ktTextBox3.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
-            this.ktTextBox3.ForeColor = System.Drawing.Color.Empty;
-            this.ktTextBox3.HideSelection = true;
-            this.ktTextBox3.Lines = new string[0];
-            this.ktTextBox3.Location = new System.Drawing.Point(358, 196);
-            this.ktTextBox3.MaxLength = 32767;
-            this.ktTextBox3.MinimumSize = new System.Drawing.Size(1, 1);
-            this.ktTextBox3.Modified = false;
-            this.ktTextBox3.Name = "ktTextBox3";
-            this.ktTextBox3.Password = true;
-            this.ktTextBox3.PasswordChar = '\0';
-            this.ktTextBox3.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.ktTextBox3.SelectedText = "";
-            this.ktTextBox3.SelectionLength = 0;
-            this.ktTextBox3.SelectionStart = 0;
-            this.ktTextBox3.ShortcutsEnabled = true;
-            this.ktTextBox3.Size = new System.Drawing.Size(235, 27);
-            this.ktTextBox3.Style = KimTools.WinForms.KtTextBox.KtTextBoxStyle.Tailwind;
-            this.ktTextBox3.TabIndex = 57;
-            this.ktTextBox3.TextMarginBottom = 0;
-            this.ktTextBox3.TextPlaceholder = "Enter Password";
-            // 
-            // ktTextBox4
-            // 
-            this.ktTextBox4.AcceptsReturn = false;
-            this.ktTextBox4.AcceptsTab = false;
-            this.ktTextBox4.AnimationSpeed = 200;
-            this.ktTextBox4.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.ktTextBox4.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.ktTextBox4.AutoSizeHeight = true;
-            this.ktTextBox4.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
-            this.ktTextBox4.Bg = KimTools.WinForms.KtColor.Tailwind_White;
-            this.ktTextBox4.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.ktTextBox4.CustomBorderColor = System.Drawing.Color.Empty;
-            this.ktTextBox4.CustomBorderColorActive = System.Drawing.Color.Empty;
-            this.ktTextBox4.CustomBorderColorDisabled = System.Drawing.Color.Empty;
-            this.ktTextBox4.CustomFillColor = System.Drawing.Color.Empty;
-            this.ktTextBox4.CustomIconLeft = null;
-            this.ktTextBox4.CustomIconRight = null;
-            this.ktTextBox4.CustomPlaceholderColor = System.Drawing.Color.Empty;
-            this.ktTextBox4.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
-            this.ktTextBox4.ForeColor = System.Drawing.Color.Empty;
-            this.ktTextBox4.HideSelection = true;
-            this.ktTextBox4.Lines = new string[0];
-            this.ktTextBox4.Location = new System.Drawing.Point(32, 196);
-            this.ktTextBox4.MaxLength = 32767;
-            this.ktTextBox4.MinimumSize = new System.Drawing.Size(1, 1);
-            this.ktTextBox4.Modified = false;
-            this.ktTextBox4.Name = "ktTextBox4";
-            this.ktTextBox4.Password = false;
-            this.ktTextBox4.PasswordChar = '\0';
-            this.ktTextBox4.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.ktTextBox4.SelectedText = "";
-            this.ktTextBox4.SelectionLength = 0;
-            this.ktTextBox4.SelectionStart = 0;
-            this.ktTextBox4.ShortcutsEnabled = true;
-            this.ktTextBox4.Size = new System.Drawing.Size(230, 27);
-            this.ktTextBox4.Style = KimTools.WinForms.KtTextBox.KtTextBoxStyle.Tailwind;
-            this.ktTextBox4.TabIndex = 55;
-            this.ktTextBox4.TextMarginBottom = 0;
-            this.ktTextBox4.TextPlaceholder = "Enter UserName";
-            // 
-            // ktButton1
-            // 
-            this.ktButton1.BackColor = System.Drawing.Color.Empty;
-            this.ktButton1.BorderShape = KimTools.WinForms.KtSize.Default;
-            this.ktButton1.BorderSize = KimTools.WinForms.KtSize.Default;
-            this.ktButton1.CustomColors = new System.Drawing.Color[0];
-            this.ktButton1.FlatAppearance.BorderSize = 0;
-            this.ktButton1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.ktButton1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.ktButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ktButton1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ktButton1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.ktButton1.IconName = "";
-            this.ktButton1.IconSize = 16;
-            this.ktButton1.IconStroke = 2.5D;
-            this.ktButton1.Location = new System.Drawing.Point(493, 291);
-            this.ktButton1.Name = "ktButton1";
-            this.ktButton1.Size = new System.Drawing.Size(95, 37);
-            this.ktButton1.Style = KimTools.WinForms.KtStyle.Tailwind;
-            this.ktButton1.TabIndex = 51;
-            this.ktButton1.Text = "ADD";
-            this.ktButton1.UseVisualStyleBackColor = false;
-            // 
-            // ktTextBox7
-            // 
-            this.ktTextBox7.AcceptsReturn = false;
-            this.ktTextBox7.AcceptsTab = false;
-            this.ktTextBox7.AnimationSpeed = 200;
-            this.ktTextBox7.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.ktTextBox7.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.ktTextBox7.AutoSizeHeight = true;
-            this.ktTextBox7.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
-            this.ktTextBox7.Bg = KimTools.WinForms.KtColor.Tailwind_White;
-            this.ktTextBox7.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.ktTextBox7.CustomBorderColor = System.Drawing.Color.Empty;
-            this.ktTextBox7.CustomBorderColorActive = System.Drawing.Color.Empty;
-            this.ktTextBox7.CustomBorderColorDisabled = System.Drawing.Color.Empty;
-            this.ktTextBox7.CustomFillColor = System.Drawing.Color.Empty;
-            this.ktTextBox7.CustomIconLeft = null;
-            this.ktTextBox7.CustomIconRight = null;
-            this.ktTextBox7.CustomPlaceholderColor = System.Drawing.Color.Empty;
-            this.ktTextBox7.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
-            this.ktTextBox7.ForeColor = System.Drawing.Color.Empty;
-            this.ktTextBox7.HideSelection = true;
-            this.ktTextBox7.Lines = new string[0];
-            this.ktTextBox7.Location = new System.Drawing.Point(358, 56);
-            this.ktTextBox7.MaxLength = 32767;
-            this.ktTextBox7.MinimumSize = new System.Drawing.Size(1, 1);
-            this.ktTextBox7.Modified = false;
-            this.ktTextBox7.Name = "ktTextBox7";
-            this.ktTextBox7.Password = false;
-            this.ktTextBox7.PasswordChar = '\0';
-            this.ktTextBox7.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.ktTextBox7.SelectedText = "";
-            this.ktTextBox7.SelectionLength = 0;
-            this.ktTextBox7.SelectionStart = 0;
-            this.ktTextBox7.ShortcutsEnabled = true;
-            this.ktTextBox7.Size = new System.Drawing.Size(235, 27);
-            this.ktTextBox7.Style = KimTools.WinForms.KtTextBox.KtTextBoxStyle.Tailwind;
-            this.ktTextBox7.TabIndex = 48;
-            this.ktTextBox7.TextMarginBottom = 0;
-            this.ktTextBox7.TextPlaceholder = "Enter Last Name";
-            // 
-            // ktTextBox8
-            // 
-            this.ktTextBox8.AcceptsReturn = false;
-            this.ktTextBox8.AcceptsTab = false;
-            this.ktTextBox8.AnimationSpeed = 200;
-            this.ktTextBox8.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.ktTextBox8.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.ktTextBox8.AutoSizeHeight = true;
-            this.ktTextBox8.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
-            this.ktTextBox8.Bg = KimTools.WinForms.KtColor.Tailwind_White;
-            this.ktTextBox8.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.ktTextBox8.CustomBorderColor = System.Drawing.Color.Empty;
-            this.ktTextBox8.CustomBorderColorActive = System.Drawing.Color.Empty;
-            this.ktTextBox8.CustomBorderColorDisabled = System.Drawing.Color.Empty;
-            this.ktTextBox8.CustomFillColor = System.Drawing.Color.Empty;
-            this.ktTextBox8.CustomIconLeft = null;
-            this.ktTextBox8.CustomIconRight = null;
-            this.ktTextBox8.CustomPlaceholderColor = System.Drawing.Color.Empty;
-            this.ktTextBox8.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
-            this.ktTextBox8.ForeColor = System.Drawing.Color.Empty;
-            this.ktTextBox8.HideSelection = true;
-            this.ktTextBox8.Lines = new string[0];
-            this.ktTextBox8.Location = new System.Drawing.Point(32, 56);
-            this.ktTextBox8.MaxLength = 32767;
-            this.ktTextBox8.MinimumSize = new System.Drawing.Size(1, 1);
-            this.ktTextBox8.Modified = false;
-            this.ktTextBox8.Name = "ktTextBox8";
-            this.ktTextBox8.Password = false;
-            this.ktTextBox8.PasswordChar = '\0';
-            this.ktTextBox8.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.ktTextBox8.SelectedText = "";
-            this.ktTextBox8.SelectionLength = 0;
-            this.ktTextBox8.SelectionStart = 0;
-            this.ktTextBox8.ShortcutsEnabled = true;
-            this.ktTextBox8.Size = new System.Drawing.Size(230, 27);
-            this.ktTextBox8.Style = KimTools.WinForms.KtTextBox.KtTextBoxStyle.Tailwind;
-            this.ktTextBox8.TabIndex = 46;
-            this.ktTextBox8.TextMarginBottom = 0;
-            this.ktTextBox8.TextPlaceholder = "Enter First Name";
-            // 
-            // InsertAdminBtn
-            // 
-            this.InsertAdminBtn.BackColor = System.Drawing.Color.Empty;
-            this.InsertAdminBtn.BorderShape = KimTools.WinForms.KtSize.Default;
-            this.InsertAdminBtn.BorderSize = KimTools.WinForms.KtSize.Default;
-            this.InsertAdminBtn.CustomColors = new System.Drawing.Color[0];
-            this.InsertAdminBtn.Enabled = false;
-            this.InsertAdminBtn.FlatAppearance.BorderSize = 0;
-            this.InsertAdminBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.InsertAdminBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.InsertAdminBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.InsertAdminBtn.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.InsertAdminBtn.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.InsertAdminBtn.IconName = "";
-            this.InsertAdminBtn.IconSize = 16;
-            this.InsertAdminBtn.IconStroke = 2.5D;
-            this.InsertAdminBtn.Location = new System.Drawing.Point(493, 291);
-            this.InsertAdminBtn.Name = "InsertAdminBtn";
-            this.InsertAdminBtn.Size = new System.Drawing.Size(95, 37);
-            this.InsertAdminBtn.Style = KimTools.WinForms.KtStyle.Tailwind;
-            this.InsertAdminBtn.TabIndex = 51;
-            this.InsertAdminBtn.Text = "ADD";
-            this.InsertAdminBtn.UseVisualStyleBackColor = false;
-            this.InsertAdminBtn.Click += new System.EventHandler(this.InsertAdminBtn_Click);
-            // 
-            // AdminPassTxb
-            // 
-            this.AdminPassTxb.AcceptsReturn = false;
-            this.AdminPassTxb.AcceptsTab = false;
-            this.AdminPassTxb.AnimationSpeed = 200;
-            this.AdminPassTxb.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.AdminPassTxb.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.AdminPassTxb.AutoSizeHeight = true;
-            this.AdminPassTxb.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
-            this.AdminPassTxb.Bg = KimTools.WinForms.KtColor.Tailwind_White;
-            this.AdminPassTxb.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.AdminPassTxb.CustomBorderColor = System.Drawing.Color.Empty;
-            this.AdminPassTxb.CustomBorderColorActive = System.Drawing.Color.Empty;
-            this.AdminPassTxb.CustomBorderColorDisabled = System.Drawing.Color.Empty;
-            this.AdminPassTxb.CustomFillColor = System.Drawing.Color.Empty;
-            this.AdminPassTxb.CustomIconLeft = null;
-            this.AdminPassTxb.CustomIconRight = null;
-            this.AdminPassTxb.CustomPlaceholderColor = System.Drawing.Color.Empty;
-            this.AdminPassTxb.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
-            this.AdminPassTxb.ForeColor = System.Drawing.Color.Empty;
-            this.AdminPassTxb.HideSelection = true;
-            this.AdminPassTxb.Lines = new string[0];
-            this.AdminPassTxb.Location = new System.Drawing.Point(358, 56);
-            this.AdminPassTxb.MaxLength = 32767;
-            this.AdminPassTxb.MinimumSize = new System.Drawing.Size(1, 1);
-            this.AdminPassTxb.Modified = false;
-            this.AdminPassTxb.Name = "AdminPassTxb";
-            this.AdminPassTxb.Password = true;
-            this.AdminPassTxb.PasswordChar = '\0';
-            this.AdminPassTxb.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.AdminPassTxb.SelectedText = "";
-            this.AdminPassTxb.SelectionLength = 0;
-            this.AdminPassTxb.SelectionStart = 0;
-            this.AdminPassTxb.ShortcutsEnabled = true;
-            this.AdminPassTxb.Size = new System.Drawing.Size(235, 27);
-            this.AdminPassTxb.Style = KimTools.WinForms.KtTextBox.KtTextBoxStyle.Tailwind;
-            this.AdminPassTxb.TabIndex = 48;
-            this.AdminPassTxb.TextMarginBottom = 0;
-            this.AdminPassTxb.TextPlaceholder = "Enter Password";
-            this.AdminPassTxb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.AdminUsernameTxb_KeyPress);
-            this.AdminPassTxb.TextChange += new System.EventHandler(this.AdminUsernameTxb_TextChange);
-            // 
-            // AdminUsernameTxb
-            // 
-            this.AdminUsernameTxb.AcceptsReturn = false;
-            this.AdminUsernameTxb.AcceptsTab = false;
-            this.AdminUsernameTxb.AnimationSpeed = 200;
-            this.AdminUsernameTxb.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.AdminUsernameTxb.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.AdminUsernameTxb.AutoSizeHeight = true;
-            this.AdminUsernameTxb.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
-            this.AdminUsernameTxb.Bg = KimTools.WinForms.KtColor.Tailwind_White;
-            this.AdminUsernameTxb.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.AdminUsernameTxb.CustomBorderColor = System.Drawing.Color.Empty;
-            this.AdminUsernameTxb.CustomBorderColorActive = System.Drawing.Color.Empty;
-            this.AdminUsernameTxb.CustomBorderColorDisabled = System.Drawing.Color.Empty;
-            this.AdminUsernameTxb.CustomFillColor = System.Drawing.Color.Empty;
-            this.AdminUsernameTxb.CustomIconLeft = null;
-            this.AdminUsernameTxb.CustomIconRight = null;
-            this.AdminUsernameTxb.CustomPlaceholderColor = System.Drawing.Color.Empty;
-            this.AdminUsernameTxb.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
-            this.AdminUsernameTxb.ForeColor = System.Drawing.Color.Empty;
-            this.AdminUsernameTxb.HideSelection = true;
-            this.AdminUsernameTxb.Lines = new string[0];
-            this.AdminUsernameTxb.Location = new System.Drawing.Point(32, 56);
-            this.AdminUsernameTxb.MaxLength = 32767;
-            this.AdminUsernameTxb.MinimumSize = new System.Drawing.Size(1, 1);
-            this.AdminUsernameTxb.Modified = false;
-            this.AdminUsernameTxb.Name = "AdminUsernameTxb";
-            this.AdminUsernameTxb.Password = false;
-            this.AdminUsernameTxb.PasswordChar = '\0';
-            this.AdminUsernameTxb.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.AdminUsernameTxb.SelectedText = "";
-            this.AdminUsernameTxb.SelectionLength = 0;
-            this.AdminUsernameTxb.SelectionStart = 0;
-            this.AdminUsernameTxb.ShortcutsEnabled = true;
-            this.AdminUsernameTxb.Size = new System.Drawing.Size(230, 27);
-            this.AdminUsernameTxb.Style = KimTools.WinForms.KtTextBox.KtTextBoxStyle.Tailwind;
-            this.AdminUsernameTxb.TabIndex = 46;
-            this.AdminUsernameTxb.TextMarginBottom = 0;
-            this.AdminUsernameTxb.TextPlaceholder = "Enter UserName";
-            this.AdminUsernameTxb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.AdminUsernameTxb_KeyPress);
-            this.AdminUsernameTxb.TextChange += new System.EventHandler(this.AdminUsernameTxb_TextChange);
             // 
             // AdSwBtn
             // 
@@ -1166,11 +173,875 @@
             this.StSwBtn.UseVisualStyleBackColor = false;
             this.StSwBtn.Click += new System.EventHandler(this.StSwBtn_Click);
             // 
+            // Pages
+            // 
+            this.Pages.Alignment = System.Windows.Forms.TabAlignment.Bottom;
+            this.Pages.AllowTransitions = false;
+            this.Pages.Controls.Add(this.Student);
+            this.Pages.Controls.Add(this.Teacher);
+            this.Pages.Controls.Add(this.Admin);
+            this.Pages.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Pages.Location = new System.Drawing.Point(3, 63);
+            this.Pages.Multiline = true;
+            this.Pages.Name = "Pages";
+            this.Pages.Page = this.Teacher;
+            this.Pages.PageIndex = 1;
+            this.Pages.PageName = "Teacher";
+            this.Pages.PageTitle = "Teacher";
+            this.Pages.SelectedIndex = 0;
+            this.Pages.Size = new System.Drawing.Size(633, 395);
+            this.Pages.TabIndex = 1;
+            animation1.AnimateOnlyDifferences = false;
+            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
+            animation1.LeafCoeff = 0F;
+            animation1.MaxTime = 1F;
+            animation1.MinTime = 0F;
+            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
+            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
+            animation1.MosaicSize = 0;
+            animation1.Padding = new System.Windows.Forms.Padding(0);
+            animation1.RotateCoeff = 0F;
+            animation1.RotateLimit = 0F;
+            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
+            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
+            animation1.TimeCoeff = 0F;
+            animation1.TransparencyCoeff = 0F;
+            this.Pages.Transition = animation1;
+            this.Pages.TransitionType = KimTools.WinForms.KtToastHelpers.KtPages.KtPgAnimatorNS.AnimationType.Custom;
+            // 
+            // Student
+            // 
+            this.Student.Controls.Add(this.StudentPassTxb);
+            this.Student.Controls.Add(this.ktLabel1);
+            this.Student.Controls.Add(this.StudentUsernameTxb);
+            this.Student.Controls.Add(this.ktLabel2);
+            this.Student.Controls.Add(this.StudentStatusCmb);
+            this.Student.Controls.Add(this.StudentGenderCmb);
+            this.Student.Controls.Add(this.AddStudentBtn);
+            this.Student.Controls.Add(this.ktLabel3);
+            this.Student.Controls.Add(this.ktLabel4);
+            this.Student.Controls.Add(this.StudentLastNameTxb);
+            this.Student.Controls.Add(this.ktLabel5);
+            this.Student.Controls.Add(this.StudentFirstNameTxb);
+            this.Student.Controls.Add(this.ktLabel6);
+            this.Student.Location = new System.Drawing.Point(4, 4);
+            this.Student.Name = "Student";
+            this.Student.Padding = new System.Windows.Forms.Padding(3);
+            this.Student.Size = new System.Drawing.Size(625, 357);
+            this.Student.TabIndex = 1;
+            this.Student.Text = "Student";
+            this.Student.UseVisualStyleBackColor = true;
+            // 
+            // StudentPassTxb
+            // 
+            this.StudentPassTxb.AcceptsReturn = false;
+            this.StudentPassTxb.AcceptsTab = false;
+            this.StudentPassTxb.AnimationSpeed = 200;
+            this.StudentPassTxb.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.StudentPassTxb.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.StudentPassTxb.AutoSizeHeight = true;
+            this.StudentPassTxb.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
+            this.StudentPassTxb.Bg = KimTools.WinForms.KtColor.Tailwind_White;
+            this.StudentPassTxb.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.StudentPassTxb.CustomBorderColor = System.Drawing.Color.Empty;
+            this.StudentPassTxb.CustomBorderColorActive = System.Drawing.Color.Empty;
+            this.StudentPassTxb.CustomBorderColorDisabled = System.Drawing.Color.Empty;
+            this.StudentPassTxb.CustomFillColor = System.Drawing.Color.Empty;
+            this.StudentPassTxb.CustomIconLeft = null;
+            this.StudentPassTxb.CustomIconRight = null;
+            this.StudentPassTxb.CustomPlaceholderColor = System.Drawing.Color.Empty;
+            this.StudentPassTxb.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.StudentPassTxb.ForeColor = System.Drawing.Color.Empty;
+            this.StudentPassTxb.HideSelection = true;
+            this.StudentPassTxb.Lines = new string[] {
+        "1234"};
+            this.StudentPassTxb.Location = new System.Drawing.Point(358, 196);
+            this.StudentPassTxb.MaxLength = 32767;
+            this.StudentPassTxb.MinimumSize = new System.Drawing.Size(1, 1);
+            this.StudentPassTxb.Modified = false;
+            this.StudentPassTxb.Name = "StudentPassTxb";
+            this.StudentPassTxb.Password = false;
+            this.StudentPassTxb.PasswordChar = '\0';
+            this.StudentPassTxb.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.StudentPassTxb.SelectedText = "";
+            this.StudentPassTxb.SelectionLength = 0;
+            this.StudentPassTxb.SelectionStart = 4;
+            this.StudentPassTxb.ShortcutsEnabled = true;
+            this.StudentPassTxb.Size = new System.Drawing.Size(235, 27);
+            this.StudentPassTxb.Style = KimTools.WinForms.KtTextBox.KtTextBoxStyle.Tailwind;
+            this.StudentPassTxb.TabIndex = 44;
+            this.StudentPassTxb.TextMarginBottom = 0;
+            this.StudentPassTxb.TextPlaceholder = "Enter Password";
+            this.StudentPassTxb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.AdminUsernameTxb_KeyPress);
+            this.StudentPassTxb.TextChange += new System.EventHandler(this.StudentTxb_TextChange);
+            // 
+            // ktLabel1
+            // 
+            this.ktLabel1.AutoSize = true;
+            this.ktLabel1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.ktLabel1.ForeColor = System.Drawing.Color.White;
+            this.ktLabel1.KtFontSize = KimTools.WinForms.KtFont.Default;
+            this.ktLabel1.Location = new System.Drawing.Point(363, 168);
+            this.ktLabel1.Name = "ktLabel1";
+            this.ktLabel1.Size = new System.Drawing.Size(90, 25);
+            this.ktLabel1.TabIndex = 43;
+            this.ktLabel1.Text = "Password";
+            // 
+            // StudentUsernameTxb
+            // 
+            this.StudentUsernameTxb.AcceptsReturn = false;
+            this.StudentUsernameTxb.AcceptsTab = false;
+            this.StudentUsernameTxb.AnimationSpeed = 200;
+            this.StudentUsernameTxb.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.StudentUsernameTxb.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.StudentUsernameTxb.AutoSizeHeight = true;
+            this.StudentUsernameTxb.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
+            this.StudentUsernameTxb.Bg = KimTools.WinForms.KtColor.Tailwind_White;
+            this.StudentUsernameTxb.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.StudentUsernameTxb.CustomBorderColor = System.Drawing.Color.Empty;
+            this.StudentUsernameTxb.CustomBorderColorActive = System.Drawing.Color.Empty;
+            this.StudentUsernameTxb.CustomBorderColorDisabled = System.Drawing.Color.Empty;
+            this.StudentUsernameTxb.CustomFillColor = System.Drawing.Color.Empty;
+            this.StudentUsernameTxb.CustomIconLeft = null;
+            this.StudentUsernameTxb.CustomIconRight = null;
+            this.StudentUsernameTxb.CustomPlaceholderColor = System.Drawing.Color.Empty;
+            this.StudentUsernameTxb.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.StudentUsernameTxb.ForeColor = System.Drawing.Color.Empty;
+            this.StudentUsernameTxb.HideSelection = true;
+            this.StudentUsernameTxb.Lines = new string[0];
+            this.StudentUsernameTxb.Location = new System.Drawing.Point(32, 196);
+            this.StudentUsernameTxb.MaxLength = 32767;
+            this.StudentUsernameTxb.MinimumSize = new System.Drawing.Size(1, 1);
+            this.StudentUsernameTxb.Modified = false;
+            this.StudentUsernameTxb.Name = "StudentUsernameTxb";
+            this.StudentUsernameTxb.Password = false;
+            this.StudentUsernameTxb.PasswordChar = '\0';
+            this.StudentUsernameTxb.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.StudentUsernameTxb.SelectedText = "";
+            this.StudentUsernameTxb.SelectionLength = 0;
+            this.StudentUsernameTxb.SelectionStart = 0;
+            this.StudentUsernameTxb.ShortcutsEnabled = true;
+            this.StudentUsernameTxb.Size = new System.Drawing.Size(230, 27);
+            this.StudentUsernameTxb.Style = KimTools.WinForms.KtTextBox.KtTextBoxStyle.Tailwind;
+            this.StudentUsernameTxb.TabIndex = 42;
+            this.StudentUsernameTxb.TextMarginBottom = 0;
+            this.StudentUsernameTxb.TextPlaceholder = "Enter UserName";
+            this.StudentUsernameTxb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.AdminUsernameTxb_KeyPress);
+            this.StudentUsernameTxb.TextChange += new System.EventHandler(this.StudentTxb_TextChange);
+            // 
+            // ktLabel2
+            // 
+            this.ktLabel2.AutoSize = true;
+            this.ktLabel2.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.ktLabel2.ForeColor = System.Drawing.Color.White;
+            this.ktLabel2.KtFontSize = KimTools.WinForms.KtFont.Default;
+            this.ktLabel2.Location = new System.Drawing.Point(32, 168);
+            this.ktLabel2.Name = "ktLabel2";
+            this.ktLabel2.Size = new System.Drawing.Size(99, 25);
+            this.ktLabel2.TabIndex = 41;
+            this.ktLabel2.Text = "UserName";
+            // 
+            // StudentStatusCmb
+            // 
+            this.StudentStatusCmb.BackColor = System.Drawing.Color.Transparent;
+            this.StudentStatusCmb.BackgroundColor = System.Drawing.Color.White;
+            this.StudentStatusCmb.BorderColor = System.Drawing.Color.Silver;
+            this.StudentStatusCmb.BorderRadius = 1;
+            this.StudentStatusCmb.Color = System.Drawing.Color.Silver;
+            this.StudentStatusCmb.Direction = KimTools.WinForms.KtComboBox.Directions.Down;
+            this.StudentStatusCmb.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.StudentStatusCmb.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.StudentStatusCmb.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.StudentStatusCmb.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.StudentStatusCmb.DisabledIndicatorColor = System.Drawing.Color.DarkGray;
+            this.StudentStatusCmb.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.StudentStatusCmb.DropdownBorderThickness = KimTools.WinForms.KtComboBox.BorderThickness.Thin;
+            this.StudentStatusCmb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.StudentStatusCmb.DropDownTextAlign = KimTools.WinForms.KtComboBox.TextAlign.Left;
+            this.StudentStatusCmb.FillDropDown = true;
+            this.StudentStatusCmb.FillIndicator = false;
+            this.StudentStatusCmb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.StudentStatusCmb.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.StudentStatusCmb.ForeColor = System.Drawing.Color.Black;
+            this.StudentStatusCmb.FormattingEnabled = true;
+            this.StudentStatusCmb.Icon = null;
+            this.StudentStatusCmb.IndicatorAlignment = KimTools.WinForms.KtComboBox.Indicator.Right;
+            this.StudentStatusCmb.IndicatorColor = System.Drawing.Color.Gray;
+            this.StudentStatusCmb.IndicatorLocation = KimTools.WinForms.KtComboBox.Indicator.Right;
+            this.StudentStatusCmb.ItemBackColor = System.Drawing.Color.White;
+            this.StudentStatusCmb.ItemBorderColor = System.Drawing.Color.White;
+            this.StudentStatusCmb.ItemForeColor = System.Drawing.Color.Black;
+            this.StudentStatusCmb.ItemHeight = 26;
+            this.StudentStatusCmb.ItemHighLightColor = System.Drawing.Color.BlueViolet;
+            this.StudentStatusCmb.ItemHighLightForeColor = System.Drawing.Color.White;
+            this.StudentStatusCmb.Items.AddRange(new object[] {
+            "Active",
+            "NonActive"});
+            this.StudentStatusCmb.ItemTopMargin = 3;
+            this.StudentStatusCmb.Location = new System.Drawing.Point(358, 124);
+            this.StudentStatusCmb.Name = "StudentStatusCmb";
+            this.StudentStatusCmb.Size = new System.Drawing.Size(235, 32);
+            this.StudentStatusCmb.TabIndex = 40;
+            this.StudentStatusCmb.Text = "Active";
+            this.StudentStatusCmb.TextAlignment = KimTools.WinForms.KtComboBox.TextAlign.Left;
+            this.StudentStatusCmb.TextLeftMargin = 5;
+            // 
+            // StudentGenderCmb
+            // 
+            this.StudentGenderCmb.BackColor = System.Drawing.Color.Transparent;
+            this.StudentGenderCmb.BackgroundColor = System.Drawing.Color.White;
+            this.StudentGenderCmb.BorderColor = System.Drawing.Color.Silver;
+            this.StudentGenderCmb.BorderRadius = 1;
+            this.StudentGenderCmb.Color = System.Drawing.Color.Silver;
+            this.StudentGenderCmb.Direction = KimTools.WinForms.KtComboBox.Directions.Down;
+            this.StudentGenderCmb.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.StudentGenderCmb.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.StudentGenderCmb.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.StudentGenderCmb.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.StudentGenderCmb.DisabledIndicatorColor = System.Drawing.Color.DarkGray;
+            this.StudentGenderCmb.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.StudentGenderCmb.DropdownBorderThickness = KimTools.WinForms.KtComboBox.BorderThickness.Thin;
+            this.StudentGenderCmb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.StudentGenderCmb.DropDownTextAlign = KimTools.WinForms.KtComboBox.TextAlign.Left;
+            this.StudentGenderCmb.FillDropDown = true;
+            this.StudentGenderCmb.FillIndicator = false;
+            this.StudentGenderCmb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.StudentGenderCmb.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.StudentGenderCmb.ForeColor = System.Drawing.Color.Black;
+            this.StudentGenderCmb.FormattingEnabled = true;
+            this.StudentGenderCmb.Icon = null;
+            this.StudentGenderCmb.IndicatorAlignment = KimTools.WinForms.KtComboBox.Indicator.Right;
+            this.StudentGenderCmb.IndicatorColor = System.Drawing.Color.Gray;
+            this.StudentGenderCmb.IndicatorLocation = KimTools.WinForms.KtComboBox.Indicator.Right;
+            this.StudentGenderCmb.ItemBackColor = System.Drawing.Color.White;
+            this.StudentGenderCmb.ItemBorderColor = System.Drawing.Color.White;
+            this.StudentGenderCmb.ItemForeColor = System.Drawing.Color.Black;
+            this.StudentGenderCmb.ItemHeight = 26;
+            this.StudentGenderCmb.ItemHighLightColor = System.Drawing.Color.BlueViolet;
+            this.StudentGenderCmb.ItemHighLightForeColor = System.Drawing.Color.White;
+            this.StudentGenderCmb.Items.AddRange(new object[] {
+            "Male",
+            "Female",
+            "Other"});
+            this.StudentGenderCmb.ItemTopMargin = 3;
+            this.StudentGenderCmb.Location = new System.Drawing.Point(32, 124);
+            this.StudentGenderCmb.Name = "StudentGenderCmb";
+            this.StudentGenderCmb.Size = new System.Drawing.Size(230, 32);
+            this.StudentGenderCmb.TabIndex = 39;
+            this.StudentGenderCmb.Text = "Male";
+            this.StudentGenderCmb.TextAlignment = KimTools.WinForms.KtComboBox.TextAlign.Left;
+            this.StudentGenderCmb.TextLeftMargin = 5;
+            // 
+            // AddStudentBtn
+            // 
+            this.AddStudentBtn.BackColor = System.Drawing.Color.Empty;
+            this.AddStudentBtn.BorderShape = KimTools.WinForms.KtSize.Default;
+            this.AddStudentBtn.BorderSize = KimTools.WinForms.KtSize.Default;
+            this.AddStudentBtn.CustomColors = new System.Drawing.Color[0];
+            this.AddStudentBtn.Enabled = false;
+            this.AddStudentBtn.FlatAppearance.BorderSize = 0;
+            this.AddStudentBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.AddStudentBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.AddStudentBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AddStudentBtn.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddStudentBtn.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.AddStudentBtn.IconName = "";
+            this.AddStudentBtn.IconSize = 16;
+            this.AddStudentBtn.IconStroke = 2.5D;
+            this.AddStudentBtn.Location = new System.Drawing.Point(493, 291);
+            this.AddStudentBtn.Name = "AddStudentBtn";
+            this.AddStudentBtn.Size = new System.Drawing.Size(95, 37);
+            this.AddStudentBtn.Style = KimTools.WinForms.KtStyle.Tailwind;
+            this.AddStudentBtn.TabIndex = 34;
+            this.AddStudentBtn.Text = "ADD";
+            this.AddStudentBtn.UseVisualStyleBackColor = false;
+            this.AddStudentBtn.Click += new System.EventHandler(this.AddStudentBtn_Click);
+            // 
+            // ktLabel3
+            // 
+            this.ktLabel3.AutoSize = true;
+            this.ktLabel3.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.ktLabel3.ForeColor = System.Drawing.Color.White;
+            this.ktLabel3.KtFontSize = KimTools.WinForms.KtFont.Default;
+            this.ktLabel3.Location = new System.Drawing.Point(363, 96);
+            this.ktLabel3.Name = "ktLabel3";
+            this.ktLabel3.Size = new System.Drawing.Size(63, 25);
+            this.ktLabel3.TabIndex = 32;
+            this.ktLabel3.Text = "Status";
+            // 
+            // ktLabel4
+            // 
+            this.ktLabel4.AutoSize = true;
+            this.ktLabel4.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.ktLabel4.ForeColor = System.Drawing.Color.White;
+            this.ktLabel4.KtFontSize = KimTools.WinForms.KtFont.Default;
+            this.ktLabel4.Location = new System.Drawing.Point(32, 96);
+            this.ktLabel4.Name = "ktLabel4";
+            this.ktLabel4.Size = new System.Drawing.Size(74, 25);
+            this.ktLabel4.TabIndex = 30;
+            this.ktLabel4.Text = "Gender";
+            // 
+            // StudentLastNameTxb
+            // 
+            this.StudentLastNameTxb.AcceptsReturn = false;
+            this.StudentLastNameTxb.AcceptsTab = false;
+            this.StudentLastNameTxb.AnimationSpeed = 200;
+            this.StudentLastNameTxb.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.StudentLastNameTxb.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.StudentLastNameTxb.AutoSizeHeight = true;
+            this.StudentLastNameTxb.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
+            this.StudentLastNameTxb.Bg = KimTools.WinForms.KtColor.Tailwind_White;
+            this.StudentLastNameTxb.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.StudentLastNameTxb.CustomBorderColor = System.Drawing.Color.Empty;
+            this.StudentLastNameTxb.CustomBorderColorActive = System.Drawing.Color.Empty;
+            this.StudentLastNameTxb.CustomBorderColorDisabled = System.Drawing.Color.Empty;
+            this.StudentLastNameTxb.CustomFillColor = System.Drawing.Color.Empty;
+            this.StudentLastNameTxb.CustomIconLeft = null;
+            this.StudentLastNameTxb.CustomIconRight = null;
+            this.StudentLastNameTxb.CustomPlaceholderColor = System.Drawing.Color.Empty;
+            this.StudentLastNameTxb.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.StudentLastNameTxb.ForeColor = System.Drawing.Color.Empty;
+            this.StudentLastNameTxb.HideSelection = true;
+            this.StudentLastNameTxb.Lines = new string[0];
+            this.StudentLastNameTxb.Location = new System.Drawing.Point(358, 56);
+            this.StudentLastNameTxb.MaxLength = 32767;
+            this.StudentLastNameTxb.MinimumSize = new System.Drawing.Size(1, 1);
+            this.StudentLastNameTxb.Modified = false;
+            this.StudentLastNameTxb.Name = "StudentLastNameTxb";
+            this.StudentLastNameTxb.Password = false;
+            this.StudentLastNameTxb.PasswordChar = '\0';
+            this.StudentLastNameTxb.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.StudentLastNameTxb.SelectedText = "";
+            this.StudentLastNameTxb.SelectionLength = 0;
+            this.StudentLastNameTxb.SelectionStart = 0;
+            this.StudentLastNameTxb.ShortcutsEnabled = true;
+            this.StudentLastNameTxb.Size = new System.Drawing.Size(235, 27);
+            this.StudentLastNameTxb.Style = KimTools.WinForms.KtTextBox.KtTextBoxStyle.Tailwind;
+            this.StudentLastNameTxb.TabIndex = 29;
+            this.StudentLastNameTxb.TextMarginBottom = 0;
+            this.StudentLastNameTxb.TextPlaceholder = "Enter Last Name";
+            this.StudentLastNameTxb.TextChange += new System.EventHandler(this.StudentTxb_TextChange);
+            // 
+            // ktLabel5
+            // 
+            this.ktLabel5.AutoSize = true;
+            this.ktLabel5.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.ktLabel5.ForeColor = System.Drawing.Color.White;
+            this.ktLabel5.KtFontSize = KimTools.WinForms.KtFont.Default;
+            this.ktLabel5.Location = new System.Drawing.Point(363, 28);
+            this.ktLabel5.Name = "ktLabel5";
+            this.ktLabel5.Size = new System.Drawing.Size(99, 25);
+            this.ktLabel5.TabIndex = 28;
+            this.ktLabel5.Text = "Last Name";
+            // 
+            // StudentFirstNameTxb
+            // 
+            this.StudentFirstNameTxb.AcceptsReturn = false;
+            this.StudentFirstNameTxb.AcceptsTab = false;
+            this.StudentFirstNameTxb.AnimationSpeed = 200;
+            this.StudentFirstNameTxb.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.StudentFirstNameTxb.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.StudentFirstNameTxb.AutoSizeHeight = true;
+            this.StudentFirstNameTxb.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
+            this.StudentFirstNameTxb.Bg = KimTools.WinForms.KtColor.Tailwind_White;
+            this.StudentFirstNameTxb.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.StudentFirstNameTxb.CustomBorderColor = System.Drawing.Color.Empty;
+            this.StudentFirstNameTxb.CustomBorderColorActive = System.Drawing.Color.Empty;
+            this.StudentFirstNameTxb.CustomBorderColorDisabled = System.Drawing.Color.Empty;
+            this.StudentFirstNameTxb.CustomFillColor = System.Drawing.Color.Empty;
+            this.StudentFirstNameTxb.CustomIconLeft = null;
+            this.StudentFirstNameTxb.CustomIconRight = null;
+            this.StudentFirstNameTxb.CustomPlaceholderColor = System.Drawing.Color.Empty;
+            this.StudentFirstNameTxb.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.StudentFirstNameTxb.ForeColor = System.Drawing.Color.Empty;
+            this.StudentFirstNameTxb.HideSelection = true;
+            this.StudentFirstNameTxb.Lines = new string[0];
+            this.StudentFirstNameTxb.Location = new System.Drawing.Point(32, 56);
+            this.StudentFirstNameTxb.MaxLength = 32767;
+            this.StudentFirstNameTxb.MinimumSize = new System.Drawing.Size(1, 1);
+            this.StudentFirstNameTxb.Modified = false;
+            this.StudentFirstNameTxb.Name = "StudentFirstNameTxb";
+            this.StudentFirstNameTxb.Password = false;
+            this.StudentFirstNameTxb.PasswordChar = '\0';
+            this.StudentFirstNameTxb.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.StudentFirstNameTxb.SelectedText = "";
+            this.StudentFirstNameTxb.SelectionLength = 0;
+            this.StudentFirstNameTxb.SelectionStart = 0;
+            this.StudentFirstNameTxb.ShortcutsEnabled = true;
+            this.StudentFirstNameTxb.Size = new System.Drawing.Size(230, 27);
+            this.StudentFirstNameTxb.Style = KimTools.WinForms.KtTextBox.KtTextBoxStyle.Tailwind;
+            this.StudentFirstNameTxb.TabIndex = 27;
+            this.StudentFirstNameTxb.TextMarginBottom = 0;
+            this.StudentFirstNameTxb.TextPlaceholder = "Enter First Name";
+            this.StudentFirstNameTxb.TextChange += new System.EventHandler(this.StudentTxb_TextChange);
+            // 
+            // ktLabel6
+            // 
+            this.ktLabel6.AutoSize = true;
+            this.ktLabel6.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.ktLabel6.ForeColor = System.Drawing.Color.White;
+            this.ktLabel6.KtFontSize = KimTools.WinForms.KtFont.Default;
+            this.ktLabel6.Location = new System.Drawing.Point(32, 28);
+            this.ktLabel6.Name = "ktLabel6";
+            this.ktLabel6.Size = new System.Drawing.Size(102, 25);
+            this.ktLabel6.TabIndex = 26;
+            this.ktLabel6.Text = "First Name";
+            // 
+            // Teacher
+            // 
+            this.Teacher.Controls.Add(this.TeacherSalaryTxb);
+            this.Teacher.Controls.Add(this.ktLabel19);
+            this.Teacher.Controls.Add(this.ktLabel7);
+            this.Teacher.Controls.Add(this.ktLabel8);
+            this.Teacher.Controls.Add(this.TeacherStatusCmb);
+            this.Teacher.Controls.Add(this.TeacherGenderCmb);
+            this.Teacher.Controls.Add(this.ktLabel9);
+            this.Teacher.Controls.Add(this.ktLabel10);
+            this.Teacher.Controls.Add(this.ktLabel11);
+            this.Teacher.Controls.Add(this.ktLabel12);
+            this.Teacher.Controls.Add(this.TeacherPassTxb);
+            this.Teacher.Controls.Add(this.TeacherUsernameTxb);
+            this.Teacher.Controls.Add(this.AddTeacherBtn);
+            this.Teacher.Controls.Add(this.TeacherLastNameTxb);
+            this.Teacher.Controls.Add(this.TeacherFirstNameTxb);
+            this.Teacher.Location = new System.Drawing.Point(4, 4);
+            this.Teacher.Name = "Teacher";
+            this.Teacher.Padding = new System.Windows.Forms.Padding(3);
+            this.Teacher.Size = new System.Drawing.Size(625, 357);
+            this.Teacher.TabIndex = 2;
+            this.Teacher.Text = "Teacher";
+            this.Teacher.UseVisualStyleBackColor = true;
+            // 
+            // TeacherSalaryTxb
+            // 
+            this.TeacherSalaryTxb.AcceptsReturn = false;
+            this.TeacherSalaryTxb.AcceptsTab = false;
+            this.TeacherSalaryTxb.AnimationSpeed = 200;
+            this.TeacherSalaryTxb.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.TeacherSalaryTxb.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.TeacherSalaryTxb.AutoSizeHeight = true;
+            this.TeacherSalaryTxb.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
+            this.TeacherSalaryTxb.Bg = KimTools.WinForms.KtColor.Tailwind_White;
+            this.TeacherSalaryTxb.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.TeacherSalaryTxb.CustomBorderColor = System.Drawing.Color.Empty;
+            this.TeacherSalaryTxb.CustomBorderColorActive = System.Drawing.Color.Empty;
+            this.TeacherSalaryTxb.CustomBorderColorDisabled = System.Drawing.Color.Empty;
+            this.TeacherSalaryTxb.CustomFillColor = System.Drawing.Color.Empty;
+            this.TeacherSalaryTxb.CustomIconLeft = null;
+            this.TeacherSalaryTxb.CustomIconRight = null;
+            this.TeacherSalaryTxb.CustomPlaceholderColor = System.Drawing.Color.Empty;
+            this.TeacherSalaryTxb.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.TeacherSalaryTxb.ForeColor = System.Drawing.Color.Empty;
+            this.TeacherSalaryTxb.HideSelection = true;
+            this.TeacherSalaryTxb.Lines = new string[0];
+            this.TeacherSalaryTxb.Location = new System.Drawing.Point(32, 270);
+            this.TeacherSalaryTxb.MaxLength = 32767;
+            this.TeacherSalaryTxb.MinimumSize = new System.Drawing.Size(1, 1);
+            this.TeacherSalaryTxb.Modified = false;
+            this.TeacherSalaryTxb.Name = "TeacherSalaryTxb";
+            this.TeacherSalaryTxb.Password = false;
+            this.TeacherSalaryTxb.PasswordChar = '\0';
+            this.TeacherSalaryTxb.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.TeacherSalaryTxb.SelectedText = "";
+            this.TeacherSalaryTxb.SelectionLength = 0;
+            this.TeacherSalaryTxb.SelectionStart = 0;
+            this.TeacherSalaryTxb.ShortcutsEnabled = true;
+            this.TeacherSalaryTxb.Size = new System.Drawing.Size(230, 27);
+            this.TeacherSalaryTxb.Style = KimTools.WinForms.KtTextBox.KtTextBoxStyle.Tailwind;
+            this.TeacherSalaryTxb.TabIndex = 59;
+            this.TeacherSalaryTxb.TextMarginBottom = 0;
+            this.TeacherSalaryTxb.TextPlaceholder = "Enter Teacher Salary";
+            this.TeacherSalaryTxb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TeacherSalaryTxb_KeyPress);
+            this.TeacherSalaryTxb.TextChange += new System.EventHandler(this.TeacherTxb_TextChange);
+            // 
+            // ktLabel19
+            // 
+            this.ktLabel19.AutoSize = true;
+            this.ktLabel19.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.ktLabel19.ForeColor = System.Drawing.Color.White;
+            this.ktLabel19.KtFontSize = KimTools.WinForms.KtFont.Default;
+            this.ktLabel19.Location = new System.Drawing.Point(32, 242);
+            this.ktLabel19.Name = "ktLabel19";
+            this.ktLabel19.Size = new System.Drawing.Size(62, 25);
+            this.ktLabel19.TabIndex = 58;
+            this.ktLabel19.Text = "Salary";
+            // 
+            // ktLabel7
+            // 
+            this.ktLabel7.AutoSize = true;
+            this.ktLabel7.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.ktLabel7.ForeColor = System.Drawing.Color.White;
+            this.ktLabel7.KtFontSize = KimTools.WinForms.KtFont.Default;
+            this.ktLabel7.Location = new System.Drawing.Point(363, 168);
+            this.ktLabel7.Name = "ktLabel7";
+            this.ktLabel7.Size = new System.Drawing.Size(90, 25);
+            this.ktLabel7.TabIndex = 56;
+            this.ktLabel7.Text = "Password";
+            // 
+            // ktLabel8
+            // 
+            this.ktLabel8.AutoSize = true;
+            this.ktLabel8.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.ktLabel8.ForeColor = System.Drawing.Color.White;
+            this.ktLabel8.KtFontSize = KimTools.WinForms.KtFont.Default;
+            this.ktLabel8.Location = new System.Drawing.Point(32, 168);
+            this.ktLabel8.Name = "ktLabel8";
+            this.ktLabel8.Size = new System.Drawing.Size(99, 25);
+            this.ktLabel8.TabIndex = 54;
+            this.ktLabel8.Text = "UserName";
+            // 
+            // TeacherStatusCmb
+            // 
+            this.TeacherStatusCmb.BackColor = System.Drawing.Color.Transparent;
+            this.TeacherStatusCmb.BackgroundColor = System.Drawing.Color.White;
+            this.TeacherStatusCmb.BorderColor = System.Drawing.Color.Silver;
+            this.TeacherStatusCmb.BorderRadius = 1;
+            this.TeacherStatusCmb.Color = System.Drawing.Color.Silver;
+            this.TeacherStatusCmb.Direction = KimTools.WinForms.KtComboBox.Directions.Down;
+            this.TeacherStatusCmb.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.TeacherStatusCmb.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.TeacherStatusCmb.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.TeacherStatusCmb.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.TeacherStatusCmb.DisabledIndicatorColor = System.Drawing.Color.DarkGray;
+            this.TeacherStatusCmb.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.TeacherStatusCmb.DropdownBorderThickness = KimTools.WinForms.KtComboBox.BorderThickness.Thin;
+            this.TeacherStatusCmb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.TeacherStatusCmb.DropDownTextAlign = KimTools.WinForms.KtComboBox.TextAlign.Left;
+            this.TeacherStatusCmb.FillDropDown = true;
+            this.TeacherStatusCmb.FillIndicator = false;
+            this.TeacherStatusCmb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.TeacherStatusCmb.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.TeacherStatusCmb.ForeColor = System.Drawing.Color.Black;
+            this.TeacherStatusCmb.FormattingEnabled = true;
+            this.TeacherStatusCmb.Icon = null;
+            this.TeacherStatusCmb.IndicatorAlignment = KimTools.WinForms.KtComboBox.Indicator.Right;
+            this.TeacherStatusCmb.IndicatorColor = System.Drawing.Color.Gray;
+            this.TeacherStatusCmb.IndicatorLocation = KimTools.WinForms.KtComboBox.Indicator.Right;
+            this.TeacherStatusCmb.ItemBackColor = System.Drawing.Color.White;
+            this.TeacherStatusCmb.ItemBorderColor = System.Drawing.Color.White;
+            this.TeacherStatusCmb.ItemForeColor = System.Drawing.Color.Black;
+            this.TeacherStatusCmb.ItemHeight = 26;
+            this.TeacherStatusCmb.ItemHighLightColor = System.Drawing.Color.BlueViolet;
+            this.TeacherStatusCmb.ItemHighLightForeColor = System.Drawing.Color.White;
+            this.TeacherStatusCmb.Items.AddRange(new object[] {
+            "Active",
+            "NonActive"});
+            this.TeacherStatusCmb.ItemTopMargin = 3;
+            this.TeacherStatusCmb.Location = new System.Drawing.Point(358, 124);
+            this.TeacherStatusCmb.Name = "TeacherStatusCmb";
+            this.TeacherStatusCmb.Size = new System.Drawing.Size(235, 32);
+            this.TeacherStatusCmb.TabIndex = 53;
+            this.TeacherStatusCmb.Text = "Active";
+            this.TeacherStatusCmb.TextAlignment = KimTools.WinForms.KtComboBox.TextAlign.Left;
+            this.TeacherStatusCmb.TextLeftMargin = 5;
+            // 
+            // TeacherGenderCmb
+            // 
+            this.TeacherGenderCmb.BackColor = System.Drawing.Color.Transparent;
+            this.TeacherGenderCmb.BackgroundColor = System.Drawing.Color.White;
+            this.TeacherGenderCmb.BorderColor = System.Drawing.Color.Silver;
+            this.TeacherGenderCmb.BorderRadius = 1;
+            this.TeacherGenderCmb.Color = System.Drawing.Color.Silver;
+            this.TeacherGenderCmb.Direction = KimTools.WinForms.KtComboBox.Directions.Down;
+            this.TeacherGenderCmb.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.TeacherGenderCmb.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.TeacherGenderCmb.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.TeacherGenderCmb.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.TeacherGenderCmb.DisabledIndicatorColor = System.Drawing.Color.DarkGray;
+            this.TeacherGenderCmb.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.TeacherGenderCmb.DropdownBorderThickness = KimTools.WinForms.KtComboBox.BorderThickness.Thin;
+            this.TeacherGenderCmb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.TeacherGenderCmb.DropDownTextAlign = KimTools.WinForms.KtComboBox.TextAlign.Left;
+            this.TeacherGenderCmb.FillDropDown = true;
+            this.TeacherGenderCmb.FillIndicator = false;
+            this.TeacherGenderCmb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.TeacherGenderCmb.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.TeacherGenderCmb.ForeColor = System.Drawing.Color.Black;
+            this.TeacherGenderCmb.FormattingEnabled = true;
+            this.TeacherGenderCmb.Icon = null;
+            this.TeacherGenderCmb.IndicatorAlignment = KimTools.WinForms.KtComboBox.Indicator.Right;
+            this.TeacherGenderCmb.IndicatorColor = System.Drawing.Color.Gray;
+            this.TeacherGenderCmb.IndicatorLocation = KimTools.WinForms.KtComboBox.Indicator.Right;
+            this.TeacherGenderCmb.ItemBackColor = System.Drawing.Color.White;
+            this.TeacherGenderCmb.ItemBorderColor = System.Drawing.Color.White;
+            this.TeacherGenderCmb.ItemForeColor = System.Drawing.Color.Black;
+            this.TeacherGenderCmb.ItemHeight = 26;
+            this.TeacherGenderCmb.ItemHighLightColor = System.Drawing.Color.BlueViolet;
+            this.TeacherGenderCmb.ItemHighLightForeColor = System.Drawing.Color.White;
+            this.TeacherGenderCmb.Items.AddRange(new object[] {
+            "Male",
+            "Female",
+            "Other"});
+            this.TeacherGenderCmb.ItemTopMargin = 3;
+            this.TeacherGenderCmb.Location = new System.Drawing.Point(32, 124);
+            this.TeacherGenderCmb.Name = "TeacherGenderCmb";
+            this.TeacherGenderCmb.Size = new System.Drawing.Size(230, 32);
+            this.TeacherGenderCmb.TabIndex = 52;
+            this.TeacherGenderCmb.Text = "Male";
+            this.TeacherGenderCmb.TextAlignment = KimTools.WinForms.KtComboBox.TextAlign.Left;
+            this.TeacherGenderCmb.TextLeftMargin = 5;
+            // 
+            // ktLabel9
+            // 
+            this.ktLabel9.AutoSize = true;
+            this.ktLabel9.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.ktLabel9.ForeColor = System.Drawing.Color.White;
+            this.ktLabel9.KtFontSize = KimTools.WinForms.KtFont.Default;
+            this.ktLabel9.Location = new System.Drawing.Point(363, 96);
+            this.ktLabel9.Name = "ktLabel9";
+            this.ktLabel9.Size = new System.Drawing.Size(63, 25);
+            this.ktLabel9.TabIndex = 50;
+            this.ktLabel9.Text = "Status";
+            // 
+            // ktLabel10
+            // 
+            this.ktLabel10.AutoSize = true;
+            this.ktLabel10.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.ktLabel10.ForeColor = System.Drawing.Color.White;
+            this.ktLabel10.KtFontSize = KimTools.WinForms.KtFont.Default;
+            this.ktLabel10.Location = new System.Drawing.Point(32, 96);
+            this.ktLabel10.Name = "ktLabel10";
+            this.ktLabel10.Size = new System.Drawing.Size(74, 25);
+            this.ktLabel10.TabIndex = 49;
+            this.ktLabel10.Text = "Gender";
+            // 
+            // ktLabel11
+            // 
+            this.ktLabel11.AutoSize = true;
+            this.ktLabel11.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.ktLabel11.ForeColor = System.Drawing.Color.White;
+            this.ktLabel11.KtFontSize = KimTools.WinForms.KtFont.Default;
+            this.ktLabel11.Location = new System.Drawing.Point(363, 28);
+            this.ktLabel11.Name = "ktLabel11";
+            this.ktLabel11.Size = new System.Drawing.Size(99, 25);
+            this.ktLabel11.TabIndex = 47;
+            this.ktLabel11.Text = "Last Name";
+            // 
+            // ktLabel12
+            // 
+            this.ktLabel12.AutoSize = true;
+            this.ktLabel12.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.ktLabel12.ForeColor = System.Drawing.Color.White;
+            this.ktLabel12.KtFontSize = KimTools.WinForms.KtFont.Default;
+            this.ktLabel12.Location = new System.Drawing.Point(32, 28);
+            this.ktLabel12.Name = "ktLabel12";
+            this.ktLabel12.Size = new System.Drawing.Size(102, 25);
+            this.ktLabel12.TabIndex = 45;
+            this.ktLabel12.Text = "First Name";
+            // 
+            // TeacherPassTxb
+            // 
+            this.TeacherPassTxb.AcceptsReturn = false;
+            this.TeacherPassTxb.AcceptsTab = false;
+            this.TeacherPassTxb.AnimationSpeed = 200;
+            this.TeacherPassTxb.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.TeacherPassTxb.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.TeacherPassTxb.AutoSizeHeight = true;
+            this.TeacherPassTxb.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
+            this.TeacherPassTxb.Bg = KimTools.WinForms.KtColor.Tailwind_White;
+            this.TeacherPassTxb.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.TeacherPassTxb.CustomBorderColor = System.Drawing.Color.Empty;
+            this.TeacherPassTxb.CustomBorderColorActive = System.Drawing.Color.Empty;
+            this.TeacherPassTxb.CustomBorderColorDisabled = System.Drawing.Color.Empty;
+            this.TeacherPassTxb.CustomFillColor = System.Drawing.Color.Empty;
+            this.TeacherPassTxb.CustomIconLeft = null;
+            this.TeacherPassTxb.CustomIconRight = null;
+            this.TeacherPassTxb.CustomPlaceholderColor = System.Drawing.Color.Empty;
+            this.TeacherPassTxb.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.TeacherPassTxb.ForeColor = System.Drawing.Color.Empty;
+            this.TeacherPassTxb.HideSelection = true;
+            this.TeacherPassTxb.Lines = new string[] {
+        "1234"};
+            this.TeacherPassTxb.Location = new System.Drawing.Point(358, 196);
+            this.TeacherPassTxb.MaxLength = 32767;
+            this.TeacherPassTxb.MinimumSize = new System.Drawing.Size(1, 1);
+            this.TeacherPassTxb.Modified = false;
+            this.TeacherPassTxb.Name = "TeacherPassTxb";
+            this.TeacherPassTxb.Password = false;
+            this.TeacherPassTxb.PasswordChar = '\0';
+            this.TeacherPassTxb.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.TeacherPassTxb.SelectedText = "";
+            this.TeacherPassTxb.SelectionLength = 0;
+            this.TeacherPassTxb.SelectionStart = 4;
+            this.TeacherPassTxb.ShortcutsEnabled = true;
+            this.TeacherPassTxb.Size = new System.Drawing.Size(235, 27);
+            this.TeacherPassTxb.Style = KimTools.WinForms.KtTextBox.KtTextBoxStyle.Tailwind;
+            this.TeacherPassTxb.TabIndex = 57;
+            this.TeacherPassTxb.TextMarginBottom = 0;
+            this.TeacherPassTxb.TextPlaceholder = "Enter Password";
+            this.TeacherPassTxb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.AdminUsernameTxb_KeyPress);
+            this.TeacherPassTxb.TextChange += new System.EventHandler(this.TeacherTxb_TextChange);
+            // 
+            // TeacherUsernameTxb
+            // 
+            this.TeacherUsernameTxb.AcceptsReturn = false;
+            this.TeacherUsernameTxb.AcceptsTab = false;
+            this.TeacherUsernameTxb.AnimationSpeed = 200;
+            this.TeacherUsernameTxb.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.TeacherUsernameTxb.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.TeacherUsernameTxb.AutoSizeHeight = true;
+            this.TeacherUsernameTxb.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
+            this.TeacherUsernameTxb.Bg = KimTools.WinForms.KtColor.Tailwind_White;
+            this.TeacherUsernameTxb.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.TeacherUsernameTxb.CustomBorderColor = System.Drawing.Color.Empty;
+            this.TeacherUsernameTxb.CustomBorderColorActive = System.Drawing.Color.Empty;
+            this.TeacherUsernameTxb.CustomBorderColorDisabled = System.Drawing.Color.Empty;
+            this.TeacherUsernameTxb.CustomFillColor = System.Drawing.Color.Empty;
+            this.TeacherUsernameTxb.CustomIconLeft = null;
+            this.TeacherUsernameTxb.CustomIconRight = null;
+            this.TeacherUsernameTxb.CustomPlaceholderColor = System.Drawing.Color.Empty;
+            this.TeacherUsernameTxb.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.TeacherUsernameTxb.ForeColor = System.Drawing.Color.Empty;
+            this.TeacherUsernameTxb.HideSelection = true;
+            this.TeacherUsernameTxb.Lines = new string[0];
+            this.TeacherUsernameTxb.Location = new System.Drawing.Point(32, 196);
+            this.TeacherUsernameTxb.MaxLength = 32767;
+            this.TeacherUsernameTxb.MinimumSize = new System.Drawing.Size(1, 1);
+            this.TeacherUsernameTxb.Modified = false;
+            this.TeacherUsernameTxb.Name = "TeacherUsernameTxb";
+            this.TeacherUsernameTxb.Password = false;
+            this.TeacherUsernameTxb.PasswordChar = '\0';
+            this.TeacherUsernameTxb.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.TeacherUsernameTxb.SelectedText = "";
+            this.TeacherUsernameTxb.SelectionLength = 0;
+            this.TeacherUsernameTxb.SelectionStart = 0;
+            this.TeacherUsernameTxb.ShortcutsEnabled = true;
+            this.TeacherUsernameTxb.Size = new System.Drawing.Size(230, 27);
+            this.TeacherUsernameTxb.Style = KimTools.WinForms.KtTextBox.KtTextBoxStyle.Tailwind;
+            this.TeacherUsernameTxb.TabIndex = 55;
+            this.TeacherUsernameTxb.TextMarginBottom = 0;
+            this.TeacherUsernameTxb.TextPlaceholder = "Enter UserName";
+            this.TeacherUsernameTxb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.AdminUsernameTxb_KeyPress);
+            this.TeacherUsernameTxb.TextChange += new System.EventHandler(this.TeacherTxb_TextChange);
+            // 
+            // AddTeacherBtn
+            // 
+            this.AddTeacherBtn.BackColor = System.Drawing.Color.Empty;
+            this.AddTeacherBtn.BorderShape = KimTools.WinForms.KtSize.Default;
+            this.AddTeacherBtn.BorderSize = KimTools.WinForms.KtSize.Default;
+            this.AddTeacherBtn.CustomColors = new System.Drawing.Color[0];
+            this.AddTeacherBtn.Enabled = false;
+            this.AddTeacherBtn.FlatAppearance.BorderSize = 0;
+            this.AddTeacherBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.AddTeacherBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.AddTeacherBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AddTeacherBtn.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddTeacherBtn.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.AddTeacherBtn.IconName = "";
+            this.AddTeacherBtn.IconSize = 16;
+            this.AddTeacherBtn.IconStroke = 2.5D;
+            this.AddTeacherBtn.Location = new System.Drawing.Point(493, 291);
+            this.AddTeacherBtn.Name = "AddTeacherBtn";
+            this.AddTeacherBtn.Size = new System.Drawing.Size(95, 37);
+            this.AddTeacherBtn.Style = KimTools.WinForms.KtStyle.Tailwind;
+            this.AddTeacherBtn.TabIndex = 51;
+            this.AddTeacherBtn.Text = "ADD";
+            this.AddTeacherBtn.UseVisualStyleBackColor = false;
+            this.AddTeacherBtn.Click += new System.EventHandler(this.AddTeacherBtn_Click);
+            // 
+            // TeacherLastNameTxb
+            // 
+            this.TeacherLastNameTxb.AcceptsReturn = false;
+            this.TeacherLastNameTxb.AcceptsTab = false;
+            this.TeacherLastNameTxb.AnimationSpeed = 200;
+            this.TeacherLastNameTxb.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.TeacherLastNameTxb.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.TeacherLastNameTxb.AutoSizeHeight = true;
+            this.TeacherLastNameTxb.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
+            this.TeacherLastNameTxb.Bg = KimTools.WinForms.KtColor.Tailwind_White;
+            this.TeacherLastNameTxb.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.TeacherLastNameTxb.CustomBorderColor = System.Drawing.Color.Empty;
+            this.TeacherLastNameTxb.CustomBorderColorActive = System.Drawing.Color.Empty;
+            this.TeacherLastNameTxb.CustomBorderColorDisabled = System.Drawing.Color.Empty;
+            this.TeacherLastNameTxb.CustomFillColor = System.Drawing.Color.Empty;
+            this.TeacherLastNameTxb.CustomIconLeft = null;
+            this.TeacherLastNameTxb.CustomIconRight = null;
+            this.TeacherLastNameTxb.CustomPlaceholderColor = System.Drawing.Color.Empty;
+            this.TeacherLastNameTxb.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.TeacherLastNameTxb.ForeColor = System.Drawing.Color.Empty;
+            this.TeacherLastNameTxb.HideSelection = true;
+            this.TeacherLastNameTxb.Lines = new string[0];
+            this.TeacherLastNameTxb.Location = new System.Drawing.Point(358, 56);
+            this.TeacherLastNameTxb.MaxLength = 32767;
+            this.TeacherLastNameTxb.MinimumSize = new System.Drawing.Size(1, 1);
+            this.TeacherLastNameTxb.Modified = false;
+            this.TeacherLastNameTxb.Name = "TeacherLastNameTxb";
+            this.TeacherLastNameTxb.Password = false;
+            this.TeacherLastNameTxb.PasswordChar = '\0';
+            this.TeacherLastNameTxb.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.TeacherLastNameTxb.SelectedText = "";
+            this.TeacherLastNameTxb.SelectionLength = 0;
+            this.TeacherLastNameTxb.SelectionStart = 0;
+            this.TeacherLastNameTxb.ShortcutsEnabled = true;
+            this.TeacherLastNameTxb.Size = new System.Drawing.Size(235, 27);
+            this.TeacherLastNameTxb.Style = KimTools.WinForms.KtTextBox.KtTextBoxStyle.Tailwind;
+            this.TeacherLastNameTxb.TabIndex = 48;
+            this.TeacherLastNameTxb.TextMarginBottom = 0;
+            this.TeacherLastNameTxb.TextPlaceholder = "Enter Last Name";
+            this.TeacherLastNameTxb.TextChange += new System.EventHandler(this.TeacherTxb_TextChange);
+            // 
+            // TeacherFirstNameTxb
+            // 
+            this.TeacherFirstNameTxb.AcceptsReturn = false;
+            this.TeacherFirstNameTxb.AcceptsTab = false;
+            this.TeacherFirstNameTxb.AnimationSpeed = 200;
+            this.TeacherFirstNameTxb.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.TeacherFirstNameTxb.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.TeacherFirstNameTxb.AutoSizeHeight = true;
+            this.TeacherFirstNameTxb.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
+            this.TeacherFirstNameTxb.Bg = KimTools.WinForms.KtColor.Tailwind_White;
+            this.TeacherFirstNameTxb.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.TeacherFirstNameTxb.CustomBorderColor = System.Drawing.Color.Empty;
+            this.TeacherFirstNameTxb.CustomBorderColorActive = System.Drawing.Color.Empty;
+            this.TeacherFirstNameTxb.CustomBorderColorDisabled = System.Drawing.Color.Empty;
+            this.TeacherFirstNameTxb.CustomFillColor = System.Drawing.Color.Empty;
+            this.TeacherFirstNameTxb.CustomIconLeft = null;
+            this.TeacherFirstNameTxb.CustomIconRight = null;
+            this.TeacherFirstNameTxb.CustomPlaceholderColor = System.Drawing.Color.Empty;
+            this.TeacherFirstNameTxb.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.TeacherFirstNameTxb.ForeColor = System.Drawing.Color.Empty;
+            this.TeacherFirstNameTxb.HideSelection = true;
+            this.TeacherFirstNameTxb.Lines = new string[0];
+            this.TeacherFirstNameTxb.Location = new System.Drawing.Point(32, 56);
+            this.TeacherFirstNameTxb.MaxLength = 32767;
+            this.TeacherFirstNameTxb.MinimumSize = new System.Drawing.Size(1, 1);
+            this.TeacherFirstNameTxb.Modified = false;
+            this.TeacherFirstNameTxb.Name = "TeacherFirstNameTxb";
+            this.TeacherFirstNameTxb.Password = false;
+            this.TeacherFirstNameTxb.PasswordChar = '\0';
+            this.TeacherFirstNameTxb.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.TeacherFirstNameTxb.SelectedText = "";
+            this.TeacherFirstNameTxb.SelectionLength = 0;
+            this.TeacherFirstNameTxb.SelectionStart = 0;
+            this.TeacherFirstNameTxb.ShortcutsEnabled = true;
+            this.TeacherFirstNameTxb.Size = new System.Drawing.Size(230, 27);
+            this.TeacherFirstNameTxb.Style = KimTools.WinForms.KtTextBox.KtTextBoxStyle.Tailwind;
+            this.TeacherFirstNameTxb.TabIndex = 46;
+            this.TeacherFirstNameTxb.TextMarginBottom = 0;
+            this.TeacherFirstNameTxb.TextPlaceholder = "Enter First Name";
+            this.TeacherFirstNameTxb.TextChange += new System.EventHandler(this.TeacherTxb_TextChange);
+            // 
+            // Admin
+            // 
+            this.Admin.Controls.Add(this.ktLabel13);
+            this.Admin.Controls.Add(this.InsertAdminBtn);
+            this.Admin.Controls.Add(this.AdminPassTxb);
+            this.Admin.Controls.Add(this.ktLabel17);
+            this.Admin.Controls.Add(this.AdminUsernameTxb);
+            this.Admin.Controls.Add(this.ktLabel18);
+            this.Admin.Location = new System.Drawing.Point(4, 4);
+            this.Admin.Name = "Admin";
+            this.Admin.Padding = new System.Windows.Forms.Padding(3);
+            this.Admin.Size = new System.Drawing.Size(625, 357);
+            this.Admin.TabIndex = 3;
+            this.Admin.Text = "Admin";
+            this.Admin.UseVisualStyleBackColor = true;
+            // 
             // ktLabel13
             // 
             this.ktLabel13.AutoSize = true;
             this.ktLabel13.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
-            this.ktLabel13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(40)))), ((int)(((byte)(67)))));
+            this.ktLabel13.ForeColor = System.Drawing.Color.White;
             this.ktLabel13.KtFontSize = KimTools.WinForms.KtFont.Default;
             this.ktLabel13.Location = new System.Drawing.Point(1756, 2857);
             this.ktLabel13.Name = "ktLabel13";
@@ -1178,19 +1049,139 @@
             this.ktLabel13.TabIndex = 52;
             this.ktLabel13.Text = "ktLabel13";
             // 
-            // AdminWarninglbl
+            // InsertAdminBtn
             // 
-            this.AdminWarninglbl.AutoSize = true;
-            this.AdminWarninglbl.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
-            this.AdminWarninglbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(57)))), ((int)(((byte)(20)))));
-            this.AdminWarninglbl.KtFontSize = KimTools.WinForms.KtFont.Default;
-            this.AdminWarninglbl.LabelColor = KimTools.WinForms.KtColor.Warning;
-            this.AdminWarninglbl.Location = new System.Drawing.Point(33, 91);
-            this.AdminWarninglbl.Name = "AdminWarninglbl";
-            this.AdminWarninglbl.Size = new System.Drawing.Size(33, 25);
-            this.AdminWarninglbl.TabIndex = 53;
-            this.AdminWarninglbl.Text = "lbl";
-            this.AdminWarninglbl.Visible = false;
+            this.InsertAdminBtn.BackColor = System.Drawing.Color.Empty;
+            this.InsertAdminBtn.BorderShape = KimTools.WinForms.KtSize.Default;
+            this.InsertAdminBtn.BorderSize = KimTools.WinForms.KtSize.Default;
+            this.InsertAdminBtn.CustomColors = new System.Drawing.Color[0];
+            this.InsertAdminBtn.Enabled = false;
+            this.InsertAdminBtn.FlatAppearance.BorderSize = 0;
+            this.InsertAdminBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.InsertAdminBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.InsertAdminBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.InsertAdminBtn.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.InsertAdminBtn.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.InsertAdminBtn.IconName = "";
+            this.InsertAdminBtn.IconSize = 16;
+            this.InsertAdminBtn.IconStroke = 2.5D;
+            this.InsertAdminBtn.Location = new System.Drawing.Point(493, 291);
+            this.InsertAdminBtn.Name = "InsertAdminBtn";
+            this.InsertAdminBtn.Size = new System.Drawing.Size(95, 37);
+            this.InsertAdminBtn.Style = KimTools.WinForms.KtStyle.Tailwind;
+            this.InsertAdminBtn.TabIndex = 51;
+            this.InsertAdminBtn.Text = "ADD";
+            this.InsertAdminBtn.UseVisualStyleBackColor = false;
+            this.InsertAdminBtn.Click += new System.EventHandler(this.InsertAdminBtn_Click);
+            // 
+            // AdminPassTxb
+            // 
+            this.AdminPassTxb.AcceptsReturn = false;
+            this.AdminPassTxb.AcceptsTab = false;
+            this.AdminPassTxb.AnimationSpeed = 200;
+            this.AdminPassTxb.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.AdminPassTxb.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.AdminPassTxb.AutoSizeHeight = true;
+            this.AdminPassTxb.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
+            this.AdminPassTxb.Bg = KimTools.WinForms.KtColor.Tailwind_White;
+            this.AdminPassTxb.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.AdminPassTxb.CustomBorderColor = System.Drawing.Color.Empty;
+            this.AdminPassTxb.CustomBorderColorActive = System.Drawing.Color.Empty;
+            this.AdminPassTxb.CustomBorderColorDisabled = System.Drawing.Color.Empty;
+            this.AdminPassTxb.CustomFillColor = System.Drawing.Color.Empty;
+            this.AdminPassTxb.CustomIconLeft = null;
+            this.AdminPassTxb.CustomIconRight = null;
+            this.AdminPassTxb.CustomPlaceholderColor = System.Drawing.Color.Empty;
+            this.AdminPassTxb.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.AdminPassTxb.ForeColor = System.Drawing.Color.Empty;
+            this.AdminPassTxb.HideSelection = true;
+            this.AdminPassTxb.Lines = new string[] {
+        "1234"};
+            this.AdminPassTxb.Location = new System.Drawing.Point(358, 56);
+            this.AdminPassTxb.MaxLength = 32767;
+            this.AdminPassTxb.MinimumSize = new System.Drawing.Size(1, 1);
+            this.AdminPassTxb.Modified = false;
+            this.AdminPassTxb.Name = "AdminPassTxb";
+            this.AdminPassTxb.Password = false;
+            this.AdminPassTxb.PasswordChar = '●';
+            this.AdminPassTxb.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.AdminPassTxb.SelectedText = "";
+            this.AdminPassTxb.SelectionLength = 0;
+            this.AdminPassTxb.SelectionStart = 4;
+            this.AdminPassTxb.ShortcutsEnabled = true;
+            this.AdminPassTxb.Size = new System.Drawing.Size(235, 27);
+            this.AdminPassTxb.Style = KimTools.WinForms.KtTextBox.KtTextBoxStyle.Tailwind;
+            this.AdminPassTxb.TabIndex = 48;
+            this.AdminPassTxb.TextMarginBottom = 0;
+            this.AdminPassTxb.TextPlaceholder = "Enter Password";
+            this.AdminPassTxb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.AdminUsernameTxb_KeyPress);
+            this.AdminPassTxb.TextChange += new System.EventHandler(this.AdminUsernameTxb_TextChange);
+            // 
+            // ktLabel17
+            // 
+            this.ktLabel17.AutoSize = true;
+            this.ktLabel17.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.ktLabel17.ForeColor = System.Drawing.Color.White;
+            this.ktLabel17.KtFontSize = KimTools.WinForms.KtFont.Default;
+            this.ktLabel17.Location = new System.Drawing.Point(363, 28);
+            this.ktLabel17.Name = "ktLabel17";
+            this.ktLabel17.Size = new System.Drawing.Size(90, 25);
+            this.ktLabel17.TabIndex = 47;
+            this.ktLabel17.Text = "Password";
+            // 
+            // AdminUsernameTxb
+            // 
+            this.AdminUsernameTxb.AcceptsReturn = false;
+            this.AdminUsernameTxb.AcceptsTab = false;
+            this.AdminUsernameTxb.AnimationSpeed = 200;
+            this.AdminUsernameTxb.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.AdminUsernameTxb.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.AdminUsernameTxb.AutoSizeHeight = true;
+            this.AdminUsernameTxb.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
+            this.AdminUsernameTxb.Bg = KimTools.WinForms.KtColor.Tailwind_White;
+            this.AdminUsernameTxb.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.AdminUsernameTxb.CustomBorderColor = System.Drawing.Color.Empty;
+            this.AdminUsernameTxb.CustomBorderColorActive = System.Drawing.Color.Empty;
+            this.AdminUsernameTxb.CustomBorderColorDisabled = System.Drawing.Color.Empty;
+            this.AdminUsernameTxb.CustomFillColor = System.Drawing.Color.Empty;
+            this.AdminUsernameTxb.CustomIconLeft = null;
+            this.AdminUsernameTxb.CustomIconRight = null;
+            this.AdminUsernameTxb.CustomPlaceholderColor = System.Drawing.Color.Empty;
+            this.AdminUsernameTxb.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.AdminUsernameTxb.ForeColor = System.Drawing.Color.Empty;
+            this.AdminUsernameTxb.HideSelection = true;
+            this.AdminUsernameTxb.Lines = new string[0];
+            this.AdminUsernameTxb.Location = new System.Drawing.Point(32, 56);
+            this.AdminUsernameTxb.MaxLength = 32767;
+            this.AdminUsernameTxb.MinimumSize = new System.Drawing.Size(1, 1);
+            this.AdminUsernameTxb.Modified = false;
+            this.AdminUsernameTxb.Name = "AdminUsernameTxb";
+            this.AdminUsernameTxb.Password = false;
+            this.AdminUsernameTxb.PasswordChar = '\0';
+            this.AdminUsernameTxb.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.AdminUsernameTxb.SelectedText = "";
+            this.AdminUsernameTxb.SelectionLength = 0;
+            this.AdminUsernameTxb.SelectionStart = 0;
+            this.AdminUsernameTxb.ShortcutsEnabled = true;
+            this.AdminUsernameTxb.Size = new System.Drawing.Size(230, 27);
+            this.AdminUsernameTxb.Style = KimTools.WinForms.KtTextBox.KtTextBoxStyle.Tailwind;
+            this.AdminUsernameTxb.TabIndex = 46;
+            this.AdminUsernameTxb.TextMarginBottom = 0;
+            this.AdminUsernameTxb.TextPlaceholder = "Enter UserName";
+            this.AdminUsernameTxb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.AdminUsernameTxb_KeyPress);
+            this.AdminUsernameTxb.TextChange += new System.EventHandler(this.AdminUsernameTxb_TextChange);
+            // 
+            // ktLabel18
+            // 
+            this.ktLabel18.AutoSize = true;
+            this.ktLabel18.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.ktLabel18.ForeColor = System.Drawing.Color.White;
+            this.ktLabel18.KtFontSize = KimTools.WinForms.KtFont.Default;
+            this.ktLabel18.Location = new System.Drawing.Point(32, 28);
+            this.ktLabel18.Name = "ktLabel18";
+            this.ktLabel18.Size = new System.Drawing.Size(99, 25);
+            this.ktLabel18.TabIndex = 45;
+            this.ktLabel18.Text = "UserName";
             // 
             // AddUser
             // 
@@ -1200,7 +1191,7 @@
             this.Controls.Add(this.Pages);
             this.Controls.Add(this.top);
             this.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
-            this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(40)))), ((int)(((byte)(67)))));
+            this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -1231,40 +1222,39 @@
         private System.Windows.Forms.TabPage Student;
         private System.Windows.Forms.TabPage Teacher;
         private System.Windows.Forms.TabPage Admin;
-        private KimTools.WinForms.KtButton ktButton3;
+        private KimTools.WinForms.KtButton AddStudentBtn;
         private KimTools.WinForms.KtLabel ktLabel3;
         private KimTools.WinForms.KtLabel ktLabel4;
-        private KimTools.WinForms.KtTextBox ktTextBox5;
+        private KimTools.WinForms.KtTextBox StudentLastNameTxb;
         private KimTools.WinForms.KtLabel ktLabel5;
-        private KimTools.WinForms.KtTextBox ktTextBox6;
+        private KimTools.WinForms.KtTextBox StudentFirstNameTxb;
         private KimTools.WinForms.KtLabel ktLabel6;
-        private KimTools.WinForms.KtComboBox GenderCmb;
+        private KimTools.WinForms.KtComboBox StudentGenderCmb;
         private KimTools.WinForms.KtComboBox StudentStatusCmb;
-        private KimTools.WinForms.KtTextBox ktTextBox1;
+        private KimTools.WinForms.KtTextBox StudentPassTxb;
         private KimTools.WinForms.KtLabel ktLabel1;
-        private KimTools.WinForms.KtTextBox ktTextBox2;
+        private KimTools.WinForms.KtTextBox StudentUsernameTxb;
         private KimTools.WinForms.KtLabel ktLabel2;
-        private KimTools.WinForms.KtTextBox ktTextBox13;
+        private KimTools.WinForms.KtTextBox TeacherSalaryTxb;
         private KimTools.WinForms.KtLabel ktLabel19;
-        private KimTools.WinForms.KtTextBox ktTextBox3;
+        private KimTools.WinForms.KtTextBox TeacherPassTxb;
         private KimTools.WinForms.KtLabel ktLabel7;
-        private KimTools.WinForms.KtTextBox ktTextBox4;
+        private KimTools.WinForms.KtTextBox TeacherUsernameTxb;
         private KimTools.WinForms.KtLabel ktLabel8;
-        private KimTools.WinForms.KtComboBox ktComboBox1;
-        private KimTools.WinForms.KtComboBox ktComboBox2;
-        private KimTools.WinForms.KtButton ktButton1;
+        private KimTools.WinForms.KtComboBox TeacherStatusCmb;
+        private KimTools.WinForms.KtComboBox TeacherGenderCmb;
+        private KimTools.WinForms.KtButton AddTeacherBtn;
         private KimTools.WinForms.KtLabel ktLabel9;
         private KimTools.WinForms.KtLabel ktLabel10;
-        private KimTools.WinForms.KtTextBox ktTextBox7;
+        private KimTools.WinForms.KtTextBox TeacherLastNameTxb;
         private KimTools.WinForms.KtLabel ktLabel11;
-        private KimTools.WinForms.KtTextBox ktTextBox8;
+        private KimTools.WinForms.KtTextBox TeacherFirstNameTxb;
         private KimTools.WinForms.KtLabel ktLabel12;
         private KimTools.WinForms.KtButton InsertAdminBtn;
         private KimTools.WinForms.KtTextBox AdminPassTxb;
         private KimTools.WinForms.KtLabel ktLabel17;
         private KimTools.WinForms.KtTextBox AdminUsernameTxb;
         private KimTools.WinForms.KtLabel ktLabel18;
-        private KimTools.WinForms.KtLabel AdminWarninglbl;
         private KimTools.WinForms.KtLabel ktLabel13;
     }
 }

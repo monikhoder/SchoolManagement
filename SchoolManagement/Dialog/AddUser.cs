@@ -4,11 +4,14 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net.NetworkInformation;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using KimTools.WinForms;
 using SchoolManagement.DBAccess;
+using SchoolManagement.Properties;
+using SmartFormat.Core.Extensions;
 
 namespace SchoolManagement.Dialog
 {
@@ -35,92 +38,28 @@ namespace SchoolManagement.Dialog
             Pages.SetPage(Admin);
         }
 
-        private void Pages_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ktLabel6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ktTextBox6_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ktLabel4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void GenderCmb_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ktLabel2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ktTextBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ktTextBox1_TextChanged_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ktLabel1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void StudentStatusCmb_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ktLabel3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ktTextBox5_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ktLabel5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ktButton3_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void InsertAdminBtn_Click(object sender, EventArgs e)
         {
             try
             {
                 CrudUsers.InsertUser("admin", AdminUsernameTxb.Text.Trim(), AdminPassTxb.Text.Trim(),"","","",0,true);
+                //reset texbox
                 AdminUsernameTxb.Text = "";
                 AdminPassTxb.Text = "";
-                AdminWarninglbl.Text = "Admin Inserted Successfully";
-                AdminWarninglbl.LabelColor = KtColor.Tailwind_Violet;
-                AdminWarninglbl.Visible = true;
-            }
-            catch (Exception ex)
+
+                //alert 
+                AlertDialogs alertDialogs = new AlertDialogs();
+                alertDialogs.AlertLbl.Text = "Admin Added Succesful";
+                alertDialogs.AlertLbl.LabelColor = KtColor.Tailwind_Violet;
+                alertDialogs.AlertIcon.Image = Properties.Resources._checked;
+                alertDialogs.ShowDialog();
+            }catch (Exception ex)
             {
-                AdminWarninglbl.Text = ex.Message;
-                AdminWarninglbl.LabelColor = KtColor.Danger;
-                AdminWarninglbl.Visible = true;                
+                AlertDialogs alertDialogs = new AlertDialogs();
+                alertDialogs.AlertLbl.Text = ex.Message;
+                alertDialogs.AlertLbl.LabelColor = KtColor.Danger;
+                alertDialogs.AlertIcon.Image = Properties.Resources.warning_icon;
+                alertDialogs.ShowDialog();
             }
         }
 
@@ -136,7 +75,7 @@ namespace SchoolManagement.Dialog
         private void AdminUsernameTxb_TextChange(object sender, EventArgs e)
         {
             AdminInsertBtnEnable();
-            AdminWarninglbl.Visible=false;
+           
         }
 
         private void AdminInsertBtnEnable()
@@ -148,9 +87,153 @@ namespace SchoolManagement.Dialog
             else
             {
                 InsertAdminBtn.Enabled = false;
-            }
-                  
+            }                 
 
+        }
+
+        private void AddTeacherBtn_Click(object sender, EventArgs e)
+        {
+            string role = "teacher";
+            string username = TeacherUsernameTxb.Text;
+            string pass = TeacherPassTxb.Text;
+            string firstname = TeacherFirstNameTxb.Text;
+            string lastname = TeacherLastNameTxb.Text;
+            string gender = TeacherGenderCmb.Text;
+            decimal salary = 0; if (TeacherSalaryTxb.Text.Length > 0) {salary = Convert.ToDecimal(TeacherSalaryTxb.Text); }
+            bool status = true;
+            if(TeacherStatusCmb.Text.ToLower() == "nonactive") {status = false;}
+            try
+            {
+                CrudUsers.InsertUser(role,username,pass,firstname,lastname,gender,salary,status);
+
+                // Clear input fields
+                TeacherUsernameTxb.Text = "";
+                TeacherPassTxb.Text = "";
+                TeacherFirstNameTxb.Text = "";
+                TeacherLastNameTxb.Text = "";
+                TeacherSalaryTxb.Text = "";
+
+                // Display success message
+                AlertDialogs alertDialogs = new AlertDialogs();
+                alertDialogs.AlertLbl.Text = "Teacher Added Succesful";
+                alertDialogs.AlertLbl.LabelColor = KtColor.Tailwind_Violet;
+                alertDialogs.AlertIcon.Image = Properties.Resources._checked;
+                alertDialogs.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                // Display error message
+                AlertDialogs alertDialogs = new AlertDialogs();
+                alertDialogs.AlertLbl.Text = ex.Message;
+                alertDialogs.AlertLbl.LabelColor = KtColor.Danger;
+                alertDialogs.AlertIcon.Image = Properties.Resources.warning_icon;
+                alertDialogs.ShowDialog();
+            }
+
+        }
+
+        private void AddStudentBtn_Click(object sender, EventArgs e)
+        {
+            string role = "student";
+            string username = StudentUsernameTxb.Text;
+            string pass = StudentPassTxb.Text;
+            string firstname = StudentFirstNameTxb.Text;
+            string lastname = StudentLastNameTxb.Text;
+            string gender = StudentGenderCmb.Text;
+            decimal salary = 0;
+            bool status;
+            if (StudentStatusCmb.Text.ToLower() == "nonactive") { status = false; }else {  status = true; }
+
+            try
+            {
+                CrudUsers.InsertUser(role, username, pass, firstname, lastname, gender, salary, status);
+
+                // Clear input fields
+                StudentUsernameTxb.Text = "";
+                StudentPassTxb.Text = "";
+                StudentFirstNameTxb.Text = "";
+                StudentLastNameTxb.Text = "";
+
+                // Display success message
+                AlertDialogs alertDialogs = new AlertDialogs();
+                alertDialogs.AlertLbl.Text = "Teacher Added Succesful";
+                alertDialogs.AlertLbl.LabelColor = KtColor.Tailwind_Violet;
+                alertDialogs.AlertIcon.Image = Properties.Resources._checked;
+                alertDialogs.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                // Display error message
+                AlertDialogs alertDialogs = new AlertDialogs();
+                alertDialogs.AlertLbl.Text = ex.Message;
+                alertDialogs.AlertLbl.LabelColor = KtColor.Danger;
+                alertDialogs.AlertIcon.Image = Properties.Resources.warning_icon;
+                alertDialogs.ShowDialog();
+            }
+
+        }
+        private void StudentInsertBtnEnable()
+        {
+            if (StudentUsernameTxb.Text.Length > 0 && StudentPassTxb.Text.Length > 0 && StudentFirstNameTxb.Text.Length > 0 && StudentLastNameTxb.Text.Length > 0)
+            {
+               AddStudentBtn.Enabled = true;
+            }
+            else
+            {
+                AddStudentBtn.Enabled = false;
+            }
+
+
+        }
+        private void TeacherInsertBtnEnable()
+        {
+            if (TeacherUsernameTxb.Text.Length > 0 && TeacherPassTxb.Text.Length > 0 && TeacherFirstNameTxb.Text.Length > 0 && TeacherLastNameTxb.Text.Length > 0 && TeacherSalaryTxb.Text.Length > 0)
+            {
+                AddTeacherBtn.Enabled = true;
+            }
+            else
+            {
+                AddTeacherBtn.Enabled = false;
+            }
+
+
+        }
+
+
+        private void TeacherSalaryTxb_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            TextBox txtBox = sender as TextBox;
+
+            // Allow control keys (like Backspace)
+            if (char.IsControl(e.KeyChar))
+            {
+                return;
+            }
+
+            // Allow digits
+            if (char.IsDigit(e.KeyChar))
+            {
+                return;
+            }
+
+            // Allow only one decimal point
+            if (e.KeyChar == '.' && !txtBox.Text.Contains('.'))
+            {
+                return;
+            }
+
+            // If none of the above, disallow the input
+            e.Handled = true;
+        }
+
+        private void StudentTxb_TextChange(object sender, EventArgs e)
+        {
+            StudentInsertBtnEnable();
+        }
+
+        private void TeacherTxb_TextChange(object sender, EventArgs e)
+        {
+            TeacherInsertBtnEnable();
         }
     }
 }

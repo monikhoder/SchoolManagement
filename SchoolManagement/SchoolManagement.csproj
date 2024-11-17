@@ -174,11 +174,11 @@
     <Compile Include="Dialog\EnrollStudent.Designer.cs">
       <DependentUpon>EnrollStudent.cs</DependentUpon>
     </Compile>
-    <Compile Include="Dialog\WarningDialog.cs">
+    <Compile Include="Dialog\AlertDialogs.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Dialog\WarningDialog.Designer.cs">
-      <DependentUpon>WarningDialog.cs</DependentUpon>
+    <Compile Include="Dialog\AlertDialogs.Designer.cs">
+      <DependentUpon>AlertDialogs.cs</DependentUpon>
     </Compile>
     <Compile Include="Exam.cs">
       <DependentUpon>DBModel.tt</DependentUpon>
@@ -257,8 +257,8 @@
     <EmbeddedResource Include="Dialog\EnrollStudent.resx">
       <DependentUpon>EnrollStudent.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Dialog\WarningDialog.resx">
-      <DependentUpon>WarningDialog.cs</DependentUpon>
+    <EmbeddedResource Include="Dialog\AlertDialogs.resx">
+      <DependentUpon>AlertDialogs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
@@ -329,6 +329,8 @@
       <DependentUpon>DBModel.edmx</DependentUpon>
       <LastGenOutput>DBModel.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\checked.png" />
+    <None Include="Resources\warning icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
