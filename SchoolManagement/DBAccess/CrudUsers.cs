@@ -35,51 +35,6 @@ namespace SchoolManagement.DBAccess
             .FirstOrDefault();
             return role;
         }
-
-        // Insert admin
-        public void InsertAdmin(string username, string password)
-        {
-            if (db.Users.Any(u => u.Username == username))
-            {
-                throw new Exception("Username already exists.");
-            }
-            User admin = new User
-            {
-                Username = username,
-                Password = password,
-                RoleId = 1
-            };
-
-            db.Users.Add(admin);
-            db.SaveChanges();
-        }
-
-        // insert Teacher
-        public void InsertTeacher(string username, string password, string firstname, string lastname, string gender, decimal salary)
-        {
-            if (db.Users.Any(u => u.Username == username))
-            {
-                throw new Exception("Username already exists.");
-            }
-            var newUser = new User
-            {
-                Username = username,
-                Password = password,
-                RoleId = 2
-            };
-            db.Users.Add(newUser);
-            db.SaveChanges();
-            var newTeacher = new Teacher
-            {
-                UserId = newUser.Id,
-                FirstName = firstname,
-                LastName = lastname,
-                Gender = gender,
-                Salary = salary
-            };
-            db.Teachers.Add(newTeacher);
-            db.SaveChanges();
-        }
         // insert User
         public void InsertUser(string role, string username, string password, string firstname, string lastname, string gender, decimal salary, bool status)
         {
@@ -139,7 +94,22 @@ namespace SchoolManagement.DBAccess
             // Save all changes 
             db.SaveChanges();
         }
+        // Get Admin
+        public List<User> GetAdmins (string search)
+        {
+            return db.Users.Where(u => u.Role.Name == "Admin" && (u.Username.Contains(search))).ToList();
+        }
 
-
+        // Get Teacher
+        public List<Teacher> GetTeachers(string search)
+        {
+            return db.Teachers .Where(t => t.FirstName.Contains(search) || t.LastName.Contains(search)).ToList();
+        }
+        // Get Student
+        public List<Student> GetStudents (string search)
+        {
+            return db.Students.Where(s =>  s.FirstName.Contains(search) || s.LastName.Contains(search)).ToList();
+        }
     }
+    
 }

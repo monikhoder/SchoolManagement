@@ -156,7 +156,7 @@ namespace SchoolManagement.Dialog
 
                 // Display success message
                 AlertDialogs alertDialogs = new AlertDialogs();
-                alertDialogs.AlertLbl.Text = "Teacher Added Succesful";
+                alertDialogs.AlertLbl.Text = "Student Added Succesful";
                 alertDialogs.AlertLbl.LabelColor = KtColor.Tailwind_Violet;
                 alertDialogs.AlertIcon.Image = Properties.Resources._checked;
                 alertDialogs.ShowDialog();

@@ -180,6 +180,12 @@
     <Compile Include="Dialog\AlertDialogs.Designer.cs">
       <DependentUpon>AlertDialogs.cs</DependentUpon>
     </Compile>
+    <Compile Include="Dialog\LoaderDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialog\LoaderDialog.Designer.cs">
+      <DependentUpon>LoaderDialog.cs</DependentUpon>
+    </Compile>
     <Compile Include="Exam.cs">
       <DependentUpon>DBModel.tt</DependentUpon>
     </Compile>
@@ -259,6 +265,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Dialog\AlertDialogs.resx">
       <DependentUpon>AlertDialogs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialog\LoaderDialog.resx">
+      <DependentUpon>LoaderDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
