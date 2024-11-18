@@ -30,11 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddClass));
             this.ktLabel5 = new KimTools.WinForms.KtLabel();
-            this.ktTextBox6 = new KimTools.WinForms.KtTextBox();
+            this.ClassnameTxb = new KimTools.WinForms.KtTextBox();
             this.ktLabel6 = new KimTools.WinForms.KtLabel();
-            this.ktDate1 = new KimTools.WinForms.KtDate();
-            this.ktButton3 = new KimTools.WinForms.KtButton();
-            this.ktDate2 = new KimTools.WinForms.KtDate();
+            this.ClassStartDate = new KimTools.WinForms.KtDate();
+            this.AddClassBtn = new KimTools.WinForms.KtButton();
+            this.ClassEndDate = new KimTools.WinForms.KtDate();
             this.ktLabel1 = new KimTools.WinForms.KtLabel();
             this.SuspendLayout();
             // 
@@ -53,49 +53,50 @@
             this.ktLabel5.Text = "Class Start";
             this.ktLabel5.Click += new System.EventHandler(this.ktLabel5_Click);
             // 
-            // ktTextBox6
+            // ClassnameTxb
             // 
-            this.ktTextBox6.AcceptsReturn = false;
-            this.ktTextBox6.AcceptsTab = false;
-            this.ktTextBox6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.ClassnameTxb.AcceptsReturn = false;
+            this.ClassnameTxb.AcceptsTab = false;
+            this.ClassnameTxb.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.ktTextBox6.AnimationSpeed = 200;
-            this.ktTextBox6.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.ktTextBox6.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.ktTextBox6.AutoSizeHeight = true;
-            this.ktTextBox6.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
-            this.ktTextBox6.Bg = KimTools.WinForms.KtColor.Tailwind_White;
-            this.ktTextBox6.Border = KimTools.WinForms.KtColor.Tailwind_White;
-            this.ktTextBox6.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.ktTextBox6.CustomBorderColor = System.Drawing.Color.Empty;
-            this.ktTextBox6.CustomBorderColorActive = System.Drawing.Color.Empty;
-            this.ktTextBox6.CustomBorderColorDisabled = System.Drawing.Color.Empty;
-            this.ktTextBox6.CustomFillColor = System.Drawing.Color.Empty;
-            this.ktTextBox6.CustomIconLeft = null;
-            this.ktTextBox6.CustomIconRight = null;
-            this.ktTextBox6.CustomPlaceholderColor = System.Drawing.Color.Empty;
-            this.ktTextBox6.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
-            this.ktTextBox6.ForeColor = System.Drawing.Color.Empty;
-            this.ktTextBox6.HideSelection = true;
-            this.ktTextBox6.Lines = new string[0];
-            this.ktTextBox6.Location = new System.Drawing.Point(153, 56);
-            this.ktTextBox6.MaxLength = 32767;
-            this.ktTextBox6.MinimumSize = new System.Drawing.Size(1, 1);
-            this.ktTextBox6.Modified = false;
-            this.ktTextBox6.Name = "ktTextBox6";
-            this.ktTextBox6.Password = false;
-            this.ktTextBox6.PasswordChar = '\0';
-            this.ktTextBox6.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.ktTextBox6.SelectedText = "";
-            this.ktTextBox6.SelectionLength = 0;
-            this.ktTextBox6.SelectionStart = 0;
-            this.ktTextBox6.ShortcutsEnabled = true;
-            this.ktTextBox6.Size = new System.Drawing.Size(230, 38);
-            this.ktTextBox6.Style = KimTools.WinForms.KtTextBox.KtTextBoxStyle.Tailwind;
-            this.ktTextBox6.TabIndex = 40;
-            this.ktTextBox6.TextMarginBottom = 0;
-            this.ktTextBox6.TextPlaceholder = "Enter Class Name";
-            this.ktTextBox6.TextChanged += new System.EventHandler(this.ktTextBox6_TextChanged);
+            this.ClassnameTxb.AnimationSpeed = 200;
+            this.ClassnameTxb.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.ClassnameTxb.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.ClassnameTxb.AutoSizeHeight = true;
+            this.ClassnameTxb.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
+            this.ClassnameTxb.Bg = KimTools.WinForms.KtColor.Tailwind_White;
+            this.ClassnameTxb.Border = KimTools.WinForms.KtColor.Tailwind_White;
+            this.ClassnameTxb.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.ClassnameTxb.CustomBorderColor = System.Drawing.Color.Empty;
+            this.ClassnameTxb.CustomBorderColorActive = System.Drawing.Color.Empty;
+            this.ClassnameTxb.CustomBorderColorDisabled = System.Drawing.Color.Empty;
+            this.ClassnameTxb.CustomFillColor = System.Drawing.Color.Empty;
+            this.ClassnameTxb.CustomIconLeft = null;
+            this.ClassnameTxb.CustomIconRight = null;
+            this.ClassnameTxb.CustomPlaceholderColor = System.Drawing.Color.Empty;
+            this.ClassnameTxb.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.ClassnameTxb.ForeColor = System.Drawing.Color.Empty;
+            this.ClassnameTxb.HideSelection = true;
+            this.ClassnameTxb.Lines = new string[0];
+            this.ClassnameTxb.Location = new System.Drawing.Point(153, 56);
+            this.ClassnameTxb.MaxLength = 32767;
+            this.ClassnameTxb.MinimumSize = new System.Drawing.Size(1, 1);
+            this.ClassnameTxb.Modified = false;
+            this.ClassnameTxb.Name = "ClassnameTxb";
+            this.ClassnameTxb.Password = false;
+            this.ClassnameTxb.PasswordChar = '\0';
+            this.ClassnameTxb.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.ClassnameTxb.SelectedText = "";
+            this.ClassnameTxb.SelectionLength = 0;
+            this.ClassnameTxb.SelectionStart = 0;
+            this.ClassnameTxb.ShortcutsEnabled = true;
+            this.ClassnameTxb.Size = new System.Drawing.Size(230, 38);
+            this.ClassnameTxb.Style = KimTools.WinForms.KtTextBox.KtTextBoxStyle.Tailwind;
+            this.ClassnameTxb.TabIndex = 40;
+            this.ClassnameTxb.TextMarginBottom = 0;
+            this.ClassnameTxb.TextPlaceholder = "Enter Class Name";
+            this.ClassnameTxb.TextChange += new System.EventHandler(this.ClassnameTxb_TextChange);
+            this.ClassnameTxb.TextChanged += new System.EventHandler(this.ktTextBox6_TextChanged);
             // 
             // ktLabel6
             // 
@@ -111,83 +112,86 @@
             this.ktLabel6.TabIndex = 39;
             this.ktLabel6.Text = "Class Name";
             // 
-            // ktDate1
+            // ClassStartDate
             // 
-            this.ktDate1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.ClassStartDate.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.ktDate1.BackColor = System.Drawing.Color.Transparent;
-            this.ktDate1.BorderRadius = 1;
-            this.ktDate1.Color = System.Drawing.Color.Silver;
-            this.ktDate1.DateBorderThickness = KimTools.WinForms.KtDate.BorderThickness.Thin;
-            this.ktDate1.DateTextAlign = KimTools.WinForms.KtDate.TextAlign.Left;
-            this.ktDate1.DisabledColor = System.Drawing.Color.Gray;
-            this.ktDate1.DisplayWeekNumbers = false;
-            this.ktDate1.DPHeight = 0;
-            this.ktDate1.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
-            this.ktDate1.FillDatePicker = false;
-            this.ktDate1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.ktDate1.ForeColor = System.Drawing.Color.Black;
-            this.ktDate1.Icon = ((System.Drawing.Image)(resources.GetObject("ktDate1.Icon")));
-            this.ktDate1.IconColor = System.Drawing.Color.Gray;
-            this.ktDate1.IconLocation = KimTools.WinForms.KtDate.Indicator.Right;
-            this.ktDate1.LeftTextMargin = 5;
-            this.ktDate1.Location = new System.Drawing.Point(153, 113);
-            this.ktDate1.MinimumSize = new System.Drawing.Size(4, 32);
-            this.ktDate1.Name = "ktDate1";
-            this.ktDate1.Size = new System.Drawing.Size(230, 32);
-            this.ktDate1.TabIndex = 52;
-            this.ktDate1.ValueChanged += new System.EventHandler(this.ktDate1_ValueChanged);
+            this.ClassStartDate.BackColor = System.Drawing.Color.Transparent;
+            this.ClassStartDate.BorderRadius = 1;
+            this.ClassStartDate.Color = System.Drawing.Color.Silver;
+            this.ClassStartDate.DateBorderThickness = KimTools.WinForms.KtDate.BorderThickness.Thin;
+            this.ClassStartDate.DateTextAlign = KimTools.WinForms.KtDate.TextAlign.Left;
+            this.ClassStartDate.DisabledColor = System.Drawing.Color.Gray;
+            this.ClassStartDate.DisplayWeekNumbers = false;
+            this.ClassStartDate.DPHeight = 0;
+            this.ClassStartDate.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
+            this.ClassStartDate.FillDatePicker = false;
+            this.ClassStartDate.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.ClassStartDate.ForeColor = System.Drawing.Color.Black;
+            this.ClassStartDate.Icon = ((System.Drawing.Image)(resources.GetObject("ClassStartDate.Icon")));
+            this.ClassStartDate.IconColor = System.Drawing.Color.Gray;
+            this.ClassStartDate.IconLocation = KimTools.WinForms.KtDate.Indicator.Right;
+            this.ClassStartDate.LeftTextMargin = 5;
+            this.ClassStartDate.Location = new System.Drawing.Point(153, 113);
+            this.ClassStartDate.MinimumSize = new System.Drawing.Size(4, 32);
+            this.ClassStartDate.Name = "ClassStartDate";
+            this.ClassStartDate.Size = new System.Drawing.Size(230, 32);
+            this.ClassStartDate.TabIndex = 52;
+            this.ClassStartDate.ValueChanged += new System.EventHandler(this.ClassnameTxb_TextChange);
             // 
-            // ktButton3
+            // AddClassBtn
             // 
-            this.ktButton3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.AddClassBtn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.ktButton3.BackColor = System.Drawing.Color.Empty;
-            this.ktButton3.BorderShape = KimTools.WinForms.KtSize.Default;
-            this.ktButton3.BorderSize = KimTools.WinForms.KtSize.Default;
-            this.ktButton3.CustomColors = new System.Drawing.Color[0];
-            this.ktButton3.FlatAppearance.BorderSize = 0;
-            this.ktButton3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.ktButton3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.ktButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ktButton3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ktButton3.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.ktButton3.IconName = "";
-            this.ktButton3.IconSize = 16;
-            this.ktButton3.IconStroke = 2.5D;
-            this.ktButton3.Location = new System.Drawing.Point(404, 232);
-            this.ktButton3.Name = "ktButton3";
-            this.ktButton3.Size = new System.Drawing.Size(117, 38);
-            this.ktButton3.Style = KimTools.WinForms.KtStyle.Tailwind;
-            this.ktButton3.TabIndex = 53;
-            this.ktButton3.Text = "ADD";
-            this.ktButton3.UseVisualStyleBackColor = false;
+            this.AddClassBtn.BackColor = System.Drawing.Color.Empty;
+            this.AddClassBtn.BorderShape = KimTools.WinForms.KtSize.Default;
+            this.AddClassBtn.BorderSize = KimTools.WinForms.KtSize.Default;
+            this.AddClassBtn.CustomColors = new System.Drawing.Color[0];
+            this.AddClassBtn.Enabled = false;
+            this.AddClassBtn.FlatAppearance.BorderSize = 0;
+            this.AddClassBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.AddClassBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.AddClassBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AddClassBtn.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddClassBtn.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.AddClassBtn.IconName = "";
+            this.AddClassBtn.IconSize = 16;
+            this.AddClassBtn.IconStroke = 2.5D;
+            this.AddClassBtn.Location = new System.Drawing.Point(404, 232);
+            this.AddClassBtn.Name = "AddClassBtn";
+            this.AddClassBtn.Size = new System.Drawing.Size(117, 38);
+            this.AddClassBtn.Style = KimTools.WinForms.KtStyle.Tailwind;
+            this.AddClassBtn.TabIndex = 53;
+            this.AddClassBtn.Text = "ADD";
+            this.AddClassBtn.UseVisualStyleBackColor = false;
+            this.AddClassBtn.Click += new System.EventHandler(this.AddClassBtn_Click);
             // 
-            // ktDate2
+            // ClassEndDate
             // 
-            this.ktDate2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.ClassEndDate.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.ktDate2.BackColor = System.Drawing.Color.Transparent;
-            this.ktDate2.BorderRadius = 1;
-            this.ktDate2.Color = System.Drawing.Color.Silver;
-            this.ktDate2.DateBorderThickness = KimTools.WinForms.KtDate.BorderThickness.Thin;
-            this.ktDate2.DateTextAlign = KimTools.WinForms.KtDate.TextAlign.Left;
-            this.ktDate2.DisabledColor = System.Drawing.Color.Gray;
-            this.ktDate2.DisplayWeekNumbers = false;
-            this.ktDate2.DPHeight = 0;
-            this.ktDate2.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
-            this.ktDate2.FillDatePicker = false;
-            this.ktDate2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.ktDate2.ForeColor = System.Drawing.Color.Black;
-            this.ktDate2.Icon = ((System.Drawing.Image)(resources.GetObject("ktDate2.Icon")));
-            this.ktDate2.IconColor = System.Drawing.Color.Gray;
-            this.ktDate2.IconLocation = KimTools.WinForms.KtDate.Indicator.Right;
-            this.ktDate2.LeftTextMargin = 5;
-            this.ktDate2.Location = new System.Drawing.Point(153, 175);
-            this.ktDate2.MinimumSize = new System.Drawing.Size(4, 32);
-            this.ktDate2.Name = "ktDate2";
-            this.ktDate2.Size = new System.Drawing.Size(230, 32);
-            this.ktDate2.TabIndex = 55;
+            this.ClassEndDate.BackColor = System.Drawing.Color.Transparent;
+            this.ClassEndDate.BorderRadius = 1;
+            this.ClassEndDate.Color = System.Drawing.Color.Silver;
+            this.ClassEndDate.DateBorderThickness = KimTools.WinForms.KtDate.BorderThickness.Thin;
+            this.ClassEndDate.DateTextAlign = KimTools.WinForms.KtDate.TextAlign.Left;
+            this.ClassEndDate.DisabledColor = System.Drawing.Color.Gray;
+            this.ClassEndDate.DisplayWeekNumbers = false;
+            this.ClassEndDate.DPHeight = 0;
+            this.ClassEndDate.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
+            this.ClassEndDate.FillDatePicker = false;
+            this.ClassEndDate.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.ClassEndDate.ForeColor = System.Drawing.Color.Black;
+            this.ClassEndDate.Icon = ((System.Drawing.Image)(resources.GetObject("ClassEndDate.Icon")));
+            this.ClassEndDate.IconColor = System.Drawing.Color.Gray;
+            this.ClassEndDate.IconLocation = KimTools.WinForms.KtDate.Indicator.Right;
+            this.ClassEndDate.LeftTextMargin = 5;
+            this.ClassEndDate.Location = new System.Drawing.Point(153, 175);
+            this.ClassEndDate.MinimumSize = new System.Drawing.Size(4, 32);
+            this.ClassEndDate.Name = "ClassEndDate";
+            this.ClassEndDate.Size = new System.Drawing.Size(230, 32);
+            this.ClassEndDate.TabIndex = 55;
+            this.ClassEndDate.ValueChanged += new System.EventHandler(this.ClassnameTxb_TextChange);
             // 
             // ktLabel1
             // 
@@ -208,11 +212,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(539, 286);
-            this.Controls.Add(this.ktDate2);
+            this.Controls.Add(this.ClassEndDate);
             this.Controls.Add(this.ktLabel1);
-            this.Controls.Add(this.ktButton3);
-            this.Controls.Add(this.ktDate1);
-            this.Controls.Add(this.ktTextBox6);
+            this.Controls.Add(this.AddClassBtn);
+            this.Controls.Add(this.ClassStartDate);
+            this.Controls.Add(this.ClassnameTxb);
             this.Controls.Add(this.ktLabel5);
             this.Controls.Add(this.ktLabel6);
             this.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
@@ -232,11 +236,11 @@
 
         #endregion
         private KimTools.WinForms.KtLabel ktLabel5;
-        private KimTools.WinForms.KtTextBox ktTextBox6;
+        private KimTools.WinForms.KtTextBox ClassnameTxb;
         private KimTools.WinForms.KtLabel ktLabel6;
-        private KimTools.WinForms.KtDate ktDate1;
-        private KimTools.WinForms.KtButton ktButton3;
-        private KimTools.WinForms.KtDate ktDate2;
+        private KimTools.WinForms.KtDate ClassStartDate;
+        private KimTools.WinForms.KtButton AddClassBtn;
+        private KimTools.WinForms.KtDate ClassEndDate;
         private KimTools.WinForms.KtLabel ktLabel1;
     }
 }

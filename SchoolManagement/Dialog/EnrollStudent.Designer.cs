@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.ktLabel1 = new KimTools.WinForms.KtLabel();
-            this.ktComboBox1 = new KimTools.WinForms.KtComboBox();
-            this.ktComboBox2 = new KimTools.WinForms.KtComboBox();
+            this.ClassNameCmb = new KimTools.WinForms.KtComboBox();
+            this.StudentCmb = new KimTools.WinForms.KtComboBox();
             this.ktLabel2 = new KimTools.WinForms.KtLabel();
-            this.ktButton1 = new KimTools.WinForms.KtButton();
+            this.EnrollBtn = new KimTools.WinForms.KtButton();
             this.SuspendLayout();
             // 
             // ktLabel1
@@ -47,87 +47,89 @@
             this.ktLabel1.TabIndex = 0;
             this.ktLabel1.Text = "Class Room";
             // 
-            // ktComboBox1
+            // ClassNameCmb
             // 
-            this.ktComboBox1.BackColor = System.Drawing.Color.Transparent;
-            this.ktComboBox1.BackgroundColor = System.Drawing.Color.White;
-            this.ktComboBox1.BorderColor = System.Drawing.Color.Silver;
-            this.ktComboBox1.BorderRadius = 1;
-            this.ktComboBox1.Color = System.Drawing.Color.Silver;
-            this.ktComboBox1.Direction = KimTools.WinForms.KtComboBox.Directions.Down;
-            this.ktComboBox1.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.ktComboBox1.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.ktComboBox1.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.ktComboBox1.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.ktComboBox1.DisabledIndicatorColor = System.Drawing.Color.DarkGray;
-            this.ktComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.ktComboBox1.DropdownBorderThickness = KimTools.WinForms.KtComboBox.BorderThickness.Thin;
-            this.ktComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ktComboBox1.DropDownTextAlign = KimTools.WinForms.KtComboBox.TextAlign.Left;
-            this.ktComboBox1.FillDropDown = true;
-            this.ktComboBox1.FillIndicator = false;
-            this.ktComboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ktComboBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.ktComboBox1.ForeColor = System.Drawing.Color.Black;
-            this.ktComboBox1.FormattingEnabled = true;
-            this.ktComboBox1.Icon = null;
-            this.ktComboBox1.IndicatorAlignment = KimTools.WinForms.KtComboBox.Indicator.Right;
-            this.ktComboBox1.IndicatorColor = System.Drawing.Color.Gray;
-            this.ktComboBox1.IndicatorLocation = KimTools.WinForms.KtComboBox.Indicator.Right;
-            this.ktComboBox1.ItemBackColor = System.Drawing.Color.White;
-            this.ktComboBox1.ItemBorderColor = System.Drawing.Color.White;
-            this.ktComboBox1.ItemForeColor = System.Drawing.Color.Black;
-            this.ktComboBox1.ItemHeight = 26;
-            this.ktComboBox1.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
-            this.ktComboBox1.ItemHighLightForeColor = System.Drawing.Color.White;
-            this.ktComboBox1.ItemTopMargin = 3;
-            this.ktComboBox1.Location = new System.Drawing.Point(144, 55);
-            this.ktComboBox1.Name = "ktComboBox1";
-            this.ktComboBox1.Size = new System.Drawing.Size(230, 32);
-            this.ktComboBox1.TabIndex = 1;
-            this.ktComboBox1.TextAlignment = KimTools.WinForms.KtComboBox.TextAlign.Left;
-            this.ktComboBox1.TextLeftMargin = 5;
+            this.ClassNameCmb.BackColor = System.Drawing.Color.Transparent;
+            this.ClassNameCmb.BackgroundColor = System.Drawing.Color.White;
+            this.ClassNameCmb.BorderColor = System.Drawing.Color.Silver;
+            this.ClassNameCmb.BorderRadius = 1;
+            this.ClassNameCmb.Color = System.Drawing.Color.Silver;
+            this.ClassNameCmb.Direction = KimTools.WinForms.KtComboBox.Directions.Down;
+            this.ClassNameCmb.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.ClassNameCmb.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.ClassNameCmb.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.ClassNameCmb.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.ClassNameCmb.DisabledIndicatorColor = System.Drawing.Color.DarkGray;
+            this.ClassNameCmb.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.ClassNameCmb.DropdownBorderThickness = KimTools.WinForms.KtComboBox.BorderThickness.Thin;
+            this.ClassNameCmb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ClassNameCmb.DropDownTextAlign = KimTools.WinForms.KtComboBox.TextAlign.Left;
+            this.ClassNameCmb.FillDropDown = true;
+            this.ClassNameCmb.FillIndicator = false;
+            this.ClassNameCmb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ClassNameCmb.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.ClassNameCmb.ForeColor = System.Drawing.Color.Black;
+            this.ClassNameCmb.FormattingEnabled = true;
+            this.ClassNameCmb.Icon = null;
+            this.ClassNameCmb.IndicatorAlignment = KimTools.WinForms.KtComboBox.Indicator.Right;
+            this.ClassNameCmb.IndicatorColor = System.Drawing.Color.Gray;
+            this.ClassNameCmb.IndicatorLocation = KimTools.WinForms.KtComboBox.Indicator.Right;
+            this.ClassNameCmb.ItemBackColor = System.Drawing.Color.White;
+            this.ClassNameCmb.ItemBorderColor = System.Drawing.Color.White;
+            this.ClassNameCmb.ItemForeColor = System.Drawing.Color.Black;
+            this.ClassNameCmb.ItemHeight = 26;
+            this.ClassNameCmb.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
+            this.ClassNameCmb.ItemHighLightForeColor = System.Drawing.Color.White;
+            this.ClassNameCmb.ItemTopMargin = 3;
+            this.ClassNameCmb.Location = new System.Drawing.Point(144, 55);
+            this.ClassNameCmb.Name = "ClassNameCmb";
+            this.ClassNameCmb.Size = new System.Drawing.Size(230, 32);
+            this.ClassNameCmb.TabIndex = 1;
+            this.ClassNameCmb.Text = null;
+            this.ClassNameCmb.TextAlignment = KimTools.WinForms.KtComboBox.TextAlign.Left;
+            this.ClassNameCmb.TextLeftMargin = 5;
             // 
-            // ktComboBox2
+            // StudentCmb
             // 
-            this.ktComboBox2.BackColor = System.Drawing.Color.Transparent;
-            this.ktComboBox2.BackgroundColor = System.Drawing.Color.White;
-            this.ktComboBox2.BorderColor = System.Drawing.Color.Silver;
-            this.ktComboBox2.BorderRadius = 1;
-            this.ktComboBox2.Color = System.Drawing.Color.Silver;
-            this.ktComboBox2.Direction = KimTools.WinForms.KtComboBox.Directions.Down;
-            this.ktComboBox2.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.ktComboBox2.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.ktComboBox2.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.ktComboBox2.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.ktComboBox2.DisabledIndicatorColor = System.Drawing.Color.DarkGray;
-            this.ktComboBox2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.ktComboBox2.DropdownBorderThickness = KimTools.WinForms.KtComboBox.BorderThickness.Thin;
-            this.ktComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ktComboBox2.DropDownTextAlign = KimTools.WinForms.KtComboBox.TextAlign.Left;
-            this.ktComboBox2.FillDropDown = true;
-            this.ktComboBox2.FillIndicator = false;
-            this.ktComboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ktComboBox2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.ktComboBox2.ForeColor = System.Drawing.Color.Black;
-            this.ktComboBox2.FormattingEnabled = true;
-            this.ktComboBox2.Icon = null;
-            this.ktComboBox2.IndicatorAlignment = KimTools.WinForms.KtComboBox.Indicator.Right;
-            this.ktComboBox2.IndicatorColor = System.Drawing.Color.Gray;
-            this.ktComboBox2.IndicatorLocation = KimTools.WinForms.KtComboBox.Indicator.Right;
-            this.ktComboBox2.ItemBackColor = System.Drawing.Color.White;
-            this.ktComboBox2.ItemBorderColor = System.Drawing.Color.White;
-            this.ktComboBox2.ItemForeColor = System.Drawing.Color.Black;
-            this.ktComboBox2.ItemHeight = 26;
-            this.ktComboBox2.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
-            this.ktComboBox2.ItemHighLightForeColor = System.Drawing.Color.White;
-            this.ktComboBox2.ItemTopMargin = 3;
-            this.ktComboBox2.Location = new System.Drawing.Point(144, 111);
-            this.ktComboBox2.Name = "ktComboBox2";
-            this.ktComboBox2.Size = new System.Drawing.Size(230, 32);
-            this.ktComboBox2.TabIndex = 3;
-            this.ktComboBox2.TextAlignment = KimTools.WinForms.KtComboBox.TextAlign.Left;
-            this.ktComboBox2.TextLeftMargin = 5;
+            this.StudentCmb.BackColor = System.Drawing.Color.Transparent;
+            this.StudentCmb.BackgroundColor = System.Drawing.Color.White;
+            this.StudentCmb.BorderColor = System.Drawing.Color.Silver;
+            this.StudentCmb.BorderRadius = 1;
+            this.StudentCmb.Color = System.Drawing.Color.Silver;
+            this.StudentCmb.Direction = KimTools.WinForms.KtComboBox.Directions.Down;
+            this.StudentCmb.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.StudentCmb.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.StudentCmb.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.StudentCmb.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.StudentCmb.DisabledIndicatorColor = System.Drawing.Color.DarkGray;
+            this.StudentCmb.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.StudentCmb.DropdownBorderThickness = KimTools.WinForms.KtComboBox.BorderThickness.Thin;
+            this.StudentCmb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.StudentCmb.DropDownTextAlign = KimTools.WinForms.KtComboBox.TextAlign.Left;
+            this.StudentCmb.FillDropDown = true;
+            this.StudentCmb.FillIndicator = false;
+            this.StudentCmb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.StudentCmb.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.StudentCmb.ForeColor = System.Drawing.Color.Black;
+            this.StudentCmb.FormattingEnabled = true;
+            this.StudentCmb.Icon = null;
+            this.StudentCmb.IndicatorAlignment = KimTools.WinForms.KtComboBox.Indicator.Right;
+            this.StudentCmb.IndicatorColor = System.Drawing.Color.Gray;
+            this.StudentCmb.IndicatorLocation = KimTools.WinForms.KtComboBox.Indicator.Right;
+            this.StudentCmb.ItemBackColor = System.Drawing.Color.White;
+            this.StudentCmb.ItemBorderColor = System.Drawing.Color.White;
+            this.StudentCmb.ItemForeColor = System.Drawing.Color.Black;
+            this.StudentCmb.ItemHeight = 26;
+            this.StudentCmb.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
+            this.StudentCmb.ItemHighLightForeColor = System.Drawing.Color.White;
+            this.StudentCmb.ItemTopMargin = 3;
+            this.StudentCmb.Location = new System.Drawing.Point(144, 111);
+            this.StudentCmb.Name = "StudentCmb";
+            this.StudentCmb.Size = new System.Drawing.Size(230, 32);
+            this.StudentCmb.TabIndex = 3;
+            this.StudentCmb.Text = null;
+            this.StudentCmb.TextAlignment = KimTools.WinForms.KtComboBox.TextAlign.Left;
+            this.StudentCmb.TextLeftMargin = 5;
             // 
             // ktLabel2
             // 
@@ -141,38 +143,38 @@
             this.ktLabel2.TabIndex = 2;
             this.ktLabel2.Text = "Student";
             // 
-            // ktButton1
+            // EnrollBtn
             // 
-            this.ktButton1.BackColor = System.Drawing.Color.Empty;
-            this.ktButton1.BorderShape = KimTools.WinForms.KtSize.Default;
-            this.ktButton1.BorderSize = KimTools.WinForms.KtSize.Default;
-            this.ktButton1.CustomColors = new System.Drawing.Color[0];
-            this.ktButton1.FlatAppearance.BorderSize = 0;
-            this.ktButton1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.ktButton1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.ktButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ktButton1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ktButton1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.ktButton1.IconName = "";
-            this.ktButton1.IconSize = 16;
-            this.ktButton1.IconStroke = 2.5D;
-            this.ktButton1.Location = new System.Drawing.Point(270, 176);
-            this.ktButton1.Name = "ktButton1";
-            this.ktButton1.Size = new System.Drawing.Size(104, 36);
-            this.ktButton1.Style = KimTools.WinForms.KtStyle.Tailwind;
-            this.ktButton1.TabIndex = 4;
-            this.ktButton1.Text = "Enroll";
-            this.ktButton1.UseVisualStyleBackColor = false;
+            this.EnrollBtn.BackColor = System.Drawing.Color.Empty;
+            this.EnrollBtn.BorderShape = KimTools.WinForms.KtSize.Default;
+            this.EnrollBtn.BorderSize = KimTools.WinForms.KtSize.Default;
+            this.EnrollBtn.CustomColors = new System.Drawing.Color[0];
+            this.EnrollBtn.FlatAppearance.BorderSize = 0;
+            this.EnrollBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.EnrollBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.EnrollBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.EnrollBtn.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EnrollBtn.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.EnrollBtn.IconName = "";
+            this.EnrollBtn.IconSize = 16;
+            this.EnrollBtn.IconStroke = 2.5D;
+            this.EnrollBtn.Location = new System.Drawing.Point(270, 176);
+            this.EnrollBtn.Name = "EnrollBtn";
+            this.EnrollBtn.Size = new System.Drawing.Size(104, 36);
+            this.EnrollBtn.Style = KimTools.WinForms.KtStyle.Tailwind;
+            this.EnrollBtn.TabIndex = 4;
+            this.EnrollBtn.Text = "Enroll";
+            this.EnrollBtn.UseVisualStyleBackColor = false;
             // 
             // EnrollStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(422, 236);
-            this.Controls.Add(this.ktButton1);
-            this.Controls.Add(this.ktComboBox2);
+            this.Controls.Add(this.EnrollBtn);
+            this.Controls.Add(this.StudentCmb);
             this.Controls.Add(this.ktLabel2);
-            this.Controls.Add(this.ktComboBox1);
+            this.Controls.Add(this.ClassNameCmb);
             this.Controls.Add(this.ktLabel1);
             this.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(40)))), ((int)(((byte)(67)))));
@@ -182,6 +184,7 @@
             this.Name = "EnrollStudent";
             this.Opacity = 1D;
             this.Text = "EnrollStudent";
+            this.Load += new System.EventHandler(this.EnrollStudent_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -190,9 +193,9 @@
         #endregion
 
         private KimTools.WinForms.KtLabel ktLabel1;
-        private KimTools.WinForms.KtComboBox ktComboBox1;
-        private KimTools.WinForms.KtComboBox ktComboBox2;
+        private KimTools.WinForms.KtComboBox ClassNameCmb;
+        private KimTools.WinForms.KtComboBox StudentCmb;
         private KimTools.WinForms.KtLabel ktLabel2;
-        private KimTools.WinForms.KtButton ktButton1;
+        private KimTools.WinForms.KtButton EnrollBtn;
     }
 }

@@ -59,6 +59,7 @@ namespace SchoolManagement.Pages
         {
             AddSubject addSubject = new AddSubject();
             addSubject.ShowDialog();
+           
         }
 
         private void EnrollBtn_Click(object sender, EventArgs e)
