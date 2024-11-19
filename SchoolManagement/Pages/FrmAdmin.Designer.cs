@@ -49,8 +49,8 @@
             KimTools.WinForms.KtTableColumn ktTableColumn10 = new KimTools.WinForms.KtTableColumn();
             KimTools.WinForms.KtTableColumn ktTableColumn11 = new KimTools.WinForms.KtTableColumn();
             KimTools.WinForms.KtTableColumn ktTableColumn12 = new KimTools.WinForms.KtTableColumn();
-            KimTools.WinForms.KtTableColumn ktTableColumn13 = new KimTools.WinForms.KtTableColumn();
             KimTools.WinForms.KtToastHelpers.KtPages.KtPgAnimatorNS.Animation animation1 = new KimTools.WinForms.KtToastHelpers.KtPages.KtPgAnimatorNS.Animation();
+            KimTools.WinForms.KtTableColumn ktTableColumn13 = new KimTools.WinForms.KtTableColumn();
             KimTools.WinForms.KtTableColumn ktTableColumn14 = new KimTools.WinForms.KtTableColumn();
             KimTools.WinForms.KtTableColumn ktTableColumn15 = new KimTools.WinForms.KtTableColumn();
             KimTools.WinForms.KtTableColumn ktTableColumn16 = new KimTools.WinForms.KtTableColumn();
@@ -65,7 +65,6 @@
             KimTools.WinForms.KtTableColumn ktTableColumn25 = new KimTools.WinForms.KtTableColumn();
             KimTools.WinForms.KtTableColumn ktTableColumn26 = new KimTools.WinForms.KtTableColumn();
             KimTools.WinForms.KtTableColumn ktTableColumn27 = new KimTools.WinForms.KtTableColumn();
-            KimTools.WinForms.KtTableColumn ktTableColumn28 = new KimTools.WinForms.KtTableColumn();
             KimTools.WinForms.ImageListBind imageListBind1 = new KimTools.WinForms.ImageListBind();
             KimTools.WinForms.KtIcon ktIcon1 = new KimTools.WinForms.KtIcon();
             KimTools.WinForms.KtAnimatorNS.Animation animation3 = new KimTools.WinForms.KtAnimatorNS.Animation();
@@ -103,7 +102,7 @@
             this.ktButton5 = new KimTools.WinForms.KtButton();
             this.ktButton6 = new KimTools.WinForms.KtButton();
             this.Classroom = new System.Windows.Forms.TabPage();
-            this.ktTable1 = new KimTools.WinForms.KtTable();
+            this.ClassTbl = new KimTools.WinForms.KtTable();
             this.ktPanel6 = new KimTools.WinForms.KtPanel();
             this.EnrollBtn = new KimTools.WinForms.KtButton();
             this.AddSubjectToClassBtn = new KimTools.WinForms.KtButton();
@@ -146,6 +145,7 @@
             this.ktToasts1 = new KimTools.WinForms.KtToasts(this.components);
             this.ktTheme1 = new KimTools.WinForms.KtTheme(this.components);
             this.LoadingTimer = new System.Windows.Forms.Timer(this.components);
+            this.ktSpinner2 = new KimTools.WinForms.KtSpinner();
             this.MainPages.SuspendLayout();
             this.Dasboard.SuspendLayout();
             this.DashboardBarPanel.SuspendLayout();
@@ -195,10 +195,10 @@
             this.MainPages.Multiline = true;
             this.MainPages.Name = "MainPages";
             this.MainPages.Padding = new System.Drawing.Point(10, 10);
-            this.MainPages.Page = this.Users;
-            this.MainPages.PageIndex = 3;
-            this.MainPages.PageName = "Users";
-            this.MainPages.PageTitle = "Users";
+            this.MainPages.Page = this.Loader;
+            this.MainPages.PageIndex = 5;
+            this.MainPages.PageName = "Loader";
+            this.MainPages.PageTitle = "Loader";
             this.MainPages.SelectedIndex = 0;
             this.MainPages.Size = new System.Drawing.Size(1194, 622);
             this.MainPages.TabIndex = 1;
@@ -1066,7 +1066,7 @@
             // 
             // Classroom
             // 
-            this.Classroom.Controls.Add(this.ktTable1);
+            this.Classroom.Controls.Add(this.ClassTbl);
             this.Classroom.Controls.Add(this.ktPanel6);
             this.Icons.SetIcons(this.Classroom, new KimTools.WinForms.KtIcon[0]);
             this.Classroom.Location = new System.Drawing.Point(4, 4);
@@ -1078,10 +1078,10 @@
             this.MenuTooltips.SetToolTip(this.Classroom, "");
             this.Classroom.UseVisualStyleBackColor = true;
             // 
-            // ktTable1
+            // ClassTbl
             // 
-            this.ktTable1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(252)))));
-            this.ktTable1.ColorBase = KimTools.WinForms.KtColor.Tailwind_White;
+            this.ClassTbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(252)))));
+            this.ClassTbl.ColorBase = KimTools.WinForms.KtColor.Tailwind_White;
             ktTableColumn8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.NotSet;
             ktTableColumn8.Fill = "";
             ktTableColumn8.Format = "";
@@ -1167,46 +1167,29 @@
             ktTableColumn12.Visible = true;
             ktTableColumn12.Width = 0;
             ktTableColumn12.Width_ = "";
-            ktTableColumn13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.NotSet;
-            ktTableColumn13.Fill = "";
-            ktTableColumn13.Format = "";
-            ktTableColumn13.Group = "";
-            ktTableColumn13.IsPrimaryKey = false;
-            ktTableColumn13.Key = "Status";
-            ktTableColumn13.Resizable = System.Windows.Forms.DataGridViewTriState.NotSet;
-            ktTableColumn13.Search = true;
-            ktTableColumn13.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            ktTableColumn13.Template = "";
-            ktTableColumn13.Title = "Status";
-            ktTableColumn13.ToolTip = "";
-            ktTableColumn13.Type = KimTools.WinForms.KtTableColumnTypes.Text;
-            ktTableColumn13.Value = "";
-            ktTableColumn13.Visible = true;
-            ktTableColumn13.Width = 0;
-            ktTableColumn13.Width_ = "";
-            this.ktTable1.Columns = new KimTools.WinForms.KtTableColumn[] {
+            this.ClassTbl.Columns = new KimTools.WinForms.KtTableColumn[] {
         ktTableColumn8,
         ktTableColumn9,
         ktTableColumn10,
         ktTableColumn11,
-        ktTableColumn12,
-        ktTableColumn13};
-            this.ktTable1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Icons.SetIcons(this.ktTable1, new KimTools.WinForms.KtIcon[0]);
-            this.ktTable1.KeyCaseSensitive = false;
-            this.ktTable1.Latency = 500;
-            this.ktTable1.Location = new System.Drawing.Point(3, 52);
-            this.ktTable1.MultiSelect = false;
-            this.ktTable1.Name = "ktTable1";
-            this.ktTable1.Padding = new System.Windows.Forms.Padding(5);
-            this.ktTable1.ShadeBase = KimTools.WinForms.KtShade.Light_10;
-            this.ktTable1.ShadeContent = KimTools.WinForms.KtShade.Light_10;
-            this.ktTable1.ShowFooter = true;
-            this.ktTable1.ShowHeader = false;
-            this.ktTable1.ShowSearch = false;
-            this.ktTable1.Size = new System.Drawing.Size(1180, 515);
-            this.ktTable1.TabIndex = 2;
-            this.MenuTooltips.SetToolTip(this.ktTable1, "");
+        ktTableColumn12};
+            this.ClassTbl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Icons.SetIcons(this.ClassTbl, new KimTools.WinForms.KtIcon[0]);
+            this.ClassTbl.KeyCaseSensitive = false;
+            this.ClassTbl.Latency = 500;
+            this.ClassTbl.Location = new System.Drawing.Point(3, 52);
+            this.ClassTbl.MultiSelect = false;
+            this.ClassTbl.Name = "ClassTbl";
+            this.ClassTbl.Padding = new System.Windows.Forms.Padding(5);
+            this.ClassTbl.ShadeBase = KimTools.WinForms.KtShade.Light_10;
+            this.ClassTbl.ShadeContent = KimTools.WinForms.KtShade.Light_10;
+            this.ClassTbl.ShowFooter = true;
+            this.ClassTbl.ShowHeader = false;
+            this.ClassTbl.ShowSearch = false;
+            this.ClassTbl.Size = new System.Drawing.Size(1180, 515);
+            this.ClassTbl.TabIndex = 2;
+            this.MenuTooltips.SetToolTip(this.ClassTbl, "");
+            this.ClassTbl.Load += new System.EventHandler(this.ClassTbl_Load);
             // 
             // ktPanel6
             // 
@@ -1486,17 +1469,34 @@
             // AdminTbl
             // 
             this.AdminTbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(222)))), ((int)(((byte)(225)))));
+            ktTableColumn13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.NotSet;
+            ktTableColumn13.Fill = "";
+            ktTableColumn13.Format = "";
+            ktTableColumn13.Group = "";
+            ktTableColumn13.IsPrimaryKey = false;
+            ktTableColumn13.Key = "No";
+            ktTableColumn13.Resizable = System.Windows.Forms.DataGridViewTriState.NotSet;
+            ktTableColumn13.Search = true;
+            ktTableColumn13.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            ktTableColumn13.Template = "";
+            ktTableColumn13.Title = "No";
+            ktTableColumn13.ToolTip = "";
+            ktTableColumn13.Type = KimTools.WinForms.KtTableColumnTypes.Text;
+            ktTableColumn13.Value = "";
+            ktTableColumn13.Visible = true;
+            ktTableColumn13.Width = 0;
+            ktTableColumn13.Width_ = "";
             ktTableColumn14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.NotSet;
             ktTableColumn14.Fill = "";
             ktTableColumn14.Format = "";
             ktTableColumn14.Group = "";
-            ktTableColumn14.IsPrimaryKey = false;
-            ktTableColumn14.Key = "No";
+            ktTableColumn14.IsPrimaryKey = true;
+            ktTableColumn14.Key = "Id";
             ktTableColumn14.Resizable = System.Windows.Forms.DataGridViewTriState.NotSet;
             ktTableColumn14.Search = true;
             ktTableColumn14.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             ktTableColumn14.Template = "";
-            ktTableColumn14.Title = "No";
+            ktTableColumn14.Title = "User ID";
             ktTableColumn14.ToolTip = "";
             ktTableColumn14.Type = KimTools.WinForms.KtTableColumnTypes.Text;
             ktTableColumn14.Value = "";
@@ -1507,13 +1507,13 @@
             ktTableColumn15.Fill = "";
             ktTableColumn15.Format = "";
             ktTableColumn15.Group = "";
-            ktTableColumn15.IsPrimaryKey = true;
-            ktTableColumn15.Key = "Id";
+            ktTableColumn15.IsPrimaryKey = false;
+            ktTableColumn15.Key = "Name";
             ktTableColumn15.Resizable = System.Windows.Forms.DataGridViewTriState.NotSet;
             ktTableColumn15.Search = true;
             ktTableColumn15.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             ktTableColumn15.Template = "";
-            ktTableColumn15.Title = "User ID";
+            ktTableColumn15.Title = "Username";
             ktTableColumn15.ToolTip = "";
             ktTableColumn15.Type = KimTools.WinForms.KtTableColumnTypes.Text;
             ktTableColumn15.Value = "";
@@ -1525,40 +1525,23 @@
             ktTableColumn16.Format = "";
             ktTableColumn16.Group = "";
             ktTableColumn16.IsPrimaryKey = false;
-            ktTableColumn16.Key = "Name";
+            ktTableColumn16.Key = "Role";
             ktTableColumn16.Resizable = System.Windows.Forms.DataGridViewTriState.NotSet;
             ktTableColumn16.Search = true;
             ktTableColumn16.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             ktTableColumn16.Template = "";
-            ktTableColumn16.Title = "Username";
+            ktTableColumn16.Title = "Role";
             ktTableColumn16.ToolTip = "";
             ktTableColumn16.Type = KimTools.WinForms.KtTableColumnTypes.Text;
             ktTableColumn16.Value = "";
             ktTableColumn16.Visible = true;
-            ktTableColumn16.Width = 0;
-            ktTableColumn16.Width_ = "";
-            ktTableColumn17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.NotSet;
-            ktTableColumn17.Fill = "";
-            ktTableColumn17.Format = "";
-            ktTableColumn17.Group = "";
-            ktTableColumn17.IsPrimaryKey = false;
-            ktTableColumn17.Key = "Role";
-            ktTableColumn17.Resizable = System.Windows.Forms.DataGridViewTriState.NotSet;
-            ktTableColumn17.Search = true;
-            ktTableColumn17.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            ktTableColumn17.Template = "";
-            ktTableColumn17.Title = "Role";
-            ktTableColumn17.ToolTip = "";
-            ktTableColumn17.Type = KimTools.WinForms.KtTableColumnTypes.Text;
-            ktTableColumn17.Value = "";
-            ktTableColumn17.Visible = true;
-            ktTableColumn17.Width = 70;
-            ktTableColumn17.Width_ = "70";
+            ktTableColumn16.Width = 70;
+            ktTableColumn16.Width_ = "70";
             this.AdminTbl.Columns = new KimTools.WinForms.KtTableColumn[] {
+        ktTableColumn13,
         ktTableColumn14,
         ktTableColumn15,
-        ktTableColumn16,
-        ktTableColumn17};
+        ktTableColumn16};
             this.AdminTbl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Icons.SetIcons(this.AdminTbl, new KimTools.WinForms.KtIcon[0]);
             this.AdminTbl.KeyCaseSensitive = false;
@@ -1591,17 +1574,34 @@
             // TeacherTbl
             // 
             this.TeacherTbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(222)))), ((int)(((byte)(225)))));
+            ktTableColumn17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.NotSet;
+            ktTableColumn17.Fill = "";
+            ktTableColumn17.Format = "";
+            ktTableColumn17.Group = "";
+            ktTableColumn17.IsPrimaryKey = false;
+            ktTableColumn17.Key = "No";
+            ktTableColumn17.Resizable = System.Windows.Forms.DataGridViewTriState.NotSet;
+            ktTableColumn17.Search = true;
+            ktTableColumn17.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            ktTableColumn17.Template = "";
+            ktTableColumn17.Title = "N0";
+            ktTableColumn17.ToolTip = "";
+            ktTableColumn17.Type = KimTools.WinForms.KtTableColumnTypes.Text;
+            ktTableColumn17.Value = "";
+            ktTableColumn17.Visible = true;
+            ktTableColumn17.Width = 0;
+            ktTableColumn17.Width_ = "";
             ktTableColumn18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.NotSet;
             ktTableColumn18.Fill = "";
             ktTableColumn18.Format = "";
             ktTableColumn18.Group = "";
             ktTableColumn18.IsPrimaryKey = false;
-            ktTableColumn18.Key = "No";
+            ktTableColumn18.Key = "Id";
             ktTableColumn18.Resizable = System.Windows.Forms.DataGridViewTriState.NotSet;
             ktTableColumn18.Search = true;
             ktTableColumn18.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             ktTableColumn18.Template = "";
-            ktTableColumn18.Title = "N0";
+            ktTableColumn18.Title = "User ID";
             ktTableColumn18.ToolTip = "";
             ktTableColumn18.Type = KimTools.WinForms.KtTableColumnTypes.Text;
             ktTableColumn18.Value = "";
@@ -1613,12 +1613,12 @@
             ktTableColumn19.Format = "";
             ktTableColumn19.Group = "";
             ktTableColumn19.IsPrimaryKey = false;
-            ktTableColumn19.Key = "Id";
+            ktTableColumn19.Key = "FullName";
             ktTableColumn19.Resizable = System.Windows.Forms.DataGridViewTriState.NotSet;
             ktTableColumn19.Search = true;
             ktTableColumn19.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             ktTableColumn19.Template = "";
-            ktTableColumn19.Title = "User ID";
+            ktTableColumn19.Title = "Full Name";
             ktTableColumn19.ToolTip = "";
             ktTableColumn19.Type = KimTools.WinForms.KtTableColumnTypes.Text;
             ktTableColumn19.Value = "";
@@ -1630,12 +1630,12 @@
             ktTableColumn20.Format = "";
             ktTableColumn20.Group = "";
             ktTableColumn20.IsPrimaryKey = false;
-            ktTableColumn20.Key = "FullName";
+            ktTableColumn20.Key = "Gender";
             ktTableColumn20.Resizable = System.Windows.Forms.DataGridViewTriState.NotSet;
             ktTableColumn20.Search = true;
             ktTableColumn20.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             ktTableColumn20.Template = "";
-            ktTableColumn20.Title = "Full Name";
+            ktTableColumn20.Title = "Gender";
             ktTableColumn20.ToolTip = "";
             ktTableColumn20.Type = KimTools.WinForms.KtTableColumnTypes.Text;
             ktTableColumn20.Value = "";
@@ -1647,12 +1647,12 @@
             ktTableColumn21.Format = "";
             ktTableColumn21.Group = "";
             ktTableColumn21.IsPrimaryKey = false;
-            ktTableColumn21.Key = "Gender";
+            ktTableColumn21.Key = "Salary";
             ktTableColumn21.Resizable = System.Windows.Forms.DataGridViewTriState.NotSet;
             ktTableColumn21.Search = true;
             ktTableColumn21.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             ktTableColumn21.Template = "";
-            ktTableColumn21.Title = "Gender";
+            ktTableColumn21.Title = "Salary";
             ktTableColumn21.ToolTip = "";
             ktTableColumn21.Type = KimTools.WinForms.KtTableColumnTypes.Text;
             ktTableColumn21.Value = "";
@@ -1664,42 +1664,25 @@
             ktTableColumn22.Format = "";
             ktTableColumn22.Group = "";
             ktTableColumn22.IsPrimaryKey = false;
-            ktTableColumn22.Key = "Salary";
+            ktTableColumn22.Key = "Status";
             ktTableColumn22.Resizable = System.Windows.Forms.DataGridViewTriState.NotSet;
             ktTableColumn22.Search = true;
             ktTableColumn22.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             ktTableColumn22.Template = "";
-            ktTableColumn22.Title = "Salary";
+            ktTableColumn22.Title = "Status";
             ktTableColumn22.ToolTip = "";
             ktTableColumn22.Type = KimTools.WinForms.KtTableColumnTypes.Text;
             ktTableColumn22.Value = "";
             ktTableColumn22.Visible = true;
             ktTableColumn22.Width = 0;
             ktTableColumn22.Width_ = "";
-            ktTableColumn23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.NotSet;
-            ktTableColumn23.Fill = "";
-            ktTableColumn23.Format = "";
-            ktTableColumn23.Group = "";
-            ktTableColumn23.IsPrimaryKey = false;
-            ktTableColumn23.Key = "Status";
-            ktTableColumn23.Resizable = System.Windows.Forms.DataGridViewTriState.NotSet;
-            ktTableColumn23.Search = true;
-            ktTableColumn23.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            ktTableColumn23.Template = "";
-            ktTableColumn23.Title = "Status";
-            ktTableColumn23.ToolTip = "";
-            ktTableColumn23.Type = KimTools.WinForms.KtTableColumnTypes.Text;
-            ktTableColumn23.Value = "";
-            ktTableColumn23.Visible = true;
-            ktTableColumn23.Width = 0;
-            ktTableColumn23.Width_ = "";
             this.TeacherTbl.Columns = new KimTools.WinForms.KtTableColumn[] {
+        ktTableColumn17,
         ktTableColumn18,
         ktTableColumn19,
         ktTableColumn20,
         ktTableColumn21,
-        ktTableColumn22,
-        ktTableColumn23};
+        ktTableColumn22};
             this.TeacherTbl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Icons.SetIcons(this.TeacherTbl, new KimTools.WinForms.KtIcon[0]);
             this.TeacherTbl.KeyCaseSensitive = false;
@@ -1732,17 +1715,34 @@
             // StudentTbl
             // 
             this.StudentTbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(222)))), ((int)(((byte)(225)))));
+            ktTableColumn23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.NotSet;
+            ktTableColumn23.Fill = "";
+            ktTableColumn23.Format = "";
+            ktTableColumn23.Group = "";
+            ktTableColumn23.IsPrimaryKey = false;
+            ktTableColumn23.Key = "No";
+            ktTableColumn23.Resizable = System.Windows.Forms.DataGridViewTriState.NotSet;
+            ktTableColumn23.Search = true;
+            ktTableColumn23.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            ktTableColumn23.Template = "";
+            ktTableColumn23.Title = "No";
+            ktTableColumn23.ToolTip = "";
+            ktTableColumn23.Type = KimTools.WinForms.KtTableColumnTypes.Text;
+            ktTableColumn23.Value = "";
+            ktTableColumn23.Visible = true;
+            ktTableColumn23.Width = 0;
+            ktTableColumn23.Width_ = "";
             ktTableColumn24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.NotSet;
             ktTableColumn24.Fill = "";
             ktTableColumn24.Format = "";
             ktTableColumn24.Group = "";
             ktTableColumn24.IsPrimaryKey = false;
-            ktTableColumn24.Key = "No";
+            ktTableColumn24.Key = "Id";
             ktTableColumn24.Resizable = System.Windows.Forms.DataGridViewTriState.NotSet;
             ktTableColumn24.Search = true;
             ktTableColumn24.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             ktTableColumn24.Template = "";
-            ktTableColumn24.Title = "No";
+            ktTableColumn24.Title = "User ID";
             ktTableColumn24.ToolTip = "";
             ktTableColumn24.Type = KimTools.WinForms.KtTableColumnTypes.Text;
             ktTableColumn24.Value = "";
@@ -1754,12 +1754,12 @@
             ktTableColumn25.Format = "";
             ktTableColumn25.Group = "";
             ktTableColumn25.IsPrimaryKey = false;
-            ktTableColumn25.Key = "Id";
+            ktTableColumn25.Key = "FullName";
             ktTableColumn25.Resizable = System.Windows.Forms.DataGridViewTriState.NotSet;
             ktTableColumn25.Search = true;
             ktTableColumn25.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             ktTableColumn25.Template = "";
-            ktTableColumn25.Title = "User ID";
+            ktTableColumn25.Title = "Full Name";
             ktTableColumn25.ToolTip = "";
             ktTableColumn25.Type = KimTools.WinForms.KtTableColumnTypes.Text;
             ktTableColumn25.Value = "";
@@ -1771,12 +1771,12 @@
             ktTableColumn26.Format = "";
             ktTableColumn26.Group = "";
             ktTableColumn26.IsPrimaryKey = false;
-            ktTableColumn26.Key = "FullName";
+            ktTableColumn26.Key = "Gender";
             ktTableColumn26.Resizable = System.Windows.Forms.DataGridViewTriState.NotSet;
             ktTableColumn26.Search = true;
             ktTableColumn26.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             ktTableColumn26.Template = "";
-            ktTableColumn26.Title = "Full Name";
+            ktTableColumn26.Title = "Gender";
             ktTableColumn26.ToolTip = "";
             ktTableColumn26.Type = KimTools.WinForms.KtTableColumnTypes.Text;
             ktTableColumn26.Value = "";
@@ -1788,41 +1788,24 @@
             ktTableColumn27.Format = "";
             ktTableColumn27.Group = "";
             ktTableColumn27.IsPrimaryKey = false;
-            ktTableColumn27.Key = "Gender";
+            ktTableColumn27.Key = "Status";
             ktTableColumn27.Resizable = System.Windows.Forms.DataGridViewTriState.NotSet;
             ktTableColumn27.Search = true;
             ktTableColumn27.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             ktTableColumn27.Template = "";
-            ktTableColumn27.Title = "Gender";
+            ktTableColumn27.Title = "Status";
             ktTableColumn27.ToolTip = "";
             ktTableColumn27.Type = KimTools.WinForms.KtTableColumnTypes.Text;
             ktTableColumn27.Value = "";
             ktTableColumn27.Visible = true;
             ktTableColumn27.Width = 0;
             ktTableColumn27.Width_ = "";
-            ktTableColumn28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.NotSet;
-            ktTableColumn28.Fill = "";
-            ktTableColumn28.Format = "";
-            ktTableColumn28.Group = "";
-            ktTableColumn28.IsPrimaryKey = false;
-            ktTableColumn28.Key = "Status";
-            ktTableColumn28.Resizable = System.Windows.Forms.DataGridViewTriState.NotSet;
-            ktTableColumn28.Search = true;
-            ktTableColumn28.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            ktTableColumn28.Template = "";
-            ktTableColumn28.Title = "Status";
-            ktTableColumn28.ToolTip = "";
-            ktTableColumn28.Type = KimTools.WinForms.KtTableColumnTypes.Text;
-            ktTableColumn28.Value = "";
-            ktTableColumn28.Visible = true;
-            ktTableColumn28.Width = 0;
-            ktTableColumn28.Width_ = "";
             this.StudentTbl.Columns = new KimTools.WinForms.KtTableColumn[] {
+        ktTableColumn23,
         ktTableColumn24,
         ktTableColumn25,
         ktTableColumn26,
-        ktTableColumn27,
-        ktTableColumn28};
+        ktTableColumn27};
             this.StudentTbl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Icons.SetIcons(this.StudentTbl, new KimTools.WinForms.KtIcon[0]);
             this.StudentTbl.KeyCaseSensitive = false;
@@ -2026,6 +2009,7 @@
             // Loader
             // 
             this.Loader.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.Loader.Controls.Add(this.ktSpinner2);
             this.Loader.Controls.Add(this.ktSpinner1);
             this.Icons.SetIcons(this.Loader, new KimTools.WinForms.KtIcon[0]);
             this.Loader.Location = new System.Drawing.Point(4, 4);
@@ -2052,7 +2036,7 @@
             this.ktSpinner1.Font = new System.Drawing.Font("Verdana", 8F);
             this.Icons.SetIcons(this.ktSpinner1, new KimTools.WinForms.KtIcon[0]);
             this.ktSpinner1.Image = null;
-            this.ktSpinner1.Location = new System.Drawing.Point(47, -40);
+            this.ktSpinner1.Location = new System.Drawing.Point(-1444, -895);
             this.ktSpinner1.Name = "ktSpinner1";
             this.ktSpinner1.NoRounding = false;
             this.ktSpinner1.Preset = KimTools.WinForms.KtSpinner.Presets.Solid;
@@ -2547,6 +2531,36 @@
             // 
             this.LoadingTimer.Interval = 1000;
             // 
+            // ktSpinner2
+            // 
+            this.ktSpinner2.AllowPresets = false;
+            this.ktSpinner2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.ktSpinner2.BackColor = System.Drawing.Color.Transparent;
+            this.ktSpinner2.CapPoint = KimTools.WinForms.KtSpinner.CapPoints.Both;
+            this.ktSpinner2.CapStyle = KimTools.WinForms.KtSpinner.CapStyles.Round;
+            this.ktSpinner2.Color = System.Drawing.Color.DarkViolet;
+            this.ktSpinner2.Colors = new KimTools.WinForms.Bloom[0];
+            this.ktSpinner2.Customization = "";
+            this.ktSpinner2.DashCap = KimTools.WinForms.KtSpinner.DashCaps.Round;
+            this.ktSpinner2.DashWidth = 0.5F;
+            this.ktSpinner2.Font = new System.Drawing.Font("Verdana", 8F);
+            this.Icons.SetIcons(this.ktSpinner2, new KimTools.WinForms.KtIcon[0]);
+            this.ktSpinner2.Image = null;
+            this.ktSpinner2.Location = new System.Drawing.Point(547, 258);
+            this.ktSpinner2.Name = "ktSpinner2";
+            this.ktSpinner2.NoRounding = false;
+            this.ktSpinner2.Preset = KimTools.WinForms.KtSpinner.Presets.Solid;
+            this.ktSpinner2.ShowText = false;
+            this.ktSpinner2.Size = new System.Drawing.Size(69, 65);
+            this.ktSpinner2.Speed = 3;
+            this.ktSpinner2.Style = KimTools.WinForms.KtSpinner.Styles.Solid;
+            this.ktSpinner2.TabIndex = 1;
+            this.ktSpinner2.Text = "ktSpinner2";
+            this.ktSpinner2.TextPadding = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            this.ktSpinner2.Thickness = 10;
+            this.MenuTooltips.SetToolTip(this.ktSpinner2, "");
+            this.ktSpinner2.Transparent = true;
+            // 
             // FrmAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
@@ -2656,7 +2670,7 @@
         private KimTools.WinForms.KtButton DeleteBtn;
         private KimTools.WinForms.KtButton ktButton2;
         private System.Windows.Forms.TabPage Classroom;
-        private KimTools.WinForms.KtTable ktTable1;
+        private KimTools.WinForms.KtTable ClassTbl;
         private KimTools.WinForms.KtPanel ktPanel6;
         private KimTools.WinForms.KtTextBox ktTextBox2;
         private KimTools.WinForms.KtButton DeleteClassBtn;
@@ -2685,5 +2699,6 @@
         private System.Windows.Forms.Timer LoadingTimer;
         public KimTools.WinForms.KtIcons Icons;
         public KimTools.WinForms.KtTransitions ktTransitions;
+        private KimTools.WinForms.KtSpinner ktSpinner2;
     }
 }

@@ -39,7 +39,7 @@
             // 
             this.ktLabel1.AutoSize = true;
             this.ktLabel1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
-            this.ktLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(40)))), ((int)(((byte)(67)))));
+            this.ktLabel1.ForeColor = System.Drawing.Color.White;
             this.ktLabel1.KtFontSize = KimTools.WinForms.KtFont.Default;
             this.ktLabel1.Location = new System.Drawing.Point(31, 55);
             this.ktLabel1.Name = "ktLabel1";
@@ -135,7 +135,7 @@
             // 
             this.ktLabel2.AutoSize = true;
             this.ktLabel2.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
-            this.ktLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(40)))), ((int)(((byte)(67)))));
+            this.ktLabel2.ForeColor = System.Drawing.Color.White;
             this.ktLabel2.KtFontSize = KimTools.WinForms.KtFont.Default;
             this.ktLabel2.Location = new System.Drawing.Point(31, 111);
             this.ktLabel2.Name = "ktLabel2";
@@ -165,6 +165,7 @@
             this.EnrollBtn.TabIndex = 4;
             this.EnrollBtn.Text = "Enroll";
             this.EnrollBtn.UseVisualStyleBackColor = false;
+            this.EnrollBtn.Click += new System.EventHandler(this.EnrollBtn_Click);
             // 
             // EnrollStudent
             // 

@@ -10,10 +10,11 @@ namespace SchoolManagement.DBAccess
     
     public class CrudClassroom
     {
-        private readonly SchoolDBEntities db;
+        SchoolDBEntities db = new SchoolDBEntities();
+        //private readonly SchoolDBEntities db;
         public CrudClassroom()
         {
-            db = new SchoolDBEntities();
+            //db = new SchoolDBEntities();
         }
         public void AddClassroom(string name , DateTime startDate , DateTime endDate)
         {
@@ -82,5 +83,36 @@ namespace SchoolManagement.DBAccess
             db.ClassSubjects.Add(classSubject);
             db.SaveChanges();
         }
+        // get end date of class
+        private DateTime GetClassEndDate(int classId)
+        {
+            return db.Classrooms.Where(c => c.Id == classId).Select(c => c.EndDate).FirstOrDefault();
+        }
+        // Enroll Student
+        public void EnrollStudent(int classId, int studentId)
+        {
+            // Check if student already enrolled in class
+            if (db.ClassEnrollments.Any(e => e.ClassroomId == classId && e.StudentId == studentId))
+            {
+                throw new Exception("Student already enrolled in this class.");
+            }
+
+            var enrollment = new ClassEnrollment()
+            {
+                ClassroomId = classId ,
+                StudentId = studentId ,
+                EnrollmentDate = DateTime.Now,
+                EndDate = GetClassEndDate(classId),
+            };
+            db.ClassEnrollments.Add(enrollment);
+            db.SaveChanges();
+        }
+        //Get classEnroll count by class ID
+        public int GetClassEnrollCountByClassId(int classId)
+        {
+            return db.ClassEnrollments.Count(e => e.ClassroomId == classId);
+        }
+
+    
     }
 }

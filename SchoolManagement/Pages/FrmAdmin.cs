@@ -19,7 +19,8 @@ namespace SchoolManagement.Pages
     public partial class FrmAdmin : KtWindow
     {
         CrudUsers userdb = new CrudUsers();
-        private int userId = -1;
+        CrudClassroom classroom = new CrudClassroom();
+        private readonly int userId = -1;
         public FrmAdmin(int UserId)
         {
             InitializeComponent();
@@ -65,14 +66,13 @@ namespace SchoolManagement.Pages
         private void EnrollBtn_Click(object sender, EventArgs e)
         {
             EnrollStudent enrollStudent = new EnrollStudent();
-            enrollStudent.Show();
+            enrollStudent.ShowDialog();
         }      
         private async Task setLoadingpage(string page)
         {
             try
             {
                 MainPages.SetPage(Loader);
-                PageLbl.Text = "Loading...";
 
                 await Task.Run(() =>
                 {
@@ -174,6 +174,26 @@ namespace SchoolManagement.Pages
                 newTbl["Status"] = status;
             }
 
+        }
+        private void LoadClassroom()
+        {
+            var classrooms = classroom.GetClassRoom();
+            int num = 1;
+            foreach (var classitems in classrooms)
+            {
+               var items = ClassTbl.NewRow();
+                items["No"] = num++;
+                items["ClassName"] = classitems.Name;
+                items["TotalStudent"] = classroom.GetClassEnrollCountByClassId(classitems.Id);
+                items["StartDate"] = classitems.StartDate.ToShortDateString();
+                items["EndDate"] = classitems.EndDate.ToShortDateString();
+               
+            }
+        }
+
+        private void ClassTbl_Load(object sender, EventArgs e)
+        {
+            LoadClassroom();
         }
     }
 }

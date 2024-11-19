@@ -32,7 +32,37 @@ namespace SchoolManagement.Dialog
         {
             var classrom = crudClassroom.GetClassRoom();
             var student = users.GetStudents("");
+            
+            ClassNameCmb.DataSource = classrom;
+            ClassNameCmb.DisplayMember = "Name";
+            ClassNameCmb.ValueMember = "Id";
 
+            StudentCmb.DataSource = student;
+            StudentCmb.DisplayMember = "LastName";
+            StudentCmb.ValueMember = "Id";
+        }
+
+        private void EnrollBtn_Click(object sender, EventArgs e)
+        {
+            int classId = (int)ClassNameCmb.SelectedValue;
+            int studentId = (int)StudentCmb.SelectedValue;
+            try
+            {
+                crudClassroom.EnrollStudent(classId,studentId);
+                AlertDialogs alertDialogs = new AlertDialogs();
+                alertDialogs.AlertLbl.Text = "Student Enrolled Successfully";
+                alertDialogs.AlertIcon.Image = Properties.Resources._checked;
+                alertDialogs.AlertLbl.LabelColor = KtColor.Tailwind_Violet;
+                alertDialogs.ShowDialog();
+            }catch (Exception ex)
+            {
+                AlertDialogs alertDialogs = new AlertDialogs();
+                alertDialogs.AlertLbl.Text = ex.Message;
+                alertDialogs.AlertIcon.Image = Properties.Resources.warning_icon;
+                alertDialogs.AlertLbl.LabelColor = KtColor.Danger;
+                alertDialogs.ShowDialog();
+
+            }
         }
     }
 }
