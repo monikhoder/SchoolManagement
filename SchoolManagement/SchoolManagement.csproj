@@ -151,6 +151,12 @@
     <Compile Include="Dialog\AddClass.Designer.cs">
       <DependentUpon>AddClass.cs</DependentUpon>
     </Compile>
+    <Compile Include="Dialog\AddExam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialog\AddExam.Designer.cs">
+      <DependentUpon>AddExam.cs</DependentUpon>
+    </Compile>
     <Compile Include="Dialog\AddSubject.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -251,6 +257,9 @@
     </Compile>
     <EmbeddedResource Include="Dialog\AddClass.resx">
       <DependentUpon>AddClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialog\AddExam.resx">
+      <DependentUpon>AddExam.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Dialog\AddSubject.resx">
       <DependentUpon>AddSubject.cs</DependentUpon>

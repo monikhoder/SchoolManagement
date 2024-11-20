@@ -195,5 +195,11 @@ namespace SchoolManagement.Pages
         {
             LoadClassroom();
         }
+
+        private void AddExamBtn_Click(object sender, EventArgs e)
+        {
+            AddExam addExam = new AddExam();
+            addExam.ShowDialog();
+        }
     }
 }
