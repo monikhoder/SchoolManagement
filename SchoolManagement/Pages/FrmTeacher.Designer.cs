@@ -29,17 +29,14 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            KimTools.WinForms.KtToastHelpers.KtPages.KtPgAnimatorNS.Animation animation1 = new KimTools.WinForms.KtToastHelpers.KtPages.KtPgAnimatorNS.Animation();
-            KimTools.WinForms.KtIcon ktIcon1 = new KimTools.WinForms.KtIcon();
+            KimTools.WinForms.KtToastHelpers.KtPages.KtPgAnimatorNS.Animation animation2 = new KimTools.WinForms.KtToastHelpers.KtPages.KtPgAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmTeacher));
-            KimTools.WinForms.KtIcon ktIcon2 = new KimTools.WinForms.KtIcon();
-            KimTools.WinForms.KtIcon ktIcon3 = new KimTools.WinForms.KtIcon();
             KimTools.WinForms.KtIcon ktIcon4 = new KimTools.WinForms.KtIcon();
             KimTools.WinForms.KtIcon ktIcon5 = new KimTools.WinForms.KtIcon();
             KimTools.WinForms.KtIcon ktIcon6 = new KimTools.WinForms.KtIcon();
-            KimTools.WinForms.KtTableColumn ktTableColumn1 = new KimTools.WinForms.KtTableColumn();
-            KimTools.WinForms.KtTableColumn ktTableColumn2 = new KimTools.WinForms.KtTableColumn();
-            KimTools.WinForms.KtTableColumn ktTableColumn3 = new KimTools.WinForms.KtTableColumn();
+            KimTools.WinForms.KtTableColumn ktTableColumn4 = new KimTools.WinForms.KtTableColumn();
+            KimTools.WinForms.KtTableColumn ktTableColumn5 = new KimTools.WinForms.KtTableColumn();
+            KimTools.WinForms.KtTableColumn ktTableColumn6 = new KimTools.WinForms.KtTableColumn();
             this.MainPages = new KimTools.WinForms.KtPages();
             this.Dasboard = new System.Windows.Forms.TabPage();
             this.DashboardBarPanel = new KimTools.WinForms.KtPanel();
@@ -47,26 +44,14 @@
             this.ktLabel10 = new KimTools.WinForms.KtLabel();
             this.ktLabel11 = new KimTools.WinForms.KtLabel();
             this.ktPictureBox6 = new KimTools.WinForms.KtPictureBox();
-            this.ktPanel4 = new KimTools.WinForms.KtPanel();
-            this.ktLabel8 = new KimTools.WinForms.KtLabel();
-            this.ktLabel9 = new KimTools.WinForms.KtLabel();
-            this.ktPictureBox5 = new KimTools.WinForms.KtPictureBox();
             this.ktPanel3 = new KimTools.WinForms.KtPanel();
             this.ktLabel6 = new KimTools.WinForms.KtLabel();
             this.ktLabel7 = new KimTools.WinForms.KtLabel();
             this.ktPictureBox4 = new KimTools.WinForms.KtPictureBox();
-            this.ktPanel2 = new KimTools.WinForms.KtPanel();
-            this.ktLabel4 = new KimTools.WinForms.KtLabel();
-            this.ktLabel5 = new KimTools.WinForms.KtLabel();
-            this.ktPictureBox3 = new KimTools.WinForms.KtPictureBox();
             this.ktPanel1 = new KimTools.WinForms.KtPanel();
             this.ktLabel1 = new KimTools.WinForms.KtLabel();
             this.ktLabel3 = new KimTools.WinForms.KtLabel();
             this.ktPictureBox2 = new KimTools.WinForms.KtPictureBox();
-            this.StudentPanel = new KimTools.WinForms.KtPanel();
-            this.ktLabel2 = new KimTools.WinForms.KtLabel();
-            this.CurentStudentLbl = new KimTools.WinForms.KtLabel();
-            this.ktPictureBox1 = new KimTools.WinForms.KtPictureBox();
             this.Users = new System.Windows.Forms.TabPage();
             this.UsersTbl = new KimTools.WinForms.KtTable();
             this.UsersTopPanel = new KimTools.WinForms.KtPanel();
@@ -79,7 +64,7 @@
             this.MenuTooltips = new KimTools.WinForms.KtTooltips(this.components);
             this.TopBarPanel = new KimTools.WinForms.KtPanel();
             this.PageLbl = new KimTools.WinForms.KtLabel();
-            this.LeftBar = new KimTools.WinForms.KtPanel();
+            this.LeftBarTeacher = new KimTools.WinForms.KtPanel();
             this.BtnLogout = new KimTools.WinForms.KtButton();
             this.ProfileBtn = new KimTools.WinForms.KtButtonSelect();
             this.UsersBtn = new KimTools.WinForms.KtButtonSelect();
@@ -95,21 +80,15 @@
             this.DashboardBarPanel.SuspendLayout();
             this.ktPanel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ktPictureBox6)).BeginInit();
-            this.ktPanel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ktPictureBox5)).BeginInit();
             this.ktPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ktPictureBox4)).BeginInit();
-            this.ktPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ktPictureBox3)).BeginInit();
             this.ktPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ktPictureBox2)).BeginInit();
-            this.StudentPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ktPictureBox1)).BeginInit();
             this.Users.SuspendLayout();
             this.UsersTopPanel.SuspendLayout();
             this.Profile.SuspendLayout();
             this.TopBarPanel.SuspendLayout();
-            this.LeftBar.SuspendLayout();
+            this.LeftBarTeacher.SuspendLayout();
             this.LogoBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
             this.SuspendLayout();
@@ -135,22 +114,22 @@
             this.MainPages.Size = new System.Drawing.Size(1190, 617);
             this.MainPages.TabIndex = 1;
             this.MenuTooltips.SetToolTip(this.MainPages, "");
-            animation1.AnimateOnlyDifferences = true;
-            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
-            animation1.LeafCoeff = 0F;
-            animation1.MaxTime = 1F;
-            animation1.MinTime = 0F;
-            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
-            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
-            animation1.MosaicSize = 0;
-            animation1.Padding = new System.Windows.Forms.Padding(10);
-            animation1.RotateCoeff = 0F;
-            animation1.RotateLimit = 0F;
-            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
-            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
-            animation1.TimeCoeff = 0F;
-            animation1.TransparencyCoeff = 0F;
-            this.MainPages.Transition = animation1;
+            animation2.AnimateOnlyDifferences = true;
+            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
+            animation2.LeafCoeff = 0F;
+            animation2.MaxTime = 1F;
+            animation2.MinTime = 0F;
+            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
+            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
+            animation2.MosaicSize = 0;
+            animation2.Padding = new System.Windows.Forms.Padding(10);
+            animation2.RotateCoeff = 0F;
+            animation2.RotateLimit = 0F;
+            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
+            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
+            animation2.TimeCoeff = 0F;
+            animation2.TransparencyCoeff = 0F;
+            this.MainPages.Transition = animation2;
             this.MainPages.TransitionType = KimTools.WinForms.KtToastHelpers.KtPages.KtPgAnimatorNS.AnimationType.Custom;
             // 
             // Dasboard
@@ -161,7 +140,7 @@
             this.Dasboard.Location = new System.Drawing.Point(4, 4);
             this.Dasboard.Name = "Dasboard";
             this.Dasboard.Padding = new System.Windows.Forms.Padding(1);
-            this.Dasboard.Size = new System.Drawing.Size(1182, 565);
+            this.Dasboard.Size = new System.Drawing.Size(1182, 575);
             this.Dasboard.TabIndex = 0;
             this.Dasboard.Text = "Dasboard";
             this.MenuTooltips.SetToolTip(this.Dasboard, "");
@@ -173,21 +152,18 @@
             this.DashboardBarPanel.Bg = KimTools.WinForms.KtColor.None;
             this.DashboardBarPanel.BgOpacity = 255;
             this.DashboardBarPanel.Border = KimTools.WinForms.KtColor.None;
-            this.DashboardBarPanel.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(233)))), ((int)(((byte)(236)))));
+            this.DashboardBarPanel.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.DashboardBarPanel.BorderOpacity = 255;
             this.DashboardBarPanel.BorderRadiusSize = 15;
             this.DashboardBarPanel.BorderShape = KimTools.WinForms.KtSize.Default;
             this.DashboardBarPanel.BorderSize = KimTools.WinForms.KtSize.None;
             this.DashboardBarPanel.BorderThickness = 0;
             this.DashboardBarPanel.Controls.Add(this.ktPanel5);
-            this.DashboardBarPanel.Controls.Add(this.ktPanel4);
             this.DashboardBarPanel.Controls.Add(this.ktPanel3);
-            this.DashboardBarPanel.Controls.Add(this.ktPanel2);
             this.DashboardBarPanel.Controls.Add(this.ktPanel1);
-            this.DashboardBarPanel.Controls.Add(this.StudentPanel);
             this.DashboardBarPanel.CustomColors = new System.Drawing.Color[0];
             this.DashboardBarPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.DashboardBarPanel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(40)))), ((int)(((byte)(67)))));
+            this.DashboardBarPanel.ForeColor = System.Drawing.Color.White;
             this.Icons.SetIcons(this.DashboardBarPanel, new KimTools.WinForms.KtIcon[0]);
             this.DashboardBarPanel.Location = new System.Drawing.Point(1, 1);
             this.DashboardBarPanel.Name = "DashboardBarPanel";
@@ -199,13 +175,13 @@
             // 
             // ktPanel5
             // 
-            this.ktPanel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(78)))), ((int)(((byte)(218)))));
-            this.ktPanel5.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(78)))), ((int)(((byte)(218)))));
+            this.ktPanel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(82)))), ((int)(((byte)(221)))));
+            this.ktPanel5.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(82)))), ((int)(((byte)(221)))));
             this.ktPanel5.Bg = KimTools.WinForms.KtColor.Primary;
             this.ktPanel5.BgOpacity = 255;
             this.ktPanel5.BgShade = KimTools.WinForms.KtShade.Light_10;
             this.ktPanel5.Border = KimTools.WinForms.KtColor.Primary;
-            this.ktPanel5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(60)))), ((int)(((byte)(202)))));
+            this.ktPanel5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(82)))), ((int)(((byte)(221)))));
             this.ktPanel5.BorderOpacity = 255;
             this.ktPanel5.BorderRadiusSize = 26;
             this.ktPanel5.BorderShape = KimTools.WinForms.KtSize.Md;
@@ -216,9 +192,9 @@
             this.ktPanel5.Controls.Add(this.ktPictureBox6);
             this.ktPanel5.CustomColors = new System.Drawing.Color[0];
             this.ktPanel5.Dock = System.Windows.Forms.DockStyle.Left;
-            this.ktPanel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(40)))), ((int)(((byte)(67)))));
+            this.ktPanel5.ForeColor = System.Drawing.Color.White;
             this.Icons.SetIcons(this.ktPanel5, new KimTools.WinForms.KtIcon[0]);
-            this.ktPanel5.Location = new System.Drawing.Point(1000, 5);
+            this.ktPanel5.Location = new System.Drawing.Point(403, 5);
             this.ktPanel5.Name = "ktPanel5";
             this.ktPanel5.ShowBorders = true;
             this.ktPanel5.Size = new System.Drawing.Size(199, 80);
@@ -235,7 +211,7 @@
             this.ktLabel10.LabelColor = KimTools.WinForms.KtColor.Tailwind_White;
             this.ktLabel10.Location = new System.Drawing.Point(10, 11);
             this.ktLabel10.Name = "ktLabel10";
-            this.ktLabel10.Size = new System.Drawing.Size(60, 38);
+            this.ktLabel10.Size = new System.Drawing.Size(42, 25);
             this.ktLabel10.TabIndex = 2;
             this.ktLabel10.Text = "120";
             this.MenuTooltips.SetToolTip(this.ktLabel10, "");
@@ -250,7 +226,7 @@
             this.ktLabel11.LabelColor = KimTools.WinForms.KtColor.Tailwind_White;
             this.ktLabel11.Location = new System.Drawing.Point(10, 50);
             this.ktLabel11.Name = "ktLabel11";
-            this.ktLabel11.Size = new System.Drawing.Size(127, 23);
+            this.ktLabel11.Size = new System.Drawing.Size(87, 15);
             this.ktLabel11.TabIndex = 1;
             this.ktLabel11.Text = "Curent Student";
             this.MenuTooltips.SetToolTip(this.ktLabel11, "");
@@ -260,18 +236,18 @@
             this.ktPictureBox6.AllowFocused = false;
             this.ktPictureBox6.AutoSizeHeight = true;
             this.ktPictureBox6.BorderRadius = 24;
-            ktIcon1.Base = KimTools.WinForms.KtState.None;
-            ktIcon1.Colors = new System.Drawing.Color[] {
+            ktIcon4.Base = KimTools.WinForms.KtState.None;
+            ktIcon4.Colors = new System.Drawing.Color[] {
         System.Drawing.Color.White};
-            ktIcon1.Icon = "Tabler.outline.users_group";
-            ktIcon1.Listen = null;
-            ktIcon1.Padding = 0;
-            ktIcon1.Property = "Image";
-            ktIcon1.Stroke = 2D;
-            ktIcon1.Trigger = KimTools.WinForms.KtState.Default;
-            ktIcon1.Width = -1;
+            ktIcon4.Icon = "Tabler.outline.users_group";
+            ktIcon4.Listen = null;
+            ktIcon4.Padding = 0;
+            ktIcon4.Property = "Image";
+            ktIcon4.Stroke = 2D;
+            ktIcon4.Trigger = KimTools.WinForms.KtState.Default;
+            ktIcon4.Width = -1;
             this.Icons.SetIcons(this.ktPictureBox6, new KimTools.WinForms.KtIcon[] {
-            ktIcon1});
+            ktIcon4});
             this.ktPictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("ktPictureBox6.Image")));
             this.ktPictureBox6.IsCircle = true;
             this.ktPictureBox6.Location = new System.Drawing.Point(143, 24);
@@ -283,101 +259,15 @@
             this.MenuTooltips.SetToolTip(this.ktPictureBox6, "");
             this.ktPictureBox6.Type = KimTools.WinForms.KtPictureBox.Types.Circle;
             // 
-            // ktPanel4
-            // 
-            this.ktPanel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(78)))), ((int)(((byte)(218)))));
-            this.ktPanel4.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(78)))), ((int)(((byte)(218)))));
-            this.ktPanel4.Bg = KimTools.WinForms.KtColor.Primary;
-            this.ktPanel4.BgOpacity = 255;
-            this.ktPanel4.BgShade = KimTools.WinForms.KtShade.Light_10;
-            this.ktPanel4.Border = KimTools.WinForms.KtColor.Primary;
-            this.ktPanel4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(60)))), ((int)(((byte)(202)))));
-            this.ktPanel4.BorderOpacity = 255;
-            this.ktPanel4.BorderRadiusSize = 26;
-            this.ktPanel4.BorderShape = KimTools.WinForms.KtSize.Md;
-            this.ktPanel4.BorderSize = KimTools.WinForms.KtSize.Md;
-            this.ktPanel4.BorderThickness = 2;
-            this.ktPanel4.Controls.Add(this.ktLabel8);
-            this.ktPanel4.Controls.Add(this.ktLabel9);
-            this.ktPanel4.Controls.Add(this.ktPictureBox5);
-            this.ktPanel4.CustomColors = new System.Drawing.Color[0];
-            this.ktPanel4.Dock = System.Windows.Forms.DockStyle.Left;
-            this.ktPanel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(40)))), ((int)(((byte)(67)))));
-            this.Icons.SetIcons(this.ktPanel4, new KimTools.WinForms.KtIcon[0]);
-            this.ktPanel4.Location = new System.Drawing.Point(801, 5);
-            this.ktPanel4.Name = "ktPanel4";
-            this.ktPanel4.ShowBorders = true;
-            this.ktPanel4.Size = new System.Drawing.Size(199, 80);
-            this.ktPanel4.TabIndex = 4;
-            this.MenuTooltips.SetToolTip(this.ktPanel4, "");
-            // 
-            // ktLabel8
-            // 
-            this.ktLabel8.AutoSize = true;
-            this.ktLabel8.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold);
-            this.ktLabel8.ForeColor = System.Drawing.Color.White;
-            this.Icons.SetIcons(this.ktLabel8, new KimTools.WinForms.KtIcon[0]);
-            this.ktLabel8.KtFontSize = KimTools.WinForms.KtFont.H2;
-            this.ktLabel8.LabelColor = KimTools.WinForms.KtColor.Tailwind_White;
-            this.ktLabel8.Location = new System.Drawing.Point(10, 11);
-            this.ktLabel8.Name = "ktLabel8";
-            this.ktLabel8.Size = new System.Drawing.Size(60, 38);
-            this.ktLabel8.TabIndex = 2;
-            this.ktLabel8.Text = "120";
-            this.MenuTooltips.SetToolTip(this.ktLabel8, "");
-            // 
-            // ktLabel9
-            // 
-            this.ktLabel9.AutoSize = true;
-            this.ktLabel9.Font = new System.Drawing.Font("Segoe UI Semibold", 8.5F, System.Drawing.FontStyle.Bold);
-            this.ktLabel9.ForeColor = System.Drawing.Color.White;
-            this.Icons.SetIcons(this.ktLabel9, new KimTools.WinForms.KtIcon[0]);
-            this.ktLabel9.KtFontSize = KimTools.WinForms.KtFont.H5;
-            this.ktLabel9.LabelColor = KimTools.WinForms.KtColor.Tailwind_White;
-            this.ktLabel9.Location = new System.Drawing.Point(10, 50);
-            this.ktLabel9.Name = "ktLabel9";
-            this.ktLabel9.Size = new System.Drawing.Size(127, 23);
-            this.ktLabel9.TabIndex = 1;
-            this.ktLabel9.Text = "Curent Student";
-            this.MenuTooltips.SetToolTip(this.ktLabel9, "");
-            // 
-            // ktPictureBox5
-            // 
-            this.ktPictureBox5.AllowFocused = false;
-            this.ktPictureBox5.AutoSizeHeight = true;
-            this.ktPictureBox5.BorderRadius = 24;
-            ktIcon2.Base = KimTools.WinForms.KtState.None;
-            ktIcon2.Colors = new System.Drawing.Color[] {
-        System.Drawing.Color.White};
-            ktIcon2.Icon = "Tabler.outline.users_group";
-            ktIcon2.Listen = null;
-            ktIcon2.Padding = 0;
-            ktIcon2.Property = "Image";
-            ktIcon2.Stroke = 2D;
-            ktIcon2.Trigger = KimTools.WinForms.KtState.Default;
-            ktIcon2.Width = -1;
-            this.Icons.SetIcons(this.ktPictureBox5, new KimTools.WinForms.KtIcon[] {
-            ktIcon2});
-            this.ktPictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("ktPictureBox5.Image")));
-            this.ktPictureBox5.IsCircle = true;
-            this.ktPictureBox5.Location = new System.Drawing.Point(143, 24);
-            this.ktPictureBox5.Name = "ktPictureBox5";
-            this.ktPictureBox5.Size = new System.Drawing.Size(48, 48);
-            this.ktPictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.ktPictureBox5.TabIndex = 0;
-            this.ktPictureBox5.TabStop = false;
-            this.MenuTooltips.SetToolTip(this.ktPictureBox5, "");
-            this.ktPictureBox5.Type = KimTools.WinForms.KtPictureBox.Types.Circle;
-            // 
             // ktPanel3
             // 
-            this.ktPanel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(78)))), ((int)(((byte)(218)))));
-            this.ktPanel3.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(78)))), ((int)(((byte)(218)))));
+            this.ktPanel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(82)))), ((int)(((byte)(221)))));
+            this.ktPanel3.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(82)))), ((int)(((byte)(221)))));
             this.ktPanel3.Bg = KimTools.WinForms.KtColor.Primary;
             this.ktPanel3.BgOpacity = 255;
             this.ktPanel3.BgShade = KimTools.WinForms.KtShade.Light_10;
             this.ktPanel3.Border = KimTools.WinForms.KtColor.Primary;
-            this.ktPanel3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(60)))), ((int)(((byte)(202)))));
+            this.ktPanel3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(82)))), ((int)(((byte)(221)))));
             this.ktPanel3.BorderOpacity = 255;
             this.ktPanel3.BorderRadiusSize = 26;
             this.ktPanel3.BorderShape = KimTools.WinForms.KtSize.Md;
@@ -388,9 +278,9 @@
             this.ktPanel3.Controls.Add(this.ktPictureBox4);
             this.ktPanel3.CustomColors = new System.Drawing.Color[0];
             this.ktPanel3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.ktPanel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(40)))), ((int)(((byte)(67)))));
+            this.ktPanel3.ForeColor = System.Drawing.Color.White;
             this.Icons.SetIcons(this.ktPanel3, new KimTools.WinForms.KtIcon[0]);
-            this.ktPanel3.Location = new System.Drawing.Point(602, 5);
+            this.ktPanel3.Location = new System.Drawing.Point(204, 5);
             this.ktPanel3.Name = "ktPanel3";
             this.ktPanel3.ShowBorders = true;
             this.ktPanel3.Size = new System.Drawing.Size(199, 80);
@@ -407,7 +297,7 @@
             this.ktLabel6.LabelColor = KimTools.WinForms.KtColor.Tailwind_White;
             this.ktLabel6.Location = new System.Drawing.Point(10, 11);
             this.ktLabel6.Name = "ktLabel6";
-            this.ktLabel6.Size = new System.Drawing.Size(60, 38);
+            this.ktLabel6.Size = new System.Drawing.Size(42, 25);
             this.ktLabel6.TabIndex = 2;
             this.ktLabel6.Text = "120";
             this.MenuTooltips.SetToolTip(this.ktLabel6, "");
@@ -422,7 +312,7 @@
             this.ktLabel7.LabelColor = KimTools.WinForms.KtColor.Tailwind_White;
             this.ktLabel7.Location = new System.Drawing.Point(10, 50);
             this.ktLabel7.Name = "ktLabel7";
-            this.ktLabel7.Size = new System.Drawing.Size(127, 23);
+            this.ktLabel7.Size = new System.Drawing.Size(87, 15);
             this.ktLabel7.TabIndex = 1;
             this.ktLabel7.Text = "Curent Student";
             this.MenuTooltips.SetToolTip(this.ktLabel7, "");
@@ -432,18 +322,18 @@
             this.ktPictureBox4.AllowFocused = false;
             this.ktPictureBox4.AutoSizeHeight = true;
             this.ktPictureBox4.BorderRadius = 24;
-            ktIcon3.Base = KimTools.WinForms.KtState.None;
-            ktIcon3.Colors = new System.Drawing.Color[] {
+            ktIcon5.Base = KimTools.WinForms.KtState.None;
+            ktIcon5.Colors = new System.Drawing.Color[] {
         System.Drawing.Color.White};
-            ktIcon3.Icon = "Tabler.outline.users_group";
-            ktIcon3.Listen = null;
-            ktIcon3.Padding = 0;
-            ktIcon3.Property = "Image";
-            ktIcon3.Stroke = 2D;
-            ktIcon3.Trigger = KimTools.WinForms.KtState.Default;
-            ktIcon3.Width = -1;
+            ktIcon5.Icon = "Tabler.outline.users_group";
+            ktIcon5.Listen = null;
+            ktIcon5.Padding = 0;
+            ktIcon5.Property = "Image";
+            ktIcon5.Stroke = 2D;
+            ktIcon5.Trigger = KimTools.WinForms.KtState.Default;
+            ktIcon5.Width = -1;
             this.Icons.SetIcons(this.ktPictureBox4, new KimTools.WinForms.KtIcon[] {
-            ktIcon3});
+            ktIcon5});
             this.ktPictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("ktPictureBox4.Image")));
             this.ktPictureBox4.IsCircle = true;
             this.ktPictureBox4.Location = new System.Drawing.Point(143, 24);
@@ -455,101 +345,15 @@
             this.MenuTooltips.SetToolTip(this.ktPictureBox4, "");
             this.ktPictureBox4.Type = KimTools.WinForms.KtPictureBox.Types.Circle;
             // 
-            // ktPanel2
-            // 
-            this.ktPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(78)))), ((int)(((byte)(218)))));
-            this.ktPanel2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(78)))), ((int)(((byte)(218)))));
-            this.ktPanel2.Bg = KimTools.WinForms.KtColor.Primary;
-            this.ktPanel2.BgOpacity = 255;
-            this.ktPanel2.BgShade = KimTools.WinForms.KtShade.Light_10;
-            this.ktPanel2.Border = KimTools.WinForms.KtColor.Primary;
-            this.ktPanel2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(60)))), ((int)(((byte)(202)))));
-            this.ktPanel2.BorderOpacity = 255;
-            this.ktPanel2.BorderRadiusSize = 26;
-            this.ktPanel2.BorderShape = KimTools.WinForms.KtSize.Md;
-            this.ktPanel2.BorderSize = KimTools.WinForms.KtSize.Md;
-            this.ktPanel2.BorderThickness = 2;
-            this.ktPanel2.Controls.Add(this.ktLabel4);
-            this.ktPanel2.Controls.Add(this.ktLabel5);
-            this.ktPanel2.Controls.Add(this.ktPictureBox3);
-            this.ktPanel2.CustomColors = new System.Drawing.Color[0];
-            this.ktPanel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.ktPanel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(40)))), ((int)(((byte)(67)))));
-            this.Icons.SetIcons(this.ktPanel2, new KimTools.WinForms.KtIcon[0]);
-            this.ktPanel2.Location = new System.Drawing.Point(403, 5);
-            this.ktPanel2.Name = "ktPanel2";
-            this.ktPanel2.ShowBorders = true;
-            this.ktPanel2.Size = new System.Drawing.Size(199, 80);
-            this.ktPanel2.TabIndex = 2;
-            this.MenuTooltips.SetToolTip(this.ktPanel2, "");
-            // 
-            // ktLabel4
-            // 
-            this.ktLabel4.AutoSize = true;
-            this.ktLabel4.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold);
-            this.ktLabel4.ForeColor = System.Drawing.Color.White;
-            this.Icons.SetIcons(this.ktLabel4, new KimTools.WinForms.KtIcon[0]);
-            this.ktLabel4.KtFontSize = KimTools.WinForms.KtFont.H2;
-            this.ktLabel4.LabelColor = KimTools.WinForms.KtColor.Tailwind_White;
-            this.ktLabel4.Location = new System.Drawing.Point(10, 11);
-            this.ktLabel4.Name = "ktLabel4";
-            this.ktLabel4.Size = new System.Drawing.Size(60, 38);
-            this.ktLabel4.TabIndex = 2;
-            this.ktLabel4.Text = "120";
-            this.MenuTooltips.SetToolTip(this.ktLabel4, "");
-            // 
-            // ktLabel5
-            // 
-            this.ktLabel5.AutoSize = true;
-            this.ktLabel5.Font = new System.Drawing.Font("Segoe UI Semibold", 8.5F, System.Drawing.FontStyle.Bold);
-            this.ktLabel5.ForeColor = System.Drawing.Color.White;
-            this.Icons.SetIcons(this.ktLabel5, new KimTools.WinForms.KtIcon[0]);
-            this.ktLabel5.KtFontSize = KimTools.WinForms.KtFont.H5;
-            this.ktLabel5.LabelColor = KimTools.WinForms.KtColor.Tailwind_White;
-            this.ktLabel5.Location = new System.Drawing.Point(10, 50);
-            this.ktLabel5.Name = "ktLabel5";
-            this.ktLabel5.Size = new System.Drawing.Size(105, 23);
-            this.ktLabel5.TabIndex = 1;
-            this.ktLabel5.Text = "Curent Class";
-            this.MenuTooltips.SetToolTip(this.ktLabel5, "");
-            // 
-            // ktPictureBox3
-            // 
-            this.ktPictureBox3.AllowFocused = false;
-            this.ktPictureBox3.AutoSizeHeight = true;
-            this.ktPictureBox3.BorderRadius = 24;
-            ktIcon4.Base = KimTools.WinForms.KtState.None;
-            ktIcon4.Colors = new System.Drawing.Color[] {
-        System.Drawing.Color.White};
-            ktIcon4.Icon = "Tabler.outline.users_group";
-            ktIcon4.Listen = null;
-            ktIcon4.Padding = 0;
-            ktIcon4.Property = "Image";
-            ktIcon4.Stroke = 2D;
-            ktIcon4.Trigger = KimTools.WinForms.KtState.Default;
-            ktIcon4.Width = -1;
-            this.Icons.SetIcons(this.ktPictureBox3, new KimTools.WinForms.KtIcon[] {
-            ktIcon4});
-            this.ktPictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("ktPictureBox3.Image")));
-            this.ktPictureBox3.IsCircle = true;
-            this.ktPictureBox3.Location = new System.Drawing.Point(143, 24);
-            this.ktPictureBox3.Name = "ktPictureBox3";
-            this.ktPictureBox3.Size = new System.Drawing.Size(48, 48);
-            this.ktPictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.ktPictureBox3.TabIndex = 0;
-            this.ktPictureBox3.TabStop = false;
-            this.MenuTooltips.SetToolTip(this.ktPictureBox3, "");
-            this.ktPictureBox3.Type = KimTools.WinForms.KtPictureBox.Types.Circle;
-            // 
             // ktPanel1
             // 
-            this.ktPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(78)))), ((int)(((byte)(218)))));
-            this.ktPanel1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(78)))), ((int)(((byte)(218)))));
+            this.ktPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(82)))), ((int)(((byte)(221)))));
+            this.ktPanel1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(82)))), ((int)(((byte)(221)))));
             this.ktPanel1.Bg = KimTools.WinForms.KtColor.Primary;
             this.ktPanel1.BgOpacity = 255;
             this.ktPanel1.BgShade = KimTools.WinForms.KtShade.Light_10;
             this.ktPanel1.Border = KimTools.WinForms.KtColor.Primary;
-            this.ktPanel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(60)))), ((int)(((byte)(202)))));
+            this.ktPanel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(82)))), ((int)(((byte)(221)))));
             this.ktPanel1.BorderOpacity = 255;
             this.ktPanel1.BorderRadiusSize = 26;
             this.ktPanel1.BorderShape = KimTools.WinForms.KtSize.Md;
@@ -560,9 +364,9 @@
             this.ktPanel1.Controls.Add(this.ktPictureBox2);
             this.ktPanel1.CustomColors = new System.Drawing.Color[0];
             this.ktPanel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.ktPanel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(40)))), ((int)(((byte)(67)))));
+            this.ktPanel1.ForeColor = System.Drawing.Color.White;
             this.Icons.SetIcons(this.ktPanel1, new KimTools.WinForms.KtIcon[0]);
-            this.ktPanel1.Location = new System.Drawing.Point(204, 5);
+            this.ktPanel1.Location = new System.Drawing.Point(5, 5);
             this.ktPanel1.Name = "ktPanel1";
             this.ktPanel1.ShowBorders = true;
             this.ktPanel1.Size = new System.Drawing.Size(199, 80);
@@ -579,7 +383,7 @@
             this.ktLabel1.LabelColor = KimTools.WinForms.KtColor.Tailwind_White;
             this.ktLabel1.Location = new System.Drawing.Point(10, 11);
             this.ktLabel1.Name = "ktLabel1";
-            this.ktLabel1.Size = new System.Drawing.Size(60, 38);
+            this.ktLabel1.Size = new System.Drawing.Size(42, 25);
             this.ktLabel1.TabIndex = 2;
             this.ktLabel1.Text = "120";
             this.MenuTooltips.SetToolTip(this.ktLabel1, "");
@@ -594,7 +398,7 @@
             this.ktLabel3.LabelColor = KimTools.WinForms.KtColor.Tailwind_White;
             this.ktLabel3.Location = new System.Drawing.Point(10, 50);
             this.ktLabel3.Name = "ktLabel3";
-            this.ktLabel3.Size = new System.Drawing.Size(125, 23);
+            this.ktLabel3.Size = new System.Drawing.Size(86, 15);
             this.ktLabel3.TabIndex = 1;
             this.ktLabel3.Text = "Curent Teacher";
             this.MenuTooltips.SetToolTip(this.ktLabel3, "");
@@ -604,18 +408,18 @@
             this.ktPictureBox2.AllowFocused = false;
             this.ktPictureBox2.AutoSizeHeight = true;
             this.ktPictureBox2.BorderRadius = 24;
-            ktIcon5.Base = KimTools.WinForms.KtState.None;
-            ktIcon5.Colors = new System.Drawing.Color[] {
+            ktIcon6.Base = KimTools.WinForms.KtState.None;
+            ktIcon6.Colors = new System.Drawing.Color[] {
         System.Drawing.Color.White};
-            ktIcon5.Icon = "Tabler.outline.users_group";
-            ktIcon5.Listen = null;
-            ktIcon5.Padding = 0;
-            ktIcon5.Property = "Image";
-            ktIcon5.Stroke = 2D;
-            ktIcon5.Trigger = KimTools.WinForms.KtState.Default;
-            ktIcon5.Width = -1;
+            ktIcon6.Icon = "Tabler.outline.users_group";
+            ktIcon6.Listen = null;
+            ktIcon6.Padding = 0;
+            ktIcon6.Property = "Image";
+            ktIcon6.Stroke = 2D;
+            ktIcon6.Trigger = KimTools.WinForms.KtState.Default;
+            ktIcon6.Width = -1;
             this.Icons.SetIcons(this.ktPictureBox2, new KimTools.WinForms.KtIcon[] {
-            ktIcon5});
+            ktIcon6});
             this.ktPictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("ktPictureBox2.Image")));
             this.ktPictureBox2.IsCircle = true;
             this.ktPictureBox2.Location = new System.Drawing.Point(143, 24);
@@ -627,92 +431,6 @@
             this.MenuTooltips.SetToolTip(this.ktPictureBox2, "");
             this.ktPictureBox2.Type = KimTools.WinForms.KtPictureBox.Types.Circle;
             // 
-            // StudentPanel
-            // 
-            this.StudentPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(78)))), ((int)(((byte)(218)))));
-            this.StudentPanel.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(78)))), ((int)(((byte)(218)))));
-            this.StudentPanel.Bg = KimTools.WinForms.KtColor.Primary;
-            this.StudentPanel.BgOpacity = 255;
-            this.StudentPanel.BgShade = KimTools.WinForms.KtShade.Light_10;
-            this.StudentPanel.Border = KimTools.WinForms.KtColor.Primary;
-            this.StudentPanel.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(60)))), ((int)(((byte)(202)))));
-            this.StudentPanel.BorderOpacity = 255;
-            this.StudentPanel.BorderRadiusSize = 26;
-            this.StudentPanel.BorderShape = KimTools.WinForms.KtSize.Md;
-            this.StudentPanel.BorderSize = KimTools.WinForms.KtSize.Md;
-            this.StudentPanel.BorderThickness = 2;
-            this.StudentPanel.Controls.Add(this.ktLabel2);
-            this.StudentPanel.Controls.Add(this.CurentStudentLbl);
-            this.StudentPanel.Controls.Add(this.ktPictureBox1);
-            this.StudentPanel.CustomColors = new System.Drawing.Color[0];
-            this.StudentPanel.Dock = System.Windows.Forms.DockStyle.Left;
-            this.StudentPanel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(40)))), ((int)(((byte)(67)))));
-            this.Icons.SetIcons(this.StudentPanel, new KimTools.WinForms.KtIcon[0]);
-            this.StudentPanel.Location = new System.Drawing.Point(5, 5);
-            this.StudentPanel.Name = "StudentPanel";
-            this.StudentPanel.ShowBorders = true;
-            this.StudentPanel.Size = new System.Drawing.Size(199, 80);
-            this.StudentPanel.TabIndex = 0;
-            this.MenuTooltips.SetToolTip(this.StudentPanel, "");
-            // 
-            // ktLabel2
-            // 
-            this.ktLabel2.AutoSize = true;
-            this.ktLabel2.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold);
-            this.ktLabel2.ForeColor = System.Drawing.Color.White;
-            this.Icons.SetIcons(this.ktLabel2, new KimTools.WinForms.KtIcon[0]);
-            this.ktLabel2.KtFontSize = KimTools.WinForms.KtFont.H2;
-            this.ktLabel2.LabelColor = KimTools.WinForms.KtColor.Tailwind_White;
-            this.ktLabel2.Location = new System.Drawing.Point(10, 11);
-            this.ktLabel2.Name = "ktLabel2";
-            this.ktLabel2.Size = new System.Drawing.Size(60, 38);
-            this.ktLabel2.TabIndex = 2;
-            this.ktLabel2.Text = "120";
-            this.MenuTooltips.SetToolTip(this.ktLabel2, "");
-            // 
-            // CurentStudentLbl
-            // 
-            this.CurentStudentLbl.AutoSize = true;
-            this.CurentStudentLbl.Font = new System.Drawing.Font("Segoe UI Semibold", 8.5F, System.Drawing.FontStyle.Bold);
-            this.CurentStudentLbl.ForeColor = System.Drawing.Color.White;
-            this.Icons.SetIcons(this.CurentStudentLbl, new KimTools.WinForms.KtIcon[0]);
-            this.CurentStudentLbl.KtFontSize = KimTools.WinForms.KtFont.H5;
-            this.CurentStudentLbl.LabelColor = KimTools.WinForms.KtColor.Tailwind_White;
-            this.CurentStudentLbl.Location = new System.Drawing.Point(10, 50);
-            this.CurentStudentLbl.Name = "CurentStudentLbl";
-            this.CurentStudentLbl.Size = new System.Drawing.Size(127, 23);
-            this.CurentStudentLbl.TabIndex = 1;
-            this.CurentStudentLbl.Text = "Curent Student";
-            this.MenuTooltips.SetToolTip(this.CurentStudentLbl, "");
-            // 
-            // ktPictureBox1
-            // 
-            this.ktPictureBox1.AllowFocused = false;
-            this.ktPictureBox1.AutoSizeHeight = true;
-            this.ktPictureBox1.BorderRadius = 24;
-            ktIcon6.Base = KimTools.WinForms.KtState.None;
-            ktIcon6.Colors = new System.Drawing.Color[] {
-        System.Drawing.Color.White};
-            ktIcon6.Icon = "Tabler.outline.users_group";
-            ktIcon6.Listen = null;
-            ktIcon6.Padding = 0;
-            ktIcon6.Property = "Image";
-            ktIcon6.Stroke = 2D;
-            ktIcon6.Trigger = KimTools.WinForms.KtState.Default;
-            ktIcon6.Width = -1;
-            this.Icons.SetIcons(this.ktPictureBox1, new KimTools.WinForms.KtIcon[] {
-            ktIcon6});
-            this.ktPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("ktPictureBox1.Image")));
-            this.ktPictureBox1.IsCircle = true;
-            this.ktPictureBox1.Location = new System.Drawing.Point(143, 24);
-            this.ktPictureBox1.Name = "ktPictureBox1";
-            this.ktPictureBox1.Size = new System.Drawing.Size(48, 48);
-            this.ktPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.ktPictureBox1.TabIndex = 0;
-            this.ktPictureBox1.TabStop = false;
-            this.MenuTooltips.SetToolTip(this.ktPictureBox1, "");
-            this.ktPictureBox1.Type = KimTools.WinForms.KtPictureBox.Types.Circle;
-            // 
             // Users
             // 
             this.Users.Controls.Add(this.UsersTbl);
@@ -720,7 +438,7 @@
             this.Icons.SetIcons(this.Users, new KimTools.WinForms.KtIcon[0]);
             this.Users.Location = new System.Drawing.Point(4, 4);
             this.Users.Name = "Users";
-            this.Users.Size = new System.Drawing.Size(1182, 565);
+            this.Users.Size = new System.Drawing.Size(1182, 575);
             this.Users.TabIndex = 5;
             this.Users.Text = "Users";
             this.MenuTooltips.SetToolTip(this.Users, "");
@@ -728,63 +446,63 @@
             // 
             // UsersTbl
             // 
-            this.UsersTbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(252)))));
+            this.UsersTbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.UsersTbl.ColorBase = KimTools.WinForms.KtColor.Tailwind_White;
-            ktTableColumn1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.NotSet;
-            ktTableColumn1.Fill = "";
-            ktTableColumn1.Format = "";
-            ktTableColumn1.Group = "";
-            ktTableColumn1.IsPrimaryKey = false;
-            ktTableColumn1.Key = "No";
-            ktTableColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.NotSet;
-            ktTableColumn1.Search = true;
-            ktTableColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            ktTableColumn1.Template = "";
-            ktTableColumn1.Title = "No";
-            ktTableColumn1.ToolTip = "";
-            ktTableColumn1.Type = KimTools.WinForms.KtTableColumnTypes.Avatar;
-            ktTableColumn1.Value = "";
-            ktTableColumn1.Visible = true;
-            ktTableColumn1.Width = 50;
-            ktTableColumn1.Width_ = "50";
-            ktTableColumn2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.NotSet;
-            ktTableColumn2.Fill = "";
-            ktTableColumn2.Format = "";
-            ktTableColumn2.Group = "";
-            ktTableColumn2.IsPrimaryKey = false;
-            ktTableColumn2.Key = "FullName";
-            ktTableColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.NotSet;
-            ktTableColumn2.Search = true;
-            ktTableColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            ktTableColumn2.Template = "";
-            ktTableColumn2.Title = "FullName";
-            ktTableColumn2.ToolTip = "";
-            ktTableColumn2.Type = KimTools.WinForms.KtTableColumnTypes.Text;
-            ktTableColumn2.Value = "";
-            ktTableColumn2.Visible = true;
-            ktTableColumn2.Width = 0;
-            ktTableColumn2.Width_ = "";
-            ktTableColumn3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.NotSet;
-            ktTableColumn3.Fill = "";
-            ktTableColumn3.Format = "";
-            ktTableColumn3.Group = "";
-            ktTableColumn3.IsPrimaryKey = false;
-            ktTableColumn3.Key = "Role";
-            ktTableColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.NotSet;
-            ktTableColumn3.Search = true;
-            ktTableColumn3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            ktTableColumn3.Template = "";
-            ktTableColumn3.Title = "Role";
-            ktTableColumn3.ToolTip = "";
-            ktTableColumn3.Type = KimTools.WinForms.KtTableColumnTypes.Text;
-            ktTableColumn3.Value = "";
-            ktTableColumn3.Visible = true;
-            ktTableColumn3.Width = 0;
-            ktTableColumn3.Width_ = "";
+            ktTableColumn4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.NotSet;
+            ktTableColumn4.Fill = "";
+            ktTableColumn4.Format = "";
+            ktTableColumn4.Group = "";
+            ktTableColumn4.IsPrimaryKey = false;
+            ktTableColumn4.Key = "No";
+            ktTableColumn4.Resizable = System.Windows.Forms.DataGridViewTriState.NotSet;
+            ktTableColumn4.Search = true;
+            ktTableColumn4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            ktTableColumn4.Template = "";
+            ktTableColumn4.Title = "No";
+            ktTableColumn4.ToolTip = "";
+            ktTableColumn4.Type = KimTools.WinForms.KtTableColumnTypes.Avatar;
+            ktTableColumn4.Value = "";
+            ktTableColumn4.Visible = true;
+            ktTableColumn4.Width = 50;
+            ktTableColumn4.Width_ = "50";
+            ktTableColumn5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.NotSet;
+            ktTableColumn5.Fill = "";
+            ktTableColumn5.Format = "";
+            ktTableColumn5.Group = "";
+            ktTableColumn5.IsPrimaryKey = false;
+            ktTableColumn5.Key = "FullName";
+            ktTableColumn5.Resizable = System.Windows.Forms.DataGridViewTriState.NotSet;
+            ktTableColumn5.Search = true;
+            ktTableColumn5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            ktTableColumn5.Template = "";
+            ktTableColumn5.Title = "FullName";
+            ktTableColumn5.ToolTip = "";
+            ktTableColumn5.Type = KimTools.WinForms.KtTableColumnTypes.Text;
+            ktTableColumn5.Value = "";
+            ktTableColumn5.Visible = true;
+            ktTableColumn5.Width = 0;
+            ktTableColumn5.Width_ = "";
+            ktTableColumn6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.NotSet;
+            ktTableColumn6.Fill = "";
+            ktTableColumn6.Format = "";
+            ktTableColumn6.Group = "";
+            ktTableColumn6.IsPrimaryKey = false;
+            ktTableColumn6.Key = "Role";
+            ktTableColumn6.Resizable = System.Windows.Forms.DataGridViewTriState.NotSet;
+            ktTableColumn6.Search = true;
+            ktTableColumn6.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            ktTableColumn6.Template = "";
+            ktTableColumn6.Title = "Role";
+            ktTableColumn6.ToolTip = "";
+            ktTableColumn6.Type = KimTools.WinForms.KtTableColumnTypes.Text;
+            ktTableColumn6.Value = "";
+            ktTableColumn6.Visible = true;
+            ktTableColumn6.Width = 0;
+            ktTableColumn6.Width_ = "";
             this.UsersTbl.Columns = new KimTools.WinForms.KtTableColumn[] {
-        ktTableColumn1,
-        ktTableColumn2,
-        ktTableColumn3};
+        ktTableColumn4,
+        ktTableColumn5,
+        ktTableColumn6};
             this.UsersTbl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Icons.SetIcons(this.UsersTbl, new KimTools.WinForms.KtIcon[0]);
             this.UsersTbl.KeyCaseSensitive = false;
@@ -798,16 +516,16 @@
             this.UsersTbl.ShowFooter = true;
             this.UsersTbl.ShowHeader = false;
             this.UsersTbl.ShowSearch = false;
-            this.UsersTbl.Size = new System.Drawing.Size(1182, 520);
+            this.UsersTbl.Size = new System.Drawing.Size(1182, 530);
             this.UsersTbl.TabIndex = 1;
             this.MenuTooltips.SetToolTip(this.UsersTbl, "");
             // 
             // UsersTopPanel
             // 
-            this.UsersTopPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(209)))), ((int)(((byte)(217)))));
-            this.UsersTopPanel.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(209)))), ((int)(((byte)(217)))));
+            this.UsersTopPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(64)))));
+            this.UsersTopPanel.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(64)))));
             this.UsersTopPanel.BgOpacity = 255;
-            this.UsersTopPanel.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(192)))), ((int)(((byte)(202)))));
+            this.UsersTopPanel.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(55)))), ((int)(((byte)(83)))));
             this.UsersTopPanel.BorderOpacity = 255;
             this.UsersTopPanel.BorderRadiusSize = 15;
             this.UsersTopPanel.BorderShape = KimTools.WinForms.KtSize.Default;
@@ -819,7 +537,7 @@
             this.UsersTopPanel.Controls.Add(this.AddBtn);
             this.UsersTopPanel.CustomColors = new System.Drawing.Color[0];
             this.UsersTopPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.UsersTopPanel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(40)))), ((int)(((byte)(67)))));
+            this.UsersTopPanel.ForeColor = System.Drawing.Color.White;
             this.Icons.SetIcons(this.UsersTopPanel, new KimTools.WinForms.KtIcon[0]);
             this.UsersTopPanel.Location = new System.Drawing.Point(0, 0);
             this.UsersTopPanel.Name = "UsersTopPanel";
@@ -958,7 +676,7 @@
             this.Icons.SetIcons(this.Profile, new KimTools.WinForms.KtIcon[0]);
             this.Profile.Location = new System.Drawing.Point(4, 4);
             this.Profile.Name = "Profile";
-            this.Profile.Size = new System.Drawing.Size(1182, 565);
+            this.Profile.Size = new System.Drawing.Size(1182, 575);
             this.Profile.TabIndex = 4;
             this.Profile.Text = "Profile";
             this.MenuTooltips.SetToolTip(this.Profile, "");
@@ -970,7 +688,7 @@
             this.Icons.SetIcons(this.ProfilePanel, new KimTools.WinForms.KtIcon[0]);
             this.ProfilePanel.Location = new System.Drawing.Point(0, 0);
             this.ProfilePanel.Name = "ProfilePanel";
-            this.ProfilePanel.Size = new System.Drawing.Size(1182, 565);
+            this.ProfilePanel.Size = new System.Drawing.Size(1182, 575);
             this.ProfilePanel.TabIndex = 0;
             this.MenuTooltips.SetToolTip(this.ProfilePanel, "");
             // 
@@ -1006,7 +724,7 @@
             this.TopBarPanel.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(63)))), ((int)(((byte)(218)))));
             this.TopBarPanel.Bg = KimTools.WinForms.KtColor.Primary;
             this.TopBarPanel.BgOpacity = 255;
-            this.TopBarPanel.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(60)))), ((int)(((byte)(202)))));
+            this.TopBarPanel.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(82)))), ((int)(((byte)(221)))));
             this.TopBarPanel.BorderOpacity = 255;
             this.TopBarPanel.BorderRadiusSize = 15;
             this.TopBarPanel.BorderShape = KimTools.WinForms.KtSize.Default;
@@ -1015,7 +733,7 @@
             this.TopBarPanel.Controls.Add(this.PageLbl);
             this.TopBarPanel.CustomColors = new System.Drawing.Color[0];
             this.TopBarPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.TopBarPanel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(40)))), ((int)(((byte)(67)))));
+            this.TopBarPanel.ForeColor = System.Drawing.Color.White;
             this.Icons.SetIcons(this.TopBarPanel, new KimTools.WinForms.KtIcon[0]);
             this.TopBarPanel.Location = new System.Drawing.Point(73, 10);
             this.TopBarPanel.Name = "TopBarPanel";
@@ -1036,41 +754,41 @@
             this.PageLbl.LabelColor = KimTools.WinForms.KtColor.Tailwind_White;
             this.PageLbl.Location = new System.Drawing.Point(20, 15);
             this.PageLbl.Name = "PageLbl";
-            this.PageLbl.Size = new System.Drawing.Size(113, 38);
+            this.PageLbl.Size = new System.Drawing.Size(77, 25);
             this.PageLbl.TabIndex = 0;
             this.PageLbl.Text = "Teacher";
             this.MenuTooltips.SetToolTip(this.PageLbl, "");
             // 
-            // LeftBar
+            // LeftBarTeacher
             // 
-            this.LeftBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(209)))), ((int)(((byte)(217)))));
-            this.LeftBar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(209)))), ((int)(((byte)(217)))));
-            this.LeftBar.BgOpacity = 255;
-            this.LeftBar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(192)))), ((int)(((byte)(202)))));
-            this.LeftBar.BorderOpacity = 255;
-            this.LeftBar.BorderRadiusSize = 15;
-            this.LeftBar.BorderShape = KimTools.WinForms.KtSize.Default;
-            this.LeftBar.BorderSize = KimTools.WinForms.KtSize.Default;
-            this.LeftBar.BorderThickness = 1;
-            this.LeftBar.Controls.Add(this.BtnLogout);
-            this.LeftBar.Controls.Add(this.ProfileBtn);
-            this.LeftBar.Controls.Add(this.UsersBtn);
-            this.LeftBar.Controls.Add(this.ktButtonSelect3);
-            this.LeftBar.Controls.Add(this.ktButtonSelect2);
-            this.LeftBar.Controls.Add(this.DashboardBtn);
-            this.LeftBar.Controls.Add(this.MenuBar);
-            this.LeftBar.Controls.Add(this.LogoBar);
-            this.LeftBar.CustomColors = new System.Drawing.Color[0];
-            this.LeftBar.Dock = System.Windows.Forms.DockStyle.Left;
-            this.LeftBar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(40)))), ((int)(((byte)(67)))));
-            this.Icons.SetIcons(this.LeftBar, new KimTools.WinForms.KtIcon[0]);
-            this.LeftBar.Location = new System.Drawing.Point(10, 10);
-            this.LeftBar.Name = "LeftBar";
-            this.LeftBar.Padding = new System.Windows.Forms.Padding(4);
-            this.LeftBar.ShowBorders = true;
-            this.LeftBar.Size = new System.Drawing.Size(63, 673);
-            this.LeftBar.TabIndex = 0;
-            this.MenuTooltips.SetToolTip(this.LeftBar, "");
+            this.LeftBarTeacher.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(64)))));
+            this.LeftBarTeacher.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(64)))));
+            this.LeftBarTeacher.BgOpacity = 255;
+            this.LeftBarTeacher.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(55)))), ((int)(((byte)(83)))));
+            this.LeftBarTeacher.BorderOpacity = 255;
+            this.LeftBarTeacher.BorderRadiusSize = 15;
+            this.LeftBarTeacher.BorderShape = KimTools.WinForms.KtSize.Default;
+            this.LeftBarTeacher.BorderSize = KimTools.WinForms.KtSize.Default;
+            this.LeftBarTeacher.BorderThickness = 1;
+            this.LeftBarTeacher.Controls.Add(this.BtnLogout);
+            this.LeftBarTeacher.Controls.Add(this.ProfileBtn);
+            this.LeftBarTeacher.Controls.Add(this.UsersBtn);
+            this.LeftBarTeacher.Controls.Add(this.ktButtonSelect3);
+            this.LeftBarTeacher.Controls.Add(this.ktButtonSelect2);
+            this.LeftBarTeacher.Controls.Add(this.DashboardBtn);
+            this.LeftBarTeacher.Controls.Add(this.MenuBar);
+            this.LeftBarTeacher.Controls.Add(this.LogoBar);
+            this.LeftBarTeacher.CustomColors = new System.Drawing.Color[0];
+            this.LeftBarTeacher.Dock = System.Windows.Forms.DockStyle.Left;
+            this.LeftBarTeacher.ForeColor = System.Drawing.Color.White;
+            this.Icons.SetIcons(this.LeftBarTeacher, new KimTools.WinForms.KtIcon[0]);
+            this.LeftBarTeacher.Location = new System.Drawing.Point(10, 10);
+            this.LeftBarTeacher.Name = "LeftBarTeacher";
+            this.LeftBarTeacher.Padding = new System.Windows.Forms.Padding(4);
+            this.LeftBarTeacher.ShowBorders = true;
+            this.LeftBarTeacher.Size = new System.Drawing.Size(63, 673);
+            this.LeftBarTeacher.TabIndex = 0;
+            this.MenuTooltips.SetToolTip(this.LeftBarTeacher, "");
             // 
             // BtnLogout
             // 
@@ -1099,6 +817,7 @@
             this.BtnLogout.TabIndex = 8;
             this.MenuTooltips.SetToolTip(this.BtnLogout, "Logout");
             this.BtnLogout.UseVisualStyleBackColor = false;
+            this.BtnLogout.Click += new System.EventHandler(this.BtnLogout_Click);
             // 
             // ProfileBtn
             // 
@@ -1318,6 +1037,7 @@
             this.Logo.TabIndex = 1;
             this.Logo.TabStop = false;
             this.MenuTooltips.SetToolTip(this.Logo, "");
+            this.Logo.Click += new System.EventHandler(this.Logo_Click);
             // 
             // Icons
             // 
@@ -1331,12 +1051,12 @@
             // 
             // FrmTeacher
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1273, 693);
             this.Controls.Add(this.MainPages);
             this.Controls.Add(this.TopBarPanel);
-            this.Controls.Add(this.LeftBar);
+            this.Controls.Add(this.LeftBarTeacher);
             this.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
             this.ForeColor = System.Drawing.Color.Black;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -1353,27 +1073,18 @@
             this.ktPanel5.ResumeLayout(false);
             this.ktPanel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ktPictureBox6)).EndInit();
-            this.ktPanel4.ResumeLayout(false);
-            this.ktPanel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ktPictureBox5)).EndInit();
             this.ktPanel3.ResumeLayout(false);
             this.ktPanel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ktPictureBox4)).EndInit();
-            this.ktPanel2.ResumeLayout(false);
-            this.ktPanel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ktPictureBox3)).EndInit();
             this.ktPanel1.ResumeLayout(false);
             this.ktPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ktPictureBox2)).EndInit();
-            this.StudentPanel.ResumeLayout(false);
-            this.StudentPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ktPictureBox1)).EndInit();
             this.Users.ResumeLayout(false);
             this.UsersTopPanel.ResumeLayout(false);
             this.Profile.ResumeLayout(false);
             this.TopBarPanel.ResumeLayout(false);
             this.TopBarPanel.PerformLayout();
-            this.LeftBar.ResumeLayout(false);
+            this.LeftBarTeacher.ResumeLayout(false);
             this.LogoBar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).EndInit();
             this.ResumeLayout(false);
@@ -1384,7 +1095,7 @@
         private System.Windows.Forms.Panel LogoBar;
         private System.Windows.Forms.PictureBox Logo;
         private System.Windows.Forms.Panel MenuBar;
-        public KimTools.WinForms.KtPanel LeftBar;
+        public KimTools.WinForms.KtPanel LeftBarTeacher;
         private System.Windows.Forms.TabPage Dasboard;
         public KimTools.WinForms.KtPages MainPages;
         private System.Windows.Forms.TabPage Profile;
@@ -1396,23 +1107,11 @@
         public KimTools.WinForms.KtTooltips MenuTooltips;
         private KimTools.WinForms.KtButton BtnLogout;
         private KimTools.WinForms.KtPanel DashboardBarPanel;
-        private KimTools.WinForms.KtPanel StudentPanel;
-        private KimTools.WinForms.KtLabel CurentStudentLbl;
-        private KimTools.WinForms.KtPictureBox ktPictureBox1;
-        private KimTools.WinForms.KtLabel ktLabel2;
         private KimTools.WinForms.KtIcons Icons;
-        private KimTools.WinForms.KtPanel ktPanel4;
-        private KimTools.WinForms.KtLabel ktLabel8;
-        private KimTools.WinForms.KtLabel ktLabel9;
-        private KimTools.WinForms.KtPictureBox ktPictureBox5;
         private KimTools.WinForms.KtPanel ktPanel3;
         private KimTools.WinForms.KtLabel ktLabel6;
         private KimTools.WinForms.KtLabel ktLabel7;
         private KimTools.WinForms.KtPictureBox ktPictureBox4;
-        private KimTools.WinForms.KtPanel ktPanel2;
-        private KimTools.WinForms.KtLabel ktLabel4;
-        private KimTools.WinForms.KtLabel ktLabel5;
-        private KimTools.WinForms.KtPictureBox ktPictureBox3;
         private KimTools.WinForms.KtPanel ktPanel1;
         private KimTools.WinForms.KtLabel ktLabel1;
         private KimTools.WinForms.KtLabel ktLabel3;

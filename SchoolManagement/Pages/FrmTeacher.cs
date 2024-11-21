@@ -20,8 +20,27 @@ namespace SchoolManagement.Pages
             InitializeComponent();
             userId = UserId;
         }
-      
 
-       
+
+
+        private void BtnLogout_Click(object sender, EventArgs e)
+        {
+           this.Hide();
+           FrmLogin frmLogin = new FrmLogin();
+           frmLogin.ShowDialog();
+
+        }
+
+        private void Logo_Click(object sender, EventArgs e)
+        {
+            if (LeftBarTeacher.Width == 63)
+            {
+                LeftBarTeacher.Size = new Size(120, 673);
+            }
+            else
+            {
+                LeftBarTeacher.Size = new Size(63, 673);
+            }
+        }
     }
 }

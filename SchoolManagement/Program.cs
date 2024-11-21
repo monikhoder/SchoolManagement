@@ -60,7 +60,8 @@ namespace SchoolManagement
             //FrmAdmin frm = new FrmAdmin(1);
             //frm.ShowDialog();
 
-            FrmStudent fm = new FrmStudent(1);
+            //FrmStudent fm = new FrmStudent(1);
+            FrmTeacher fm = new FrmTeacher(1);
             fm.ShowDialog();
 
         }
