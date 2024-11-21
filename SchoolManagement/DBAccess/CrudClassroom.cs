@@ -112,7 +112,18 @@ namespace SchoolManagement.DBAccess
         {
             return db.ClassEnrollments.Count(e => e.ClassroomId == classId);
         }
-
-    
+        //Get all class enrollment
+        public List<ClassEnrollment> GetAllClassEnrollment()
+        {
+            return db.ClassEnrollments.ToList();
+        }
+        //Get total student by class id
+        public int GetTotalStudentByClassId(int classId)
+        {
+            int num = db.ClassEnrollments
+                        .Where(ce => ce.ClassroomId == classId)
+                        .Count();
+            return num;
+        }
     }
 }

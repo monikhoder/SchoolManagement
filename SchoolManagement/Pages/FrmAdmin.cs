@@ -137,7 +137,6 @@ namespace SchoolManagement.Pages
             {
                 AdminTbl_Load(sender, e);
             }
-
         }
 
         private void TeacherTbl_Load(object sender, EventArgs e)
