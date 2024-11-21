@@ -85,8 +85,13 @@ namespace SchoolManagement.DBAccess
             return subject;
         }
         //Create schedule exam
-        public void AddExam(string name, int classId ,int classSubjectId, DateTime date, int duratin )
+        public void AddExam(string name,int classSubjectId, DateTime date, int duratin )
         {
+            //check if this subject already has an exam
+            if (db.Exams.Any(e => e.ClassSubjectId == classSubjectId))
+            {
+                throw new Exception("This subject already has an exam");
+            }
             var newExam = new Exam
             {
                 Name = name,
@@ -94,6 +99,8 @@ namespace SchoolManagement.DBAccess
                 ExamDate = date,
                 Duration = duratin
             };
+            db.Exams.Add(newExam);
+            db.SaveChanges();
            
         }
     }

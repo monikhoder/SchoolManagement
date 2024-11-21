@@ -195,10 +195,10 @@
             this.MainPages.Multiline = true;
             this.MainPages.Name = "MainPages";
             this.MainPages.Padding = new System.Drawing.Point(10, 10);
-            this.MainPages.Page = this.Profile;
-            this.MainPages.PageIndex = 4;
-            this.MainPages.PageName = "Profile";
-            this.MainPages.PageTitle = "Profile";
+            this.MainPages.Page = this.Exam;
+            this.MainPages.PageIndex = 1;
+            this.MainPages.PageName = "Exam";
+            this.MainPages.PageTitle = "Exam";
             this.MainPages.SelectedIndex = 0;
             this.MainPages.Size = new System.Drawing.Size(1194, 622);
             this.MainPages.TabIndex = 1;
@@ -1566,7 +1566,7 @@
             this.Teacher.Location = new System.Drawing.Point(4, 4);
             this.Teacher.Name = "Teacher";
             this.Teacher.Padding = new System.Windows.Forms.Padding(3);
-            this.Teacher.Size = new System.Drawing.Size(1172, 483);
+            this.Teacher.Size = new System.Drawing.Size(178, 0);
             this.Teacher.TabIndex = 1;
             this.Teacher.Text = "Teacher";
             this.MenuTooltips.SetToolTip(this.Teacher, "");
@@ -1695,7 +1695,7 @@
             this.TeacherTbl.ShowFooter = true;
             this.TeacherTbl.ShowHeader = true;
             this.TeacherTbl.ShowSearch = true;
-            this.TeacherTbl.Size = new System.Drawing.Size(1166, 477);
+            this.TeacherTbl.Size = new System.Drawing.Size(172, 0);
             this.TeacherTbl.TabIndex = 0;
             this.MenuTooltips.SetToolTip(this.TeacherTbl, "");
             this.TeacherTbl.Load += new System.EventHandler(this.TeacherTbl_Load);
@@ -1707,7 +1707,7 @@
             this.Student.Location = new System.Drawing.Point(4, 4);
             this.Student.Name = "Student";
             this.Student.Padding = new System.Windows.Forms.Padding(3);
-            this.Student.Size = new System.Drawing.Size(1172, 483);
+            this.Student.Size = new System.Drawing.Size(178, 0);
             this.Student.TabIndex = 2;
             this.Student.Text = "Student";
             this.MenuTooltips.SetToolTip(this.Student, "");
@@ -1818,7 +1818,7 @@
             this.StudentTbl.ShowFooter = true;
             this.StudentTbl.ShowHeader = true;
             this.StudentTbl.ShowSearch = true;
-            this.StudentTbl.Size = new System.Drawing.Size(1166, 477);
+            this.StudentTbl.Size = new System.Drawing.Size(172, 0);
             this.StudentTbl.TabIndex = 1;
             this.MenuTooltips.SetToolTip(this.StudentTbl, "");
             this.StudentTbl.Load += new System.EventHandler(this.StudentTbl_Load);
@@ -2037,7 +2037,7 @@
             this.ktSpinner2.Font = new System.Drawing.Font("Verdana", 8F);
             this.Icons.SetIcons(this.ktSpinner2, new KimTools.WinForms.KtIcon[0]);
             this.ktSpinner2.Image = null;
-            this.ktSpinner2.Location = new System.Drawing.Point(-1441, -880);
+            this.ktSpinner2.Location = new System.Drawing.Point(-1938, -1165);
             this.ktSpinner2.Name = "ktSpinner2";
             this.ktSpinner2.NoRounding = false;
             this.ktSpinner2.Preset = KimTools.WinForms.KtSpinner.Presets.Solid;
@@ -2067,7 +2067,7 @@
             this.ktSpinner1.Font = new System.Drawing.Font("Verdana", 8F);
             this.Icons.SetIcons(this.ktSpinner1, new KimTools.WinForms.KtIcon[0]);
             this.ktSpinner1.Image = null;
-            this.ktSpinner1.Location = new System.Drawing.Point(-3432, -2033);
+            this.ktSpinner1.Location = new System.Drawing.Point(-3929, -2318);
             this.ktSpinner1.Name = "ktSpinner1";
             this.ktSpinner1.NoRounding = false;
             this.ktSpinner1.Preset = KimTools.WinForms.KtSpinner.Presets.Solid;

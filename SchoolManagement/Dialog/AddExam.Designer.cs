@@ -46,7 +46,7 @@
             // 
             this.ktLabel8.AutoSize = true;
             this.ktLabel8.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
-            this.ktLabel8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(40)))), ((int)(((byte)(67)))));
+            this.ktLabel8.ForeColor = System.Drawing.Color.White;
             this.ktLabel8.KtFontSize = KimTools.WinForms.KtFont.Default;
             this.ktLabel8.Location = new System.Drawing.Point(80, 246);
             this.ktLabel8.Name = "ktLabel8";
@@ -92,15 +92,16 @@
             this.ClassNameCmb.Name = "ClassNameCmb";
             this.ClassNameCmb.Size = new System.Drawing.Size(230, 32);
             this.ClassNameCmb.TabIndex = 60;
+            this.ClassNameCmb.Text = null;
             this.ClassNameCmb.TextAlignment = KimTools.WinForms.KtComboBox.TextAlign.Left;
             this.ClassNameCmb.TextLeftMargin = 5;
-            this.ClassNameCmb.SelectedIndexChanged += new System.EventHandler(this.ClassNameCmb_SelectedIndexChanged);
+            this.ClassNameCmb.SelectedValueChanged += new System.EventHandler(this.ClassNameCmb_SelectedValueChanged);
             // 
             // ktLabel10
             // 
             this.ktLabel10.AutoSize = true;
             this.ktLabel10.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
-            this.ktLabel10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(40)))), ((int)(((byte)(67)))));
+            this.ktLabel10.ForeColor = System.Drawing.Color.White;
             this.ktLabel10.KtFontSize = KimTools.WinForms.KtFont.Default;
             this.ktLabel10.Location = new System.Drawing.Point(80, 108);
             this.ktLabel10.Name = "ktLabel10";
@@ -112,7 +113,7 @@
             // 
             this.ktLabel12.AutoSize = true;
             this.ktLabel12.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
-            this.ktLabel12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(40)))), ((int)(((byte)(67)))));
+            this.ktLabel12.ForeColor = System.Drawing.Color.White;
             this.ktLabel12.KtFontSize = KimTools.WinForms.KtFont.Default;
             this.ktLabel12.Location = new System.Drawing.Point(80, 40);
             this.ktLabel12.Name = "ktLabel12";
@@ -143,6 +144,7 @@
             this.AddExamBtn.TabIndex = 59;
             this.AddExamBtn.Text = "ADD";
             this.AddExamBtn.UseVisualStyleBackColor = false;
+            this.AddExamBtn.Click += new System.EventHandler(this.AddExamBtn_Click);
             // 
             // ExamNameTxb
             // 
@@ -183,12 +185,13 @@
             this.ExamNameTxb.TabIndex = 57;
             this.ExamNameTxb.TextMarginBottom = 0;
             this.ExamNameTxb.TextPlaceholder = "Enter Exam Name";
+            this.ExamNameTxb.TextChange += new System.EventHandler(this.ExamNameTxb_TextChange);
             // 
             // ktLabel1
             // 
             this.ktLabel1.AutoSize = true;
             this.ktLabel1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
-            this.ktLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(40)))), ((int)(((byte)(67)))));
+            this.ktLabel1.ForeColor = System.Drawing.Color.White;
             this.ktLabel1.KtFontSize = KimTools.WinForms.KtFont.Default;
             this.ktLabel1.Location = new System.Drawing.Point(80, 316);
             this.ktLabel1.Name = "ktLabel1";
@@ -235,6 +238,8 @@
             this.DurationTxb.TabIndex = 64;
             this.DurationTxb.TextMarginBottom = 0;
             this.DurationTxb.TextPlaceholder = "Enter Duration in Minutes";
+            this.DurationTxb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DurationTxb_KeyPress);
+            this.DurationTxb.TextChange += new System.EventHandler(this.ExamNameTxb_TextChange);
             // 
             // ExamDate
             // 
@@ -259,6 +264,7 @@
             this.ExamDate.Name = "ExamDate";
             this.ExamDate.Size = new System.Drawing.Size(230, 32);
             this.ExamDate.TabIndex = 65;
+            this.ExamDate.ValueChanged += new System.EventHandler(this.ExamNameTxb_TextChange);
             // 
             // ClassSubjectCmb
             // 
@@ -298,6 +304,7 @@
             this.ClassSubjectCmb.Name = "ClassSubjectCmb";
             this.ClassSubjectCmb.Size = new System.Drawing.Size(230, 32);
             this.ClassSubjectCmb.TabIndex = 67;
+            this.ClassSubjectCmb.Text = null;
             this.ClassSubjectCmb.TextAlignment = KimTools.WinForms.KtComboBox.TextAlign.Left;
             this.ClassSubjectCmb.TextLeftMargin = 5;
             // 
@@ -305,7 +312,7 @@
             // 
             this.ktLabel2.AutoSize = true;
             this.ktLabel2.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
-            this.ktLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(40)))), ((int)(((byte)(67)))));
+            this.ktLabel2.ForeColor = System.Drawing.Color.White;
             this.ktLabel2.KtFontSize = KimTools.WinForms.KtFont.Default;
             this.ktLabel2.Location = new System.Drawing.Point(80, 178);
             this.ktLabel2.Name = "ktLabel2";
@@ -330,7 +337,7 @@
             this.Controls.Add(this.AddExamBtn);
             this.Controls.Add(this.ExamNameTxb);
             this.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
-            this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(40)))), ((int)(((byte)(67)))));
+            this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
