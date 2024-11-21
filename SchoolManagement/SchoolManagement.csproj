@@ -129,6 +129,7 @@
       <DependentUpon>DBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DBAccess\CrudClassroom.cs" />
+    <Compile Include="DBAccess\CrudExam.cs" />
     <Compile Include="DBAccess\CrudUsers.cs" />
     <Compile Include="DBModel.Context.cs">
       <AutoGen>True</AutoGen>

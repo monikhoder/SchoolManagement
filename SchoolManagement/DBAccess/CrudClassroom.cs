@@ -125,5 +125,13 @@ namespace SchoolManagement.DBAccess
                         .Count();
             return num;
         }
+        //Search classroom name
+        public List<ClassEnrollment> GetAllClassEnrollmentByName(string text)
+        {
+            string name = text.Length >= 5 ? text.Substring(0, 5) : text;
+            return db.ClassEnrollments
+                     .Where(ce => ce.Classroom.Name.StartsWith(name))
+                     .ToList();
+        }
     }
 }

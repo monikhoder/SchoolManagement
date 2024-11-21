@@ -50,6 +50,12 @@
             KimTools.WinForms.KtTableColumn ktTableColumn11 = new KimTools.WinForms.KtTableColumn();
             KimTools.WinForms.KtTableColumn ktTableColumn12 = new KimTools.WinForms.KtTableColumn();
             KimTools.WinForms.KtTableColumn ktTableColumn13 = new KimTools.WinForms.KtTableColumn();
+            KimTools.WinForms.KtTableColumn ktTableColumn14 = new KimTools.WinForms.KtTableColumn();
+            KimTools.WinForms.KtTableColumn ktTableColumn15 = new KimTools.WinForms.KtTableColumn();
+            KimTools.WinForms.KtTableColumn ktTableColumn16 = new KimTools.WinForms.KtTableColumn();
+            KimTools.WinForms.KtTableColumn ktTableColumn17 = new KimTools.WinForms.KtTableColumn();
+            KimTools.WinForms.KtTableColumn ktTableColumn18 = new KimTools.WinForms.KtTableColumn();
+            KimTools.WinForms.KtTableColumn ktTableColumn19 = new KimTools.WinForms.KtTableColumn();
             this.MainPages = new KimTools.WinForms.KtPages();
             this.Dasboard = new System.Windows.Forms.TabPage();
             this.DashboardBarPanel = new KimTools.WinForms.KtPanel();
@@ -80,19 +86,25 @@
             this.Classroom = new System.Windows.Forms.TabPage();
             this.ClassroomTbl = new KimTools.WinForms.KtTable();
             this.UsersTopPanel = new KimTools.WinForms.KtPanel();
-            this.ktTextBox1 = new KimTools.WinForms.KtTextBox();
+            this.ClassroomSch = new KimTools.WinForms.KtTextBox();
             this.Exam = new System.Windows.Forms.TabPage();
-            this.ktTable1 = new KimTools.WinForms.KtTable();
+            this.ExamTbl = new KimTools.WinForms.KtTable();
             this.ktPanel6 = new KimTools.WinForms.KtPanel();
-            this.ktTextBox2 = new KimTools.WinForms.KtTextBox();
+            this.ExamSch = new KimTools.WinForms.KtTextBox();
             this.ProfilePanel = new System.Windows.Forms.TabPage();
+            this.Loader = new System.Windows.Forms.TabPage();
+            this.ktSpinner2 = new KimTools.WinForms.KtSpinner();
+            this.Score = new System.Windows.Forms.TabPage();
+            this.ScoreTbl = new KimTools.WinForms.KtTable();
+            this.ktPanel7 = new KimTools.WinForms.KtPanel();
+            this.ScoreSch = new KimTools.WinForms.KtTextBox();
             this.MenuTooltips = new KimTools.WinForms.KtTooltips(this.components);
             this.TopBarPanel = new KimTools.WinForms.KtPanel();
             this.PageLbl = new KimTools.WinForms.KtLabel();
             this.LeftBar = new KimTools.WinForms.KtPanel();
             this.BtnLogout = new KimTools.WinForms.KtButton();
             this.ProfileBtn = new KimTools.WinForms.KtButtonSelect();
-            this.UsersBtn = new KimTools.WinForms.KtButtonSelect();
+            this.ScoreBtn = new KimTools.WinForms.KtButtonSelect();
             this.ExamBtn = new KimTools.WinForms.KtButtonSelect();
             this.ClassroomBtn = new KimTools.WinForms.KtButtonSelect();
             this.DashboardBtn = new KimTools.WinForms.KtButtonSelect();
@@ -100,9 +112,6 @@
             this.LogoBar = new System.Windows.Forms.Panel();
             this.Logo = new System.Windows.Forms.PictureBox();
             this.Icons = new KimTools.WinForms.KtIcons();
-            this.Loader = new System.Windows.Forms.TabPage();
-            this.ktSpinner2 = new KimTools.WinForms.KtSpinner();
-            this.ktComboBox1 = new KimTools.WinForms.KtComboBox();
             this.MainPages.SuspendLayout();
             this.Dasboard.SuspendLayout();
             this.DashboardBarPanel.SuspendLayout();
@@ -122,11 +131,13 @@
             this.UsersTopPanel.SuspendLayout();
             this.Exam.SuspendLayout();
             this.ktPanel6.SuspendLayout();
+            this.Loader.SuspendLayout();
+            this.Score.SuspendLayout();
+            this.ktPanel7.SuspendLayout();
             this.TopBarPanel.SuspendLayout();
             this.LeftBar.SuspendLayout();
             this.LogoBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
-            this.Loader.SuspendLayout();
             this.SuspendLayout();
             // 
             // MainPages
@@ -138,16 +149,17 @@
             this.MainPages.Controls.Add(this.Exam);
             this.MainPages.Controls.Add(this.ProfilePanel);
             this.MainPages.Controls.Add(this.Loader);
+            this.MainPages.Controls.Add(this.Score);
             this.MainPages.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Icons.SetIcons(this.MainPages, new KimTools.WinForms.KtIcon[0]);
             this.MainPages.Location = new System.Drawing.Point(73, 66);
             this.MainPages.Multiline = true;
             this.MainPages.Name = "MainPages";
             this.MainPages.Padding = new System.Drawing.Point(10, 10);
-            this.MainPages.Page = this.Classroom;
-            this.MainPages.PageIndex = 1;
-            this.MainPages.PageName = "Classroom";
-            this.MainPages.PageTitle = "Classroom";
+            this.MainPages.Page = this.Score;
+            this.MainPages.PageIndex = 5;
+            this.MainPages.PageName = "Score";
+            this.MainPages.PageTitle = "Score";
             this.MainPages.SelectedIndex = 0;
             this.MainPages.Size = new System.Drawing.Size(1190, 617);
             this.MainPages.TabIndex = 1;
@@ -769,7 +781,7 @@
             ktTableColumn2.Format = "";
             ktTableColumn2.Group = "";
             ktTableColumn2.IsPrimaryKey = false;
-            ktTableColumn2.Key = "Class name";
+            ktTableColumn2.Key = "ClassName";
             ktTableColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.NotSet;
             ktTableColumn2.Search = true;
             ktTableColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
@@ -786,7 +798,7 @@
             ktTableColumn3.Format = "";
             ktTableColumn3.Group = "";
             ktTableColumn3.IsPrimaryKey = false;
-            ktTableColumn3.Key = "Total student";
+            ktTableColumn3.Key = "TotalStudent";
             ktTableColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.NotSet;
             ktTableColumn3.Search = true;
             ktTableColumn3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
@@ -803,7 +815,7 @@
             ktTableColumn4.Format = "";
             ktTableColumn4.Group = "";
             ktTableColumn4.IsPrimaryKey = false;
-            ktTableColumn4.Key = "Start date";
+            ktTableColumn4.Key = "StartDate";
             ktTableColumn4.Resizable = System.Windows.Forms.DataGridViewTriState.NotSet;
             ktTableColumn4.Search = true;
             ktTableColumn4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
@@ -820,7 +832,7 @@
             ktTableColumn5.Format = "";
             ktTableColumn5.Group = "";
             ktTableColumn5.IsPrimaryKey = false;
-            ktTableColumn5.Key = "End date";
+            ktTableColumn5.Key = "EndDate";
             ktTableColumn5.Resizable = System.Windows.Forms.DataGridViewTriState.NotSet;
             ktTableColumn5.Search = true;
             ktTableColumn5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
@@ -885,7 +897,7 @@
             this.UsersTopPanel.BorderShape = KimTools.WinForms.KtSize.Default;
             this.UsersTopPanel.BorderSize = KimTools.WinForms.KtSize.Default;
             this.UsersTopPanel.BorderThickness = 1;
-            this.UsersTopPanel.Controls.Add(this.ktTextBox1);
+            this.UsersTopPanel.Controls.Add(this.ClassroomSch);
             this.UsersTopPanel.CustomColors = new System.Drawing.Color[0];
             this.UsersTopPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.UsersTopPanel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(40)))), ((int)(((byte)(67)))));
@@ -898,52 +910,53 @@
             this.UsersTopPanel.TabIndex = 0;
             this.MenuTooltips.SetToolTip(this.UsersTopPanel, "");
             // 
-            // ktTextBox1
+            // ClassroomSch
             // 
-            this.ktTextBox1.AcceptsReturn = false;
-            this.ktTextBox1.AcceptsTab = false;
-            this.ktTextBox1.AnimationSpeed = 200;
-            this.ktTextBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.ktTextBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.ktTextBox1.AutoSizeHeight = true;
-            this.ktTextBox1.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
-            this.ktTextBox1.Bg = KimTools.WinForms.KtColor.Tailwind_White;
-            this.ktTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.ktTextBox1.CustomBorderColor = System.Drawing.Color.Empty;
-            this.ktTextBox1.CustomBorderColorActive = System.Drawing.Color.Empty;
-            this.ktTextBox1.CustomBorderColorDisabled = System.Drawing.Color.Empty;
-            this.ktTextBox1.CustomFillColor = System.Drawing.Color.Empty;
-            this.ktTextBox1.CustomIconLeft = null;
-            this.ktTextBox1.CustomIconRight = null;
-            this.ktTextBox1.CustomPlaceholderColor = System.Drawing.Color.Empty;
-            this.ktTextBox1.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
-            this.ktTextBox1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.ktTextBox1.ForeColor = System.Drawing.Color.Empty;
-            this.ktTextBox1.HideSelection = true;
-            this.Icons.SetIcons(this.ktTextBox1, new KimTools.WinForms.KtIcon[0]);
-            this.ktTextBox1.Lines = new string[0];
-            this.ktTextBox1.Location = new System.Drawing.Point(3, 3);
-            this.ktTextBox1.MaxLength = 32767;
-            this.ktTextBox1.MinimumSize = new System.Drawing.Size(1, 1);
-            this.ktTextBox1.Modified = false;
-            this.ktTextBox1.Name = "ktTextBox1";
-            this.ktTextBox1.Password = false;
-            this.ktTextBox1.PasswordChar = '\0';
-            this.ktTextBox1.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.ktTextBox1.SelectedText = "";
-            this.ktTextBox1.SelectionLength = 0;
-            this.ktTextBox1.SelectionStart = 0;
-            this.ktTextBox1.ShortcutsEnabled = true;
-            this.ktTextBox1.Size = new System.Drawing.Size(265, 39);
-            this.ktTextBox1.Style = KimTools.WinForms.KtTextBox.KtTextBoxStyle.Tailwind;
-            this.ktTextBox1.TabIndex = 3;
-            this.ktTextBox1.TextMarginBottom = 0;
-            this.ktTextBox1.TextPlaceholder = "Type to Search";
-            this.MenuTooltips.SetToolTip(this.ktTextBox1, "Search");
+            this.ClassroomSch.AcceptsReturn = false;
+            this.ClassroomSch.AcceptsTab = false;
+            this.ClassroomSch.AnimationSpeed = 200;
+            this.ClassroomSch.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.ClassroomSch.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.ClassroomSch.AutoSizeHeight = true;
+            this.ClassroomSch.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
+            this.ClassroomSch.Bg = KimTools.WinForms.KtColor.Tailwind_White;
+            this.ClassroomSch.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.ClassroomSch.CustomBorderColor = System.Drawing.Color.Empty;
+            this.ClassroomSch.CustomBorderColorActive = System.Drawing.Color.Empty;
+            this.ClassroomSch.CustomBorderColorDisabled = System.Drawing.Color.Empty;
+            this.ClassroomSch.CustomFillColor = System.Drawing.Color.Empty;
+            this.ClassroomSch.CustomIconLeft = null;
+            this.ClassroomSch.CustomIconRight = null;
+            this.ClassroomSch.CustomPlaceholderColor = System.Drawing.Color.Empty;
+            this.ClassroomSch.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.ClassroomSch.Dock = System.Windows.Forms.DockStyle.Left;
+            this.ClassroomSch.ForeColor = System.Drawing.Color.Black;
+            this.ClassroomSch.HideSelection = true;
+            this.Icons.SetIcons(this.ClassroomSch, new KimTools.WinForms.KtIcon[0]);
+            this.ClassroomSch.Lines = new string[0];
+            this.ClassroomSch.Location = new System.Drawing.Point(3, 3);
+            this.ClassroomSch.MaxLength = 32767;
+            this.ClassroomSch.MinimumSize = new System.Drawing.Size(1, 1);
+            this.ClassroomSch.Modified = false;
+            this.ClassroomSch.Name = "ClassroomSch";
+            this.ClassroomSch.Password = false;
+            this.ClassroomSch.PasswordChar = '\0';
+            this.ClassroomSch.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.ClassroomSch.SelectedText = "";
+            this.ClassroomSch.SelectionLength = 0;
+            this.ClassroomSch.SelectionStart = 0;
+            this.ClassroomSch.ShortcutsEnabled = true;
+            this.ClassroomSch.Size = new System.Drawing.Size(265, 39);
+            this.ClassroomSch.Style = KimTools.WinForms.KtTextBox.KtTextBoxStyle.Tailwind;
+            this.ClassroomSch.TabIndex = 3;
+            this.ClassroomSch.TextMarginBottom = 0;
+            this.ClassroomSch.TextPlaceholder = "Type to Search";
+            this.MenuTooltips.SetToolTip(this.ClassroomSch, "Search");
+            this.ClassroomSch.TextChanged += new System.EventHandler(this.ClassroomSch_TextChanged);
             // 
             // Exam
             // 
-            this.Exam.Controls.Add(this.ktTable1);
+            this.Exam.Controls.Add(this.ExamTbl);
             this.Exam.Controls.Add(this.ktPanel6);
             this.Icons.SetIcons(this.Exam, new KimTools.WinForms.KtIcon[0]);
             this.Exam.Location = new System.Drawing.Point(4, 4);
@@ -954,10 +967,10 @@
             this.MenuTooltips.SetToolTip(this.Exam, "");
             this.Exam.UseVisualStyleBackColor = true;
             // 
-            // ktTable1
+            // ExamTbl
             // 
-            this.ktTable1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(252)))));
-            this.ktTable1.ColorBase = KimTools.WinForms.KtColor.Tailwind_White;
+            this.ExamTbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(252)))));
+            this.ExamTbl.ColorBase = KimTools.WinForms.KtColor.Tailwind_White;
             ktTableColumn7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.NotSet;
             ktTableColumn7.Fill = "";
             ktTableColumn7.Format = "";
@@ -1077,7 +1090,7 @@
             ktTableColumn13.Visible = true;
             ktTableColumn13.Width = 0;
             ktTableColumn13.Width_ = "";
-            this.ktTable1.Columns = new KimTools.WinForms.KtTableColumn[] {
+            this.ExamTbl.Columns = new KimTools.WinForms.KtTableColumn[] {
         ktTableColumn7,
         ktTableColumn8,
         ktTableColumn9,
@@ -1085,22 +1098,23 @@
         ktTableColumn11,
         ktTableColumn12,
         ktTableColumn13};
-            this.ktTable1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Icons.SetIcons(this.ktTable1, new KimTools.WinForms.KtIcon[0]);
-            this.ktTable1.KeyCaseSensitive = false;
-            this.ktTable1.Latency = 500;
-            this.ktTable1.Location = new System.Drawing.Point(0, 45);
-            this.ktTable1.MultiSelect = false;
-            this.ktTable1.Name = "ktTable1";
-            this.ktTable1.Padding = new System.Windows.Forms.Padding(5);
-            this.ktTable1.ShadeBase = KimTools.WinForms.KtShade.Light_10;
-            this.ktTable1.ShadeContent = KimTools.WinForms.KtShade.Light_10;
-            this.ktTable1.ShowFooter = true;
-            this.ktTable1.ShowHeader = false;
-            this.ktTable1.ShowSearch = false;
-            this.ktTable1.Size = new System.Drawing.Size(1182, 520);
-            this.ktTable1.TabIndex = 2;
-            this.MenuTooltips.SetToolTip(this.ktTable1, "");
+            this.ExamTbl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Icons.SetIcons(this.ExamTbl, new KimTools.WinForms.KtIcon[0]);
+            this.ExamTbl.KeyCaseSensitive = false;
+            this.ExamTbl.Latency = 500;
+            this.ExamTbl.Location = new System.Drawing.Point(0, 45);
+            this.ExamTbl.MultiSelect = false;
+            this.ExamTbl.Name = "ExamTbl";
+            this.ExamTbl.Padding = new System.Windows.Forms.Padding(5);
+            this.ExamTbl.ShadeBase = KimTools.WinForms.KtShade.Light_10;
+            this.ExamTbl.ShadeContent = KimTools.WinForms.KtShade.Light_10;
+            this.ExamTbl.ShowFooter = true;
+            this.ExamTbl.ShowHeader = false;
+            this.ExamTbl.ShowSearch = false;
+            this.ExamTbl.Size = new System.Drawing.Size(1182, 520);
+            this.ExamTbl.TabIndex = 2;
+            this.MenuTooltips.SetToolTip(this.ExamTbl, "");
+            this.ExamTbl.Load += new System.EventHandler(this.ExamTbl_Load);
             // 
             // ktPanel6
             // 
@@ -1113,8 +1127,7 @@
             this.ktPanel6.BorderShape = KimTools.WinForms.KtSize.Default;
             this.ktPanel6.BorderSize = KimTools.WinForms.KtSize.Default;
             this.ktPanel6.BorderThickness = 1;
-            this.ktPanel6.Controls.Add(this.ktComboBox1);
-            this.ktPanel6.Controls.Add(this.ktTextBox2);
+            this.ktPanel6.Controls.Add(this.ExamSch);
             this.ktPanel6.CustomColors = new System.Drawing.Color[0];
             this.ktPanel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.ktPanel6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(40)))), ((int)(((byte)(67)))));
@@ -1127,48 +1140,49 @@
             this.ktPanel6.TabIndex = 1;
             this.MenuTooltips.SetToolTip(this.ktPanel6, "");
             // 
-            // ktTextBox2
+            // ExamSch
             // 
-            this.ktTextBox2.AcceptsReturn = false;
-            this.ktTextBox2.AcceptsTab = false;
-            this.ktTextBox2.AnimationSpeed = 200;
-            this.ktTextBox2.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.ktTextBox2.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.ktTextBox2.AutoSizeHeight = true;
-            this.ktTextBox2.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
-            this.ktTextBox2.Bg = KimTools.WinForms.KtColor.Tailwind_White;
-            this.ktTextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.ktTextBox2.CustomBorderColor = System.Drawing.Color.Empty;
-            this.ktTextBox2.CustomBorderColorActive = System.Drawing.Color.Empty;
-            this.ktTextBox2.CustomBorderColorDisabled = System.Drawing.Color.Empty;
-            this.ktTextBox2.CustomFillColor = System.Drawing.Color.Empty;
-            this.ktTextBox2.CustomIconLeft = null;
-            this.ktTextBox2.CustomIconRight = null;
-            this.ktTextBox2.CustomPlaceholderColor = System.Drawing.Color.Empty;
-            this.ktTextBox2.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
-            this.ktTextBox2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.ktTextBox2.ForeColor = System.Drawing.Color.Empty;
-            this.ktTextBox2.HideSelection = true;
-            this.Icons.SetIcons(this.ktTextBox2, new KimTools.WinForms.KtIcon[0]);
-            this.ktTextBox2.Lines = new string[0];
-            this.ktTextBox2.Location = new System.Drawing.Point(3, 3);
-            this.ktTextBox2.MaxLength = 32767;
-            this.ktTextBox2.MinimumSize = new System.Drawing.Size(1, 1);
-            this.ktTextBox2.Modified = false;
-            this.ktTextBox2.Name = "ktTextBox2";
-            this.ktTextBox2.Password = false;
-            this.ktTextBox2.PasswordChar = '\0';
-            this.ktTextBox2.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.ktTextBox2.SelectedText = "";
-            this.ktTextBox2.SelectionLength = 0;
-            this.ktTextBox2.SelectionStart = 0;
-            this.ktTextBox2.ShortcutsEnabled = true;
-            this.ktTextBox2.Size = new System.Drawing.Size(265, 39);
-            this.ktTextBox2.Style = KimTools.WinForms.KtTextBox.KtTextBoxStyle.Tailwind;
-            this.ktTextBox2.TabIndex = 3;
-            this.ktTextBox2.TextMarginBottom = 0;
-            this.ktTextBox2.TextPlaceholder = "Type to Search";
-            this.MenuTooltips.SetToolTip(this.ktTextBox2, "Search");
+            this.ExamSch.AcceptsReturn = false;
+            this.ExamSch.AcceptsTab = false;
+            this.ExamSch.AnimationSpeed = 200;
+            this.ExamSch.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.ExamSch.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.ExamSch.AutoSizeHeight = true;
+            this.ExamSch.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
+            this.ExamSch.Bg = KimTools.WinForms.KtColor.Tailwind_White;
+            this.ExamSch.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.ExamSch.CustomBorderColor = System.Drawing.Color.Empty;
+            this.ExamSch.CustomBorderColorActive = System.Drawing.Color.Empty;
+            this.ExamSch.CustomBorderColorDisabled = System.Drawing.Color.Empty;
+            this.ExamSch.CustomFillColor = System.Drawing.Color.Empty;
+            this.ExamSch.CustomIconLeft = null;
+            this.ExamSch.CustomIconRight = null;
+            this.ExamSch.CustomPlaceholderColor = System.Drawing.Color.Empty;
+            this.ExamSch.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.ExamSch.Dock = System.Windows.Forms.DockStyle.Left;
+            this.ExamSch.ForeColor = System.Drawing.Color.Black;
+            this.ExamSch.HideSelection = true;
+            this.Icons.SetIcons(this.ExamSch, new KimTools.WinForms.KtIcon[0]);
+            this.ExamSch.Lines = new string[0];
+            this.ExamSch.Location = new System.Drawing.Point(3, 3);
+            this.ExamSch.MaxLength = 32767;
+            this.ExamSch.MinimumSize = new System.Drawing.Size(1, 1);
+            this.ExamSch.Modified = false;
+            this.ExamSch.Name = "ExamSch";
+            this.ExamSch.Password = false;
+            this.ExamSch.PasswordChar = '\0';
+            this.ExamSch.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.ExamSch.SelectedText = "";
+            this.ExamSch.SelectionLength = 0;
+            this.ExamSch.SelectionStart = 0;
+            this.ExamSch.ShortcutsEnabled = true;
+            this.ExamSch.Size = new System.Drawing.Size(265, 39);
+            this.ExamSch.Style = KimTools.WinForms.KtTextBox.KtTextBoxStyle.Tailwind;
+            this.ExamSch.TabIndex = 3;
+            this.ExamSch.TextMarginBottom = 0;
+            this.ExamSch.TextPlaceholder = "Type to Search";
+            this.MenuTooltips.SetToolTip(this.ExamSch, "Search");
+            this.ExamSch.TextChanged += new System.EventHandler(this.ExamSch_TextChanged);
             // 
             // ProfilePanel
             // 
@@ -1180,6 +1194,262 @@
             this.ProfilePanel.Text = "Profile";
             this.MenuTooltips.SetToolTip(this.ProfilePanel, "");
             this.ProfilePanel.UseVisualStyleBackColor = true;
+            // 
+            // Loader
+            // 
+            this.Loader.Controls.Add(this.ktSpinner2);
+            this.Icons.SetIcons(this.Loader, new KimTools.WinForms.KtIcon[0]);
+            this.Loader.Location = new System.Drawing.Point(4, 4);
+            this.Loader.Name = "Loader";
+            this.Loader.Padding = new System.Windows.Forms.Padding(3);
+            this.Loader.Size = new System.Drawing.Size(1182, 565);
+            this.Loader.TabIndex = 8;
+            this.Loader.Text = "Loader";
+            this.MenuTooltips.SetToolTip(this.Loader, "");
+            this.Loader.UseVisualStyleBackColor = true;
+            // 
+            // ktSpinner2
+            // 
+            this.ktSpinner2.AllowPresets = false;
+            this.ktSpinner2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.ktSpinner2.BackColor = System.Drawing.Color.Transparent;
+            this.ktSpinner2.CapPoint = KimTools.WinForms.KtSpinner.CapPoints.Both;
+            this.ktSpinner2.CapStyle = KimTools.WinForms.KtSpinner.CapStyles.Round;
+            this.ktSpinner2.Color = System.Drawing.Color.DarkViolet;
+            this.ktSpinner2.Colors = new KimTools.WinForms.Bloom[0];
+            this.ktSpinner2.Customization = "";
+            this.ktSpinner2.DashCap = KimTools.WinForms.KtSpinner.DashCaps.Round;
+            this.ktSpinner2.DashWidth = 0.5F;
+            this.ktSpinner2.Font = new System.Drawing.Font("Verdana", 8F);
+            this.Icons.SetIcons(this.ktSpinner2, new KimTools.WinForms.KtIcon[0]);
+            this.ktSpinner2.Image = null;
+            this.ktSpinner2.Location = new System.Drawing.Point(557, 250);
+            this.ktSpinner2.Name = "ktSpinner2";
+            this.ktSpinner2.NoRounding = false;
+            this.ktSpinner2.Preset = KimTools.WinForms.KtSpinner.Presets.Solid;
+            this.ktSpinner2.ShowText = false;
+            this.ktSpinner2.Size = new System.Drawing.Size(69, 65);
+            this.ktSpinner2.Speed = 3;
+            this.ktSpinner2.Style = KimTools.WinForms.KtSpinner.Styles.Solid;
+            this.ktSpinner2.TabIndex = 2;
+            this.ktSpinner2.Text = "ktSpinner2";
+            this.ktSpinner2.TextPadding = new System.Windows.Forms.Padding(0);
+            this.ktSpinner2.Thickness = 10;
+            this.MenuTooltips.SetToolTip(this.ktSpinner2, "");
+            this.ktSpinner2.Transparent = true;
+            // 
+            // Score
+            // 
+            this.Score.Controls.Add(this.ScoreTbl);
+            this.Score.Controls.Add(this.ktPanel7);
+            this.Icons.SetIcons(this.Score, new KimTools.WinForms.KtIcon[0]);
+            this.Score.Location = new System.Drawing.Point(4, 4);
+            this.Score.Name = "Score";
+            this.Score.Padding = new System.Windows.Forms.Padding(3);
+            this.Score.Size = new System.Drawing.Size(1182, 565);
+            this.Score.TabIndex = 9;
+            this.Score.Text = "Score";
+            this.MenuTooltips.SetToolTip(this.Score, "");
+            this.Score.UseVisualStyleBackColor = true;
+            // 
+            // ScoreTbl
+            // 
+            this.ScoreTbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(252)))));
+            this.ScoreTbl.ColorBase = KimTools.WinForms.KtColor.Tailwind_White;
+            ktTableColumn14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.NotSet;
+            ktTableColumn14.Fill = "";
+            ktTableColumn14.Format = "";
+            ktTableColumn14.Group = "";
+            ktTableColumn14.IsPrimaryKey = false;
+            ktTableColumn14.Key = "No";
+            ktTableColumn14.Resizable = System.Windows.Forms.DataGridViewTriState.NotSet;
+            ktTableColumn14.Search = true;
+            ktTableColumn14.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            ktTableColumn14.Template = "";
+            ktTableColumn14.Title = "No";
+            ktTableColumn14.ToolTip = "";
+            ktTableColumn14.Type = KimTools.WinForms.KtTableColumnTypes.Avatar;
+            ktTableColumn14.Value = "";
+            ktTableColumn14.Visible = true;
+            ktTableColumn14.Width = 50;
+            ktTableColumn14.Width_ = "50";
+            ktTableColumn15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.NotSet;
+            ktTableColumn15.Fill = "";
+            ktTableColumn15.Format = "";
+            ktTableColumn15.Group = "";
+            ktTableColumn15.IsPrimaryKey = false;
+            ktTableColumn15.Key = "Name";
+            ktTableColumn15.Resizable = System.Windows.Forms.DataGridViewTriState.NotSet;
+            ktTableColumn15.Search = true;
+            ktTableColumn15.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            ktTableColumn15.Template = "";
+            ktTableColumn15.Title = "Name";
+            ktTableColumn15.ToolTip = "";
+            ktTableColumn15.Type = KimTools.WinForms.KtTableColumnTypes.Text;
+            ktTableColumn15.Value = "";
+            ktTableColumn15.Visible = true;
+            ktTableColumn15.Width = 0;
+            ktTableColumn15.Width_ = "";
+            ktTableColumn16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.NotSet;
+            ktTableColumn16.Fill = "";
+            ktTableColumn16.Format = "";
+            ktTableColumn16.Group = "";
+            ktTableColumn16.IsPrimaryKey = false;
+            ktTableColumn16.Key = "Teacher";
+            ktTableColumn16.Resizable = System.Windows.Forms.DataGridViewTriState.NotSet;
+            ktTableColumn16.Search = true;
+            ktTableColumn16.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            ktTableColumn16.Template = "";
+            ktTableColumn16.Title = "Teacher";
+            ktTableColumn16.ToolTip = "";
+            ktTableColumn16.Type = KimTools.WinForms.KtTableColumnTypes.Text;
+            ktTableColumn16.Value = "";
+            ktTableColumn16.Visible = true;
+            ktTableColumn16.Width = 0;
+            ktTableColumn16.Width_ = "";
+            ktTableColumn17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.NotSet;
+            ktTableColumn17.Fill = "";
+            ktTableColumn17.Format = "";
+            ktTableColumn17.Group = "";
+            ktTableColumn17.IsPrimaryKey = false;
+            ktTableColumn17.Key = "Subject";
+            ktTableColumn17.Resizable = System.Windows.Forms.DataGridViewTriState.NotSet;
+            ktTableColumn17.Search = true;
+            ktTableColumn17.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            ktTableColumn17.Template = "";
+            ktTableColumn17.Title = "Subject";
+            ktTableColumn17.ToolTip = "";
+            ktTableColumn17.Type = KimTools.WinForms.KtTableColumnTypes.Text;
+            ktTableColumn17.Value = "";
+            ktTableColumn17.Visible = true;
+            ktTableColumn17.Width = 0;
+            ktTableColumn17.Width_ = "";
+            ktTableColumn18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.NotSet;
+            ktTableColumn18.Fill = "";
+            ktTableColumn18.Format = "";
+            ktTableColumn18.Group = "";
+            ktTableColumn18.IsPrimaryKey = false;
+            ktTableColumn18.Key = "Score";
+            ktTableColumn18.Resizable = System.Windows.Forms.DataGridViewTriState.NotSet;
+            ktTableColumn18.Search = true;
+            ktTableColumn18.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            ktTableColumn18.Template = "";
+            ktTableColumn18.Title = "Score";
+            ktTableColumn18.ToolTip = "";
+            ktTableColumn18.Type = KimTools.WinForms.KtTableColumnTypes.Text;
+            ktTableColumn18.Value = "";
+            ktTableColumn18.Visible = true;
+            ktTableColumn18.Width = 0;
+            ktTableColumn18.Width_ = "";
+            ktTableColumn19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.NotSet;
+            ktTableColumn19.Fill = "";
+            ktTableColumn19.Format = "";
+            ktTableColumn19.Group = "";
+            ktTableColumn19.IsPrimaryKey = false;
+            ktTableColumn19.Key = "Exam date";
+            ktTableColumn19.Resizable = System.Windows.Forms.DataGridViewTriState.NotSet;
+            ktTableColumn19.Search = true;
+            ktTableColumn19.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            ktTableColumn19.Template = "";
+            ktTableColumn19.Title = "ExamDate";
+            ktTableColumn19.ToolTip = "";
+            ktTableColumn19.Type = KimTools.WinForms.KtTableColumnTypes.Text;
+            ktTableColumn19.Value = "";
+            ktTableColumn19.Visible = true;
+            ktTableColumn19.Width = 0;
+            ktTableColumn19.Width_ = "";
+            this.ScoreTbl.Columns = new KimTools.WinForms.KtTableColumn[] {
+        ktTableColumn14,
+        ktTableColumn15,
+        ktTableColumn16,
+        ktTableColumn17,
+        ktTableColumn18,
+        ktTableColumn19};
+            this.ScoreTbl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Icons.SetIcons(this.ScoreTbl, new KimTools.WinForms.KtIcon[0]);
+            this.ScoreTbl.KeyCaseSensitive = false;
+            this.ScoreTbl.Latency = 500;
+            this.ScoreTbl.Location = new System.Drawing.Point(3, 48);
+            this.ScoreTbl.MultiSelect = false;
+            this.ScoreTbl.Name = "ScoreTbl";
+            this.ScoreTbl.Padding = new System.Windows.Forms.Padding(5);
+            this.ScoreTbl.ShadeBase = KimTools.WinForms.KtShade.Light_10;
+            this.ScoreTbl.ShadeContent = KimTools.WinForms.KtShade.Light_10;
+            this.ScoreTbl.ShowFooter = true;
+            this.ScoreTbl.ShowHeader = false;
+            this.ScoreTbl.ShowSearch = false;
+            this.ScoreTbl.Size = new System.Drawing.Size(1176, 514);
+            this.ScoreTbl.TabIndex = 3;
+            this.MenuTooltips.SetToolTip(this.ScoreTbl, "");
+            this.ScoreTbl.Load += new System.EventHandler(this.ScoreTbl_Load);
+            // 
+            // ktPanel7
+            // 
+            this.ktPanel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(209)))), ((int)(((byte)(217)))));
+            this.ktPanel7.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(209)))), ((int)(((byte)(217)))));
+            this.ktPanel7.BgOpacity = 255;
+            this.ktPanel7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(192)))), ((int)(((byte)(202)))));
+            this.ktPanel7.BorderOpacity = 255;
+            this.ktPanel7.BorderRadiusSize = 15;
+            this.ktPanel7.BorderShape = KimTools.WinForms.KtSize.Default;
+            this.ktPanel7.BorderSize = KimTools.WinForms.KtSize.Default;
+            this.ktPanel7.BorderThickness = 1;
+            this.ktPanel7.Controls.Add(this.ScoreSch);
+            this.ktPanel7.CustomColors = new System.Drawing.Color[0];
+            this.ktPanel7.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ktPanel7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(40)))), ((int)(((byte)(67)))));
+            this.Icons.SetIcons(this.ktPanel7, new KimTools.WinForms.KtIcon[0]);
+            this.ktPanel7.Location = new System.Drawing.Point(3, 3);
+            this.ktPanel7.Name = "ktPanel7";
+            this.ktPanel7.Padding = new System.Windows.Forms.Padding(3);
+            this.ktPanel7.ShowBorders = true;
+            this.ktPanel7.Size = new System.Drawing.Size(1176, 45);
+            this.ktPanel7.TabIndex = 2;
+            this.MenuTooltips.SetToolTip(this.ktPanel7, "");
+            // 
+            // ScoreSch
+            // 
+            this.ScoreSch.AcceptsReturn = false;
+            this.ScoreSch.AcceptsTab = false;
+            this.ScoreSch.AnimationSpeed = 200;
+            this.ScoreSch.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.ScoreSch.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.ScoreSch.AutoSizeHeight = true;
+            this.ScoreSch.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
+            this.ScoreSch.Bg = KimTools.WinForms.KtColor.Tailwind_White;
+            this.ScoreSch.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.ScoreSch.CustomBorderColor = System.Drawing.Color.Empty;
+            this.ScoreSch.CustomBorderColorActive = System.Drawing.Color.Empty;
+            this.ScoreSch.CustomBorderColorDisabled = System.Drawing.Color.Empty;
+            this.ScoreSch.CustomFillColor = System.Drawing.Color.Empty;
+            this.ScoreSch.CustomIconLeft = null;
+            this.ScoreSch.CustomIconRight = null;
+            this.ScoreSch.CustomPlaceholderColor = System.Drawing.Color.Empty;
+            this.ScoreSch.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.ScoreSch.Dock = System.Windows.Forms.DockStyle.Left;
+            this.ScoreSch.ForeColor = System.Drawing.Color.Black;
+            this.ScoreSch.HideSelection = true;
+            this.Icons.SetIcons(this.ScoreSch, new KimTools.WinForms.KtIcon[0]);
+            this.ScoreSch.Lines = new string[0];
+            this.ScoreSch.Location = new System.Drawing.Point(3, 3);
+            this.ScoreSch.MaxLength = 32767;
+            this.ScoreSch.MinimumSize = new System.Drawing.Size(1, 1);
+            this.ScoreSch.Modified = false;
+            this.ScoreSch.Name = "ScoreSch";
+            this.ScoreSch.Password = false;
+            this.ScoreSch.PasswordChar = '\0';
+            this.ScoreSch.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.ScoreSch.SelectedText = "";
+            this.ScoreSch.SelectionLength = 0;
+            this.ScoreSch.SelectionStart = 0;
+            this.ScoreSch.ShortcutsEnabled = true;
+            this.ScoreSch.Size = new System.Drawing.Size(265, 39);
+            this.ScoreSch.Style = KimTools.WinForms.KtTextBox.KtTextBoxStyle.Tailwind;
+            this.ScoreSch.TabIndex = 3;
+            this.ScoreSch.TextMarginBottom = 0;
+            this.ScoreSch.TextPlaceholder = "Type to Search";
+            this.MenuTooltips.SetToolTip(this.ScoreSch, "Search");
+            this.ScoreSch.TextChanged += new System.EventHandler(this.ScoreSch_TextChanged);
             // 
             // MenuTooltips
             // 
@@ -1261,7 +1531,7 @@
             this.LeftBar.BorderThickness = 1;
             this.LeftBar.Controls.Add(this.BtnLogout);
             this.LeftBar.Controls.Add(this.ProfileBtn);
-            this.LeftBar.Controls.Add(this.UsersBtn);
+            this.LeftBar.Controls.Add(this.ScoreBtn);
             this.LeftBar.Controls.Add(this.ExamBtn);
             this.LeftBar.Controls.Add(this.ClassroomBtn);
             this.LeftBar.Controls.Add(this.DashboardBtn);
@@ -1345,42 +1615,43 @@
             this.ProfileBtn.UseVisualStyleBackColor = false;
             this.ProfileBtn.Selected += new System.EventHandler(this.ProfileBtn_Selected);
             // 
-            // UsersBtn
+            // ScoreBtn
             // 
-            this.UsersBtn.Appearance = System.Windows.Forms.Appearance.Button;
-            this.UsersBtn.BackColor = System.Drawing.Color.Transparent;
-            this.UsersBtn.Bg = KimTools.WinForms.KtColor.Secondary;
-            this.UsersBtn.BorderShape = KimTools.WinForms.KtSize.Lg;
-            this.UsersBtn.BorderSize = KimTools.WinForms.KtSize.Default;
-            this.UsersBtn.ContentColor = KimTools.WinForms.KtColor.Primary;
-            this.UsersBtn.ContentColorSelected = KimTools.WinForms.KtColor.Tailwind_White;
-            this.UsersBtn.ContentCustomSelected = System.Drawing.Color.Empty;
-            this.UsersBtn.CustomColors = new System.Drawing.Color[0];
-            this.UsersBtn.Dock = System.Windows.Forms.DockStyle.Top;
-            this.UsersBtn.FillSelected = KimTools.WinForms.KtColor.Primary;
-            this.UsersBtn.FlatAppearance.BorderSize = 0;
-            this.UsersBtn.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-            this.UsersBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.UsersBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.UsersBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.UsersBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
-            this.UsersBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(63)))), ((int)(((byte)(218)))));
-            this.UsersBtn.IconName = "Tabler.outline.users_group";
-            this.Icons.SetIcons(this.UsersBtn, new KimTools.WinForms.KtIcon[0]);
-            this.UsersBtn.IconSize = 20;
-            this.UsersBtn.IconStroke = 2.5D;
-            this.UsersBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.UsersBtn.LabelColorCustom = System.Drawing.Color.Empty;
-            this.UsersBtn.LabelPadding = 0;
-            this.UsersBtn.Location = new System.Drawing.Point(4, 243);
-            this.UsersBtn.Name = "UsersBtn";
-            this.UsersBtn.Padding = new System.Windows.Forms.Padding(10);
-            this.UsersBtn.Size = new System.Drawing.Size(55, 54);
-            this.UsersBtn.Style = KimTools.WinForms.KtStyle.Ghost;
-            this.UsersBtn.StyleSelected = KimTools.WinForms.KtStyle.GradientOutline;
-            this.UsersBtn.TabIndex = 6;
-            this.MenuTooltips.SetToolTip(this.UsersBtn, "Users");
-            this.UsersBtn.UseVisualStyleBackColor = false;
+            this.ScoreBtn.Appearance = System.Windows.Forms.Appearance.Button;
+            this.ScoreBtn.BackColor = System.Drawing.Color.Transparent;
+            this.ScoreBtn.Bg = KimTools.WinForms.KtColor.Secondary;
+            this.ScoreBtn.BorderShape = KimTools.WinForms.KtSize.Lg;
+            this.ScoreBtn.BorderSize = KimTools.WinForms.KtSize.Default;
+            this.ScoreBtn.ContentColor = KimTools.WinForms.KtColor.Primary;
+            this.ScoreBtn.ContentColorSelected = KimTools.WinForms.KtColor.Tailwind_White;
+            this.ScoreBtn.ContentCustomSelected = System.Drawing.Color.Empty;
+            this.ScoreBtn.CustomColors = new System.Drawing.Color[0];
+            this.ScoreBtn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ScoreBtn.FillSelected = KimTools.WinForms.KtColor.Primary;
+            this.ScoreBtn.FlatAppearance.BorderSize = 0;
+            this.ScoreBtn.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.ScoreBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.ScoreBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.ScoreBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ScoreBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.ScoreBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(63)))), ((int)(((byte)(218)))));
+            this.ScoreBtn.IconName = "Tabler.outline.users_group";
+            this.Icons.SetIcons(this.ScoreBtn, new KimTools.WinForms.KtIcon[0]);
+            this.ScoreBtn.IconSize = 20;
+            this.ScoreBtn.IconStroke = 2.5D;
+            this.ScoreBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.ScoreBtn.LabelColorCustom = System.Drawing.Color.Empty;
+            this.ScoreBtn.LabelPadding = 0;
+            this.ScoreBtn.Location = new System.Drawing.Point(4, 243);
+            this.ScoreBtn.Name = "ScoreBtn";
+            this.ScoreBtn.Padding = new System.Windows.Forms.Padding(10);
+            this.ScoreBtn.Size = new System.Drawing.Size(55, 54);
+            this.ScoreBtn.Style = KimTools.WinForms.KtStyle.Ghost;
+            this.ScoreBtn.StyleSelected = KimTools.WinForms.KtStyle.GradientOutline;
+            this.ScoreBtn.TabIndex = 6;
+            this.MenuTooltips.SetToolTip(this.ScoreBtn, "Score");
+            this.ScoreBtn.UseVisualStyleBackColor = false;
+            this.ScoreBtn.Selected += new System.EventHandler(this.DashboardBtn_Selected);
             // 
             // ExamBtn
             // 
@@ -1540,92 +1811,6 @@
             this.Icons.Property = null;
             this.Icons.Stroke = 1D;
             // 
-            // Loader
-            // 
-            this.Loader.Controls.Add(this.ktSpinner2);
-            this.Icons.SetIcons(this.Loader, new KimTools.WinForms.KtIcon[0]);
-            this.Loader.Location = new System.Drawing.Point(4, 4);
-            this.Loader.Name = "Loader";
-            this.Loader.Padding = new System.Windows.Forms.Padding(3);
-            this.Loader.Size = new System.Drawing.Size(1182, 565);
-            this.Loader.TabIndex = 8;
-            this.Loader.Text = "Loader";
-            this.MenuTooltips.SetToolTip(this.Loader, "");
-            this.Loader.UseVisualStyleBackColor = true;
-            // 
-            // ktSpinner2
-            // 
-            this.ktSpinner2.AllowPresets = false;
-            this.ktSpinner2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.ktSpinner2.BackColor = System.Drawing.Color.Transparent;
-            this.ktSpinner2.CapPoint = KimTools.WinForms.KtSpinner.CapPoints.Both;
-            this.ktSpinner2.CapStyle = KimTools.WinForms.KtSpinner.CapStyles.Round;
-            this.ktSpinner2.Color = System.Drawing.Color.DarkViolet;
-            this.ktSpinner2.Colors = new KimTools.WinForms.Bloom[0];
-            this.ktSpinner2.Customization = "";
-            this.ktSpinner2.DashCap = KimTools.WinForms.KtSpinner.DashCaps.Round;
-            this.ktSpinner2.DashWidth = 0.5F;
-            this.ktSpinner2.Font = new System.Drawing.Font("Verdana", 8F);
-            this.Icons.SetIcons(this.ktSpinner2, new KimTools.WinForms.KtIcon[0]);
-            this.ktSpinner2.Image = null;
-            this.ktSpinner2.Location = new System.Drawing.Point(557, 250);
-            this.ktSpinner2.Name = "ktSpinner2";
-            this.ktSpinner2.NoRounding = false;
-            this.ktSpinner2.Preset = KimTools.WinForms.KtSpinner.Presets.Solid;
-            this.ktSpinner2.ShowText = false;
-            this.ktSpinner2.Size = new System.Drawing.Size(69, 65);
-            this.ktSpinner2.Speed = 3;
-            this.ktSpinner2.Style = KimTools.WinForms.KtSpinner.Styles.Solid;
-            this.ktSpinner2.TabIndex = 2;
-            this.ktSpinner2.Text = "ktSpinner2";
-            this.ktSpinner2.TextPadding = new System.Windows.Forms.Padding(0);
-            this.ktSpinner2.Thickness = 10;
-            this.MenuTooltips.SetToolTip(this.ktSpinner2, "");
-            this.ktSpinner2.Transparent = true;
-            // 
-            // ktComboBox1
-            // 
-            this.ktComboBox1.BackColor = System.Drawing.Color.Transparent;
-            this.ktComboBox1.BackgroundColor = System.Drawing.Color.White;
-            this.ktComboBox1.BorderColor = System.Drawing.Color.Silver;
-            this.ktComboBox1.BorderRadius = 1;
-            this.ktComboBox1.Color = System.Drawing.Color.Silver;
-            this.ktComboBox1.Direction = KimTools.WinForms.KtComboBox.Directions.Down;
-            this.ktComboBox1.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.ktComboBox1.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.ktComboBox1.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.ktComboBox1.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.ktComboBox1.DisabledIndicatorColor = System.Drawing.Color.DarkGray;
-            this.ktComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.ktComboBox1.DropdownBorderThickness = KimTools.WinForms.KtComboBox.BorderThickness.Thin;
-            this.ktComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ktComboBox1.DropDownTextAlign = KimTools.WinForms.KtComboBox.TextAlign.Left;
-            this.ktComboBox1.FillDropDown = true;
-            this.ktComboBox1.FillIndicator = false;
-            this.ktComboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ktComboBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.ktComboBox1.ForeColor = System.Drawing.Color.Black;
-            this.ktComboBox1.FormattingEnabled = true;
-            this.ktComboBox1.Icon = null;
-            this.Icons.SetIcons(this.ktComboBox1, new KimTools.WinForms.KtIcon[0]);
-            this.ktComboBox1.IndicatorAlignment = KimTools.WinForms.KtComboBox.Indicator.Right;
-            this.ktComboBox1.IndicatorColor = System.Drawing.Color.Gray;
-            this.ktComboBox1.IndicatorLocation = KimTools.WinForms.KtComboBox.Indicator.Right;
-            this.ktComboBox1.ItemBackColor = System.Drawing.Color.White;
-            this.ktComboBox1.ItemBorderColor = System.Drawing.Color.White;
-            this.ktComboBox1.ItemForeColor = System.Drawing.Color.Black;
-            this.ktComboBox1.ItemHeight = 26;
-            this.ktComboBox1.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
-            this.ktComboBox1.ItemHighLightForeColor = System.Drawing.Color.White;
-            this.ktComboBox1.ItemTopMargin = 3;
-            this.ktComboBox1.Location = new System.Drawing.Point(916, 6);
-            this.ktComboBox1.Name = "ktComboBox1";
-            this.ktComboBox1.Size = new System.Drawing.Size(260, 32);
-            this.ktComboBox1.TabIndex = 4;
-            this.ktComboBox1.TextAlignment = KimTools.WinForms.KtComboBox.TextAlign.Left;
-            this.ktComboBox1.TextLeftMargin = 5;
-            this.MenuTooltips.SetToolTip(this.ktComboBox1, "");
-            // 
             // FrmStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
@@ -1669,12 +1854,14 @@
             this.UsersTopPanel.ResumeLayout(false);
             this.Exam.ResumeLayout(false);
             this.ktPanel6.ResumeLayout(false);
+            this.Loader.ResumeLayout(false);
+            this.Score.ResumeLayout(false);
+            this.ktPanel7.ResumeLayout(false);
             this.TopBarPanel.ResumeLayout(false);
             this.TopBarPanel.PerformLayout();
             this.LeftBar.ResumeLayout(false);
             this.LogoBar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).EndInit();
-            this.Loader.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1689,7 +1876,7 @@
         private KimTools.WinForms.KtButtonSelect DashboardBtn;
         private KimTools.WinForms.KtButtonSelect ClassroomBtn;
         private KimTools.WinForms.KtButtonSelect ProfileBtn;
-        private KimTools.WinForms.KtButtonSelect UsersBtn;
+        private KimTools.WinForms.KtButtonSelect ScoreBtn;
         private KimTools.WinForms.KtButtonSelect ExamBtn;
         public KimTools.WinForms.KtTooltips MenuTooltips;
         private KimTools.WinForms.KtButton BtnLogout;
@@ -1724,14 +1911,17 @@
         private System.Windows.Forms.TabPage Classroom;
         private KimTools.WinForms.KtPanel UsersTopPanel;
         private KimTools.WinForms.KtTable ClassroomTbl;
-        private KimTools.WinForms.KtTextBox ktTextBox1;
+        private KimTools.WinForms.KtTextBox ClassroomSch;
         private System.Windows.Forms.TabPage Exam;
         private System.Windows.Forms.TabPage ProfilePanel;
-        private KimTools.WinForms.KtTable ktTable1;
+        private KimTools.WinForms.KtTable ExamTbl;
         private KimTools.WinForms.KtPanel ktPanel6;
-        private KimTools.WinForms.KtTextBox ktTextBox2;
+        private KimTools.WinForms.KtTextBox ExamSch;
         private System.Windows.Forms.TabPage Loader;
         private KimTools.WinForms.KtSpinner ktSpinner2;
-        private KimTools.WinForms.KtComboBox ktComboBox1;
+        private System.Windows.Forms.TabPage Score;
+        private KimTools.WinForms.KtPanel ktPanel7;
+        private KimTools.WinForms.KtTextBox ScoreSch;
+        private KimTools.WinForms.KtTable ScoreTbl;
     }
 }
