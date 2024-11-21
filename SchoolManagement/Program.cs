@@ -21,7 +21,7 @@ namespace SchoolManagement
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            /*            using (FrmLogin frmLogin = new FrmLogin())
+                        using (FrmLogin frmLogin = new FrmLogin())
                         {
                             DialogResult result = frmLogin.ShowDialog();
 
@@ -56,13 +56,8 @@ namespace SchoolManagement
                                         break;
                                 }
                             }
-                        }*/
-            //FrmAdmin frm = new FrmAdmin(1);
-            //frm.ShowDialog();
-
-            //FrmStudent fm = new FrmStudent(1);
-            FrmTeacher fm = new FrmTeacher(1);
-            fm.ShowDialog();
+                        }
+           
 
         }
     }

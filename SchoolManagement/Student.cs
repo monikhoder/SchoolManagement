@@ -26,8 +26,8 @@ namespace SchoolManagement
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Gender { get; set; }
-        public Nullable<bool> Status { get; set; }
         public System.DateTime RegisterDate { get; set; }
+        public Nullable<bool> Status { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ClassEnrollment> ClassEnrollments { get; set; }

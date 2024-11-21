@@ -8,11 +8,10 @@ namespace SchoolManagement.DBAccess
 {
     public class CrudExam
     {
-        SchoolDBEntities db = new SchoolDBEntities();
-        //private readonly SchoolDBEntities db;
+        private readonly SchoolDBEntities db;
         public CrudExam()
         {
-            //db = new SchoolDBEntities();
+            db = new SchoolDBEntities();
         }
         public List<Exam> GetAllExam()
         {
@@ -84,6 +83,18 @@ namespace SchoolManagement.DBAccess
                               where er.Id == examId && ce.Id == userId
                               select s.Name).FirstOrDefault();
             return subject;
+        }
+        //Create schedule exam
+        public void AddExam(string name, int classId ,int classSubjectId, DateTime date, int duratin )
+        {
+            var newExam = new Exam
+            {
+                Name = name,
+                ClassSubjectId = classSubjectId,
+                ExamDate = date,
+                Duration = duratin
+            };
+           
         }
     }
 }

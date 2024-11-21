@@ -23,7 +23,6 @@ namespace SchoolManagement
     
         public int Id { get; set; }
         public string Name { get; set; }
-        public int Capacity { get; set; }
         public System.DateTime StartDate { get; set; }
         public System.DateTime EndDate { get; set; }
         public Nullable<bool> Status { get; set; }

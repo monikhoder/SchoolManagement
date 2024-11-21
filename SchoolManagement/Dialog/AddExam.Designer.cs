@@ -30,14 +30,16 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddExam));
             this.ktLabel8 = new KimTools.WinForms.KtLabel();
-            this.ClassSubjectCmb = new KimTools.WinForms.KtComboBox();
+            this.ClassNameCmb = new KimTools.WinForms.KtComboBox();
             this.ktLabel10 = new KimTools.WinForms.KtLabel();
             this.ktLabel12 = new KimTools.WinForms.KtLabel();
             this.AddExamBtn = new KimTools.WinForms.KtButton();
             this.ExamNameTxb = new KimTools.WinForms.KtTextBox();
             this.ktLabel1 = new KimTools.WinForms.KtLabel();
             this.DurationTxb = new KimTools.WinForms.KtTextBox();
-            this.ktDate1 = new KimTools.WinForms.KtDate();
+            this.ExamDate = new KimTools.WinForms.KtDate();
+            this.ClassSubjectCmb = new KimTools.WinForms.KtComboBox();
+            this.ktLabel2 = new KimTools.WinForms.KtLabel();
             this.SuspendLayout();
             // 
             // ktLabel8
@@ -46,53 +48,53 @@
             this.ktLabel8.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
             this.ktLabel8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(40)))), ((int)(((byte)(67)))));
             this.ktLabel8.KtFontSize = KimTools.WinForms.KtFont.Default;
-            this.ktLabel8.Location = new System.Drawing.Point(80, 180);
+            this.ktLabel8.Location = new System.Drawing.Point(80, 246);
             this.ktLabel8.Name = "ktLabel8";
             this.ktLabel8.Size = new System.Drawing.Size(99, 25);
             this.ktLabel8.TabIndex = 61;
             this.ktLabel8.Text = "Exam Date";
             // 
-            // ClassSubjectCmb
+            // ClassNameCmb
             // 
-            this.ClassSubjectCmb.BackColor = System.Drawing.Color.Transparent;
-            this.ClassSubjectCmb.BackgroundColor = System.Drawing.Color.White;
-            this.ClassSubjectCmb.BorderColor = System.Drawing.Color.Silver;
-            this.ClassSubjectCmb.BorderRadius = 1;
-            this.ClassSubjectCmb.Color = System.Drawing.Color.Silver;
-            this.ClassSubjectCmb.Direction = KimTools.WinForms.KtComboBox.Directions.Down;
-            this.ClassSubjectCmb.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.ClassSubjectCmb.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.ClassSubjectCmb.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.ClassSubjectCmb.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.ClassSubjectCmb.DisabledIndicatorColor = System.Drawing.Color.DarkGray;
-            this.ClassSubjectCmb.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.ClassSubjectCmb.DropdownBorderThickness = KimTools.WinForms.KtComboBox.BorderThickness.Thin;
-            this.ClassSubjectCmb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ClassSubjectCmb.DropDownTextAlign = KimTools.WinForms.KtComboBox.TextAlign.Left;
-            this.ClassSubjectCmb.FillDropDown = true;
-            this.ClassSubjectCmb.FillIndicator = false;
-            this.ClassSubjectCmb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ClassSubjectCmb.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.ClassSubjectCmb.ForeColor = System.Drawing.Color.Black;
-            this.ClassSubjectCmb.FormattingEnabled = true;
-            this.ClassSubjectCmb.Icon = null;
-            this.ClassSubjectCmb.IndicatorAlignment = KimTools.WinForms.KtComboBox.Indicator.Right;
-            this.ClassSubjectCmb.IndicatorColor = System.Drawing.Color.Gray;
-            this.ClassSubjectCmb.IndicatorLocation = KimTools.WinForms.KtComboBox.Indicator.Right;
-            this.ClassSubjectCmb.ItemBackColor = System.Drawing.Color.White;
-            this.ClassSubjectCmb.ItemBorderColor = System.Drawing.Color.White;
-            this.ClassSubjectCmb.ItemForeColor = System.Drawing.Color.Black;
-            this.ClassSubjectCmb.ItemHeight = 26;
-            this.ClassSubjectCmb.ItemHighLightColor = System.Drawing.Color.BlueViolet;
-            this.ClassSubjectCmb.ItemHighLightForeColor = System.Drawing.Color.White;
-            this.ClassSubjectCmb.ItemTopMargin = 3;
-            this.ClassSubjectCmb.Location = new System.Drawing.Point(80, 136);
-            this.ClassSubjectCmb.Name = "ClassSubjectCmb";
-            this.ClassSubjectCmb.Size = new System.Drawing.Size(230, 32);
-            this.ClassSubjectCmb.TabIndex = 60;
-            this.ClassSubjectCmb.Text = "Male";
-            this.ClassSubjectCmb.TextAlignment = KimTools.WinForms.KtComboBox.TextAlign.Left;
-            this.ClassSubjectCmb.TextLeftMargin = 5;
+            this.ClassNameCmb.BackColor = System.Drawing.Color.Transparent;
+            this.ClassNameCmb.BackgroundColor = System.Drawing.Color.White;
+            this.ClassNameCmb.BorderColor = System.Drawing.Color.Silver;
+            this.ClassNameCmb.BorderRadius = 1;
+            this.ClassNameCmb.Color = System.Drawing.Color.Silver;
+            this.ClassNameCmb.Direction = KimTools.WinForms.KtComboBox.Directions.Down;
+            this.ClassNameCmb.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.ClassNameCmb.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.ClassNameCmb.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.ClassNameCmb.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.ClassNameCmb.DisabledIndicatorColor = System.Drawing.Color.DarkGray;
+            this.ClassNameCmb.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.ClassNameCmb.DropdownBorderThickness = KimTools.WinForms.KtComboBox.BorderThickness.Thin;
+            this.ClassNameCmb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ClassNameCmb.DropDownTextAlign = KimTools.WinForms.KtComboBox.TextAlign.Left;
+            this.ClassNameCmb.FillDropDown = true;
+            this.ClassNameCmb.FillIndicator = false;
+            this.ClassNameCmb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ClassNameCmb.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.ClassNameCmb.ForeColor = System.Drawing.Color.Black;
+            this.ClassNameCmb.FormattingEnabled = true;
+            this.ClassNameCmb.Icon = null;
+            this.ClassNameCmb.IndicatorAlignment = KimTools.WinForms.KtComboBox.Indicator.Right;
+            this.ClassNameCmb.IndicatorColor = System.Drawing.Color.Gray;
+            this.ClassNameCmb.IndicatorLocation = KimTools.WinForms.KtComboBox.Indicator.Right;
+            this.ClassNameCmb.ItemBackColor = System.Drawing.Color.White;
+            this.ClassNameCmb.ItemBorderColor = System.Drawing.Color.White;
+            this.ClassNameCmb.ItemForeColor = System.Drawing.Color.Black;
+            this.ClassNameCmb.ItemHeight = 26;
+            this.ClassNameCmb.ItemHighLightColor = System.Drawing.Color.BlueViolet;
+            this.ClassNameCmb.ItemHighLightForeColor = System.Drawing.Color.White;
+            this.ClassNameCmb.ItemTopMargin = 3;
+            this.ClassNameCmb.Location = new System.Drawing.Point(80, 136);
+            this.ClassNameCmb.Name = "ClassNameCmb";
+            this.ClassNameCmb.Size = new System.Drawing.Size(230, 32);
+            this.ClassNameCmb.TabIndex = 60;
+            this.ClassNameCmb.TextAlignment = KimTools.WinForms.KtComboBox.TextAlign.Left;
+            this.ClassNameCmb.TextLeftMargin = 5;
+            this.ClassNameCmb.SelectedIndexChanged += new System.EventHandler(this.ClassNameCmb_SelectedIndexChanged);
             // 
             // ktLabel10
             // 
@@ -102,9 +104,9 @@
             this.ktLabel10.KtFontSize = KimTools.WinForms.KtFont.Default;
             this.ktLabel10.Location = new System.Drawing.Point(80, 108);
             this.ktLabel10.Name = "ktLabel10";
-            this.ktLabel10.Size = new System.Drawing.Size(120, 25);
+            this.ktLabel10.Size = new System.Drawing.Size(107, 25);
             this.ktLabel10.TabIndex = 58;
-            this.ktLabel10.Text = "Class Subject";
+            this.ktLabel10.Text = "Class Name";
             // 
             // ktLabel12
             // 
@@ -134,7 +136,7 @@
             this.AddExamBtn.IconName = "";
             this.AddExamBtn.IconSize = 16;
             this.AddExamBtn.IconStroke = 2.5D;
-            this.AddExamBtn.Location = new System.Drawing.Point(474, 338);
+            this.AddExamBtn.Location = new System.Drawing.Point(419, 338);
             this.AddExamBtn.Name = "AddExamBtn";
             this.AddExamBtn.Size = new System.Drawing.Size(95, 37);
             this.AddExamBtn.Style = KimTools.WinForms.KtStyle.Tailwind;
@@ -188,7 +190,7 @@
             this.ktLabel1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
             this.ktLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(40)))), ((int)(((byte)(67)))));
             this.ktLabel1.KtFontSize = KimTools.WinForms.KtFont.Default;
-            this.ktLabel1.Location = new System.Drawing.Point(80, 250);
+            this.ktLabel1.Location = new System.Drawing.Point(80, 316);
             this.ktLabel1.Name = "ktLabel1";
             this.ktLabel1.Size = new System.Drawing.Size(86, 25);
             this.ktLabel1.TabIndex = 63;
@@ -216,7 +218,7 @@
             this.DurationTxb.ForeColor = System.Drawing.Color.Empty;
             this.DurationTxb.HideSelection = true;
             this.DurationTxb.Lines = new string[0];
-            this.DurationTxb.Location = new System.Drawing.Point(80, 278);
+            this.DurationTxb.Location = new System.Drawing.Point(80, 344);
             this.DurationTxb.MaxLength = 32767;
             this.DurationTxb.MinimumSize = new System.Drawing.Size(1, 1);
             this.DurationTxb.Modified = false;
@@ -234,39 +236,95 @@
             this.DurationTxb.TextMarginBottom = 0;
             this.DurationTxb.TextPlaceholder = "Enter Duration in Minutes";
             // 
-            // ktDate1
+            // ExamDate
             // 
-            this.ktDate1.BackColor = System.Drawing.Color.Transparent;
-            this.ktDate1.BorderRadius = 1;
-            this.ktDate1.Color = System.Drawing.Color.Silver;
-            this.ktDate1.DateBorderThickness = KimTools.WinForms.KtDate.BorderThickness.Thin;
-            this.ktDate1.DateTextAlign = KimTools.WinForms.KtDate.TextAlign.Left;
-            this.ktDate1.DisabledColor = System.Drawing.Color.Gray;
-            this.ktDate1.DisplayWeekNumbers = false;
-            this.ktDate1.DPHeight = 0;
-            this.ktDate1.FillDatePicker = false;
-            this.ktDate1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.ktDate1.ForeColor = System.Drawing.Color.Black;
-            this.ktDate1.Icon = ((System.Drawing.Image)(resources.GetObject("ktDate1.Icon")));
-            this.ktDate1.IconColor = System.Drawing.Color.Gray;
-            this.ktDate1.IconLocation = KimTools.WinForms.KtDate.Indicator.Right;
-            this.ktDate1.LeftTextMargin = 5;
-            this.ktDate1.Location = new System.Drawing.Point(80, 210);
-            this.ktDate1.MinimumSize = new System.Drawing.Size(0, 32);
-            this.ktDate1.Name = "ktDate1";
-            this.ktDate1.Size = new System.Drawing.Size(230, 32);
-            this.ktDate1.TabIndex = 65;
+            this.ExamDate.BackColor = System.Drawing.Color.Transparent;
+            this.ExamDate.BorderRadius = 1;
+            this.ExamDate.Color = System.Drawing.Color.Silver;
+            this.ExamDate.DateBorderThickness = KimTools.WinForms.KtDate.BorderThickness.Thin;
+            this.ExamDate.DateTextAlign = KimTools.WinForms.KtDate.TextAlign.Left;
+            this.ExamDate.DisabledColor = System.Drawing.Color.Gray;
+            this.ExamDate.DisplayWeekNumbers = false;
+            this.ExamDate.DPHeight = 0;
+            this.ExamDate.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
+            this.ExamDate.FillDatePicker = false;
+            this.ExamDate.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.ExamDate.ForeColor = System.Drawing.Color.Black;
+            this.ExamDate.Icon = ((System.Drawing.Image)(resources.GetObject("ExamDate.Icon")));
+            this.ExamDate.IconColor = System.Drawing.Color.Gray;
+            this.ExamDate.IconLocation = KimTools.WinForms.KtDate.Indicator.Right;
+            this.ExamDate.LeftTextMargin = 5;
+            this.ExamDate.Location = new System.Drawing.Point(80, 276);
+            this.ExamDate.MinimumSize = new System.Drawing.Size(4, 32);
+            this.ExamDate.Name = "ExamDate";
+            this.ExamDate.Size = new System.Drawing.Size(230, 32);
+            this.ExamDate.TabIndex = 65;
+            // 
+            // ClassSubjectCmb
+            // 
+            this.ClassSubjectCmb.BackColor = System.Drawing.Color.Transparent;
+            this.ClassSubjectCmb.BackgroundColor = System.Drawing.Color.White;
+            this.ClassSubjectCmb.BorderColor = System.Drawing.Color.Silver;
+            this.ClassSubjectCmb.BorderRadius = 1;
+            this.ClassSubjectCmb.Color = System.Drawing.Color.Silver;
+            this.ClassSubjectCmb.Direction = KimTools.WinForms.KtComboBox.Directions.Down;
+            this.ClassSubjectCmb.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.ClassSubjectCmb.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.ClassSubjectCmb.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.ClassSubjectCmb.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.ClassSubjectCmb.DisabledIndicatorColor = System.Drawing.Color.DarkGray;
+            this.ClassSubjectCmb.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.ClassSubjectCmb.DropdownBorderThickness = KimTools.WinForms.KtComboBox.BorderThickness.Thin;
+            this.ClassSubjectCmb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ClassSubjectCmb.DropDownTextAlign = KimTools.WinForms.KtComboBox.TextAlign.Left;
+            this.ClassSubjectCmb.FillDropDown = true;
+            this.ClassSubjectCmb.FillIndicator = false;
+            this.ClassSubjectCmb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ClassSubjectCmb.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.ClassSubjectCmb.ForeColor = System.Drawing.Color.Black;
+            this.ClassSubjectCmb.FormattingEnabled = true;
+            this.ClassSubjectCmb.Icon = null;
+            this.ClassSubjectCmb.IndicatorAlignment = KimTools.WinForms.KtComboBox.Indicator.Right;
+            this.ClassSubjectCmb.IndicatorColor = System.Drawing.Color.Gray;
+            this.ClassSubjectCmb.IndicatorLocation = KimTools.WinForms.KtComboBox.Indicator.Right;
+            this.ClassSubjectCmb.ItemBackColor = System.Drawing.Color.White;
+            this.ClassSubjectCmb.ItemBorderColor = System.Drawing.Color.White;
+            this.ClassSubjectCmb.ItemForeColor = System.Drawing.Color.Black;
+            this.ClassSubjectCmb.ItemHeight = 26;
+            this.ClassSubjectCmb.ItemHighLightColor = System.Drawing.Color.BlueViolet;
+            this.ClassSubjectCmb.ItemHighLightForeColor = System.Drawing.Color.White;
+            this.ClassSubjectCmb.ItemTopMargin = 3;
+            this.ClassSubjectCmb.Location = new System.Drawing.Point(80, 206);
+            this.ClassSubjectCmb.Name = "ClassSubjectCmb";
+            this.ClassSubjectCmb.Size = new System.Drawing.Size(230, 32);
+            this.ClassSubjectCmb.TabIndex = 67;
+            this.ClassSubjectCmb.TextAlignment = KimTools.WinForms.KtComboBox.TextAlign.Left;
+            this.ClassSubjectCmb.TextLeftMargin = 5;
+            // 
+            // ktLabel2
+            // 
+            this.ktLabel2.AutoSize = true;
+            this.ktLabel2.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.ktLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(40)))), ((int)(((byte)(67)))));
+            this.ktLabel2.KtFontSize = KimTools.WinForms.KtFont.Default;
+            this.ktLabel2.Location = new System.Drawing.Point(80, 178);
+            this.ktLabel2.Name = "ktLabel2";
+            this.ktLabel2.Size = new System.Drawing.Size(120, 25);
+            this.ktLabel2.TabIndex = 66;
+            this.ktLabel2.Text = "Class Subject";
             // 
             // AddExam
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(636, 391);
-            this.Controls.Add(this.ktDate1);
+            this.ClientSize = new System.Drawing.Size(568, 391);
+            this.Controls.Add(this.ClassSubjectCmb);
+            this.Controls.Add(this.ktLabel2);
+            this.Controls.Add(this.ExamDate);
             this.Controls.Add(this.ktLabel1);
             this.Controls.Add(this.DurationTxb);
             this.Controls.Add(this.ktLabel8);
-            this.Controls.Add(this.ClassSubjectCmb);
+            this.Controls.Add(this.ClassNameCmb);
             this.Controls.Add(this.ktLabel10);
             this.Controls.Add(this.ktLabel12);
             this.Controls.Add(this.AddExamBtn);
@@ -288,13 +346,15 @@
         #endregion
 
         private KimTools.WinForms.KtLabel ktLabel8;
-        private KimTools.WinForms.KtComboBox ClassSubjectCmb;
+        private KimTools.WinForms.KtComboBox ClassNameCmb;
         private KimTools.WinForms.KtLabel ktLabel10;
         private KimTools.WinForms.KtLabel ktLabel12;
         private KimTools.WinForms.KtButton AddExamBtn;
         private KimTools.WinForms.KtTextBox ExamNameTxb;
         private KimTools.WinForms.KtLabel ktLabel1;
         private KimTools.WinForms.KtTextBox DurationTxb;
-        private KimTools.WinForms.KtDate ktDate1;
+        private KimTools.WinForms.KtDate ExamDate;
+        private KimTools.WinForms.KtComboBox ClassSubjectCmb;
+        private KimTools.WinForms.KtLabel ktLabel2;
     }
 }

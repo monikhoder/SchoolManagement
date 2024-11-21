@@ -195,10 +195,10 @@
             this.MainPages.Multiline = true;
             this.MainPages.Name = "MainPages";
             this.MainPages.Padding = new System.Drawing.Point(10, 10);
-            this.MainPages.Page = this.Users;
-            this.MainPages.PageIndex = 3;
-            this.MainPages.PageName = "Users";
-            this.MainPages.PageTitle = "Users";
+            this.MainPages.Page = this.Profile;
+            this.MainPages.PageIndex = 4;
+            this.MainPages.PageName = "Profile";
+            this.MainPages.PageTitle = "Profile";
             this.MainPages.SelectedIndex = 0;
             this.MainPages.Size = new System.Drawing.Size(1194, 622);
             this.MainPages.TabIndex = 1;
@@ -2037,7 +2037,7 @@
             this.ktSpinner2.Font = new System.Drawing.Font("Verdana", 8F);
             this.Icons.SetIcons(this.ktSpinner2, new KimTools.WinForms.KtIcon[0]);
             this.ktSpinner2.Image = null;
-            this.ktSpinner2.Location = new System.Drawing.Point(-944, -595);
+            this.ktSpinner2.Location = new System.Drawing.Point(-1441, -880);
             this.ktSpinner2.Name = "ktSpinner2";
             this.ktSpinner2.NoRounding = false;
             this.ktSpinner2.Preset = KimTools.WinForms.KtSpinner.Presets.Solid;
@@ -2067,7 +2067,7 @@
             this.ktSpinner1.Font = new System.Drawing.Font("Verdana", 8F);
             this.Icons.SetIcons(this.ktSpinner1, new KimTools.WinForms.KtIcon[0]);
             this.ktSpinner1.Image = null;
-            this.ktSpinner1.Location = new System.Drawing.Point(-2935, -1748);
+            this.ktSpinner1.Location = new System.Drawing.Point(-3432, -2033);
             this.ktSpinner1.Name = "ktSpinner1";
             this.ktSpinner1.NoRounding = false;
             this.ktSpinner1.Preset = KimTools.WinForms.KtSpinner.Presets.Solid;

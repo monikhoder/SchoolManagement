@@ -19,12 +19,12 @@ namespace SchoolManagement.DBAccess
         // Validate user credentials by return user ID
         public int ValidateUser(string username, string password)
         {
-            int userID = db.Users.Where(u => u.Username == username && u.Password == password).Select(u => u.Id).FirstOrDefault();
-            if (userID > 0)
-            {
-                return userID;
-            }          
-            return -1;
+          
+                int userID = db.Users.Where(u => u.Username == username && u.Password == password)
+                                     .Select(u => u.Id)
+                                     .FirstOrDefault();
+                return userID > 0 ? userID : -1;
+           
         }
         // Get User Role by Id
         public string GetUserRole(int userId)

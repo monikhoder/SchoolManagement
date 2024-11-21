@@ -10,11 +10,11 @@ namespace SchoolManagement.DBAccess
     
     public class CrudClassroom
     {
-        SchoolDBEntities db = new SchoolDBEntities();
-        //private readonly SchoolDBEntities db;
+
+        private readonly SchoolDBEntities db;
         public CrudClassroom()
         {
-            //db = new SchoolDBEntities();
+            db = new SchoolDBEntities();
         }
         public void AddClassroom(string name , DateTime startDate , DateTime endDate)
         {
@@ -133,5 +133,22 @@ namespace SchoolManagement.DBAccess
                      .Where(ce => ce.Classroom.Name.StartsWith(name))
                      .ToList();
         }
+        // Get Class Subject by class ID
+        public List<SubjectData> GetClassSubjectByClassId(int classId)
+        {
+            return db.ClassSubjects
+                .Where(cs => cs.ClassroomId == classId)
+                .Select(cs => new SubjectData
+                {
+                    Id = cs.SubjectId,
+                    Name = cs.Subject.Name
+                })
+                .ToList();           
+        }
+    }
+    public class SubjectData
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
     }
 }

@@ -88,7 +88,7 @@ namespace SchoolManagement
 
         private void BtnLogin_Click(object sender, EventArgs e)
         {
-            int userId = userdb.ValidateUser(UsernameTxb.Text, PasswordTxb.Text);
+           int userId = userdb.ValidateUser(UsernameTxb.Text.ToLower(), PasswordTxb.Text);
 
             if (userId <= 0)
             {
