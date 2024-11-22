@@ -20,12 +20,15 @@ namespace SchoolManagement.Pages
     {
         CrudUsers userdb = new CrudUsers();
         CrudClassroom classroom = new CrudClassroom();
+        CrudExam crudexam = new CrudExam();
         private readonly int userId = -1;
         public FrmAdmin(int UserId)
         {
             InitializeComponent();
             userId = UserId;
-            
+            StudentCountTxb.Text = userdb.StudentCount().ToString();
+            TeacherCountTxb.Text = userdb.TeacherCount().ToString();
+            ClassCountTxb.Text = classroom.GetClassCount().ToString();
         }
         private void AddBtn_Click(object sender, EventArgs e)
         {
@@ -199,6 +202,29 @@ namespace SchoolManagement.Pages
         {
             AddExam addExam = new AddExam();
             addExam.ShowDialog();
+        }
+        private void LoadExamList()
+        {
+           ExamsTbl.Rows.Clear();
+           var exams = crudexam.GetExamList();
+            int num = 1;
+            foreach (var exam in exams)
+            {
+                
+                var examTbl = ExamsTbl.NewRow();
+                examTbl["No"] = num++;
+                examTbl["ExamName"] = exam.Name;
+                examTbl["ClassRoom"] = exam.Classroom;
+                examTbl["Subject"] = exam.Subject;
+                examTbl["Teacher"] = exam.Teacher;
+                examTbl["ExamDate"] = exam.ExamDate.ToShortDateString();
+                examTbl["Duration"] = exam.Duration;
+            }
+        }
+
+        private void ExamsTbl_Load(object sender, EventArgs e)
+        {
+            LoadExamList();
         }
     }
 }

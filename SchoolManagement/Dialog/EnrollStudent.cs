@@ -44,17 +44,19 @@ namespace SchoolManagement.Dialog
 
         private void EnrollBtn_Click(object sender, EventArgs e)
         {
-            int classId = (int)ClassNameCmb.SelectedValue;
-            int studentId = (int)StudentCmb.SelectedValue;
+            int classId = Convert.ToInt32(ClassNameCmb.SelectedValue);
+            int studentId = Convert.ToInt32(StudentCmb.SelectedValue);
+
             try
             {
-                crudClassroom.EnrollStudent(classId,studentId);
+                crudClassroom.EnrollStudent(classId, studentId);
                 AlertDialogs alertDialogs = new AlertDialogs();
                 alertDialogs.AlertLbl.Text = "Student Enrolled Successfully";
                 alertDialogs.AlertIcon.Image = Properties.Resources._checked;
                 alertDialogs.AlertLbl.LabelColor = KtColor.Tailwind_Violet;
                 alertDialogs.ShowDialog();
-            }catch (Exception ex)
+            }
+            catch (Exception ex)
             {
                 AlertDialogs alertDialogs = new AlertDialogs();
                 alertDialogs.AlertLbl.Text = ex.Message;
