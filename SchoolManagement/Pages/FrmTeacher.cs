@@ -21,8 +21,6 @@ namespace SchoolManagement.Pages
             userId = UserId;
         }
 
-
-
         private void BtnLogout_Click(object sender, EventArgs e)
         {
            this.Hide();
@@ -30,7 +28,6 @@ namespace SchoolManagement.Pages
            frmLogin.ShowDialog();
 
         }
-
         private void Logo_Click(object sender, EventArgs e)
         {
             if (LeftBarTeacher.Width == 63)
