@@ -36,7 +36,7 @@ namespace SchoolManagement.Pages
         {
             await SetLoadingpage("Profile");
 
-            FrmProfile frmProfile = new FrmProfile();
+            FrmProfile frmProfile = new FrmProfile(userId);
             frmProfile.TopLevel = false;
             frmProfile.Dock = DockStyle.Fill;
 

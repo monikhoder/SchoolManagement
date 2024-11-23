@@ -229,6 +229,7 @@
             this.AddressTxb.CustomIconRight = null;
             this.AddressTxb.CustomPlaceholderColor = System.Drawing.Color.Empty;
             this.AddressTxb.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.AddressTxb.Enabled = false;
             this.AddressTxb.ForeColor = System.Drawing.Color.Empty;
             this.AddressTxb.HideSelection = true;
             this.AddressTxb.Lines = new string[0];
@@ -270,6 +271,7 @@
             this.LastNameTxb.CustomIconRight = null;
             this.LastNameTxb.CustomPlaceholderColor = System.Drawing.Color.Empty;
             this.LastNameTxb.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.LastNameTxb.Enabled = false;
             this.LastNameTxb.ForeColor = System.Drawing.Color.Empty;
             this.LastNameTxb.HideSelection = true;
             this.LastNameTxb.Lines = new string[0];
@@ -311,6 +313,7 @@
             this.FirstNameTxb.CustomIconRight = null;
             this.FirstNameTxb.CustomPlaceholderColor = System.Drawing.Color.Empty;
             this.FirstNameTxb.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.FirstNameTxb.Enabled = false;
             this.FirstNameTxb.ForeColor = System.Drawing.Color.Empty;
             this.FirstNameTxb.HideSelection = true;
             this.FirstNameTxb.Lines = new string[0];
@@ -352,6 +355,7 @@
             this.PhoneNumberTxb.CustomIconRight = null;
             this.PhoneNumberTxb.CustomPlaceholderColor = System.Drawing.Color.Empty;
             this.PhoneNumberTxb.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.PhoneNumberTxb.Enabled = false;
             this.PhoneNumberTxb.ForeColor = System.Drawing.Color.Empty;
             this.PhoneNumberTxb.HideSelection = true;
             this.PhoneNumberTxb.Lines = new string[0];

@@ -157,6 +157,11 @@ namespace SchoolManagement.DBAccess
         {
             return db.Classrooms.Count();
         }
+        // Get Subject count by class ID
+        public int GetSubjectCountByClassId(int classId)
+        {
+            return db.ClassSubjects.Count(cs => cs.ClassroomId == classId);
+        }
     }
     public class SubjectData
     {
