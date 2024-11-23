@@ -6,6 +6,7 @@ using System.Data.Entity;
 using System.Drawing;
 using System.Linq;
 using System.Runtime.InteropServices;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -18,15 +19,14 @@ namespace SchoolManagement.Pages
     public partial class FrmTeacher : KtWindow
     {
         private int userId = -1;
-
-        CrudClassroom crudClassroom = new CrudClassroom();
-
+        private SchoolDBEntities dbContext;
         public FrmTeacher(int UserId)
         {
             InitializeComponent();
+            dbContext = new SchoolDBEntities();
             userId = UserId;
             UsernameDisplay(userId);
-            //LoadClassSubject();
+            LoadComboBox();
         }
 
         private void UsernameDisplay(int UserId)
@@ -34,16 +34,22 @@ namespace SchoolManagement.Pages
             //userId = UserId;    
             ktLabelUsername.Text = UserId.ToString();
         }
-        private void LoadClassSubject()
+        private void LoadComboBox()
         {
-            using ( var context = new SchoolDBEntities())
+            foreach ( Subject s in dbContext.Subjects )
             {
-                var classSubjects = context.ClassSubjects.Include(cs => cs.Subject).ToList();
-                ktcmbClassSubject.DataSource = classSubjects;
-                ktcmbClassSubject.DisplayMember = "Subject.Name";
-                ktcmbClassSubject.ValueMember = "Id";
+                ktcmbClassSubject.Items.Add( s.Name );
             }
+
+            foreach (Classroom c in dbContext.Classrooms)
+            {
+                ktcmbClassName.Items.Add( c.Name );
+            }
+
+
+
         }
+
         private void ktLabelLogout_Click(object sender, EventArgs e)
         {
             this.Hide();

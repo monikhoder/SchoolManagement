@@ -50,7 +50,7 @@
             this.ktLabel8.KtFontSize = KimTools.WinForms.KtFont.Default;
             this.ktLabel8.Location = new System.Drawing.Point(80, 246);
             this.ktLabel8.Name = "ktLabel8";
-            this.ktLabel8.Size = new System.Drawing.Size(99, 25);
+            this.ktLabel8.Size = new System.Drawing.Size(82, 20);
             this.ktLabel8.TabIndex = 61;
             this.ktLabel8.Text = "Exam Date";
             // 
@@ -105,7 +105,7 @@
             this.ktLabel10.KtFontSize = KimTools.WinForms.KtFont.Default;
             this.ktLabel10.Location = new System.Drawing.Point(80, 108);
             this.ktLabel10.Name = "ktLabel10";
-            this.ktLabel10.Size = new System.Drawing.Size(107, 25);
+            this.ktLabel10.Size = new System.Drawing.Size(87, 20);
             this.ktLabel10.TabIndex = 58;
             this.ktLabel10.Text = "Class Name";
             // 
@@ -117,7 +117,7 @@
             this.ktLabel12.KtFontSize = KimTools.WinForms.KtFont.Default;
             this.ktLabel12.Location = new System.Drawing.Point(80, 40);
             this.ktLabel12.Name = "ktLabel12";
-            this.ktLabel12.Size = new System.Drawing.Size(109, 25);
+            this.ktLabel12.Size = new System.Drawing.Size(91, 20);
             this.ktLabel12.TabIndex = 56;
             this.ktLabel12.Text = "Exam Name";
             // 
@@ -195,7 +195,7 @@
             this.ktLabel1.KtFontSize = KimTools.WinForms.KtFont.Default;
             this.ktLabel1.Location = new System.Drawing.Point(80, 316);
             this.ktLabel1.Name = "ktLabel1";
-            this.ktLabel1.Size = new System.Drawing.Size(86, 25);
+            this.ktLabel1.Size = new System.Drawing.Size(70, 20);
             this.ktLabel1.TabIndex = 63;
             this.ktLabel1.Text = "Duration";
             // 
@@ -316,15 +316,15 @@
             this.ktLabel2.KtFontSize = KimTools.WinForms.KtFont.Default;
             this.ktLabel2.Location = new System.Drawing.Point(80, 178);
             this.ktLabel2.Name = "ktLabel2";
-            this.ktLabel2.Size = new System.Drawing.Size(120, 25);
+            this.ktLabel2.Size = new System.Drawing.Size(96, 20);
             this.ktLabel2.TabIndex = 66;
             this.ktLabel2.Text = "Class Subject";
             // 
             // AddExam
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(568, 391);
+            this.ClientSize = new System.Drawing.Size(568, 430);
             this.Controls.Add(this.ClassSubjectCmb);
             this.Controls.Add(this.ktLabel2);
             this.Controls.Add(this.ExamDate);

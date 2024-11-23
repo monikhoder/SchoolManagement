@@ -32,20 +32,17 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmTeacher));
             this.MenuTooltips = new KimTools.WinForms.KtTooltips(this.components);
             this.TopBarPanel = new KimTools.WinForms.KtPanel();
-            this.PageLbl = new KimTools.WinForms.KtLabel();
-            this.Icons = new KimTools.WinForms.KtIcons();
-            this.ktLabelLogout = new KimTools.WinForms.KtLabel();
             this.ktLabelUsername = new KimTools.WinForms.KtLabel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.ktcmbClassSubject = new KimTools.WinForms.KtComboBox();
-            this.ktLabel1 = new KimTools.WinForms.KtLabel();
-            this.ktComboBox2 = new KimTools.WinForms.KtComboBox();
+            this.ktLabelLogout = new KimTools.WinForms.KtLabel();
+            this.PageLbl = new KimTools.WinForms.KtLabel();
             this.ktLabel2 = new KimTools.WinForms.KtLabel();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.ktcmbClassName = new KimTools.WinForms.KtComboBox();
+            this.ktLabel1 = new KimTools.WinForms.KtLabel();
+            this.ktcmbClassSubject = new KimTools.WinForms.KtComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.ktLabel3 = new KimTools.WinForms.KtLabel();
+            this.Icons = new KimTools.WinForms.KtIcons();
             this.TopBarPanel.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -97,9 +94,44 @@
             this.TopBarPanel.Location = new System.Drawing.Point(10, 10);
             this.TopBarPanel.Name = "TopBarPanel";
             this.TopBarPanel.ShowBorders = true;
-            this.TopBarPanel.Size = new System.Drawing.Size(967, 56);
+            this.TopBarPanel.Size = new System.Drawing.Size(1414, 56);
             this.TopBarPanel.TabIndex = 2;
             this.MenuTooltips.SetToolTip(this.TopBarPanel, "");
+            // 
+            // ktLabelUsername
+            // 
+            this.ktLabelUsername.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.ktLabelUsername.AutoSize = true;
+            this.ktLabelUsername.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold);
+            this.ktLabelUsername.ForeColor = System.Drawing.Color.White;
+            this.Icons.SetIcons(this.ktLabelUsername, new KimTools.WinForms.KtIcon[0]);
+            this.ktLabelUsername.KtFontSize = KimTools.WinForms.KtFont.H2;
+            this.ktLabelUsername.LabelColor = KimTools.WinForms.KtColor.Tailwind_White;
+            this.ktLabelUsername.Location = new System.Drawing.Point(144, 14);
+            this.ktLabelUsername.Name = "ktLabelUsername";
+            this.ktLabelUsername.Size = new System.Drawing.Size(124, 32);
+            this.ktLabelUsername.TabIndex = 4;
+            this.ktLabelUsername.Text = "Username";
+            this.MenuTooltips.SetToolTip(this.ktLabelUsername, "");
+            // 
+            // ktLabelLogout
+            // 
+            this.ktLabelLogout.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ktLabelLogout.AutoSize = true;
+            this.ktLabelLogout.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold);
+            this.ktLabelLogout.ForeColor = System.Drawing.Color.White;
+            this.Icons.SetIcons(this.ktLabelLogout, new KimTools.WinForms.KtIcon[0]);
+            this.ktLabelLogout.KtFontSize = KimTools.WinForms.KtFont.H2;
+            this.ktLabelLogout.LabelColor = KimTools.WinForms.KtColor.Tailwind_White;
+            this.ktLabelLogout.Location = new System.Drawing.Point(1309, 14);
+            this.ktLabelLogout.Name = "ktLabelLogout";
+            this.ktLabelLogout.Size = new System.Drawing.Size(91, 32);
+            this.ktLabelLogout.TabIndex = 3;
+            this.ktLabelLogout.Text = "Logout";
+            this.MenuTooltips.SetToolTip(this.ktLabelLogout, "");
+            this.ktLabelLogout.Click += new System.EventHandler(this.ktLabelLogout_Click);
             // 
             // PageLbl
             // 
@@ -113,70 +145,88 @@
             this.PageLbl.LabelColor = KimTools.WinForms.KtColor.Tailwind_White;
             this.PageLbl.Location = new System.Drawing.Point(24, 14);
             this.PageLbl.Name = "PageLbl";
-            this.PageLbl.Size = new System.Drawing.Size(92, 25);
+            this.PageLbl.Size = new System.Drawing.Size(114, 32);
             this.PageLbl.TabIndex = 0;
             this.PageLbl.Text = "Welcome";
             this.MenuTooltips.SetToolTip(this.PageLbl, "");
             // 
-            // Icons
+            // ktLabel2
             // 
-            this.Icons.Icon = "Hero.outline.user-group";
-            this.Icons.IconColor = System.Drawing.Color.White;
-            this.Icons.IconPadding = 0;
-            this.Icons.IconSize = 128;
-            this.Icons.ImageListBinding = null;
-            this.Icons.Property = null;
-            this.Icons.Stroke = 1D;
-            // 
-            // ktLabelLogout
-            // 
-            this.ktLabelLogout.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.ktLabelLogout.AutoSize = true;
-            this.ktLabelLogout.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold);
-            this.ktLabelLogout.ForeColor = System.Drawing.Color.White;
-            this.Icons.SetIcons(this.ktLabelLogout, new KimTools.WinForms.KtIcon[0]);
-            this.ktLabelLogout.KtFontSize = KimTools.WinForms.KtFont.H2;
-            this.ktLabelLogout.LabelColor = KimTools.WinForms.KtColor.Tailwind_White;
-            this.ktLabelLogout.Location = new System.Drawing.Point(879, 14);
-            this.ktLabelLogout.Name = "ktLabelLogout";
-            this.ktLabelLogout.Size = new System.Drawing.Size(72, 25);
-            this.ktLabelLogout.TabIndex = 3;
-            this.ktLabelLogout.Text = "Logout";
-            this.MenuTooltips.SetToolTip(this.ktLabelLogout, "");
-            this.ktLabelLogout.Click += new System.EventHandler(this.ktLabelLogout_Click);
-            // 
-            // ktLabelUsername
-            // 
-            this.ktLabelUsername.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.ktLabel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.ktLabelUsername.AutoSize = true;
-            this.ktLabelUsername.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold);
-            this.ktLabelUsername.ForeColor = System.Drawing.Color.White;
-            this.Icons.SetIcons(this.ktLabelUsername, new KimTools.WinForms.KtIcon[0]);
-            this.ktLabelUsername.KtFontSize = KimTools.WinForms.KtFont.H2;
-            this.ktLabelUsername.LabelColor = KimTools.WinForms.KtColor.Tailwind_White;
-            this.ktLabelUsername.Location = new System.Drawing.Point(132, 14);
-            this.ktLabelUsername.Name = "ktLabelUsername";
-            this.ktLabelUsername.Size = new System.Drawing.Size(98, 25);
-            this.ktLabelUsername.TabIndex = 4;
-            this.ktLabelUsername.Text = "Username";
-            this.MenuTooltips.SetToolTip(this.ktLabelUsername, "");
+            this.ktLabel2.AutoSize = true;
+            this.ktLabel2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.ktLabel2.ForeColor = System.Drawing.Color.Black;
+            this.Icons.SetIcons(this.ktLabel2, new KimTools.WinForms.KtIcon[0]);
+            this.ktLabel2.KtFontSize = KimTools.WinForms.KtFont.H3;
+            this.ktLabel2.LabelColor = KimTools.WinForms.KtColor.Tailwind_Black;
+            this.ktLabel2.Location = new System.Drawing.Point(96, 223);
+            this.ktLabel2.Name = "ktLabel2";
+            this.ktLabel2.Size = new System.Drawing.Size(60, 28);
+            this.ktLabel2.TabIndex = 3;
+            this.ktLabel2.Text = "Exam";
+            this.MenuTooltips.SetToolTip(this.ktLabel2, "");
             // 
-            // panel1
+            // ktcmbClassName
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.ktcmbClassName.BackColor = System.Drawing.Color.Transparent;
+            this.ktcmbClassName.BackgroundColor = System.Drawing.Color.White;
+            this.ktcmbClassName.BorderColor = System.Drawing.Color.Silver;
+            this.ktcmbClassName.BorderRadius = 1;
+            this.ktcmbClassName.Color = System.Drawing.Color.Silver;
+            this.ktcmbClassName.Direction = KimTools.WinForms.KtComboBox.Directions.Down;
+            this.ktcmbClassName.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.ktcmbClassName.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.ktcmbClassName.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.ktcmbClassName.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.ktcmbClassName.DisabledIndicatorColor = System.Drawing.Color.DarkGray;
+            this.ktcmbClassName.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.ktcmbClassName.DropdownBorderThickness = KimTools.WinForms.KtComboBox.BorderThickness.Thin;
+            this.ktcmbClassName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ktcmbClassName.DropDownTextAlign = KimTools.WinForms.KtComboBox.TextAlign.Left;
+            this.ktcmbClassName.FillDropDown = true;
+            this.ktcmbClassName.FillIndicator = false;
+            this.ktcmbClassName.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ktcmbClassName.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.ktcmbClassName.ForeColor = System.Drawing.Color.Black;
+            this.ktcmbClassName.FormattingEnabled = true;
+            this.ktcmbClassName.Icon = null;
+            this.Icons.SetIcons(this.ktcmbClassName, new KimTools.WinForms.KtIcon[0]);
+            this.ktcmbClassName.IndicatorAlignment = KimTools.WinForms.KtComboBox.Indicator.Right;
+            this.ktcmbClassName.IndicatorColor = System.Drawing.Color.Gray;
+            this.ktcmbClassName.IndicatorLocation = KimTools.WinForms.KtComboBox.Indicator.Right;
+            this.ktcmbClassName.ItemBackColor = System.Drawing.Color.White;
+            this.ktcmbClassName.ItemBorderColor = System.Drawing.Color.White;
+            this.ktcmbClassName.ItemForeColor = System.Drawing.Color.Black;
+            this.ktcmbClassName.ItemHeight = 26;
+            this.ktcmbClassName.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
+            this.ktcmbClassName.ItemHighLightForeColor = System.Drawing.Color.White;
+            this.ktcmbClassName.ItemTopMargin = 3;
+            this.ktcmbClassName.Location = new System.Drawing.Point(176, 173);
+            this.ktcmbClassName.Name = "ktcmbClassName";
+            this.ktcmbClassName.Size = new System.Drawing.Size(295, 32);
+            this.ktcmbClassName.TabIndex = 2;
+            this.ktcmbClassName.Text = null;
+            this.ktcmbClassName.TextAlignment = KimTools.WinForms.KtComboBox.TextAlign.Left;
+            this.ktcmbClassName.TextLeftMargin = 5;
+            this.MenuTooltips.SetToolTip(this.ktcmbClassName, "");
+            // 
+            // ktLabel1
+            // 
+            this.ktLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.panel1.Controls.Add(this.ktLabel2);
-            this.panel1.Controls.Add(this.ktComboBox2);
-            this.panel1.Controls.Add(this.ktLabel1);
-            this.panel1.Controls.Add(this.ktcmbClassSubject);
-            this.Icons.SetIcons(this.panel1, new KimTools.WinForms.KtIcon[0]);
-            this.panel1.Location = new System.Drawing.Point(13, 98);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(452, 330);
-            this.panel1.TabIndex = 3;
-            this.MenuTooltips.SetToolTip(this.panel1, "");
+            this.ktLabel1.AutoSize = true;
+            this.ktLabel1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.ktLabel1.ForeColor = System.Drawing.Color.Black;
+            this.Icons.SetIcons(this.ktLabel1, new KimTools.WinForms.KtIcon[0]);
+            this.ktLabel1.KtFontSize = KimTools.WinForms.KtFont.H3;
+            this.ktLabel1.LabelColor = KimTools.WinForms.KtColor.Tailwind_Black;
+            this.ktLabel1.Location = new System.Drawing.Point(99, 173);
+            this.ktLabel1.Name = "ktLabel1";
+            this.ktLabel1.Size = new System.Drawing.Size(57, 28);
+            this.ktLabel1.TabIndex = 1;
+            this.ktLabel1.Text = "Class";
+            this.MenuTooltips.SetToolTip(this.ktLabel1, "");
             // 
             // ktcmbClassSubject
             // 
@@ -213,120 +263,64 @@
             this.ktcmbClassSubject.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
             this.ktcmbClassSubject.ItemHighLightForeColor = System.Drawing.Color.White;
             this.ktcmbClassSubject.ItemTopMargin = 3;
-            this.ktcmbClassSubject.Location = new System.Drawing.Point(132, 17);
+            this.ktcmbClassSubject.Location = new System.Drawing.Point(179, 118);
             this.ktcmbClassSubject.Name = "ktcmbClassSubject";
             this.ktcmbClassSubject.Size = new System.Drawing.Size(292, 32);
             this.ktcmbClassSubject.TabIndex = 0;
+            this.ktcmbClassSubject.Text = null;
             this.ktcmbClassSubject.TextAlignment = KimTools.WinForms.KtComboBox.TextAlign.Left;
             this.ktcmbClassSubject.TextLeftMargin = 5;
             this.MenuTooltips.SetToolTip(this.ktcmbClassSubject, "");
-            // 
-            // ktLabel1
-            // 
-            this.ktLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.ktLabel1.AutoSize = true;
-            this.ktLabel1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.ktLabel1.ForeColor = System.Drawing.Color.Black;
-            this.Icons.SetIcons(this.ktLabel1, new KimTools.WinForms.KtIcon[0]);
-            this.ktLabel1.KtFontSize = KimTools.WinForms.KtFont.H3;
-            this.ktLabel1.LabelColor = KimTools.WinForms.KtColor.Tailwind_Black;
-            this.ktLabel1.Location = new System.Drawing.Point(21, 22);
-            this.ktLabel1.Name = "ktLabel1";
-            this.ktLabel1.Size = new System.Drawing.Size(105, 21);
-            this.ktLabel1.TabIndex = 1;
-            this.ktLabel1.Text = "Class Subject";
-            this.MenuTooltips.SetToolTip(this.ktLabel1, "");
-            // 
-            // ktComboBox2
-            // 
-            this.ktComboBox2.BackColor = System.Drawing.Color.Transparent;
-            this.ktComboBox2.BackgroundColor = System.Drawing.Color.White;
-            this.ktComboBox2.BorderColor = System.Drawing.Color.Silver;
-            this.ktComboBox2.BorderRadius = 1;
-            this.ktComboBox2.Color = System.Drawing.Color.Silver;
-            this.ktComboBox2.Direction = KimTools.WinForms.KtComboBox.Directions.Down;
-            this.ktComboBox2.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.ktComboBox2.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.ktComboBox2.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.ktComboBox2.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.ktComboBox2.DisabledIndicatorColor = System.Drawing.Color.DarkGray;
-            this.ktComboBox2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.ktComboBox2.DropdownBorderThickness = KimTools.WinForms.KtComboBox.BorderThickness.Thin;
-            this.ktComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ktComboBox2.DropDownTextAlign = KimTools.WinForms.KtComboBox.TextAlign.Left;
-            this.ktComboBox2.FillDropDown = true;
-            this.ktComboBox2.FillIndicator = false;
-            this.ktComboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ktComboBox2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.ktComboBox2.ForeColor = System.Drawing.Color.Black;
-            this.ktComboBox2.FormattingEnabled = true;
-            this.ktComboBox2.Icon = null;
-            this.Icons.SetIcons(this.ktComboBox2, new KimTools.WinForms.KtIcon[0]);
-            this.ktComboBox2.IndicatorAlignment = KimTools.WinForms.KtComboBox.Indicator.Right;
-            this.ktComboBox2.IndicatorColor = System.Drawing.Color.Gray;
-            this.ktComboBox2.IndicatorLocation = KimTools.WinForms.KtComboBox.Indicator.Right;
-            this.ktComboBox2.ItemBackColor = System.Drawing.Color.White;
-            this.ktComboBox2.ItemBorderColor = System.Drawing.Color.White;
-            this.ktComboBox2.ItemForeColor = System.Drawing.Color.Black;
-            this.ktComboBox2.ItemHeight = 26;
-            this.ktComboBox2.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
-            this.ktComboBox2.ItemHighLightForeColor = System.Drawing.Color.White;
-            this.ktComboBox2.ItemTopMargin = 3;
-            this.ktComboBox2.Location = new System.Drawing.Point(132, 71);
-            this.ktComboBox2.Name = "ktComboBox2";
-            this.ktComboBox2.Size = new System.Drawing.Size(295, 32);
-            this.ktComboBox2.TabIndex = 2;
-            this.ktComboBox2.TextAlignment = KimTools.WinForms.KtComboBox.TextAlign.Left;
-            this.ktComboBox2.TextLeftMargin = 5;
-            this.MenuTooltips.SetToolTip(this.ktComboBox2, "");
-            // 
-            // ktLabel2
-            // 
-            this.ktLabel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.ktLabel2.AutoSize = true;
-            this.ktLabel2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.ktLabel2.ForeColor = System.Drawing.Color.Black;
-            this.Icons.SetIcons(this.ktLabel2, new KimTools.WinForms.KtIcon[0]);
-            this.ktLabel2.KtFontSize = KimTools.WinForms.KtFont.H3;
-            this.ktLabel2.LabelColor = KimTools.WinForms.KtColor.Tailwind_Black;
-            this.ktLabel2.Location = new System.Drawing.Point(56, 72);
-            this.ktLabel2.Name = "ktLabel2";
-            this.ktLabel2.Size = new System.Drawing.Size(57, 21);
-            this.ktLabel2.TabIndex = 3;
-            this.ktLabel2.Text = "Exame";
-            this.MenuTooltips.SetToolTip(this.ktLabel2, "");
-            // 
-            // panel2
-            // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.panel2.Controls.Add(this.dataGridView1);
-            this.Icons.SetIcons(this.panel2, new KimTools.WinForms.KtIcon[0]);
-            this.panel2.Location = new System.Drawing.Point(492, 98);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(452, 330);
-            this.panel2.TabIndex = 4;
-            this.MenuTooltips.SetToolTip(this.panel2, "");
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Icons.SetIcons(this.dataGridView1, new KimTools.WinForms.KtIcon[0]);
-            this.dataGridView1.Location = new System.Drawing.Point(3, 3);
+            this.dataGridView1.Location = new System.Drawing.Point(652, 118);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(446, 324);
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.Size = new System.Drawing.Size(609, 532);
             this.dataGridView1.TabIndex = 0;
             this.MenuTooltips.SetToolTip(this.dataGridView1, "");
             // 
+            // ktLabel3
+            // 
+            this.ktLabel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.ktLabel3.AutoSize = true;
+            this.ktLabel3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.ktLabel3.ForeColor = System.Drawing.Color.Black;
+            this.Icons.SetIcons(this.ktLabel3, new KimTools.WinForms.KtIcon[0]);
+            this.ktLabel3.KtFontSize = KimTools.WinForms.KtFont.H3;
+            this.ktLabel3.LabelColor = KimTools.WinForms.KtColor.Tailwind_Black;
+            this.ktLabel3.Location = new System.Drawing.Point(77, 118);
+            this.ktLabel3.Name = "ktLabel3";
+            this.ktLabel3.Size = new System.Drawing.Size(79, 28);
+            this.ktLabel3.TabIndex = 4;
+            this.ktLabel3.Text = "Subject";
+            this.MenuTooltips.SetToolTip(this.ktLabel3, "");
+            // 
+            // Icons
+            // 
+            this.Icons.Icon = "Hero.outline.user-group";
+            this.Icons.IconColor = System.Drawing.Color.White;
+            this.Icons.IconPadding = 0;
+            this.Icons.IconSize = 128;
+            this.Icons.ImageListBinding = null;
+            this.Icons.Property = null;
+            this.Icons.Stroke = 1D;
+            // 
             // FrmTeacher
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(987, 465);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
+            this.ClientSize = new System.Drawing.Size(1434, 904);
+            this.Controls.Add(this.ktLabel3);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.ktLabel2);
+            this.Controls.Add(this.ktcmbClassName);
+            this.Controls.Add(this.ktLabel1);
+            this.Controls.Add(this.ktcmbClassSubject);
             this.Controls.Add(this.TopBarPanel);
             this.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
             this.ForeColor = System.Drawing.Color.Black;
@@ -340,11 +334,9 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.TopBarPanel.ResumeLayout(false);
             this.TopBarPanel.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -355,12 +347,11 @@
         private KimTools.WinForms.KtLabel PageLbl;
         private KimTools.WinForms.KtLabel ktLabelUsername;
         private KimTools.WinForms.KtLabel ktLabelLogout;
-        private System.Windows.Forms.Panel panel1;
         private KimTools.WinForms.KtLabel ktLabel2;
-        private KimTools.WinForms.KtComboBox ktComboBox2;
+        private KimTools.WinForms.KtComboBox ktcmbClassName;
         private KimTools.WinForms.KtLabel ktLabel1;
         private KimTools.WinForms.KtComboBox ktcmbClassSubject;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private KimTools.WinForms.KtLabel ktLabel3;
     }
 }
