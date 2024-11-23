@@ -59,6 +59,7 @@ namespace SchoolManagement.DBAccess
         {
             return db.Subjects.ToList();
         }
+       
         // Get class Count by subject ID
         public int GetClassCountBySubjectId(int subjectId)
         {
@@ -95,6 +96,11 @@ namespace SchoolManagement.DBAccess
             if (db.ClassEnrollments.Any(e => e.ClassroomId == classId && e.StudentId == studentId))
             {
                 throw new Exception("Student already enrolled in this class.");
+            }
+            // Check if class is not completed
+            if (db.Classrooms.Any(c => c.Id == classId && c.EndDate < DateTime.Now))
+            {
+                throw new Exception("Class is already completed can not enroll student");
             }
 
             var enrollment = new ClassEnrollment()
@@ -133,6 +139,7 @@ namespace SchoolManagement.DBAccess
                      .Where(ce => ce.Classroom.Name.StartsWith(name))
                      .ToList();
         }
+       
         // Get Class Subject by class ID
         public List<SubjectData> GetClassSubjectByClassId(int classId)
         {
@@ -140,10 +147,15 @@ namespace SchoolManagement.DBAccess
                 .Where(cs => cs.ClassroomId == classId)
                 .Select(cs => new SubjectData
                 {
-                    Id = cs.SubjectId,
+                    Id = cs.Id,
                     Name = cs.Subject.Name
                 })
                 .ToList();           
+        }
+        // Get class count
+        public int GetClassCount()
+        {
+            return db.Classrooms.Count();
         }
     }
     public class SubjectData

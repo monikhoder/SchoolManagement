@@ -110,6 +110,16 @@ namespace SchoolManagement.DBAccess
         {
             return db.Students.Where(s =>  s.FirstName.Contains(search) || s.LastName.Contains(search)).ToList();
         }
+        //Get Student Count
+        public int StudentCount()
+        {
+            return db.Students.Count();
+        }
+        //Get Teacher Count
+        public int TeacherCount()
+        {
+            return db.Teachers.Count();
+        }
     }
     
 }

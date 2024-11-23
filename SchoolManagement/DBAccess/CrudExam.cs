@@ -100,8 +100,38 @@ namespace SchoolManagement.DBAccess
                 Duration = duratin
             };
             db.Exams.Add(newExam);
-            db.SaveChanges();
-           
+            db.SaveChanges();           
         }
+        //Get exam list
+        public List<examlist> GetExamList()
+        {
+            var examList = (from e in db.Exams
+                            join cs in db.ClassSubjects on e.ClassSubjectId equals cs.Id
+                            join c in db.Classrooms on cs.ClassroomId equals c.Id
+                            join s in db.Subjects on cs.SubjectId equals s.Id
+                            join t in db.Teachers on cs.TeacherId equals t.Id
+                            select new examlist
+                            {
+                                Id = e.Id,
+                                Name = e.Name,
+                                Classroom = c.Name,
+                                Subject = s.Name,
+                                Teacher = t.FirstName + " " + t.LastName,
+                                ExamDate = e.ExamDate,
+                                Duration = e.Duration
+                            }).ToList();
+            return examList;
+        }
+        
+    }
+    public class examlist
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string Classroom { get; set; }
+        public string Subject { get; set; }
+        public string Teacher { get; set; }
+        public DateTime ExamDate { get; set; }
+        public int Duration { get; set; }
     }
 }

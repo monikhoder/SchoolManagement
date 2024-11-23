@@ -59,7 +59,7 @@ namespace SchoolManagement.Dialog
         {
             try
             {
-                int subjectId = ClassSubjectCmb.SelectedValue is int ? (int)ClassSubjectCmb.SelectedValue : 1;
+                int subjectId = Convert.ToInt32(ClassSubjectCmb.SelectedValue);
                 int duration = DurationTxb.Text.Length > 0 ? int.Parse(DurationTxb.Text) : 0;
                 exam.AddExam(ExamNameTxb.Text, subjectId, ExamDate.Value, duration);
 
@@ -103,6 +103,11 @@ namespace SchoolManagement.Dialog
             {
                 e.Handled = true;
             }
+        }
+
+        private void ClassSubjectCmb_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
