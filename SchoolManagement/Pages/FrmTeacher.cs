@@ -22,6 +22,7 @@ namespace SchoolManagement.Pages
         private SchoolDBEntities dbContext;
         public FrmTeacher(int UserId)
         {
+            this.ControlBox = false;
             InitializeComponent();
             dbContext = new SchoolDBEntities();
             userId = UserId;
@@ -36,25 +37,33 @@ namespace SchoolManagement.Pages
         }
         private void LoadComboBox()
         {
-            foreach ( Subject s in dbContext.Subjects )
-            {
-                ktcmbClassSubject.Items.Add( s.Name );
-            }
+            //foreach ( Subject s in dbContext.Subjects )
+            //{
+            //    ktcmbClassSubject.Items.Add( s.Name );
+            //}
 
-            foreach (Classroom c in dbContext.Classrooms)
-            {
-                ktcmbClassName.Items.Add( c.Name );
-            }
+            //foreach (Classroom c in dbContext.Classrooms)
+            //{
+            //    ktcmbClassName.Items.Add( c.Name );
+            //}
 
 
 
         }
 
-        private void ktLabelLogout_Click(object sender, EventArgs e)
+        private void ktButton9_Click(object sender, EventArgs e)
         {
             this.Hide();
             FrmLogin frmLogin = new FrmLogin();
             frmLogin.ShowDialog();
+        }
+
+
+        private void btnteachingClass_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            TeachingClass teachingClass = new TeachingClass();
+            teachingClass.ShowDialog();
         }
     }
 }

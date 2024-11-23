@@ -59,6 +59,7 @@ namespace SchoolManagement
             //}
 
             Application.Run(new FrmTeacher(1));
+           
         }
     }
 }
