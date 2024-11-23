@@ -8,24 +8,35 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using KimTools.WinForms;
+using SchoolManagement.DBAccess;
 
 namespace SchoolManagement.Pages
 {
     public partial class FrmProfile : KtWindow
     {
-        public FrmProfile()
+        private int UserId;
+        private string role;
+        CrudUsers Users;
+        public FrmProfile(int Id)
         {
             InitializeComponent();
+            Users = new CrudUsers();
+            UserId = Id;
+            role = Users.GetUserRole(Id);
+           
         }
-        private void SaveBtnEnable()
+        private void SaveBtnEnable(string role)
         {
-            if (FirstNameTxb.Text.Length > 0 && LastNameTxb.Text.Length > 0 && UsernameTxb.Text.Length > 0 && PhoneNumberTxb.Text.Length > 0 && AddressTxb.Text.Length > 0)
+            if (role.ToLower() == "admin")
             {
-                SaveBtn.Enabled = true;
-            }
-            else
-            {
-                SaveBtn.Enabled = false;
+                if (UsernameTxb.Text.Length > 0)
+                {
+                    SaveBtn.Enabled = true;
+                }
+                else
+                {
+                    SaveBtn.Enabled = false;
+                }
             }
 
         }
@@ -43,12 +54,32 @@ namespace SchoolManagement.Pages
 
         private void FrmProfile_Load(object sender, EventArgs e)
         {
-            
+            var currentUser = Users.GetUserbyId(UserId);
+            if (role.ToLower() == "admin")
+            {
+                UsernameTxb.Text = currentUser.Username;
+            }else if (role.ToLower() == "teacher")
+            {
+                var teacher = Users.GetTeacherById(UserId);
+                FirstNameTxb.Text = teacher.FirstName;
+                LastNameTxb.Text = teacher.LastName;
+                FirstNameTxb.Enabled = true;
+                LastNameTxb.Enabled = true ;
+                UsernameTxb.Text = currentUser.Username;
+            }else if (role.ToLower() == "student")
+            {
+                var student = Users.GetStudentById(UserId);
+                FirstNameTxb.Text = student.FirstName;
+                LastNameTxb.Text = student.LastName;
+                FirstNameTxb.Enabled = true;
+                LastNameTxb.Enabled = true;
+                UsernameTxb.Text = currentUser.Username;
+            }
+
         }
         private void Textbox_TextChange(object sender, EventArgs e)
         {
-            SaveBtnEnable();
-            ChangePassEnable();
+            SaveBtnEnable(role);
         }
         private void Nospace_KeyPress(object sender, KeyPressEventArgs e)
         {

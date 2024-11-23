@@ -94,6 +94,21 @@ namespace SchoolManagement.DBAccess
             // Save all changes 
             db.SaveChanges();
         }
+        //Get User
+        public User GetUserbyId(int userId)
+        {
+            return db.Users.FirstOrDefault(u => u.Id == userId);
+        }
+        // Get Admin by User Id
+        public Teacher GetTeacherById(int userId)
+        {
+            return db.Teachers.FirstOrDefault(t => t.UserId == userId);
+        }
+        // Get Student by User Id
+        public Student GetStudentById(int userId)
+        {
+            return db.Students.FirstOrDefault(s => s.UserId == userId);
+        }
         // Get Admin
         public List<User> GetAdmins (string search)
         {

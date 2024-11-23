@@ -34,6 +34,15 @@ namespace SchoolManagement.Pages
         {
             AddUser addUser = new AddUser();
             addUser.ShowDialog();
+            if (UserlistCmb.Text == "Admin")
+            {
+                AdminTbl_Load(sender, e);
+            }else if (UserlistCmb.Text == "Teacher")
+            {
+                TeacherTbl_Load(sender, e);
+            }else{
+                StudentTbl_Load(sender, e);
+            }
         }
         private void DeleteBtn_Click(object sender, EventArgs e)
         {
@@ -44,6 +53,7 @@ namespace SchoolManagement.Pages
         {
             AddClass addClass = new AddClass();
             addClass.ShowDialog();
+            ClassTbl_Load(sender, e);
         }
         private void DeleteClassBtn_Click(object sender, EventArgs e)
         {
@@ -63,13 +73,14 @@ namespace SchoolManagement.Pages
         {
             AddSubject addSubject = new AddSubject();
             addSubject.ShowDialog();
-           
+            LoadClassroom();
         }
 
         private void EnrollBtn_Click(object sender, EventArgs e)
         {
             EnrollStudent enrollStudent = new EnrollStudent();
             enrollStudent.ShowDialog();
+            ClassTbl_Load(sender, e);
         }      
         private async Task setLoadingpage(string page)
         {
@@ -104,7 +115,7 @@ namespace SchoolManagement.Pages
         {
             await setLoadingpage("Profile");
 
-            FrmProfile frmProfile = new FrmProfile();
+            FrmProfile frmProfile = new FrmProfile(userId);
             frmProfile.TopLevel = false;
             frmProfile.Dock = DockStyle.Fill;
 
@@ -179,17 +190,27 @@ namespace SchoolManagement.Pages
         }
         private void LoadClassroom()
         {
+            ClassTbl.Rows.Clear();
             var classrooms = classroom.GetClassRoom();
             int num = 1;
             foreach (var classitems in classrooms)
             {
-               var items = ClassTbl.NewRow();
+                string status = "Ongoing";
+                if (classitems.EndDate < DateTime.Now)
+                {
+                    status = "Finished";
+                }else if (classitems.StartDate > DateTime.Now)
+                {
+                    status = "Upcoming";
+                }   
+                var items = ClassTbl.NewRow();
                 items["No"] = num++;
                 items["ClassName"] = classitems.Name;
                 items["TotalStudent"] = classroom.GetClassEnrollCountByClassId(classitems.Id);
+                items["TotalSubject"] = classroom.GetSubjectCountByClassId(classitems.Id);
                 items["StartDate"] = classitems.StartDate.ToShortDateString();
                 items["EndDate"] = classitems.EndDate.ToShortDateString();
-               
+                items["Status"] = status;              
             }
         }
 

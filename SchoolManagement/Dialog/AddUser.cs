@@ -108,7 +108,6 @@ namespace SchoolManagement.Dialog
 
                 // Clear input fields
                 TeacherUsernameTxb.Text = "";
-                TeacherPassTxb.Text = "";
                 TeacherFirstNameTxb.Text = "";
                 TeacherLastNameTxb.Text = "";
                 TeacherSalaryTxb.Text = "";
@@ -150,7 +149,6 @@ namespace SchoolManagement.Dialog
 
                 // Clear input fields
                 StudentUsernameTxb.Text = "";
-                StudentPassTxb.Text = "";
                 StudentFirstNameTxb.Text = "";
                 StudentLastNameTxb.Text = "";
 
