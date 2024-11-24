@@ -73,6 +73,7 @@
             this.Student});
             this.dgteachingClass.Location = new System.Drawing.Point(12, 73);
             this.dgteachingClass.Name = "dgteachingClass";
+            this.dgteachingClass.RowHeadersWidth = 51;
             this.dgteachingClass.RowTemplate.Height = 24;
             this.dgteachingClass.Size = new System.Drawing.Size(1131, 533);
             this.dgteachingClass.TabIndex = 12;
@@ -80,27 +81,37 @@
             // ID
             // 
             this.ID.HeaderText = "Number";
+            this.ID.MinimumWidth = 6;
             this.ID.Name = "ID";
+            this.ID.Width = 170;
             // 
             // ClassroomId
             // 
             this.ClassroomId.HeaderText = "Class room";
+            this.ClassroomId.MinimumWidth = 6;
             this.ClassroomId.Name = "ClassroomId";
+            this.ClassroomId.Width = 250;
             // 
             // SujectId
             // 
             this.SujectId.HeaderText = "Subject";
+            this.SujectId.MinimumWidth = 6;
             this.SujectId.Name = "SujectId";
+            this.SujectId.Width = 170;
             // 
             // TeacherId
             // 
             this.TeacherId.HeaderText = "Teacher";
+            this.TeacherId.MinimumWidth = 6;
             this.TeacherId.Name = "TeacherId";
+            this.TeacherId.Width = 125;
             // 
             // Student
             // 
             this.Student.HeaderText = "Student";
+            this.Student.MinimumWidth = 6;
             this.Student.Name = "Student";
+            this.Student.Width = 125;
             // 
             // TeachingClass
             // 

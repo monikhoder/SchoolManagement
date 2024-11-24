@@ -38,7 +38,7 @@ namespace SchoolManagement.Dialog
                         join t in dbContext.Teachers on cs.TeacherId equals t.Id
                         join ce in dbContext.ClassEnrollments on cs.Id equals ce.ClassroomId
                         join st in dbContext.Students on ce.StudentId equals st.Id
-                         select new
+                        select new
                         {
                             Id = cs.Id,
                             ClassroomName = c.Name,
@@ -49,7 +49,8 @@ namespace SchoolManagement.Dialog
 
             foreach (var item in query)
             {
-                dgteachingClass.Rows.Add(item.Id,
+                dgteachingClass.Rows.Add(
+                    item.Id,
                     item.ClassroomName,
                     item.SubjectName,
                     item.TeacherName,
