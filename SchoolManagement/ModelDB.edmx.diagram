@@ -23,7 +23,14 @@
         <AssociationConnector Association="SchoolDBModel.FK__ClassSubj__Teach__5FB337D6" ManuallyRouted="false" />
         <AssociationConnector Association="SchoolDBModel.FK__Exam__ClassSubje__693CA210" ManuallyRouted="false" />
         <AssociationConnector Association="SchoolDBModel.FK__ExamResul__ExamI__6D0D32F4" ManuallyRouted="false" />
-        <AssociationConnector Association="SchoolDBModel.FK__ExamResul__Stude__6E01572D" ManuallyRouted="false" />
+        <AssociationConnector Association="SchoolDBModel.FK__ExamResul__Stude__6E01572D" ManuallyRouted="true" >
+          <ConnectorPoint PointX="2.25" PointY="2.2990433585501888" />
+          <ConnectorPoint PointX="2.35673289" PointY="2.223960799960949" />
+          <ConnectorPoint PointX="3.2604166666666665" PointY="2.2239607999609485" />
+          <ConnectorPoint PointX="3.4270833333333335" PointY="2.223960799960949" />
+          <ConnectorPoint PointX="11.25" PointY="2.223960799960949" />
+          <ConnectorPoint PointX="11.25" PointY="5" />
+        </AssociationConnector>
         <AssociationConnector Association="SchoolDBModel.FK__User__RoleId__4CA06362" ManuallyRouted="false" />
         <AssociationConnector Association="SchoolDBModel.FK__Student__UserId__5070F446" ManuallyRouted="false" />
         <AssociationConnector Association="SchoolDBModel.FK__Teacher__UserId__5441852A" ManuallyRouted="false" />

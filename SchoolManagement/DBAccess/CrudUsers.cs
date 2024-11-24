@@ -135,6 +135,19 @@ namespace SchoolManagement.DBAccess
         {
             return db.Teachers.Count();
         }
+        // Update user password
+        public void UpdatePassword(int userId, string newPassword, string oldPassword)
+        {
+            var user = db.Users.FirstOrDefault(u => u.Id == userId);
+            if (user != null && user.Password == oldPassword)
+            {
+                user.Password = newPassword;
+                db.SaveChanges();
+            }else
+            {
+                throw new Exception("Incorrect Old Password.");
+            }
+        }
     }
     
 }

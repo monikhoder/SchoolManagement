@@ -486,6 +486,7 @@
             this.ChangePassBtn.TabIndex = 15;
             this.ChangePassBtn.Text = "Change Password";
             this.ChangePassBtn.UseVisualStyleBackColor = false;
+            this.ChangePassBtn.Click += new System.EventHandler(this.ChangePassBtn_Click);
             // 
             // SaveBtn
             // 

@@ -29,6 +29,7 @@ namespace SchoolManagement.Pages
             StudentCountTxb.Text = userdb.StudentCount().ToString();
             TeacherCountTxb.Text = userdb.TeacherCount().ToString();
             ClassCountTxb.Text = classroom.GetClassCount().ToString();
+            UpcomingExamLbl.Text = crudexam.GetUpComingExamCount().ToString();
         }
         private void AddBtn_Click(object sender, EventArgs e)
         {
@@ -223,6 +224,7 @@ namespace SchoolManagement.Pages
         {
             AddExam addExam = new AddExam();
             addExam.ShowDialog();
+            LoadExamList();
         }
         private void LoadExamList()
         {

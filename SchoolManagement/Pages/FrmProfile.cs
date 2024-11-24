@@ -7,8 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Serialization;
 using KimTools.WinForms;
 using SchoolManagement.DBAccess;
+using SchoolManagement.Dialog;
 
 namespace SchoolManagement.Pages
 {
@@ -80,6 +82,18 @@ namespace SchoolManagement.Pages
         private void Textbox_TextChange(object sender, EventArgs e)
         {
             SaveBtnEnable(role);
+            UpdatepassEnable();
+        }
+        private void UpdatepassEnable()
+        {
+            if (OldPasswordTxb.Text.Length > 0 && NewPasswordTxb.Text.Length > 0)
+            {
+                ChangePassBtn.Enabled = true;
+            }
+            else
+            {
+                ChangePassBtn.Enabled = false;
+            }
         }
         private void Nospace_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -96,6 +110,29 @@ namespace SchoolManagement.Pages
             {
                 e.Handled = true;
             }
+        }
+
+        private void ChangePassBtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Users.UpdatePassword(UserId, NewPasswordTxb.Text, OldPasswordTxb.Text);
+                AlertDialogs alertDialogs = new AlertDialogs();
+                alertDialogs.AlertLbl.Text = "Password Changed Successfully";
+                alertDialogs.AlertLbl.LabelColor = KtColor.Tailwind_Violet;
+                alertDialogs.AlertIcon.Image = Properties.Resources._checked;
+                alertDialogs.ShowDialog();
+            }
+            catch (Exception ex) {
+                AlertDialogs alertDialogs = new AlertDialogs();
+                alertDialogs.AlertLbl.Text = ex.Message;
+                alertDialogs.AlertLbl.LabelColor = KtColor.Danger;
+                alertDialogs.AlertIcon.Image = Properties.Resources.warning_icon;
+                alertDialogs.ShowDialog();
+            }
+
+
+            
         }
     }
 }

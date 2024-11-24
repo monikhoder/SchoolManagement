@@ -122,6 +122,15 @@ namespace SchoolManagement.DBAccess
                             }).ToList();
             return examList;
         }
+        //Get up coming exam count
+        public int GetUpComingExamCount()
+        {
+            var upComingExamCount = db.Exams
+                .Where(e => e.ExamDate >= DateTime.Now)
+                .Count();
+            return upComingExamCount;
+        }
+
         
     }
     public class examlist
