@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmTeacher));
             this.MenuTooltips = new KimTools.WinForms.KtTooltips(this.components);
-            this.Icons = new KimTools.WinForms.KtIcons();
             this.ktButton5 = new KimTools.WinForms.KtButton();
             this.ktButton6 = new KimTools.WinForms.KtButton();
             this.ktButton7 = new KimTools.WinForms.KtButton();
@@ -44,6 +43,7 @@
             this.ktButton9 = new KimTools.WinForms.KtButton();
             this.ktLabelUsername = new KimTools.WinForms.KtLabel();
             this.PageLbl = new KimTools.WinForms.KtLabel();
+            this.Icons = new KimTools.WinForms.KtIcons();
             this.TopBarPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -72,16 +72,6 @@
             this.MenuTooltips.TextFont = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
             this.MenuTooltips.TextMargin = 2;
             this.MenuTooltips.ToolTipPosition = new System.Drawing.Point(0, 0);
-            // 
-            // Icons
-            // 
-            this.Icons.Icon = "Hero.outline.user-group";
-            this.Icons.IconColor = System.Drawing.Color.White;
-            this.Icons.IconPadding = 0;
-            this.Icons.IconSize = 128;
-            this.Icons.ImageListBinding = null;
-            this.Icons.Property = null;
-            this.Icons.Stroke = 1D;
             // 
             // ktButton5
             // 
@@ -312,6 +302,9 @@
             // 
             // ktButton9
             // 
+            this.ktButton9.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.ktButton9.BackColor = System.Drawing.Color.Empty;
             this.ktButton9.BorderShape = KimTools.WinForms.KtSize.Default;
             this.ktButton9.BorderSize = KimTools.WinForms.KtSize.Default;
@@ -322,16 +315,16 @@
             this.ktButton9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ktButton9.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ktButton9.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.ktButton9.IconName = "";
+            this.ktButton9.IconName = "Tabler.outline.logout";
             this.Icons.SetIcons(this.ktButton9, new KimTools.WinForms.KtIcon[0]);
-            this.ktButton9.IconSize = 16;
+            this.ktButton9.IconSize = 30;
             this.ktButton9.IconStroke = 2.5D;
-            this.ktButton9.Location = new System.Drawing.Point(1004, 8);
+            this.ktButton9.ImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.ktButton9.Location = new System.Drawing.Point(1007, 7);
             this.ktButton9.Name = "ktButton9";
             this.ktButton9.Size = new System.Drawing.Size(95, 45);
             this.ktButton9.Style = KimTools.WinForms.KtStyle.Tailwind;
             this.ktButton9.TabIndex = 11;
-            this.ktButton9.Text = "Logout";
             this.MenuTooltips.SetToolTip(this.ktButton9, "");
             this.ktButton9.UseVisualStyleBackColor = false;
             this.ktButton9.Click += new System.EventHandler(this.ktButton9_Click);
@@ -348,7 +341,7 @@
             this.ktLabelUsername.LabelColor = KimTools.WinForms.KtColor.Tailwind_White;
             this.ktLabelUsername.Location = new System.Drawing.Point(143, 19);
             this.ktLabelUsername.Name = "ktLabelUsername";
-            this.ktLabelUsername.Size = new System.Drawing.Size(98, 25);
+            this.ktLabelUsername.Size = new System.Drawing.Size(124, 32);
             this.ktLabelUsername.TabIndex = 4;
             this.ktLabelUsername.Text = "Username";
             this.MenuTooltips.SetToolTip(this.ktLabelUsername, "");
@@ -365,14 +358,24 @@
             this.PageLbl.LabelColor = KimTools.WinForms.KtColor.Tailwind_White;
             this.PageLbl.Location = new System.Drawing.Point(23, 19);
             this.PageLbl.Name = "PageLbl";
-            this.PageLbl.Size = new System.Drawing.Size(92, 25);
+            this.PageLbl.Size = new System.Drawing.Size(114, 32);
             this.PageLbl.TabIndex = 0;
             this.PageLbl.Text = "Welcome";
             this.MenuTooltips.SetToolTip(this.PageLbl, "");
             // 
+            // Icons
+            // 
+            this.Icons.Icon = "Hero.outline.user-group";
+            this.Icons.IconColor = System.Drawing.Color.White;
+            this.Icons.IconPadding = 0;
+            this.Icons.IconSize = 128;
+            this.Icons.ImageListBinding = null;
+            this.Icons.Property = null;
+            this.Icons.Stroke = 1D;
+            // 
             // FrmTeacher
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1137, 547);
             this.Controls.Add(this.ktButton5);
