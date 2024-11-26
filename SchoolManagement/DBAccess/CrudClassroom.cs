@@ -123,8 +123,14 @@ namespace SchoolManagement.DBAccess
         {
             return db.ClassEnrollments.ToList();
         }
-        //Get total student by class id
-        public int GetTotalStudentByClassId(int classId)
+
+        public List<ClassSubject> GetClassSubject()
+        {
+            return db.ClassSubjects.ToList();
+        }
+
+            //Get total student by class id
+            public int GetTotalStudentByClassId(int classId)
         {
             int num = db.ClassEnrollments
                         .Where(ce => ce.ClassroomId == classId)
