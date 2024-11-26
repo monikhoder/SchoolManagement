@@ -72,7 +72,7 @@
             this.Dasboard = new System.Windows.Forms.TabPage();
             this.DashboardBarPanel = new KimTools.WinForms.KtPanel();
             this.ktPanel3 = new KimTools.WinForms.KtPanel();
-            this.ktLabel6 = new KimTools.WinForms.KtLabel();
+            this.UpcomingExamLbl = new KimTools.WinForms.KtLabel();
             this.ktLabel7 = new KimTools.WinForms.KtLabel();
             this.ktPictureBox4 = new KimTools.WinForms.KtPictureBox();
             this.ktPanel2 = new KimTools.WinForms.KtPanel();
@@ -182,10 +182,10 @@
             this.MainPages.Multiline = true;
             this.MainPages.Name = "MainPages";
             this.MainPages.Padding = new System.Drawing.Point(10, 10);
-            this.MainPages.Page = this.Exam;
-            this.MainPages.PageIndex = 1;
-            this.MainPages.PageName = "Exam";
-            this.MainPages.PageTitle = "Exam";
+            this.MainPages.Page = this.Loader;
+            this.MainPages.PageIndex = 5;
+            this.MainPages.PageName = "Loader";
+            this.MainPages.PageTitle = "Loader";
             this.MainPages.SelectedIndex = 0;
             this.MainPages.Size = new System.Drawing.Size(1194, 622);
             this.MainPages.TabIndex = 1;
@@ -266,7 +266,7 @@
             this.ktPanel3.BorderShape = KimTools.WinForms.KtSize.Md;
             this.ktPanel3.BorderSize = KimTools.WinForms.KtSize.Md;
             this.ktPanel3.BorderThickness = 2;
-            this.ktPanel3.Controls.Add(this.ktLabel6);
+            this.ktPanel3.Controls.Add(this.UpcomingExamLbl);
             this.ktPanel3.Controls.Add(this.ktLabel7);
             this.ktPanel3.Controls.Add(this.ktPictureBox4);
             this.ktPanel3.CustomColors = new System.Drawing.Color[0];
@@ -281,21 +281,21 @@
             this.ktPanel3.TabIndex = 3;
             this.MenuTooltips.SetToolTip(this.ktPanel3, "");
             // 
-            // ktLabel6
+            // UpcomingExamLbl
             // 
-            this.ktLabel6.AutoSize = true;
-            this.ktLabel6.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold);
-            this.ktLabel6.ForeColor = System.Drawing.Color.White;
-            this.ktIcons1.SetIcons(this.ktLabel6, new KimTools.WinForms.KtIcon[0]);
-            this.Icons.SetIcons(this.ktLabel6, new KimTools.WinForms.KtIcon[0]);
-            this.ktLabel6.KtFontSize = KimTools.WinForms.KtFont.H2;
-            this.ktLabel6.LabelColor = KimTools.WinForms.KtColor.Tailwind_White;
-            this.ktLabel6.Location = new System.Drawing.Point(10, 11);
-            this.ktLabel6.Name = "ktLabel6";
-            this.ktLabel6.Size = new System.Drawing.Size(60, 38);
-            this.ktLabel6.TabIndex = 2;
-            this.ktLabel6.Text = "120";
-            this.MenuTooltips.SetToolTip(this.ktLabel6, "");
+            this.UpcomingExamLbl.AutoSize = true;
+            this.UpcomingExamLbl.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold);
+            this.UpcomingExamLbl.ForeColor = System.Drawing.Color.White;
+            this.ktIcons1.SetIcons(this.UpcomingExamLbl, new KimTools.WinForms.KtIcon[0]);
+            this.Icons.SetIcons(this.UpcomingExamLbl, new KimTools.WinForms.KtIcon[0]);
+            this.UpcomingExamLbl.KtFontSize = KimTools.WinForms.KtFont.H2;
+            this.UpcomingExamLbl.LabelColor = KimTools.WinForms.KtColor.Tailwind_White;
+            this.UpcomingExamLbl.Location = new System.Drawing.Point(10, 11);
+            this.UpcomingExamLbl.Name = "UpcomingExamLbl";
+            this.UpcomingExamLbl.Size = new System.Drawing.Size(60, 38);
+            this.UpcomingExamLbl.TabIndex = 2;
+            this.UpcomingExamLbl.Text = "120";
+            this.MenuTooltips.SetToolTip(this.UpcomingExamLbl, "");
             // 
             // ktLabel7
             // 
@@ -1257,7 +1257,7 @@
             this.Admin.Location = new System.Drawing.Point(4, 4);
             this.Admin.Name = "Admin";
             this.Admin.Padding = new System.Windows.Forms.Padding(3);
-            this.Admin.Size = new System.Drawing.Size(1172, 478);
+            this.Admin.Size = new System.Drawing.Size(178, 0);
             this.Admin.TabIndex = 0;
             this.Admin.Text = "Admin";
             this.MenuTooltips.SetToolTip(this.Admin, "");
@@ -1351,7 +1351,7 @@
             this.AdminTbl.ShowFooter = true;
             this.AdminTbl.ShowHeader = true;
             this.AdminTbl.ShowSearch = true;
-            this.AdminTbl.Size = new System.Drawing.Size(1166, 472);
+            this.AdminTbl.Size = new System.Drawing.Size(172, 0);
             this.AdminTbl.TabIndex = 0;
             this.MenuTooltips.SetToolTip(this.AdminTbl, "");
             this.AdminTbl.Load += new System.EventHandler(this.AdminTbl_Load);
@@ -1364,7 +1364,7 @@
             this.Teacher.Location = new System.Drawing.Point(4, 4);
             this.Teacher.Name = "Teacher";
             this.Teacher.Padding = new System.Windows.Forms.Padding(3);
-            this.Teacher.Size = new System.Drawing.Size(1172, 478);
+            this.Teacher.Size = new System.Drawing.Size(178, 0);
             this.Teacher.TabIndex = 1;
             this.Teacher.Text = "Teacher";
             this.MenuTooltips.SetToolTip(this.Teacher, "");
@@ -1494,7 +1494,7 @@
             this.TeacherTbl.ShowFooter = true;
             this.TeacherTbl.ShowHeader = true;
             this.TeacherTbl.ShowSearch = true;
-            this.TeacherTbl.Size = new System.Drawing.Size(1166, 472);
+            this.TeacherTbl.Size = new System.Drawing.Size(172, 0);
             this.TeacherTbl.TabIndex = 0;
             this.MenuTooltips.SetToolTip(this.TeacherTbl, "");
             this.TeacherTbl.Load += new System.EventHandler(this.TeacherTbl_Load);
@@ -1846,7 +1846,7 @@
             this.ktIcons1.SetIcons(this.LoaderIndicator, new KimTools.WinForms.KtIcon[0]);
             this.Icons.SetIcons(this.LoaderIndicator, new KimTools.WinForms.KtIcon[0]);
             this.LoaderIndicator.Image = null;
-            this.LoaderIndicator.Location = new System.Drawing.Point(46, -36);
+            this.LoaderIndicator.Location = new System.Drawing.Point(541, 254);
             this.LoaderIndicator.Name = "LoaderIndicator";
             this.LoaderIndicator.NoRounding = false;
             this.LoaderIndicator.Preset = KimTools.WinForms.KtSpinner.Presets.Solid;
@@ -1855,7 +1855,6 @@
             this.LoaderIndicator.Speed = 3;
             this.LoaderIndicator.Style = KimTools.WinForms.KtSpinner.Styles.Solid;
             this.LoaderIndicator.TabIndex = 1;
-            this.LoaderIndicator.Text = "ktSpinner2";
             this.LoaderIndicator.TextPadding = new System.Windows.Forms.Padding(0);
             this.LoaderIndicator.Thickness = 10;
             this.MenuTooltips.SetToolTip(this.LoaderIndicator, "");
@@ -2439,7 +2438,7 @@
         private KimTools.WinForms.KtPictureBox ktPictureBox1;
         private KimTools.WinForms.KtLabel StudentCountTxb;
         private KimTools.WinForms.KtPanel ktPanel3;
-        private KimTools.WinForms.KtLabel ktLabel6;
+        private KimTools.WinForms.KtLabel UpcomingExamLbl;
         private KimTools.WinForms.KtLabel ktLabel7;
         private KimTools.WinForms.KtPictureBox ktPictureBox4;
         private KimTools.WinForms.KtPanel ktPanel2;
