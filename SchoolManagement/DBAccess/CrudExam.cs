@@ -123,7 +123,14 @@ namespace SchoolManagement.DBAccess
                             }).ToList();
             return examList;
         }
-
+        //Get up coming exam count
+        public int GetUpComingExamCount()
+        {
+            var upComingExamCount = db.Exams
+                .Where(e => e.ExamDate >= DateTime.Now)
+                .Count();
+            return upComingExamCount;
+        }
         public List<teachinglist> GetTeachinglists()
         {
             var teachinglist = (from cs in db.ClassSubjects
@@ -145,37 +152,54 @@ namespace SchoolManagement.DBAccess
             return teachinglist;
         }
 
-
-        
-    }
-
-    public class teachinglist
-    {
-        public int Id { get; set; }
-        public string ClassName { get; set; }
-        public string Subject { get; set; }
-        public string Teacher { get; set; }
-        public string Student { get; set; }
-        public string StudentGender { get; set; }
-        //Get up coming exam count
-        public int GetUpComingExamCount()
+        public class teachinglist
         {
-            var upComingExamCount = db.Exams
-                .Where(e => e.ExamDate >= DateTime.Now)
-                .Count();
-            return upComingExamCount;
+            public int Id { get; set; }
+            public string ClassName { get; set; }
+            public string Subject { get; set; }
+            public string Teacher { get; set; }
+            public string Student { get; set; }
+            public string StudentGender { get; set; }
+
         }
 
-        
+        public List<scoringlist> GetAllScoringList()
+        {
+            var scoringlist = (from er in db.ExamResults
+                               join en in db.Exams on er.ExamId equals en.Id
+                               join st in db.Students on er.StudentId equals st.Id
+
+                               select new scoringlist
+                               {
+                                   Id = en.Id,
+                                   ExamName = en.Name,
+                                   Student = st.FirstName + " " + st.LastName,
+                                   Score = er.Score
+                               }).ToList();
+
+            return scoringlist;
+        }
+        public class scoringlist
+        {
+            public int Id { get; set; }
+            public string ExamName { get; set; }
+            public string Student { get; set; }
+            public decimal Score  { get; set; }
+        }
+
+
+        public class examlist
+        {
+            public int Id { get; set; }
+            public string Name { get; set; }
+            public string Classroom { get; set; }
+            public string Subject { get; set; }
+            public string Teacher { get; set; }
+            public DateTime ExamDate { get; set; }
+            public int Duration { get; set; }
+        }
+
     }
-    public class examlist
-    {
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public string Classroom { get; set; }
-        public string Subject { get; set; }
-        public string Teacher { get; set; }
-        public DateTime ExamDate { get; set; }
-        public int Duration { get; set; }
-    }
+
+   
 }

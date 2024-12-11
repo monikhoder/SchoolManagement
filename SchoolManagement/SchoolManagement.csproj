@@ -179,6 +179,12 @@
     <Compile Include="Dialog\LoaderDialog.Designer.cs">
       <DependentUpon>LoaderDialog.cs</DependentUpon>
     </Compile>
+    <Compile Include="Dialog\ScoringExam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialog\ScoringExam.Designer.cs">
+      <DependentUpon>ScoringExam.cs</DependentUpon>
+    </Compile>
     <Compile Include="Dialog\TeachingClass.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -285,6 +291,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Dialog\LoaderDialog.resx">
       <DependentUpon>LoaderDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialog\ScoringExam.resx">
+      <DependentUpon>ScoringExam.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Dialog\TeachingClass.resx">
       <DependentUpon>TeachingClass.cs</DependentUpon>

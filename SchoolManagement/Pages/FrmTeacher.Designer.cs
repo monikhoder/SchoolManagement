@@ -150,7 +150,7 @@
             this.TopBarPanel.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(63)))), ((int)(((byte)(218)))));
             this.TopBarPanel.Bg = KimTools.WinForms.KtColor.Primary;
             this.TopBarPanel.BgOpacity = 255;
-            this.TopBarPanel.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(82)))), ((int)(((byte)(221)))));
+            this.TopBarPanel.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(60)))), ((int)(((byte)(202)))));
             this.TopBarPanel.BorderOpacity = 255;
             this.TopBarPanel.BorderRadiusSize = 15;
             this.TopBarPanel.BorderShape = KimTools.WinForms.KtSize.Default;
@@ -161,7 +161,7 @@
             this.TopBarPanel.Controls.Add(this.PageLbl);
             this.TopBarPanel.CustomColors = new System.Drawing.Color[0];
             this.TopBarPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.TopBarPanel.ForeColor = System.Drawing.Color.White;
+            this.TopBarPanel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(40)))), ((int)(((byte)(67)))));
             this.Icons.SetIcons(this.TopBarPanel, new KimTools.WinForms.KtIcon[0]);
             this.TopBarPanel.Location = new System.Drawing.Point(10, 10);
             this.TopBarPanel.Name = "TopBarPanel";

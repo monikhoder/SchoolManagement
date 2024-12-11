@@ -37,16 +37,6 @@ namespace SchoolManagement.Pages
         }
         private void LoadComboBox()
         {
-            //foreach ( Subject s in dbContext.Subjects )
-            //{
-            //    ktcmbClassSubject.Items.Add( s.Name );
-            //}
-
-            //foreach (Classroom c in dbContext.Classrooms)
-            //{
-            //    ktcmbClassName.Items.Add( c.Name );
-            //}
-
 
 
         }

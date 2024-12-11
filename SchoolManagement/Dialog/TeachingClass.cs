@@ -29,9 +29,7 @@ namespace SchoolManagement.Dialog
         }
         private void ktLabelBack_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            FrmTeacher frmTeacher = new FrmTeacher(1);
-            frmTeacher.ShowDialog();
+            
         }
 
          private void TeachingClass_Load(object sender, EventArgs e)
@@ -57,6 +55,11 @@ namespace SchoolManagement.Dialog
 
         }
 
-
+        private void ktButtonBack_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FrmTeacher frmTeacher = new FrmTeacher(1);
+            frmTeacher.Show();
+        }
     }
 }
