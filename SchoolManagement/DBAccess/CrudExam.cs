@@ -1,6 +1,7 @@
-﻿using System;
+﻿ using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -122,6 +123,40 @@ namespace SchoolManagement.DBAccess
                             }).ToList();
             return examList;
         }
+
+        public List<teachinglist> GetTeachinglists()
+        {
+            var teachinglist = (from cs in db.ClassSubjects
+                                join c in db.Classrooms on cs.ClassroomId equals c.Id
+                                join s in db.Subjects on cs.SubjectId equals s.Id
+                                join t in db.Teachers on cs.TeacherId equals t.Id
+                                join ce in db.ClassEnrollments on c.Id equals ce.ClassroomId
+                                select new teachinglist
+                                {
+                                    Id = cs.Id,
+                                    ClassName = c.Name,
+                                    Subject = s.Name,
+                                    Teacher = t.FirstName + " " + t.LastName,
+                                    Student = ce.Student.FirstName + " " + ce.Student.LastName,
+                                    StudentGender = ce.Student.Gender
+
+                                }).ToList();
+
+            return teachinglist;
+        }
+
+
+        
+    }
+
+    public class teachinglist
+    {
+        public int Id { get; set; }
+        public string ClassName { get; set; }
+        public string Subject { get; set; }
+        public string Teacher { get; set; }
+        public string Student { get; set; }
+        public string StudentGender { get; set; }
         //Get up coming exam count
         public int GetUpComingExamCount()
         {
