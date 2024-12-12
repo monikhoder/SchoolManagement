@@ -1,4 +1,6 @@
-﻿using SchoolManagement.DBAccess;
+﻿using KimTools.WinForms;
+using SchoolManagement.DBAccess;
+using SchoolManagement.Pages;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -59,7 +61,64 @@ namespace SchoolManagement.Dialog
             ScoreStudentCmb.DisplayMember = "FullName";
             ScoreStudentCmb.ValueMember = "Id";
         }
+
+        private void AssignScore(int examId, int studentId)
+        {
+           
+            if (db.ExamResults.Any(e => e.ExamId == examId && e.StudentId == studentId))
+            {
+                throw new Exception("Student Score already added in this class.");
+            }
+
+            var assignscore = new ExamResult()
+            {
+                ExamId = examId,
+                StudentId = studentId,
+                Score = decimal.Parse(ktTextBoxScore.Text),
+                GradedDate = DateTime.Now,
+            };
+            db.ExamResults.Add(assignscore);
+            db.SaveChanges();
+
+        }
+        private void AddScorebtn_Click(object sender, EventArgs e)
+        {
+            int examId = Convert.ToInt32(ScoreClassNameCmb.SelectedValue);
+            int studentId = Convert.ToInt32(ScoreStudentCmb.SelectedValue);
+
+            try
+            {
+                AssignScore(examId, studentId);
+                AlertDialogs alertDialogs = new AlertDialogs();
+                alertDialogs.AlertLbl.Text = "Student Enrolled Successfully";
+                alertDialogs.AlertIcon.Image = Properties.Resources._checked;
+                alertDialogs.AlertLbl.LabelColor = KtColor.Tailwind_Violet;
+                alertDialogs.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                AlertDialogs alertDialogs = new AlertDialogs();
+                alertDialogs.AlertLbl.Text = ex.Message;
+                alertDialogs.AlertIcon.Image = Properties.Resources.warning_icon;
+                alertDialogs.AlertLbl.LabelColor = KtColor.Danger;
+                alertDialogs.ShowDialog();
+
+            }
+            LoadScore();
+            ClearScore();
+        }
         private void ScoringExam_Load(object sender, EventArgs e)
+        {
+            LoadScore();
+        }
+
+        private void ClearScore()
+        {
+            ScoreClassNameCmb.Text = "";
+            ScoreStudentCmb.Text= "";
+            ktTextBoxScore.Text = "";
+        }
+        private void LoadScore()
         {
 
             ScoringTbl.Rows.Clear();
@@ -75,12 +134,16 @@ namespace SchoolManagement.Dialog
                 newScoringTbl["ExamName"] = se.ExamName;
                 newScoringTbl["StudentName"] = se.Student;
                 newScoringTbl["Score"] = se.Score;
-                
+
 
                 ScoringTbl.Rows.Add(newScoringTbl);
             }
         }
-
-
+        private void ktButtonBack_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FrmTeacher frmTeacher = new FrmTeacher(1);
+            frmTeacher.Show();
+        }
     }
 }

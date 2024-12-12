@@ -40,6 +40,7 @@
             this.ktLabel3 = new KimTools.WinForms.KtLabel();
             this.ktTextBoxScore = new KimTools.WinForms.KtTextBox();
             this.ScoringTbl = new KimTools.WinForms.KtTable();
+            this.ktButtonBack = new KimTools.WinForms.KtButton();
             this.SuspendLayout();
             // 
             // ScoreStudentCmb
@@ -172,6 +173,7 @@
             this.AddScorebtn.TabIndex = 9;
             this.AddScorebtn.Text = "Add";
             this.AddScorebtn.UseVisualStyleBackColor = false;
+            this.AddScorebtn.Click += new System.EventHandler(this.AddScorebtn_Click);
             // 
             // ktLabel3
             // 
@@ -314,15 +316,41 @@
             this.ScoringTbl.ShowFooter = true;
             this.ScoringTbl.ShowHeader = true;
             this.ScoringTbl.ShowSearch = true;
-            this.ScoringTbl.Size = new System.Drawing.Size(932, 600);
+            this.ScoringTbl.Size = new System.Drawing.Size(957, 603);
             this.ScoringTbl.TabIndex = 12;
+            // 
+            // ktButtonBack
+            // 
+            this.ktButtonBack.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.ktButtonBack.BackColor = System.Drawing.Color.Empty;
+            this.ktButtonBack.BorderShape = KimTools.WinForms.KtSize.Default;
+            this.ktButtonBack.BorderSize = KimTools.WinForms.KtSize.Default;
+            this.ktButtonBack.CustomColors = new System.Drawing.Color[0];
+            this.ktButtonBack.FlatAppearance.BorderSize = 0;
+            this.ktButtonBack.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.ktButtonBack.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.ktButtonBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ktButtonBack.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ktButtonBack.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.ktButtonBack.IconName = "Tabler.outline.arrow_back_up_double";
+            this.ktButtonBack.IconSize = 30;
+            this.ktButtonBack.IconStroke = 2.5D;
+            this.ktButtonBack.ImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.ktButtonBack.Location = new System.Drawing.Point(4, 571);
+            this.ktButtonBack.Name = "ktButtonBack";
+            this.ktButtonBack.Size = new System.Drawing.Size(72, 42);
+            this.ktButtonBack.Style = KimTools.WinForms.KtStyle.Tailwind;
+            this.ktButtonBack.TabIndex = 13;
+            this.ktButtonBack.UseVisualStyleBackColor = false;
+            this.ktButtonBack.Click += new System.EventHandler(this.ktButtonBack_Click);
             // 
             // ScoringExam
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(22)))), ((int)(((byte)(51)))));
-            this.ClientSize = new System.Drawing.Size(1316, 613);
+            this.ClientSize = new System.Drawing.Size(1341, 616);
+            this.Controls.Add(this.ktButtonBack);
             this.Controls.Add(this.ScoringTbl);
             this.Controls.Add(this.ktTextBoxScore);
             this.Controls.Add(this.ktLabel3);
@@ -332,6 +360,7 @@
             this.Controls.Add(this.ScoreClassNameCmb);
             this.Controls.Add(this.ktLabel1);
             this.Name = "ScoringExam";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ScoringExam";
             this.Load += new System.EventHandler(this.ScoringExam_Load);
             this.ResumeLayout(false);
@@ -349,5 +378,6 @@
         private KimTools.WinForms.KtLabel ktLabel3;
         private KimTools.WinForms.KtTextBox ktTextBoxScore;
         private KimTools.WinForms.KtTable ScoringTbl;
+        private KimTools.WinForms.KtButton ktButtonBack;
     }
 }

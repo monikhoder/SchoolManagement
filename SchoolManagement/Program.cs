@@ -59,10 +59,10 @@ namespace SchoolManagement
             //    }
             //}
 
-            ScoringExam scoringExam = new ScoringExam();
-            Application.Run(scoringExam);
+            //ScoringExam scoringExam = new ScoringExam();
+            //Application.Run(scoringExam);
 
-            //Application.Run(new FrmTeacher(1));
+            Application.Run(new FrmTeacher(1));
            
         }
     }

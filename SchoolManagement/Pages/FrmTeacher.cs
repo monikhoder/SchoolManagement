@@ -55,5 +55,12 @@ namespace SchoolManagement.Pages
             TeachingClass teachingClass = new TeachingClass();
             teachingClass.ShowDialog();
         }
+
+        private void btnscoringExam_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ScoringExam scoringExam = new ScoringExam();
+            scoringExam.ShowDialog();
+        }
     }
 }

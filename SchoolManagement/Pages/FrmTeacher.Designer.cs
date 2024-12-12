@@ -32,7 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmTeacher));
             this.MenuTooltips = new KimTools.WinForms.KtTooltips(this.components);
             this.ktButton3 = new KimTools.WinForms.KtButton();
-            this.ktButton2 = new KimTools.WinForms.KtButton();
+            this.btnscoringExam = new KimTools.WinForms.KtButton();
             this.btnteachingClass = new KimTools.WinForms.KtButton();
             this.TopBarPanel = new KimTools.WinForms.KtPanel();
             this.ktButton9 = new KimTools.WinForms.KtButton();
@@ -93,30 +93,31 @@
             this.MenuTooltips.SetToolTip(this.ktButton3, "");
             this.ktButton3.UseVisualStyleBackColor = false;
             // 
-            // ktButton2
+            // btnscoringExam
             // 
-            this.ktButton2.BackColor = System.Drawing.Color.Empty;
-            this.ktButton2.BorderShape = KimTools.WinForms.KtSize.Default;
-            this.ktButton2.BorderSize = KimTools.WinForms.KtSize.Default;
-            this.ktButton2.CustomColors = new System.Drawing.Color[0];
-            this.ktButton2.FlatAppearance.BorderSize = 0;
-            this.ktButton2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.ktButton2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.ktButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ktButton2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ktButton2.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.ktButton2.IconName = "";
-            this.Icons.SetIcons(this.ktButton2, new KimTools.WinForms.KtIcon[0]);
-            this.ktButton2.IconSize = 16;
-            this.ktButton2.IconStroke = 2.5D;
-            this.ktButton2.Location = new System.Drawing.Point(334, 182);
-            this.ktButton2.Name = "ktButton2";
-            this.ktButton2.Size = new System.Drawing.Size(186, 77);
-            this.ktButton2.Style = KimTools.WinForms.KtStyle.Tailwind;
-            this.ktButton2.TabIndex = 4;
-            this.ktButton2.Text = "Scoring Exam";
-            this.MenuTooltips.SetToolTip(this.ktButton2, "");
-            this.ktButton2.UseVisualStyleBackColor = false;
+            this.btnscoringExam.BackColor = System.Drawing.Color.Empty;
+            this.btnscoringExam.BorderShape = KimTools.WinForms.KtSize.Default;
+            this.btnscoringExam.BorderSize = KimTools.WinForms.KtSize.Default;
+            this.btnscoringExam.CustomColors = new System.Drawing.Color[0];
+            this.btnscoringExam.FlatAppearance.BorderSize = 0;
+            this.btnscoringExam.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnscoringExam.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnscoringExam.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnscoringExam.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnscoringExam.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnscoringExam.IconName = "";
+            this.Icons.SetIcons(this.btnscoringExam, new KimTools.WinForms.KtIcon[0]);
+            this.btnscoringExam.IconSize = 16;
+            this.btnscoringExam.IconStroke = 2.5D;
+            this.btnscoringExam.Location = new System.Drawing.Point(334, 182);
+            this.btnscoringExam.Name = "btnscoringExam";
+            this.btnscoringExam.Size = new System.Drawing.Size(186, 77);
+            this.btnscoringExam.Style = KimTools.WinForms.KtStyle.Tailwind;
+            this.btnscoringExam.TabIndex = 4;
+            this.btnscoringExam.Text = "Scoring Exam";
+            this.MenuTooltips.SetToolTip(this.btnscoringExam, "");
+            this.btnscoringExam.UseVisualStyleBackColor = false;
+            this.btnscoringExam.Click += new System.EventHandler(this.btnscoringExam_Click);
             // 
             // btnteachingClass
             // 
@@ -150,7 +151,7 @@
             this.TopBarPanel.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(63)))), ((int)(((byte)(218)))));
             this.TopBarPanel.Bg = KimTools.WinForms.KtColor.Primary;
             this.TopBarPanel.BgOpacity = 255;
-            this.TopBarPanel.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(60)))), ((int)(((byte)(202)))));
+            this.TopBarPanel.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(82)))), ((int)(((byte)(221)))));
             this.TopBarPanel.BorderOpacity = 255;
             this.TopBarPanel.BorderRadiusSize = 15;
             this.TopBarPanel.BorderShape = KimTools.WinForms.KtSize.Default;
@@ -161,7 +162,7 @@
             this.TopBarPanel.Controls.Add(this.PageLbl);
             this.TopBarPanel.CustomColors = new System.Drawing.Color[0];
             this.TopBarPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.TopBarPanel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(40)))), ((int)(((byte)(67)))));
+            this.TopBarPanel.ForeColor = System.Drawing.Color.White;
             this.Icons.SetIcons(this.TopBarPanel, new KimTools.WinForms.KtIcon[0]);
             this.TopBarPanel.Location = new System.Drawing.Point(10, 10);
             this.TopBarPanel.Name = "TopBarPanel";
@@ -249,7 +250,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1137, 547);
             this.Controls.Add(this.ktButton3);
-            this.Controls.Add(this.ktButton2);
+            this.Controls.Add(this.btnscoringExam);
             this.Controls.Add(this.btnteachingClass);
             this.Controls.Add(this.TopBarPanel);
             this.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
@@ -274,7 +275,7 @@
         private KimTools.WinForms.KtLabel PageLbl;
         private KimTools.WinForms.KtLabel ktLabelUsername;
         private KimTools.WinForms.KtButton btnteachingClass;
-        private KimTools.WinForms.KtButton ktButton2;
+        private KimTools.WinForms.KtButton btnscoringExam;
         private KimTools.WinForms.KtButton ktButton3;
         private KimTools.WinForms.KtButton ktButton9;
     }
