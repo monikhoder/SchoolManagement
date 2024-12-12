@@ -22,48 +22,43 @@ namespace SchoolManagement
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            //using (FrmLogin frmLogin = new FrmLogin())
-            //{
-            //    DialogResult result = frmLogin.ShowDialog();
+            using (FrmLogin frmLogin = new FrmLogin())
+            {
+                DialogResult result = frmLogin.ShowDialog();
 
-            //    if (result == DialogResult.OK)
-            //    {
-            //        int userId = frmLogin.UserId;
-            //        var role = userdb.GetUserRole(userId);
-            //        switch (role.ToLower())
-            //        {
-            //            case "admin":
-            //                using (FrmAdmin adminForm = new FrmAdmin(userId))
-            //                {
-            //                    adminForm.ShowDialog();
-            //                }
-            //                break;
+                if (result == DialogResult.OK)
+                {
+                    int userId = frmLogin.UserId;
+                    var role = userdb.GetUserRole(userId);
+                    switch (role.ToLower())
+                    {
+                        case "admin":
+                            using (FrmAdmin adminForm = new FrmAdmin(userId))
+                            {
+                                adminForm.ShowDialog();
+                            }
+                            break;
 
-            //            case "teacher":
-            //                using (FrmTeacher teacherForm = new FrmTeacher(userId))
-            //                {
-            //                    teacherForm.ShowDialog();
-            //                }
-            //                break;
+                        case "teacher":
+                            using (FrmTeacher teacherForm = new FrmTeacher(userId))
+                            {
+                                teacherForm.ShowDialog();
+                            }
+                            break;
 
-            //            case "student":
-            //                using (FrmStudent studentForm = new FrmStudent(userId))
-            //                {
-            //                    studentForm.ShowDialog();
-            //                }
-            //                break;
+                        case "student":
+                            using (FrmStudent studentForm = new FrmStudent(userId))
+                            {
+                                studentForm.ShowDialog();
+                            }
+                            break;
 
-            //            default:
-            //                break;
-            //        }
-            //    }
-            //}
+                        default:
+                            break;
+                    }
+                }
+            }
 
-            //ScoringExam scoringExam = new ScoringExam();
-            //Application.Run(scoringExam);
-
-            Application.Run(new FrmTeacher(1));
-           
         }
     }
 }
